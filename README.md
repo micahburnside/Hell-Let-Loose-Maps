@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://hellletloose.com">
-    <img alt="Download on the App Store" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
+    <img alt="Download on the App Store" title="App Store" src="https://sdqeklghxkpezitwhgbg.supabase.co/storage/v1/object/public/my-public-media/Remagen1.PNG" width="140">
   </a>
 
 </p>
@@ -34,7 +34,7 @@ View repository and user information, control your notifications and even manage
 **Available for iOS only.**
 
 <p align="center">
-  <img src = "http://i.imgur.com/HowF6aM.png" width=350>
+  <img src = "https://sdqeklghxkpezitwhgbg.supabase.co/storage/v1/object/public/my-public-media/Carentan1.PNG" width=350>
 </p>
 
 ## Features
