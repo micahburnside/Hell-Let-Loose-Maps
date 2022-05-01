@@ -50,9 +50,6 @@ View repository and user information, control your notifications and even manage
   <img src = "https://freeurlshortener.net/ZEM" width=700>
 </p>
 
-<p align="center">
-  <img src = "https://freeurlshortener.net/YRT" width=700>
-</p>
 
 <p align="center">
   <img src = "https://freeurlshortener.net/IpU" width=700>
