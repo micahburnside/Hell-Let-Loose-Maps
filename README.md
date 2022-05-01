@@ -42,7 +42,7 @@ View repository and user information, control your notifications and even manage
 * View Hell Let Loose Maps
 * Available on iPhone and iPad
 <p align="center">
-  <img src = "https://sdqeklghxkpezitwhgbg.supabase.co/storage/v1/object/public/my-public-media/OmahaBeach1.PNG" width=700>
+  <img src ="https://sdqeklghxkpezitwhgbg.supabase.co/storage/v1/object/public/my-public-media/OmahaBeach1.PNG"width=700>
 </p>
 
 
