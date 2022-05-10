@@ -8,13 +8,23 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    var tapCount = 0
-//    var imageView: UIImageView?
-//    var pinchMe: UIPinchGestureRecognizer?
+
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBaseViewController()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = .black
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
         
     }
     
@@ -39,4 +49,9 @@ class BaseViewController: UIViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
 
+    func presentViewController(storyboardName: String, identifier: String) {
+        let storyboard = UIStoryboard.init(name: storyboardName, bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: identifier)
+        self.navigationController?.present(controller, animated: true)
+    }
 }
