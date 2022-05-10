@@ -50,9 +50,9 @@ extension TACMapsViewController: DataSourceDelegate {
         case 7:
             self.pushToViewController(storyboardName: "RemagenTAC", identifier: "RemagenTACViewController")
         case 8:
-            self.pushToViewController(storyboardName: "SaintMarieDuMontTAC", identifier: "SaintMarieDuMontTACViewController")
+            self.pushToViewController(storyboardName: "SainteMarieduMontTAC", identifier: "SainteMarieduMontTACViewController")
         case 9:
-            self.pushToViewController(storyboardName: "SaintMereEgliseTAC", identifier: "SaintMereEgliseTACViewController")
+            self.pushToViewController(storyboardName: "SainteMereEgliseTAC", identifier: "SainteMereEgliseTACViewController")
         case 10:
             self.pushToViewController(storyboardName: "StalingradTAC", identifier: "StalingradTACViewController")
         case 11:

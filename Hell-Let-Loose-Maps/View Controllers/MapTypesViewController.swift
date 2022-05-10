@@ -34,9 +34,12 @@ extension MapTypesViewController: DataSourceDelegate {
     func didSelectCell(indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            self.pushToViewController(storyboardName: "StrongpointsMaps", identifier: "StrongpointsMapsViewController")
+            self.pushToViewController(storyboardName: "BaseLayerMaps", identifier: "BaseLayerMapsViewController")
         case 1:
+            self.pushToViewController(storyboardName: "StrongpointsMaps", identifier: "StrongpointsMapsViewController")
+        case 2:
             self.pushToViewController(storyboardName: "TACMaps", identifier: "TACMapsViewController")
+
         default:
         break
         }

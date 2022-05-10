@@ -9,7 +9,7 @@ import UIKit
 
 class StrongpointsMapsViewController: BaseViewController {
 
-    @IBOutlet var mapsListDataSource: TACMapsListDataSource!
+    @IBOutlet var strongpointsMapsDataSource: StrongpointsMapsDataSource!
     
     override func viewWillAppear(_ animated: Bool) {
         loadMapsListDataSource()
@@ -21,7 +21,7 @@ class StrongpointsMapsViewController: BaseViewController {
     }
     
     func loadMapsListDataSource() {
-        mapsListDataSource.setup(dataSourceDelegate: self)
+        strongpointsMapsDataSource.setup(dataSourceDelegate: self)
     }
     
 
@@ -61,9 +61,9 @@ extension StrongpointsMapsViewController: DataSourceDelegate {
         case 7:
             self.pushToViewController(storyboardName: "RemagenStrongpoints", identifier: "RemagenStrongpointsViewController")
         case 8:
-            self.pushToViewController(storyboardName: "SaintMarieDuMontStrongpoints", identifier: "SaintMarieDuMontStrongpointsViewController")
+            self.pushToViewController(storyboardName: "SainteMarieduMontStrongpoints", identifier: "SainteMarieduMontStrongpointsViewController")
         case 9:
-            self.pushToViewController(storyboardName: "SaintMereEgliseStrongpoints", identifier: "SaintMereEgliseStrongpointsViewController")
+            self.pushToViewController(storyboardName: "SainteMereEgliseStrongpoints", identifier: "SainteMereEgliseStrongpointsViewController")
         case 10:
             self.pushToViewController(storyboardName: "StalingradStrongpoints", identifier: "StalingradStrongpointsViewController")
         case 11:

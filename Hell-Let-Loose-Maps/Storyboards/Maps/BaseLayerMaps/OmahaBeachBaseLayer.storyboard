@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ipc-1W-mwd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--OmahaBeachBaseLayer-->
+        <scene sceneID="1Al-6j-98L">
+            <objects>
+                <viewController storyboardIdentifier="OmahaBeachBaseLayerViewController" title="OmahaBeachBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="koJ-Da-j9B" customClass="OmahaBeachBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mcj-RR-x9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIf-l6-R6b">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OmahaBeachBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="wHB-5o-OyA">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wHB-5o-OyA" firstAttribute="leading" secondItem="dIf-l6-R6b" secondAttribute="leading" id="OGT-BS-mkr"/>
+                                    <constraint firstItem="wHB-5o-OyA" firstAttribute="top" secondItem="dIf-l6-R6b" secondAttribute="top" constant="-22" id="OPt-fU-heQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="wHB-5o-OyA" secondAttribute="trailing" id="lS0-6t-stl"/>
+                                    <constraint firstAttribute="bottom" secondItem="wHB-5o-OyA" secondAttribute="bottom" constant="-22" id="umH-GO-RyP"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZJ7-jD-zBF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pjX-Kv-T7K"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="87i-7p-8x1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dIf-l6-R6b" firstAttribute="centerX" secondItem="mcj-RR-x9o" secondAttribute="centerX" id="CK2-yI-D54"/>
+                            <constraint firstItem="dIf-l6-R6b" firstAttribute="top" secondItem="87i-7p-8x1" secondAttribute="top" id="SoB-y6-9X2"/>
+                            <constraint firstItem="dIf-l6-R6b" firstAttribute="leading" secondItem="87i-7p-8x1" secondAttribute="leading" id="Xpd-Zy-IFY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dIf-l6-R6b" secondAttribute="bottom" constant="-34" id="g1C-i6-fLU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Omaha Beach" id="GBd-K9-LGM"/>
+                    <connections>
+                        <outlet property="imageView" destination="wHB-5o-OyA" id="mbr-AR-YS4"/>
+                        <outlet property="imageViewBottomConstraint" destination="umH-GO-RyP" id="S6s-xD-Hht"/>
+                        <outlet property="imageViewLeadingConstraint" destination="OGT-BS-mkr" id="1gk-qw-s9c"/>
+                        <outlet property="imageViewTopConstraint" destination="OPt-fU-heQ" id="gDR-XD-C2c"/>
+                        <outlet property="imageViewTrailingConstraint" destination="lS0-6t-stl" id="q5c-Jc-RcE"/>
+                        <outlet property="scrollView" destination="dIf-l6-R6b" id="bg5-Ls-GQV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCH-qh-E5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nyL-6K-KGX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ipc-1W-mwd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NZo-CV-Tc4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="koJ-Da-j9B" kind="relationship" relationship="rootViewController" id="a5N-2f-zez"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGE-2Q-cXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OmahaBeachBaseLayer" width="1920" height="1920"/>
+    </resources>
+</document>

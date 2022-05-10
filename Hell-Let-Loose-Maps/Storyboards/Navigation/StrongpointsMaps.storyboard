@@ -34,9 +34,9 @@
                             <constraint firstItem="uUd-6t-XS2" firstAttribute="trailing" secondItem="uI6-B8-hg8" secondAttribute="trailing" id="bKW-xX-2wj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Strongpoint Maps" id="Jxb-aD-iQs"/>
+                    <navigationItem key="navigationItem" title="Strongpoints" id="Jxb-aD-iQs"/>
                     <connections>
-                        <outlet property="mapsListDataSource" destination="A32-NT-kIs" id="PTt-gt-32y"/>
+                        <outlet property="strongpointsMapsDataSource" destination="A32-NT-kIs" id="6Vi-3I-0lp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFd-4U-XeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

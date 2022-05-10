@@ -10,7 +10,7 @@ import UIKit
 
 class StrongpointsMapsDataSource: NSObject {
     
-    private var mapsList = MapsListDictionary().strongPointMapsListDictionary
+    private var mapsList = MapsListDictionary().mapsListDictionary
 
     var delegate: DataSourceDelegate?
 

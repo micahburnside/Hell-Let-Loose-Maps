@@ -34,9 +34,9 @@
                             <constraint firstItem="mZy-oP-Sg9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fPa-eU-C2s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TAC Maps" id="zQx-uD-DhQ"/>
+                    <navigationItem key="navigationItem" title="TACs" id="zQx-uD-DhQ"/>
                     <connections>
-                        <outlet property="tacMapsListDataSource" destination="Cv8-XZ-ots" id="btf-v5-VfT"/>
+                        <outlet property="tacMapsListDataSource" destination="Cv8-XZ-ots" id="VF2-YT-X0O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

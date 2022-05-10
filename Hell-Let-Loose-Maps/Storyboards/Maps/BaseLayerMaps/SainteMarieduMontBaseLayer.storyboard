@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SainteMarieduMont-->
+        <scene sceneID="wAf-2x-8Y8">
+            <objects>
+                <viewController storyboardIdentifier="SainteMarieduMontBaseLayerViewController" title="SainteMarieduMont" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aty-wk-lWf" customClass="SainteMarieduMontBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wNs-K9-OFn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlP-hL-EQ6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SainteMarieduMontBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="lMD-om-45Q">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lMD-om-45Q" firstAttribute="top" secondItem="DlP-hL-EQ6" secondAttribute="top" constant="-22" id="lg3-3b-ila"/>
+                                    <constraint firstAttribute="bottom" secondItem="lMD-om-45Q" secondAttribute="bottom" constant="-22" id="lpI-eg-vaa"/>
+                                    <constraint firstAttribute="trailing" secondItem="lMD-om-45Q" secondAttribute="trailing" id="sRm-wR-JqW"/>
+                                    <constraint firstItem="lMD-om-45Q" firstAttribute="leading" secondItem="DlP-hL-EQ6" secondAttribute="leading" id="uOx-WM-fcD"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nKn-UP-Jcj"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="XNl-Bh-4Du"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pA9-Ga-CAF"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DlP-hL-EQ6" firstAttribute="leading" secondItem="pA9-Ga-CAF" secondAttribute="leading" id="HSb-4q-PcO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DlP-hL-EQ6" secondAttribute="bottom" constant="-34" id="QR8-Xr-2XJ"/>
+                            <constraint firstItem="DlP-hL-EQ6" firstAttribute="centerX" secondItem="wNs-K9-OFn" secondAttribute="centerX" id="R6o-NC-zOk"/>
+                            <constraint firstItem="DlP-hL-EQ6" firstAttribute="top" secondItem="pA9-Ga-CAF" secondAttribute="top" id="eT4-Yy-A2s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Saint Marie du Mont" id="UMA-Xh-P3Y"/>
+                    <connections>
+                        <outlet property="imageView" destination="lMD-om-45Q" id="acp-v3-QQZ"/>
+                        <outlet property="imageViewBottomConstraint" destination="lpI-eg-vaa" id="LMS-f1-Hxk"/>
+                        <outlet property="imageViewLeadingConstraint" destination="uOx-WM-fcD" id="eDy-M9-zqw"/>
+                        <outlet property="imageViewTopConstraint" destination="lg3-3b-ila" id="Qms-U2-iS7"/>
+                        <outlet property="imageViewTrailingConstraint" destination="sRm-wR-JqW" id="PE1-jA-dgq"/>
+                        <outlet property="scrollView" destination="DlP-hL-EQ6" id="ind-QP-X9F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDK-1F-2UY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cH2-T2-vXX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hSv-hx-afa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7YA-SH-Nfl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Aty-wk-lWf" kind="relationship" relationship="rootViewController" id="9u9-75-q2B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YfL-5v-rso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SainteMarieduMontBaseLayer" width="1920" height="1920"/>
+    </resources>
+</document>

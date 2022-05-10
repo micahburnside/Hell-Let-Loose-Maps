@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XjS-Qj-qqd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--KurskBaseLayer-->
+        <scene sceneID="Uxm-N3-5x5">
+            <objects>
+                <viewController storyboardIdentifier="KurskBaseLayerViewController" title="KurskBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bcJ-a0-eD3" customClass="KurskBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P45-23-QWM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-OK-qch">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KurskBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="ci9-Wv-9jj">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ci9-Wv-9jj" firstAttribute="top" secondItem="pKg-OK-qch" secondAttribute="top" constant="-22" id="82G-HJ-xdE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ci9-Wv-9jj" secondAttribute="bottom" constant="-22" id="gZ9-bj-JeA"/>
+                                    <constraint firstItem="ci9-Wv-9jj" firstAttribute="leading" secondItem="pKg-OK-qch" secondAttribute="leading" id="jNI-yL-hs8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ci9-Wv-9jj" secondAttribute="trailing" id="wFE-7l-9vM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pZy-od-yQU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wl0-XM-3rf"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="560-dB-gza"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="pKg-OK-qch" secondAttribute="bottom" constant="-34" id="AIv-qV-4tD"/>
+                            <constraint firstItem="pKg-OK-qch" firstAttribute="top" secondItem="560-dB-gza" secondAttribute="top" id="QMZ-CP-ZYQ"/>
+                            <constraint firstItem="pKg-OK-qch" firstAttribute="centerX" secondItem="P45-23-QWM" secondAttribute="centerX" id="cbs-HG-Nd4"/>
+                            <constraint firstItem="pKg-OK-qch" firstAttribute="leading" secondItem="560-dB-gza" secondAttribute="leading" id="keD-OS-iVJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kursk" id="X10-h9-PER"/>
+                    <connections>
+                        <outlet property="imageView" destination="ci9-Wv-9jj" id="i0t-zY-yY2"/>
+                        <outlet property="imageViewBottomConstraint" destination="gZ9-bj-JeA" id="Qou-Q0-EF5"/>
+                        <outlet property="imageViewLeadingConstraint" destination="jNI-yL-hs8" id="9Pw-kc-FeZ"/>
+                        <outlet property="imageViewTopConstraint" destination="82G-HJ-xdE" id="mPg-xJ-aNl"/>
+                        <outlet property="imageViewTrailingConstraint" destination="wFE-7l-9vM" id="w1G-AG-fR9"/>
+                        <outlet property="scrollView" destination="pKg-OK-qch" id="qad-8F-Fep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUA-X3-7KX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qvT-q5-NXr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XjS-Qj-qqd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Qc-Yr-yfJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bcJ-a0-eD3" kind="relationship" relationship="rootViewController" id="nSd-uF-lj9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfp-q6-b80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="KurskBaseLayer" width="1920" height="1920"/>
+    </resources>
+</document>

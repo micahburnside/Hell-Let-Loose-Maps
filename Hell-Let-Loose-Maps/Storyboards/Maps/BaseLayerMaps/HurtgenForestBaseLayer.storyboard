@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLz-cu-apT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HurtgenForestBaseLayer-->
+        <scene sceneID="YyO-2z-XaY">
+            <objects>
+                <viewController storyboardIdentifier="HurtgenForestBaseLayerViewController" title="HurtgenForestBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rhK-Y0-w1M" customClass="HurtgenForestBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Yu-qW-J7h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WS8-IP-IOz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HürtgenForestBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="t1V-V0-xm4">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="t1V-V0-xm4" secondAttribute="trailing" id="72R-Y4-3NK"/>
+                                    <constraint firstItem="t1V-V0-xm4" firstAttribute="leading" secondItem="WS8-IP-IOz" secondAttribute="leading" id="E9d-tb-AlG"/>
+                                    <constraint firstItem="t1V-V0-xm4" firstAttribute="top" secondItem="WS8-IP-IOz" secondAttribute="top" constant="-22" id="Q6C-BX-ytB"/>
+                                    <constraint firstAttribute="bottom" secondItem="t1V-V0-xm4" secondAttribute="bottom" constant="-22" id="yAU-sH-Kzq"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aZU-A3-Lqc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BiK-rZ-e7M"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d79-F4-2jH"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WS8-IP-IOz" firstAttribute="centerX" secondItem="7Yu-qW-J7h" secondAttribute="centerX" id="Juu-uS-Pya"/>
+                            <constraint firstItem="WS8-IP-IOz" firstAttribute="top" secondItem="d79-F4-2jH" secondAttribute="top" id="akv-kp-YFq"/>
+                            <constraint firstItem="WS8-IP-IOz" firstAttribute="leading" secondItem="d79-F4-2jH" secondAttribute="leading" id="e9A-GW-qiq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="WS8-IP-IOz" secondAttribute="bottom" constant="-34" id="oG6-AZ-24q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hürtgen Forest" id="rJo-eR-3lp"/>
+                    <connections>
+                        <outlet property="imageView" destination="t1V-V0-xm4" id="3zh-LK-OLC"/>
+                        <outlet property="imageViewBottomConstraint" destination="yAU-sH-Kzq" id="fOD-7b-iFx"/>
+                        <outlet property="imageViewLeadingConstraint" destination="E9d-tb-AlG" id="HN4-Wk-Iou"/>
+                        <outlet property="imageViewTopConstraint" destination="Q6C-BX-ytB" id="N3x-2K-BGA"/>
+                        <outlet property="imageViewTrailingConstraint" destination="72R-Y4-3NK" id="kzv-kY-hfu"/>
+                        <outlet property="scrollView" destination="WS8-IP-IOz" id="OOp-ZW-22n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buE-8Z-xF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oAg-fg-ZZ6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aLz-cu-apT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YZS-ez-2td">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rhK-Y0-w1M" kind="relationship" relationship="rootViewController" id="I8R-8j-qN5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5e-bW-ZA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HürtgenForestBaseLayer" width="1920" height="1920"/>
+    </resources>
+</document>

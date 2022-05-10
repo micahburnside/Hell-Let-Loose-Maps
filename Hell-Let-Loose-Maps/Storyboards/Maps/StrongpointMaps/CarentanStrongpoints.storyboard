@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NKD-I7-s8w">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CarentanStrongpoints-->
+        <scene sceneID="bFh-NT-D13">
+            <objects>
+                <viewController storyboardIdentifier="CarentanStrongpointsViewController" title="CarentanStrongpoints" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8i3-jq-jVI" customClass="CarentanStrongpointsViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YU2-tf-AsR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-YQ-vWB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarentanStrongpoints" translatesAutoresizingMaskIntoConstraints="NO" id="lU3-TD-i8d">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lU3-TD-i8d" firstAttribute="leading" secondItem="SEr-YQ-vWB" secondAttribute="leading" id="9MC-F1-WqH"/>
+                                    <constraint firstAttribute="bottom" secondItem="lU3-TD-i8d" secondAttribute="bottom" constant="-22" id="KVV-Nd-uAu"/>
+                                    <constraint firstItem="lU3-TD-i8d" firstAttribute="top" secondItem="SEr-YQ-vWB" secondAttribute="top" constant="-22" id="OjQ-Ce-SKM"/>
+                                    <constraint firstAttribute="trailing" secondItem="lU3-TD-i8d" secondAttribute="trailing" id="TcQ-g6-MPX"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4U1-bc-eOP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="gDH-7V-UdO"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HGH-fQ-sQm"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SEr-YQ-vWB" firstAttribute="top" secondItem="HGH-fQ-sQm" secondAttribute="top" id="ENY-fb-ck3"/>
+                            <constraint firstItem="SEr-YQ-vWB" firstAttribute="centerX" secondItem="YU2-tf-AsR" secondAttribute="centerX" id="Pp5-wQ-ymG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SEr-YQ-vWB" secondAttribute="bottom" constant="-34" id="QeH-Na-Zlk"/>
+                            <constraint firstItem="SEr-YQ-vWB" firstAttribute="leading" secondItem="HGH-fQ-sQm" secondAttribute="leading" id="pIY-fW-BwA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Carentan" id="fFK-1q-uF8"/>
+                    <connections>
+                        <outlet property="imageView" destination="lU3-TD-i8d" id="JBO-7I-2q9"/>
+                        <outlet property="imageViewBottomConstraint" destination="KVV-Nd-uAu" id="HhT-1C-MXz"/>
+                        <outlet property="imageViewLeadingConstraint" destination="9MC-F1-WqH" id="Q5k-v8-V62"/>
+                        <outlet property="imageViewTopConstraint" destination="OjQ-Ce-SKM" id="pc1-yG-n5M"/>
+                        <outlet property="imageViewTrailingConstraint" destination="TcQ-g6-MPX" id="2Lt-Dl-zLE"/>
+                        <outlet property="scrollView" destination="SEr-YQ-vWB" id="Noy-hY-cIM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgO-Cq-dhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I6K-mo-ABD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKD-I7-s8w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vJP-se-Iam">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8i3-jq-jVI" kind="relationship" relationship="rootViewController" id="92z-Zs-lEO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcB-IE-ydM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CarentanStrongpoints" width="1920" height="1920"/>
+    </resources>
+</document>

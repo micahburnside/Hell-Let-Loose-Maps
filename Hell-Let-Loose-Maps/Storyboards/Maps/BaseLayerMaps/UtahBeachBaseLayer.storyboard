@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UtahBeachBaseLayer-->
+        <scene sceneID="9N9-9t-Kmb">
+            <objects>
+                <viewController storyboardIdentifier="UtahBeachBaseLayerViewController" title="UtahBeachBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pE4-ik-yv9" customClass="UtahBeachBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V57-8U-m71">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ipk-gm-maE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UtahBeachBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="UgK-8x-dQP">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UgK-8x-dQP" firstAttribute="leading" secondItem="Ipk-gm-maE" secondAttribute="leading" id="D9G-1q-Azq"/>
+                                    <constraint firstAttribute="trailing" secondItem="UgK-8x-dQP" secondAttribute="trailing" id="M4J-Rd-fNw"/>
+                                    <constraint firstAttribute="bottom" secondItem="UgK-8x-dQP" secondAttribute="bottom" constant="-22" id="fdu-OY-IkK"/>
+                                    <constraint firstItem="UgK-8x-dQP" firstAttribute="top" secondItem="Ipk-gm-maE" secondAttribute="top" constant="-22" id="rC9-A5-gWB"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="BdB-HT-h8t"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Kg5-4O-fo9"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D7c-1d-ggR"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ipk-gm-maE" firstAttribute="centerX" secondItem="V57-8U-m71" secondAttribute="centerX" id="Iua-01-z8g"/>
+                            <constraint firstItem="Ipk-gm-maE" firstAttribute="leading" secondItem="D7c-1d-ggR" secondAttribute="leading" id="iXc-0T-Fkw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ipk-gm-maE" secondAttribute="bottom" constant="-34" id="uY9-Dl-Ybm"/>
+                            <constraint firstItem="Ipk-gm-maE" firstAttribute="top" secondItem="D7c-1d-ggR" secondAttribute="top" id="zLO-9h-Idn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Utah Beach" id="P9W-no-BX3"/>
+                    <connections>
+                        <outlet property="imageView" destination="UgK-8x-dQP" id="fiH-ly-WEl"/>
+                        <outlet property="imageViewBottomConstraint" destination="fdu-OY-IkK" id="Cy4-vl-fTf"/>
+                        <outlet property="imageViewLeadingConstraint" destination="D9G-1q-Azq" id="YJy-nO-kCK"/>
+                        <outlet property="imageViewTopConstraint" destination="rC9-A5-gWB" id="DXi-xp-Zz9"/>
+                        <outlet property="imageViewTrailingConstraint" destination="M4J-Rd-fNw" id="lgB-8U-xEP"/>
+                        <outlet property="scrollView" destination="Ipk-gm-maE" id="UeK-Mm-l7n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7o5-9J-bYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Znd-xG-FNs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PqQ-bF-rau" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t87-A5-gNw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pE4-ik-yv9" kind="relationship" relationship="rootViewController" id="rcB-Ty-93s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GmK-TA-wQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="UtahBeachBaseLayer" width="1920" height="1920"/>
+    </resources>
+</document>

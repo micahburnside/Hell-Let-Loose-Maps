@@ -10,7 +10,7 @@ import UIKit
 
 class TACMapsListDataSource: NSObject {
     
-    private var mapsList = MapsListDictionary().tacMapsListDictionary
+    private var mapsList = MapsListDictionary().mapsListDictionary
 
     var delegate: DataSourceDelegate?
 
@@ -19,7 +19,7 @@ class TACMapsListDataSource: NSObject {
 
     func setup(dataSourceDelegate: DataSourceDelegate) {
         self.delegate = dataSourceDelegate
-        self.tableView.register(UINib(nibName: "MapsListTableViewCell", bundle: nil), forCellReuseIdentifier: "MapsListTableViewCell")
+        self.tableView.register(UINib(nibName: "TACMapsListTableViewCell", bundle: nil), forCellReuseIdentifier: "TACMapsListTableViewCell")
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         self.keys = Array(self.mapsList.keys.sorted(by: {$0.localizedStandardCompare($1) == .orderedAscending}))
@@ -51,7 +51,7 @@ extension TACMapsListDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MapsListTableViewCell", for: indexPath) as! MapsListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TACMapsListTableViewCell", for: indexPath) as! TACMapsListTableViewCell
         let key = keys[indexPath.row]
 
         cell.primaryText = "\(key)"

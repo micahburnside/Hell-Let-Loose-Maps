@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7g2-x7-fkA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RemagenStrongpoints-->
+        <scene sceneID="hyf-cy-wAd">
+            <objects>
+                <viewController storyboardIdentifier="RemagenStrongpointsViewController" title="RemagenStrongpoints" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i7t-Pp-C8G" customClass="RemagenStrongpointsViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9xz-kU-3xU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCS-MJ-0u1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RemagenStrongpoints" translatesAutoresizingMaskIntoConstraints="NO" id="vtl-9g-Ct1">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vtl-9g-Ct1" firstAttribute="leading" secondItem="HCS-MJ-0u1" secondAttribute="leading" id="0js-nN-hzz"/>
+                                    <constraint firstAttribute="trailing" secondItem="vtl-9g-Ct1" secondAttribute="trailing" id="6Wd-P7-WgT"/>
+                                    <constraint firstAttribute="bottom" secondItem="vtl-9g-Ct1" secondAttribute="bottom" constant="-22" id="A1H-mO-aTc"/>
+                                    <constraint firstItem="vtl-9g-Ct1" firstAttribute="top" secondItem="HCS-MJ-0u1" secondAttribute="top" constant="-22" id="VpA-qG-bKN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="lw8-Zy-w6X"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="i4E-zo-0dG"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Ni-Sl-5VI"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HCS-MJ-0u1" firstAttribute="leading" secondItem="6Ni-Sl-5VI" secondAttribute="leading" id="4Re-FL-yG7"/>
+                            <constraint firstItem="HCS-MJ-0u1" firstAttribute="centerX" secondItem="9xz-kU-3xU" secondAttribute="centerX" id="9ax-vF-s87"/>
+                            <constraint firstItem="HCS-MJ-0u1" firstAttribute="top" secondItem="6Ni-Sl-5VI" secondAttribute="top" id="KSk-eQ-Zgq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="HCS-MJ-0u1" secondAttribute="bottom" constant="-34" id="yAJ-Qu-yul"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remagen" id="ztd-7U-UY5"/>
+                    <connections>
+                        <outlet property="imageView" destination="vtl-9g-Ct1" id="2rK-gx-apZ"/>
+                        <outlet property="imageViewBottomConstraint" destination="A1H-mO-aTc" id="cPb-Y2-c4o"/>
+                        <outlet property="imageViewLeadingConstraint" destination="0js-nN-hzz" id="Xxr-wl-kCr"/>
+                        <outlet property="imageViewTopConstraint" destination="VpA-qG-bKN" id="hob-CU-yO4"/>
+                        <outlet property="imageViewTrailingConstraint" destination="6Wd-P7-WgT" id="rnY-oC-tcr"/>
+                        <outlet property="scrollView" destination="HCS-MJ-0u1" id="2ak-Rg-z7l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byn-Xd-jDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="axt-3o-XjZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7g2-x7-fkA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hqN-NG-nbZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i7t-Pp-C8G" kind="relationship" relationship="rootViewController" id="XBv-ur-LYQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVS-za-SkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RemagenStrongpoints" width="1920" height="1920"/>
+    </resources>
+</document>
