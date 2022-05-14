@@ -21,9 +21,7 @@ class Hill400BaseLayerViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+            self.imageView.image = getMap(mapName: .Hill400, layerType: .Hill400BaseLayer)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {

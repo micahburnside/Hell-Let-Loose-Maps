@@ -21,9 +21,7 @@ class KurskStrongpointsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+        self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskStrongpoints)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {

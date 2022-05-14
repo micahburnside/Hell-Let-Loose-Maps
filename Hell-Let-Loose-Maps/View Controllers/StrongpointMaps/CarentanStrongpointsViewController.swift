@@ -21,9 +21,7 @@ class CarentanStrongpointsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+        self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanStrongpoints)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {

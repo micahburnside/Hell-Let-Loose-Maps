@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UtahBeachStrongpoints" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-cn-67a">
-                                        <rect key="frame" x="0.0" y="-22" width="1308" height="1308"/>
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -85,6 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="UtahBeachStrongpoints" width="1308" height="1308"/>
+        <image name="UtahBeachStrongpoints" width="1920" height="1920"/>
     </resources>
 </document>

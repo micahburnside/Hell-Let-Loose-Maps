@@ -10,7 +10,7 @@ import Foundation
 struct MapsListDictionary {
     
     let mapTypesDictionary: [String : String] = [
-        "Base Layers" : "Base layer map without overlay",
+        "BaseLayers" : "Base layer map without overlay",
         "TACs" : "Map with grid overlay",
         "Strongpoints" : "TAC map with strongpoints overlay",
 
@@ -32,4 +32,11 @@ struct MapsListDictionary {
         
     ]
 
+    let layerTypesDictionary: [String : Int] = [
+        "BaseLayer" : 0,
+        "TAC" : 1,
+        "Strongpoints" : 2,
+
+    ]
+    
 }

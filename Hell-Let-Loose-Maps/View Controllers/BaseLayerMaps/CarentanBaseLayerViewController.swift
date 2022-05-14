@@ -7,28 +7,36 @@
 
 import UIKit
 
-class CarentanBaseLayerViewController: BaseViewController {
+class CarentanBaseLayerViewController: BaseViewController, UIAdaptivePresentationControllerDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var layerButton: UIBarButtonItem!
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
-    var photoName: String?
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+            self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {
       super.viewWillLayoutSubviews()
         updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navController = segue.destination as? UINavigationController,
+            let controller = navController.viewControllers.first as? SelectLayerViewController {            
+            controller.preferredContentSize = CGSize(width: 300, height: 150)
+            navController.presentationController?.delegate = self
+        }
     }
 }
 //MARK:- Sizing
@@ -38,7 +46,7 @@ extension CarentanBaseLayerViewController {
 
         scrollView.minimumZoomScale = 0.2
         scrollView.maximumZoomScale = 5.0
-        
+                
     }
     
     func updateConstraintsForSize(_ size: CGSize) {

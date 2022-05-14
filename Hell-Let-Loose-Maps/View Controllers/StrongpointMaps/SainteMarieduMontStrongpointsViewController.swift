@@ -21,9 +21,7 @@ class SainteMarieduMontStrongpointsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+        self.imageView.image = getMap(mapName: .SainteMarieduMont, layerType: .SainteMarieduMontStrongpoints)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {

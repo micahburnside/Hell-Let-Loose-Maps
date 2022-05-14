@@ -17,16 +17,11 @@ class CarentanTACViewController: BaseViewController {
     @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+        self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanTAC)
         scrollView.delegate = self
-        
     }
     
     override func viewWillLayoutSubviews() {
@@ -34,16 +29,13 @@ class CarentanTACViewController: BaseViewController {
         updateMinZoomScaleForSize(view.bounds.size)
     }
 
-
 }
 //MARK:- Sizing
 extension CarentanTACViewController {
     
   func updateMinZoomScaleForSize(_ size: CGSize) {
-
       scrollView.minimumZoomScale = 0.2
       scrollView.maximumZoomScale = 5.0
-      
   }
   
   func updateConstraintsForSize(_ size: CGSize) {
@@ -54,7 +46,6 @@ extension CarentanTACViewController {
     let xOffset = max(0, (size.width - imageView.frame.width) / 2)
     imageViewLeadingConstraint.constant = xOffset
     imageViewTrailingConstraint.constant = xOffset
-
     view.layoutIfNeeded()
   }
 }

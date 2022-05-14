@@ -21,9 +21,7 @@ class HurtgenForestBaseLayerViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+            self.imageView.image = getMap(mapName: .HurtgenForest, layerType: .HurtgenForestBaseLayer)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {

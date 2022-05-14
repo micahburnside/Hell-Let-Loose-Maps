@@ -17,23 +17,12 @@ class UtahBeachTACViewController: BaseViewController {
     @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+        self.imageView.image = getMap(mapName: .UtahBeach, layerType: .UtahBeachTAC)
         scrollView.delegate = self
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
-//            tap.numberOfTapsRequired = 2
-//            view.addGestureRecognizer(tap)
     }
-    
-//    @objc func doubleTapped() {
-//        print("doubleTapped Pressed")
-//    }
     
     override func viewWillLayoutSubviews() {
       super.viewWillLayoutSubviews()

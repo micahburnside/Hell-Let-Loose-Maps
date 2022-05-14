@@ -21,9 +21,7 @@ class SainteMarieduMontBaseLayerViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+            self.imageView.image = getMap(mapName: .SainteMarieduMont, layerType: .SainteMarieduMontBaseLayer)        
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {

@@ -21,9 +21,7 @@ class PurpleHeartLaneStrongpointsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+        self.imageView.image = getMap(mapName: .PurpleHeartLane, layerType: .PurpleHeartLaneStrongpoints)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {

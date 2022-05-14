@@ -21,9 +21,7 @@ class UtahBeachBaseLayerViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let photoName = photoName {
-          imageView.image = UIImage(named: photoName)
-        }
+        self.imageView.image = getMap(mapName: .UtahBeach, layerType: .UtahBeachBaseLayer)
         scrollView.delegate = self
     }
     override func viewWillLayoutSubviews() {
