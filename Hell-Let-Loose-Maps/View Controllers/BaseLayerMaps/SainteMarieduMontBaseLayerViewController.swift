@@ -72,13 +72,10 @@ extension SainteMarieduMontBaseLayerViewController: UIScrollViewDelegate {
 extension SainteMarieduMontBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .SainteMarieduMont, layerType: .SainteMarieduMontStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .SainteMarieduMont, layerType: .SainteMarieduMontTAC)
 
     }

@@ -74,13 +74,10 @@ extension KurskBaseLayerViewController: UIScrollViewDelegate {
 extension KurskBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskTAC)
 
     }

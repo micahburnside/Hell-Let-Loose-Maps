@@ -72,13 +72,10 @@ extension PurpleHeartLaneBaseLayerViewController: UIScrollViewDelegate {
 extension PurpleHeartLaneBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .PurpleHeartLane, layerType: .PurpleHeartLaneStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .PurpleHeartLane, layerType: .PurpleHeartLaneTAC)
 
     }

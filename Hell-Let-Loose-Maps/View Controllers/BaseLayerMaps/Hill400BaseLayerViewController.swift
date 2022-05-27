@@ -73,13 +73,10 @@ extension Hill400BaseLayerViewController: UIScrollViewDelegate {
 extension Hill400BaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .Hill400, layerType: .Hill400Strongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .Hill400, layerType: .Hill400TAC)
 
     }

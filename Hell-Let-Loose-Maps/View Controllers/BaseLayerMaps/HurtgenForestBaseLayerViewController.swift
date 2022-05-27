@@ -71,13 +71,10 @@ extension HurtgenForestBaseLayerViewController: UIScrollViewDelegate {
 
 extension HurtgenForestBaseLayerViewController: UpdateMapDelegate {
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .HurtgenForest, layerType: .HurtgenForestStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .HurtgenForest, layerType: .HurtgenForestTAC)
     }
 }

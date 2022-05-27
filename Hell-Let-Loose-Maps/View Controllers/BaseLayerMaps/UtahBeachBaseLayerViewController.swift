@@ -72,13 +72,10 @@ extension UtahBeachBaseLayerViewController: UIScrollViewDelegate {
 extension UtahBeachBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .UtahBeach, layerType: .UtahBeachStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .UtahBeach, layerType: .UtahBeachTAC)
 
     }

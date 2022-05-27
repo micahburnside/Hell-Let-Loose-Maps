@@ -72,13 +72,10 @@ extension RemagenBaseLayerViewController: UIScrollViewDelegate {
 extension RemagenBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .Remagen, layerType: .RemagenStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .Remagen, layerType: .RemagenTAC)
 
     }

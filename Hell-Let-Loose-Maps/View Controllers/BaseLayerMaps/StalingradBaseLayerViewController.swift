@@ -72,13 +72,10 @@ extension StalingradBaseLayerViewController: UIScrollViewDelegate {
 extension StalingradBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .Stalingrad, layerType: .StalingradStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .Stalingrad, layerType: .StalingradTAC)
 
     }

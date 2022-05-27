@@ -72,13 +72,10 @@ extension OmahaBeachBaseLayerViewController: UIScrollViewDelegate {
 extension OmahaBeachBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .OmahaBeach, layerType: .OmahaBeachStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .OmahaBeach, layerType: .OmahaBeachTAC)
 
     }

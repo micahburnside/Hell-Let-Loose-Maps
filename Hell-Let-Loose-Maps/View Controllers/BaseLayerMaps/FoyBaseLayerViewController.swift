@@ -74,13 +74,10 @@ extension FoyBaseLayerViewController: UIScrollViewDelegate {
 extension FoyBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .Foy, layerType: .FoyStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .Carentan, layerType: .FoyTAC)
 
     }

@@ -97,13 +97,10 @@ extension CarentanBaseLayerViewController: UIAdaptivePresentationControllerDeleg
 extension CarentanBaseLayerViewController: UpdateMapDelegate {
     
     func loadStrongpointsLayer() {
-        print("Carentan Strongpoints!!")
         self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanStrongpoints)
     }
     
     func loadTACLayer() {
-        print("Carentan TAC!!")
-
         self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanTAC)
 
     }
