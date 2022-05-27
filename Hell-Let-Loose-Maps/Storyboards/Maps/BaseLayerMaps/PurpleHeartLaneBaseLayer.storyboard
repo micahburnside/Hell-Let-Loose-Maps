@@ -43,7 +43,14 @@
                             <constraint firstItem="TVH-jQ-4yp" firstAttribute="centerX" secondItem="9iV-am-62Y" secondAttribute="centerX" id="sov-rc-TTi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Purple Heart Lane" id="uEV-2B-rOt"/>
+                    <navigationItem key="navigationItem" title="Purple Heart Lane" id="uEV-2B-rOt">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="7O4-SJ-7EK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="BQ2-Y2-0rm" id="lVR-xh-oTn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="SxF-bV-pDd" id="my9-nw-pS4"/>
                         <outlet property="imageViewBottomConstraint" destination="XWX-pK-sJH" id="1nF-VP-dD5"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="PurpleHeartLaneBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

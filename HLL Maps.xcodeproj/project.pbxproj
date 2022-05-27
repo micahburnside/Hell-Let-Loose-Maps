@@ -15,41 +15,12 @@
 		54141836281CC13200E0483B /* Hell_Let_Loose_MapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141835281CC13200E0483B /* Hell_Let_Loose_MapsTests.swift */; };
 		54141840281CC13200E0483B /* Hell_Let_Loose_MapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414183F281CC13200E0483B /* Hell_Let_Loose_MapsUITests.swift */; };
 		54141842281CC13200E0483B /* Hell_Let_Loose_MapsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141841281CC13200E0483B /* Hell_Let_Loose_MapsUITestsLaunchTests.swift */; };
-		5414185D281CC1D200E0483B /* TACMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141850281CC1D100E0483B /* TACMapsViewController.swift */; };
-		5414185E281CC1D200E0483B /* PurpleHeartLaneTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141851281CC1D100E0483B /* PurpleHeartLaneTACViewController.swift */; };
-		5414185F281CC1D200E0483B /* SainteMarieduMontTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141852281CC1D100E0483B /* SainteMarieduMontTACViewController.swift */; };
-		54141860281CC1D200E0483B /* FoyTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141853281CC1D100E0483B /* FoyTACViewController.swift */; };
-		54141861281CC1D200E0483B /* UtahBeachTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141854281CC1D100E0483B /* UtahBeachTACViewController.swift */; };
-		54141862281CC1D200E0483B /* StalingradTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141855281CC1D100E0483B /* StalingradTACViewController.swift */; };
-		54141863281CC1D200E0483B /* CarentanTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141856281CC1D100E0483B /* CarentanTACViewController.swift */; };
-		54141864281CC1D200E0483B /* RemagenTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141857281CC1D100E0483B /* RemagenTACViewController.swift */; };
-		54141865281CC1D200E0483B /* KurskTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141858281CC1D200E0483B /* KurskTACViewController.swift */; };
-		54141866281CC1D200E0483B /* SainteMereEgliseTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141859281CC1D200E0483B /* SainteMereEgliseTACViewController.swift */; };
-		54141867281CC1D200E0483B /* OmahaBeachTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414185A281CC1D200E0483B /* OmahaBeachTACViewController.swift */; };
-		54141868281CC1D200E0483B /* Hill400TACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414185B281CC1D200E0483B /* Hill400TACViewController.swift */; };
-		54141869281CC1D200E0483B /* HürtgenForestTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414185C281CC1D200E0483B /* HürtgenForestTACViewController.swift */; };
 		5414186D281CC1F200E0483B /* DataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414186B281CC1F200E0483B /* DataSourceDelegate.swift */; };
-		5414186E281CC1F200E0483B /* TACMapsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414186C281CC1F200E0483B /* TACMapsListDataSource.swift */; };
-		54141873281CC20E00E0483B /* TACMapsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141871281CC20E00E0483B /* TACMapsListTableViewCell.swift */; };
-		54141874281CC20E00E0483B /* TACMapsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54141872281CC20E00E0483B /* TACMapsListTableViewCell.xib */; };
-		54141882281CC21800E0483B /* CarentanTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54141875281CC21800E0483B /* CarentanTAC.storyboard */; };
 		54141892281CC22E00E0483B /* CustomUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141890281CC22E00E0483B /* CustomUITableViewCell.swift */; };
 		54141893281CC22E00E0483B /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141891281CC22E00E0483B /* NSObject+.swift */; };
 		54141896281CC24100E0483B /* MapsListDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141895281CC24100E0483B /* MapsListDictionary.swift */; };
 		54141899281CC2C500E0483B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141898281CC2C500E0483B /* BaseViewController.swift */; };
-		5414189B281DCDF300E0483B /* FoyTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5414189A281DCDF300E0483B /* FoyTAC.storyboard */; };
-		5414189D281DCE5800E0483B /* TACMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5414189C281DCE5800E0483B /* TACMaps.storyboard */; };
-		541418A1281DD01700E0483B /* HurtgenForestTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5414189E281DD01600E0483B /* HurtgenForestTAC.storyboard */; };
-		541418A2281DD01700E0483B /* Hill400TAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5414189F281DD01600E0483B /* Hill400TAC.storyboard */; };
-		541418A3281DD01700E0483B /* KurskTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418A0281DD01700E0483B /* KurskTAC.storyboard */; };
-		541418AB281DD03500E0483B /* OmahaBeachTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418A4281DD03500E0483B /* OmahaBeachTAC.storyboard */; };
-		541418AC281DD03500E0483B /* StalingradTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418A5281DD03500E0483B /* StalingradTAC.storyboard */; };
-		541418AD281DD03500E0483B /* SainteMarieduMontTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418A6281DD03500E0483B /* SainteMarieduMontTAC.storyboard */; };
-		541418AE281DD03500E0483B /* SainteMereEgliseTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418A7281DD03500E0483B /* SainteMereEgliseTAC.storyboard */; };
-		541418AF281DD03500E0483B /* RemagenTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418A8281DD03500E0483B /* RemagenTAC.storyboard */; };
-		541418B0281DD03500E0483B /* UtahBeachTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418A9281DD03500E0483B /* UtahBeachTAC.storyboard */; };
-		541418B1281DD03500E0483B /* PurpleHeartLaneTAC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541418AA281DD03500E0483B /* PurpleHeartLaneTAC.storyboard */; };
-		541418BD28245BE100E0483B /* StrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541418BC28245BE100E0483B /* StrongpointsViewController.swift */; };
+		549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AF31328404420005E1658 /* UpdateMapDelegate.swift */; };
 		54D081BE2829EFEC00542CB7 /* CarentanBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */; };
 		54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */; };
 		54D081C32829F0EC00542CB7 /* FoyBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */; };
@@ -79,45 +50,12 @@
 		54D081F32829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081F22829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard */; };
 		54D081F52829F7C300542CB7 /* UtahBeachBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081F42829F7C300542CB7 /* UtahBeachBaseLayer.storyboard */; };
 		54D081F7282A131400542CB7 /* StalingradBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081F6282A131400542CB7 /* StalingradBaseLayer.storyboard */; };
-		54D081FC282A6FB900542CB7 /* HLLMKMapLayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081FB282A6FB900542CB7 /* HLLMKMapLayerDelegate.swift */; };
-		54D0824A282EBF1800542CB7 /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D08249282EBF1800542CB7 /* OptionsTableViewController.swift */; };
-		54D0824D282EC9EC00542CB7 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0824B282EC9EC00542CB7 /* OptionsTableViewCell.swift */; };
-		54D0824E282EC9EC00542CB7 /* OptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D0824C282EC9EC00542CB7 /* OptionsTableViewCell.xib */; };
-		54D08256282F378A00542CB7 /* SelectLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D08255282F378A00542CB7 /* SelectLayerViewController.swift */; };
-		54D08258282F9EED00542CB7 /* MapLayerTypeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D08257282F9EED00542CB7 /* MapLayerTypeDelegate.swift */; };
-		54FA946D282461570045EFD2 /* CarentanStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA946C282461570045EFD2 /* CarentanStrongpoints.storyboard */; };
-		54FA94712824619C0045EFD2 /* FoyStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA94702824619C0045EFD2 /* FoyStrongpoints.storyboard */; };
-		54FA9473282461AF0045EFD2 /* Hill400Strongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA9472282461AF0045EFD2 /* Hill400Strongpoints.storyboard */; };
-		54FA9475282461C10045EFD2 /* HurtgenForestStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA9474282461C10045EFD2 /* HurtgenForestStrongpoints.storyboard */; };
-		54FA9477282461CF0045EFD2 /* KurskStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA9476282461CF0045EFD2 /* KurskStrongpoints.storyboard */; };
-		54FA9479282461DE0045EFD2 /* OmahaBeachStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA9478282461DE0045EFD2 /* OmahaBeachStrongpoints.storyboard */; };
-		54FA947B282461EE0045EFD2 /* PurpleHeartLaneStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA947A282461EE0045EFD2 /* PurpleHeartLaneStrongpoints.storyboard */; };
-		54FA947D282461FC0045EFD2 /* RemagenStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA947C282461FC0045EFD2 /* RemagenStrongpoints.storyboard */; };
-		54FA947F2824620F0045EFD2 /* SainteMarieduMontStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA947E2824620F0045EFD2 /* SainteMarieduMontStrongpoints.storyboard */; };
-		54FA94812824621D0045EFD2 /* SainteMereEgliseStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA94802824621D0045EFD2 /* SainteMereEgliseStrongpoints.storyboard */; };
-		54FA94832824622A0045EFD2 /* StalingradStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA94822824622A0045EFD2 /* StalingradStrongpoints.storyboard */; };
-		54FA9485282462370045EFD2 /* UtahBeachStrongpoints.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA9484282462370045EFD2 /* UtahBeachStrongpoints.storyboard */; };
-		54FA948B282466A90045EFD2 /* CarentanStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA948A282466A90045EFD2 /* CarentanStrongpointsViewController.swift */; };
-		54FA948D282466B20045EFD2 /* FoyStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA948C282466B20045EFD2 /* FoyStrongpointsViewController.swift */; };
-		54FA948F282466C10045EFD2 /* Hill400StrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA948E282466C10045EFD2 /* Hill400StrongpointsViewController.swift */; };
-		54FA9491282466D40045EFD2 /* HurtgenForestStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA9490282466D40045EFD2 /* HurtgenForestStrongpointsViewController.swift */; };
-		54FA9493282466E20045EFD2 /* KurskStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA9492282466E20045EFD2 /* KurskStrongpointsViewController.swift */; };
-		54FA9495282466EF0045EFD2 /* OmahaBeachStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA9494282466EF0045EFD2 /* OmahaBeachStrongpointsViewController.swift */; };
-		54FA9497282467000045EFD2 /* PurpleHeartLaneStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA9496282467000045EFD2 /* PurpleHeartLaneStrongpointsViewController.swift */; };
-		54FA94992824670C0045EFD2 /* RemagenStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA94982824670C0045EFD2 /* RemagenStrongpointsViewController.swift */; };
-		54FA949B282467200045EFD2 /* SainteMarieduMontStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA949A282467200045EFD2 /* SainteMarieduMontStrongpointsViewController.swift */; };
-		54FA949D2824672D0045EFD2 /* SainteMereEgliseStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA949C2824672C0045EFD2 /* SainteMereEgliseStrongpointsViewController.swift */; };
-		54FA949F2824673B0045EFD2 /* StalingradStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA949E2824673B0045EFD2 /* StalingradStrongpointsViewController.swift */; };
-		54FA94A12824674A0045EFD2 /* UtahBeachStrongpointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA94A02824674A0045EFD2 /* UtahBeachStrongpointsViewController.swift */; };
-		54FA94A3282478120045EFD2 /* StrongpointsMapsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA94A2282478120045EFD2 /* StrongpointsMapsDataSource.swift */; };
-		54FA94A5282478C80045EFD2 /* StrongpointsMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA94A4282478C80045EFD2 /* StrongpointsMaps.storyboard */; };
-		54FA94A828247A7D0045EFD2 /* StrongpointsMapsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA94A628247A7D0045EFD2 /* StrongpointsMapsTableViewCell.swift */; };
-		54FA94A928247A7D0045EFD2 /* StrongpointsMapsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FA94A728247A7D0045EFD2 /* StrongpointsMapsTableViewCell.xib */; };
-		54FA94AB28247B9F0045EFD2 /* MapTypesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA94AA28247B9F0045EFD2 /* MapTypesDataSource.swift */; };
-		54FA94AD28247BD50045EFD2 /* MapTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA94AC28247BD50045EFD2 /* MapTypesViewController.swift */; };
-		54FA94B028247C2C0045EFD2 /* MapTypesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA94AE28247C2C0045EFD2 /* MapTypesTableViewCell.swift */; };
-		54FA94B128247C2C0045EFD2 /* MapTypesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FA94AF28247C2C0045EFD2 /* MapTypesTableViewCell.xib */; };
-		54FA94B328247DBC0045EFD2 /* MapTypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FA94B228247DBC0045EFD2 /* MapTypes.storyboard */; };
+		54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0825D283057CE00542CB7 /* MapLayerSelectionDelegate.swift */; };
+		54D0826228330B0400542CB7 /* SelectLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D0826128330B0400542CB7 /* SelectLayer.storyboard */; };
+		54D0826428330B2500542CB7 /* SelectLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826328330B2500542CB7 /* SelectLayerViewController.swift */; };
+		54D0826728330B6900542CB7 /* SelectLayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826528330B6900542CB7 /* SelectLayerTableViewCell.swift */; };
+		54D0826828330B6900542CB7 /* SelectLayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D0826628330B6900542CB7 /* SelectLayerTableViewCell.xib */; };
+		54D0826A28330B7300542CB7 /* SelectLayerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826928330B7300542CB7 /* SelectLayerDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,41 +88,12 @@
 		5414183B281CC13200E0483B /* HLL MapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HLL MapsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5414183F281CC13200E0483B /* Hell_Let_Loose_MapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hell_Let_Loose_MapsUITests.swift; sourceTree = "<group>"; };
 		54141841281CC13200E0483B /* Hell_Let_Loose_MapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hell_Let_Loose_MapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		54141850281CC1D100E0483B /* TACMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TACMapsViewController.swift; sourceTree = "<group>"; };
-		54141851281CC1D100E0483B /* PurpleHeartLaneTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurpleHeartLaneTACViewController.swift; sourceTree = "<group>"; };
-		54141852281CC1D100E0483B /* SainteMarieduMontTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SainteMarieduMontTACViewController.swift; sourceTree = "<group>"; };
-		54141853281CC1D100E0483B /* FoyTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoyTACViewController.swift; sourceTree = "<group>"; };
-		54141854281CC1D100E0483B /* UtahBeachTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtahBeachTACViewController.swift; sourceTree = "<group>"; };
-		54141855281CC1D100E0483B /* StalingradTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StalingradTACViewController.swift; sourceTree = "<group>"; };
-		54141856281CC1D100E0483B /* CarentanTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarentanTACViewController.swift; sourceTree = "<group>"; };
-		54141857281CC1D100E0483B /* RemagenTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemagenTACViewController.swift; sourceTree = "<group>"; };
-		54141858281CC1D200E0483B /* KurskTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KurskTACViewController.swift; sourceTree = "<group>"; };
-		54141859281CC1D200E0483B /* SainteMereEgliseTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SainteMereEgliseTACViewController.swift; sourceTree = "<group>"; };
-		5414185A281CC1D200E0483B /* OmahaBeachTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmahaBeachTACViewController.swift; sourceTree = "<group>"; };
-		5414185B281CC1D200E0483B /* Hill400TACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hill400TACViewController.swift; sourceTree = "<group>"; };
-		5414185C281CC1D200E0483B /* HürtgenForestTACViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HürtgenForestTACViewController.swift"; sourceTree = "<group>"; };
 		5414186B281CC1F200E0483B /* DataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceDelegate.swift; sourceTree = "<group>"; };
-		5414186C281CC1F200E0483B /* TACMapsListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TACMapsListDataSource.swift; sourceTree = "<group>"; };
-		54141871281CC20E00E0483B /* TACMapsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TACMapsListTableViewCell.swift; sourceTree = "<group>"; };
-		54141872281CC20E00E0483B /* TACMapsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TACMapsListTableViewCell.xib; sourceTree = "<group>"; };
-		54141875281CC21800E0483B /* CarentanTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarentanTAC.storyboard; sourceTree = "<group>"; };
 		54141890281CC22E00E0483B /* CustomUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUITableViewCell.swift; sourceTree = "<group>"; };
 		54141891281CC22E00E0483B /* NSObject+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		54141895281CC24100E0483B /* MapsListDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsListDictionary.swift; sourceTree = "<group>"; };
 		54141898281CC2C500E0483B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5414189A281DCDF300E0483B /* FoyTAC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoyTAC.storyboard; sourceTree = "<group>"; };
-		5414189C281DCE5800E0483B /* TACMaps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TACMaps.storyboard; sourceTree = "<group>"; };
-		5414189E281DD01600E0483B /* HurtgenForestTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HurtgenForestTAC.storyboard; sourceTree = "<group>"; };
-		5414189F281DD01600E0483B /* Hill400TAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hill400TAC.storyboard; sourceTree = "<group>"; };
-		541418A0281DD01700E0483B /* KurskTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KurskTAC.storyboard; sourceTree = "<group>"; };
-		541418A4281DD03500E0483B /* OmahaBeachTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OmahaBeachTAC.storyboard; sourceTree = "<group>"; };
-		541418A5281DD03500E0483B /* StalingradTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StalingradTAC.storyboard; sourceTree = "<group>"; };
-		541418A6281DD03500E0483B /* SainteMarieduMontTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SainteMarieduMontTAC.storyboard; sourceTree = "<group>"; };
-		541418A7281DD03500E0483B /* SainteMereEgliseTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SainteMereEgliseTAC.storyboard; sourceTree = "<group>"; };
-		541418A8281DD03500E0483B /* RemagenTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RemagenTAC.storyboard; sourceTree = "<group>"; };
-		541418A9281DD03500E0483B /* UtahBeachTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UtahBeachTAC.storyboard; sourceTree = "<group>"; };
-		541418AA281DD03500E0483B /* PurpleHeartLaneTAC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PurpleHeartLaneTAC.storyboard; sourceTree = "<group>"; };
-		541418BC28245BE100E0483B /* StrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointsViewController.swift; sourceTree = "<group>"; };
+		549AF31328404420005E1658 /* UpdateMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMapDelegate.swift; sourceTree = "<group>"; };
 		54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarentanBaseLayer.storyboard; sourceTree = "<group>"; };
 		54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarentanBaseLayerViewController.swift; sourceTree = "<group>"; };
 		54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoyBaseLayerViewController.swift; sourceTree = "<group>"; };
@@ -214,45 +123,12 @@
 		54D081F22829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SainteMereEgliseBaseLayer.storyboard; sourceTree = "<group>"; };
 		54D081F42829F7C300542CB7 /* UtahBeachBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UtahBeachBaseLayer.storyboard; sourceTree = "<group>"; };
 		54D081F6282A131400542CB7 /* StalingradBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StalingradBaseLayer.storyboard; sourceTree = "<group>"; };
-		54D081FB282A6FB900542CB7 /* HLLMKMapLayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLMKMapLayerDelegate.swift; sourceTree = "<group>"; };
-		54D08249282EBF1800542CB7 /* OptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
-		54D0824B282EC9EC00542CB7 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
-		54D0824C282EC9EC00542CB7 /* OptionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsTableViewCell.xib; sourceTree = "<group>"; };
-		54D08255282F378A00542CB7 /* SelectLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLayerViewController.swift; sourceTree = "<group>"; };
-		54D08257282F9EED00542CB7 /* MapLayerTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayerTypeDelegate.swift; sourceTree = "<group>"; };
-		54FA946C282461570045EFD2 /* CarentanStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarentanStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA94702824619C0045EFD2 /* FoyStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoyStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA9472282461AF0045EFD2 /* Hill400Strongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hill400Strongpoints.storyboard; sourceTree = "<group>"; };
-		54FA9474282461C10045EFD2 /* HurtgenForestStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HurtgenForestStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA9476282461CF0045EFD2 /* KurskStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KurskStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA9478282461DE0045EFD2 /* OmahaBeachStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OmahaBeachStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA947A282461EE0045EFD2 /* PurpleHeartLaneStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PurpleHeartLaneStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA947C282461FC0045EFD2 /* RemagenStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemagenStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA947E2824620F0045EFD2 /* SainteMarieduMontStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SainteMarieduMontStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA94802824621D0045EFD2 /* SainteMereEgliseStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SainteMereEgliseStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA94822824622A0045EFD2 /* StalingradStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StalingradStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA9484282462370045EFD2 /* UtahBeachStrongpoints.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UtahBeachStrongpoints.storyboard; sourceTree = "<group>"; };
-		54FA948A282466A90045EFD2 /* CarentanStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarentanStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA948C282466B20045EFD2 /* FoyStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoyStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA948E282466C10045EFD2 /* Hill400StrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hill400StrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA9490282466D40045EFD2 /* HurtgenForestStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HurtgenForestStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA9492282466E20045EFD2 /* KurskStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA9494282466EF0045EFD2 /* OmahaBeachStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmahaBeachStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA9496282467000045EFD2 /* PurpleHeartLaneStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleHeartLaneStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA94982824670C0045EFD2 /* RemagenStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemagenStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA949A282467200045EFD2 /* SainteMarieduMontStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SainteMarieduMontStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA949C2824672C0045EFD2 /* SainteMereEgliseStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SainteMereEgliseStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA949E2824673B0045EFD2 /* StalingradStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StalingradStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA94A02824674A0045EFD2 /* UtahBeachStrongpointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtahBeachStrongpointsViewController.swift; sourceTree = "<group>"; };
-		54FA94A2282478120045EFD2 /* StrongpointsMapsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointsMapsDataSource.swift; sourceTree = "<group>"; };
-		54FA94A4282478C80045EFD2 /* StrongpointsMaps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StrongpointsMaps.storyboard; sourceTree = "<group>"; };
-		54FA94A628247A7D0045EFD2 /* StrongpointsMapsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointsMapsTableViewCell.swift; sourceTree = "<group>"; };
-		54FA94A728247A7D0045EFD2 /* StrongpointsMapsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrongpointsMapsTableViewCell.xib; sourceTree = "<group>"; };
-		54FA94AA28247B9F0045EFD2 /* MapTypesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypesDataSource.swift; sourceTree = "<group>"; };
-		54FA94AC28247BD50045EFD2 /* MapTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypesViewController.swift; sourceTree = "<group>"; };
-		54FA94AE28247C2C0045EFD2 /* MapTypesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypesTableViewCell.swift; sourceTree = "<group>"; };
-		54FA94AF28247C2C0045EFD2 /* MapTypesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTypesTableViewCell.xib; sourceTree = "<group>"; };
-		54FA94B228247DBC0045EFD2 /* MapTypes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapTypes.storyboard; sourceTree = "<group>"; };
+		54D0825D283057CE00542CB7 /* MapLayerSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayerSelectionDelegate.swift; sourceTree = "<group>"; };
+		54D0826128330B0400542CB7 /* SelectLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectLayer.storyboard; sourceTree = "<group>"; };
+		54D0826328330B2500542CB7 /* SelectLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLayerViewController.swift; sourceTree = "<group>"; };
+		54D0826528330B6900542CB7 /* SelectLayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLayerTableViewCell.swift; sourceTree = "<group>"; };
+		54D0826628330B6900542CB7 /* SelectLayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectLayerTableViewCell.xib; sourceTree = "<group>"; };
+		54D0826928330B7300542CB7 /* SelectLayerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLayerDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,8 +159,6 @@
 		54141812281CC13100E0483B = {
 			isa = PBXGroup;
 			children = (
-				54D08249282EBF1800542CB7 /* OptionsTableViewController.swift */,
-				54D08255282F378A00542CB7 /* SelectLayerViewController.swift */,
 				5414181D281CC13100E0483B /* Hell-Let-Loose-Maps */,
 				54141834281CC13200E0483B /* Hell-Let-Loose-MapsTests */,
 				5414183E281CC13200E0483B /* Hell-Let-Loose-MapsUITests */,
@@ -305,18 +179,13 @@
 		5414181D281CC13100E0483B /* Hell-Let-Loose-Maps */ = {
 			isa = PBXGroup;
 			children = (
-				54D08202282CBF5400542CB7 /* New Group */,
-				54D081FD282C6E1D00542CB7 /* Modals */,
 				5414188F281CC21C00E0483B /* Storyboards */,
+				5414186A281CC1DD00E0483B /* View Controllers */,
+				543F7CD72835AC780035EEF1 /* Delegates */,
+				54D081FD282C6E1D00542CB7 /* Modals */,
 				54141870281CC20500E0483B /* Cells */,
 				5414186F281CC1FB00E0483B /* DataSources */,
-				5414186A281CC1DD00E0483B /* View Controllers */,
 				54141897281CC24500E0483B /* Supporting Files */,
-				5414181E281CC13100E0483B /* AppDelegate.swift */,
-				54141820281CC13100E0483B /* SceneDelegate.swift */,
-				54141822281CC13100E0483B /* ViewController.swift */,
-				54141827281CC13200E0483B /* Assets.xcassets */,
-				54141829281CC13200E0483B /* LaunchScreen.storyboard */,
 				5414182C281CC13200E0483B /* Info.plist */,
 			);
 			path = "Hell-Let-Loose-Maps";
@@ -344,12 +213,8 @@
 			children = (
 				54141898281CC2C500E0483B /* BaseViewController.swift */,
 				54D081D82829F19000542CB7 /* BaseLayerMapsViewController.swift */,
-				54FA94AC28247BD50045EFD2 /* MapTypesViewController.swift */,
-				54141850281CC1D100E0483B /* TACMapsViewController.swift */,
-				541418BC28245BE100E0483B /* StrongpointsViewController.swift */,
+				54D0826328330B2500542CB7 /* SelectLayerViewController.swift */,
 				54D081BF2829F00600542CB7 /* BaseLayerMaps */,
-				54FA9487282466040045EFD2 /* StrongpointMaps */,
-				54FA9486282465E10045EFD2 /* TACMaps */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -357,11 +222,8 @@
 		5414186F281CC1FB00E0483B /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				5414186C281CC1F200E0483B /* TACMapsListDataSource.swift */,
-				54FA94A2282478120045EFD2 /* StrongpointsMapsDataSource.swift */,
-				54FA94AA28247B9F0045EFD2 /* MapTypesDataSource.swift */,
 				54D081DC2829F25900542CB7 /* BaseLayerMapsDataSource.swift */,
-				54D081FB282A6FB900542CB7 /* HLLMKMapLayerDelegate.swift */,
+				54D0826928330B7300542CB7 /* SelectLayerDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -369,16 +231,11 @@
 		54141870281CC20500E0483B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				54141871281CC20E00E0483B /* TACMapsListTableViewCell.swift */,
-				54141872281CC20E00E0483B /* TACMapsListTableViewCell.xib */,
-				54FA94A628247A7D0045EFD2 /* StrongpointsMapsTableViewCell.swift */,
-				54FA94A728247A7D0045EFD2 /* StrongpointsMapsTableViewCell.xib */,
-				54FA94AE28247C2C0045EFD2 /* MapTypesTableViewCell.swift */,
-				54FA94AF28247C2C0045EFD2 /* MapTypesTableViewCell.xib */,
+				54141890281CC22E00E0483B /* CustomUITableViewCell.swift */,
 				54D081DE2829F28F00542CB7 /* BaseLayerMapsTableViewCell.swift */,
 				54D081DF2829F28F00542CB7 /* BaseLayerMapsTableViewCell.xib */,
-				54D0824B282EC9EC00542CB7 /* OptionsTableViewCell.swift */,
-				54D0824C282EC9EC00542CB7 /* OptionsTableViewCell.xib */,
+				54D0826528330B6900542CB7 /* SelectLayerTableViewCell.swift */,
+				54D0826628330B6900542CB7 /* SelectLayerTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -395,13 +252,23 @@
 		54141897281CC24500E0483B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5414186B281CC1F200E0483B /* DataSourceDelegate.swift */,
-				54141890281CC22E00E0483B /* CustomUITableViewCell.swift */,
-				54141891281CC22E00E0483B /* NSObject+.swift */,
-				54141895281CC24100E0483B /* MapsListDictionary.swift */,
-				54D08257282F9EED00542CB7 /* MapLayerTypeDelegate.swift */,
+				5414181E281CC13100E0483B /* AppDelegate.swift */,
+				54141820281CC13100E0483B /* SceneDelegate.swift */,
+				54141822281CC13100E0483B /* ViewController.swift */,
+				54141827281CC13200E0483B /* Assets.xcassets */,
+				54141829281CC13200E0483B /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		543F7CD72835AC780035EEF1 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5414186B281CC1F200E0483B /* DataSourceDelegate.swift */,
+				54D0825D283057CE00542CB7 /* MapLayerSelectionDelegate.swift */,
+				549AF31328404420005E1658 /* UpdateMapDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		54D081BB2829EF9600542CB7 /* BaseLayerMaps */ = {
@@ -427,8 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				54D081BB2829EF9600542CB7 /* BaseLayerMaps */,
-				54FA946E2824616C0045EFD2 /* TACMaps */,
-				54FA946F2824617C0045EFD2 /* StrongpointMaps */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -455,100 +320,17 @@
 		54D081FD282C6E1D00542CB7 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				54141891281CC22E00E0483B /* NSObject+.swift */,
+				54141895281CC24100E0483B /* MapsListDictionary.swift */,
 			);
 			path = Modals;
-			sourceTree = "<group>";
-		};
-		54D08202282CBF5400542CB7 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		54FA946E2824616C0045EFD2 /* TACMaps */ = {
-			isa = PBXGroup;
-			children = (
-				54141875281CC21800E0483B /* CarentanTAC.storyboard */,
-				5414189A281DCDF300E0483B /* FoyTAC.storyboard */,
-				5414189F281DD01600E0483B /* Hill400TAC.storyboard */,
-				5414189E281DD01600E0483B /* HurtgenForestTAC.storyboard */,
-				541418A0281DD01700E0483B /* KurskTAC.storyboard */,
-				541418A4281DD03500E0483B /* OmahaBeachTAC.storyboard */,
-				541418AA281DD03500E0483B /* PurpleHeartLaneTAC.storyboard */,
-				541418A8281DD03500E0483B /* RemagenTAC.storyboard */,
-				541418A6281DD03500E0483B /* SainteMarieduMontTAC.storyboard */,
-				541418A7281DD03500E0483B /* SainteMereEgliseTAC.storyboard */,
-				541418A5281DD03500E0483B /* StalingradTAC.storyboard */,
-				541418A9281DD03500E0483B /* UtahBeachTAC.storyboard */,
-			);
-			path = TACMaps;
-			sourceTree = "<group>";
-		};
-		54FA946F2824617C0045EFD2 /* StrongpointMaps */ = {
-			isa = PBXGroup;
-			children = (
-				54FA946C282461570045EFD2 /* CarentanStrongpoints.storyboard */,
-				54FA94702824619C0045EFD2 /* FoyStrongpoints.storyboard */,
-				54FA9472282461AF0045EFD2 /* Hill400Strongpoints.storyboard */,
-				54FA9474282461C10045EFD2 /* HurtgenForestStrongpoints.storyboard */,
-				54FA9476282461CF0045EFD2 /* KurskStrongpoints.storyboard */,
-				54FA9478282461DE0045EFD2 /* OmahaBeachStrongpoints.storyboard */,
-				54FA947A282461EE0045EFD2 /* PurpleHeartLaneStrongpoints.storyboard */,
-				54FA947C282461FC0045EFD2 /* RemagenStrongpoints.storyboard */,
-				54FA947E2824620F0045EFD2 /* SainteMarieduMontStrongpoints.storyboard */,
-				54FA94802824621D0045EFD2 /* SainteMereEgliseStrongpoints.storyboard */,
-				54FA94822824622A0045EFD2 /* StalingradStrongpoints.storyboard */,
-				54FA9484282462370045EFD2 /* UtahBeachStrongpoints.storyboard */,
-			);
-			path = StrongpointMaps;
-			sourceTree = "<group>";
-		};
-		54FA9486282465E10045EFD2 /* TACMaps */ = {
-			isa = PBXGroup;
-			children = (
-				54141856281CC1D100E0483B /* CarentanTACViewController.swift */,
-				54141853281CC1D100E0483B /* FoyTACViewController.swift */,
-				5414185B281CC1D200E0483B /* Hill400TACViewController.swift */,
-				5414185C281CC1D200E0483B /* HürtgenForestTACViewController.swift */,
-				54141858281CC1D200E0483B /* KurskTACViewController.swift */,
-				5414185A281CC1D200E0483B /* OmahaBeachTACViewController.swift */,
-				54141851281CC1D100E0483B /* PurpleHeartLaneTACViewController.swift */,
-				54141857281CC1D100E0483B /* RemagenTACViewController.swift */,
-				54141852281CC1D100E0483B /* SainteMarieduMontTACViewController.swift */,
-				54141859281CC1D200E0483B /* SainteMereEgliseTACViewController.swift */,
-				54141855281CC1D100E0483B /* StalingradTACViewController.swift */,
-				54141854281CC1D100E0483B /* UtahBeachTACViewController.swift */,
-			);
-			path = TACMaps;
-			sourceTree = "<group>";
-		};
-		54FA9487282466040045EFD2 /* StrongpointMaps */ = {
-			isa = PBXGroup;
-			children = (
-				54FA948A282466A90045EFD2 /* CarentanStrongpointsViewController.swift */,
-				54FA948C282466B20045EFD2 /* FoyStrongpointsViewController.swift */,
-				54FA948E282466C10045EFD2 /* Hill400StrongpointsViewController.swift */,
-				54FA9490282466D40045EFD2 /* HurtgenForestStrongpointsViewController.swift */,
-				54FA9492282466E20045EFD2 /* KurskStrongpointsViewController.swift */,
-				54FA9494282466EF0045EFD2 /* OmahaBeachStrongpointsViewController.swift */,
-				54FA9496282467000045EFD2 /* PurpleHeartLaneStrongpointsViewController.swift */,
-				54FA94982824670C0045EFD2 /* RemagenStrongpointsViewController.swift */,
-				54FA949A282467200045EFD2 /* SainteMarieduMontStrongpointsViewController.swift */,
-				54FA949C2824672C0045EFD2 /* SainteMereEgliseStrongpointsViewController.swift */,
-				54FA949E2824673B0045EFD2 /* StalingradStrongpointsViewController.swift */,
-				54FA94A02824674A0045EFD2 /* UtahBeachStrongpointsViewController.swift */,
-			);
-			path = StrongpointMaps;
 			sourceTree = "<group>";
 		};
 		54FA94B428248C040045EFD2 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				54FA94B228247DBC0045EFD2 /* MapTypes.storyboard */,
-				5414189C281DCE5800E0483B /* TACMaps.storyboard */,
-				54FA94A4282478C80045EFD2 /* StrongpointsMaps.storyboard */,
 				54D081DA2829F24800542CB7 /* BaseLayerMaps.storyboard */,
+				54D0826128330B0400542CB7 /* SelectLayer.storyboard */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -657,52 +439,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541418A1281DD01700E0483B /* HurtgenForestTAC.storyboard in Resources */,
-				54FA947B282461EE0045EFD2 /* PurpleHeartLaneStrongpoints.storyboard in Resources */,
 				54D081E72829F75B00542CB7 /* HurtgenForestBaseLayer.storyboard in Resources */,
-				54FA9477282461CF0045EFD2 /* KurskStrongpoints.storyboard in Resources */,
-				54FA94712824619C0045EFD2 /* FoyStrongpoints.storyboard in Resources */,
 				54D081E32829F6C700542CB7 /* FoyBaseLayer.storyboard in Resources */,
-				5414189B281DCDF300E0483B /* FoyTAC.storyboard in Resources */,
-				541418AF281DD03500E0483B /* RemagenTAC.storyboard in Resources */,
-				54FA94B128247C2C0045EFD2 /* MapTypesTableViewCell.xib in Resources */,
 				5414182B281CC13200E0483B /* LaunchScreen.storyboard in Resources */,
+				54D0826228330B0400542CB7 /* SelectLayer.storyboard in Resources */,
 				54D081DB2829F24800542CB7 /* BaseLayerMaps.storyboard in Resources */,
-				541418B0281DD03500E0483B /* UtahBeachTAC.storyboard in Resources */,
-				54FA94B328247DBC0045EFD2 /* MapTypes.storyboard in Resources */,
-				54FA94832824622A0045EFD2 /* StalingradStrongpoints.storyboard in Resources */,
 				54D081EB2829F77D00542CB7 /* OmahaBeachBaseLayer.storyboard in Resources */,
-				54141874281CC20E00E0483B /* TACMapsListTableViewCell.xib in Resources */,
 				54D081E52829F6F800542CB7 /* Hill400BaseLayer.storyboard in Resources */,
-				541418AC281DD03500E0483B /* StalingradTAC.storyboard in Resources */,
-				54141882281CC21800E0483B /* CarentanTAC.storyboard in Resources */,
 				54141828281CC13200E0483B /* Assets.xcassets in Resources */,
-				541418AE281DD03500E0483B /* SainteMereEgliseTAC.storyboard in Resources */,
 				54D081F32829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard in Resources */,
-				541418A2281DD01700E0483B /* Hill400TAC.storyboard in Resources */,
-				54FA947D282461FC0045EFD2 /* RemagenStrongpoints.storyboard in Resources */,
 				54D081E92829F76600542CB7 /* KurskBaseLayer.storyboard in Resources */,
-				5414189D281DCE5800E0483B /* TACMaps.storyboard in Resources */,
-				54FA94812824621D0045EFD2 /* SainteMereEgliseStrongpoints.storyboard in Resources */,
-				54FA9475282461C10045EFD2 /* HurtgenForestStrongpoints.storyboard in Resources */,
 				54D081F7282A131400542CB7 /* StalingradBaseLayer.storyboard in Resources */,
-				54FA9473282461AF0045EFD2 /* Hill400Strongpoints.storyboard in Resources */,
-				54FA9485282462370045EFD2 /* UtahBeachStrongpoints.storyboard in Resources */,
-				541418A3281DD01700E0483B /* KurskTAC.storyboard in Resources */,
-				54FA94A5282478C80045EFD2 /* StrongpointsMaps.storyboard in Resources */,
-				541418B1281DD03500E0483B /* PurpleHeartLaneTAC.storyboard in Resources */,
-				54FA94A928247A7D0045EFD2 /* StrongpointsMapsTableViewCell.xib in Resources */,
+				54D0826828330B6900542CB7 /* SelectLayerTableViewCell.xib in Resources */,
 				54D081F52829F7C300542CB7 /* UtahBeachBaseLayer.storyboard in Resources */,
-				541418AD281DD03500E0483B /* SainteMarieduMontTAC.storyboard in Resources */,
 				54D081ED2829F78E00542CB7 /* PurpleHeartLaneBaseLayer.storyboard in Resources */,
-				54FA946D282461570045EFD2 /* CarentanStrongpoints.storyboard in Resources */,
 				54D081F12829F7A600542CB7 /* SainteMarieduMontBaseLayer.storyboard in Resources */,
 				54D081E12829F28F00542CB7 /* BaseLayerMapsTableViewCell.xib in Resources */,
 				54D081BE2829EFEC00542CB7 /* CarentanBaseLayer.storyboard in Resources */,
-				54FA947F2824620F0045EFD2 /* SainteMarieduMontStrongpoints.storyboard in Resources */,
-				541418AB281DD03500E0483B /* OmahaBeachTAC.storyboard in Resources */,
-				54FA9479282461DE0045EFD2 /* OmahaBeachStrongpoints.storyboard in Resources */,
-				54D0824E282EC9EC00542CB7 /* OptionsTableViewCell.xib in Resources */,
 				54D081EF2829F79800542CB7 /* RemagenBaseLayer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,66 +481,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54FA9497282467000045EFD2 /* PurpleHeartLaneStrongpointsViewController.swift in Sources */,
 				54D081D52829F16D00542CB7 /* StalingradBaseLayerViewController.swift in Sources */,
-				5414185F281CC1D200E0483B /* SainteMarieduMontTACViewController.swift in Sources */,
-				54FA9495282466EF0045EFD2 /* OmahaBeachStrongpointsViewController.swift in Sources */,
-				54D081FC282A6FB900542CB7 /* HLLMKMapLayerDelegate.swift in Sources */,
-				54141869281CC1D200E0483B /* HürtgenForestTACViewController.swift in Sources */,
 				54141823281CC13100E0483B /* ViewController.swift in Sources */,
 				54141899281CC2C500E0483B /* BaseViewController.swift in Sources */,
 				54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */,
-				54FA948B282466A90045EFD2 /* CarentanStrongpointsViewController.swift in Sources */,
-				5414186E281CC1F200E0483B /* TACMapsListDataSource.swift in Sources */,
-				54FA949B282467200045EFD2 /* SainteMarieduMontStrongpointsViewController.swift in Sources */,
 				54D081CF2829F14300542CB7 /* RemagenBaseLayerViewController.swift in Sources */,
 				54141893281CC22E00E0483B /* NSObject+.swift in Sources */,
+				549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */,
 				54D081C92829F11100542CB7 /* KurskBaseLayerViewController.swift in Sources */,
-				54141863281CC1D200E0483B /* CarentanTACViewController.swift in Sources */,
 				5414181F281CC13100E0483B /* AppDelegate.swift in Sources */,
-				54FA94A828247A7D0045EFD2 /* StrongpointsMapsTableViewCell.swift in Sources */,
 				54D081C52829F0F800542CB7 /* Hill400BaseLayerViewController.swift in Sources */,
-				541418BD28245BE100E0483B /* StrongpointsViewController.swift in Sources */,
-				54D0824A282EBF1800542CB7 /* OptionsTableViewController.swift in Sources */,
 				54141821281CC13100E0483B /* SceneDelegate.swift in Sources */,
-				54FA94A12824674A0045EFD2 /* UtahBeachStrongpointsViewController.swift in Sources */,
-				54141867281CC1D200E0483B /* OmahaBeachTACViewController.swift in Sources */,
-				54141873281CC20E00E0483B /* TACMapsListTableViewCell.swift in Sources */,
-				54141864281CC1D200E0483B /* RemagenTACViewController.swift in Sources */,
-				54141861281CC1D200E0483B /* UtahBeachTACViewController.swift in Sources */,
-				54FA949D2824672D0045EFD2 /* SainteMereEgliseStrongpointsViewController.swift in Sources */,
-				54141865281CC1D200E0483B /* KurskTACViewController.swift in Sources */,
-				54141860281CC1D200E0483B /* FoyTACViewController.swift in Sources */,
 				54D081D92829F19000542CB7 /* BaseLayerMapsViewController.swift in Sources */,
 				54141896281CC24100E0483B /* MapsListDictionary.swift in Sources */,
 				54D081C32829F0EC00542CB7 /* FoyBaseLayerViewController.swift in Sources */,
-				54141866281CC1D200E0483B /* SainteMereEgliseTACViewController.swift in Sources */,
-				54FA9493282466E20045EFD2 /* KurskStrongpointsViewController.swift in Sources */,
 				54141892281CC22E00E0483B /* CustomUITableViewCell.swift in Sources */,
-				5414185E281CC1D200E0483B /* PurpleHeartLaneTACViewController.swift in Sources */,
+				54D0826428330B2500542CB7 /* SelectLayerViewController.swift in Sources */,
+				54D0826728330B6900542CB7 /* SelectLayerTableViewCell.swift in Sources */,
 				54D081D32829F16000542CB7 /* SainteMereEgliseBaseLayerViewController.swift in Sources */,
-				54FA9491282466D40045EFD2 /* HurtgenForestStrongpointsViewController.swift in Sources */,
 				54D081CD2829F13400542CB7 /* PurpleHeartLaneBaseLayerViewController.swift in Sources */,
 				54D081E02829F28F00542CB7 /* BaseLayerMapsTableViewCell.swift in Sources */,
-				54FA948D282466B20045EFD2 /* FoyStrongpointsViewController.swift in Sources */,
-				54D08258282F9EED00542CB7 /* MapLayerTypeDelegate.swift in Sources */,
 				54D081D72829F17700542CB7 /* UtahBeachBaseLayerViewController.swift in Sources */,
-				54FA94A3282478120045EFD2 /* StrongpointsMapsDataSource.swift in Sources */,
-				54FA94B028247C2C0045EFD2 /* MapTypesTableViewCell.swift in Sources */,
-				54D08256282F378A00542CB7 /* SelectLayerViewController.swift in Sources */,
-				54FA949F2824673B0045EFD2 /* StalingradStrongpointsViewController.swift in Sources */,
-				54FA94992824670C0045EFD2 /* RemagenStrongpointsViewController.swift in Sources */,
 				54D081DD2829F25900542CB7 /* BaseLayerMapsDataSource.swift in Sources */,
 				54D081CB2829F12200542CB7 /* OmahaBeachBaseLayerViewController.swift in Sources */,
-				54FA948F282466C10045EFD2 /* Hill400StrongpointsViewController.swift in Sources */,
-				54141868281CC1D200E0483B /* Hill400TACViewController.swift in Sources */,
-				54D0824D282EC9EC00542CB7 /* OptionsTableViewCell.swift in Sources */,
-				54141862281CC1D200E0483B /* StalingradTACViewController.swift in Sources */,
-				5414185D281CC1D200E0483B /* TACMapsViewController.swift in Sources */,
-				54FA94AD28247BD50045EFD2 /* MapTypesViewController.swift in Sources */,
 				54D081C72829F10800542CB7 /* HurtgenForestBaseLayerViewController.swift in Sources */,
-				54FA94AB28247B9F0045EFD2 /* MapTypesDataSource.swift in Sources */,
+				54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */,
 				54D081D12829F15300542CB7 /* SainteMarieduMontBaseLayerViewController.swift in Sources */,
+				54D0826A28330B7300542CB7 /* SelectLayerDataSource.swift in Sources */,
 				5414186D281CC1F200E0483B /* DataSourceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -963,7 +683,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "HLL Maps";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MapTypes;
+				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -992,7 +712,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "HLL Maps";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MapTypes;
+				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

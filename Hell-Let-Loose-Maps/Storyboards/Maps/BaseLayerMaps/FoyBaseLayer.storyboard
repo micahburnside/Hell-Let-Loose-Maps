@@ -43,7 +43,14 @@
                             <constraint firstItem="QVf-gC-YoU" firstAttribute="centerX" secondItem="wd2-Br-Dvd" secondAttribute="centerX" id="ukG-fj-kV8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Foy" id="Pzm-77-ihZ"/>
+                    <navigationItem key="navigationItem" title="Foy" id="Pzm-77-ihZ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="8hp-CF-f0F">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="609-Mh-kZw" id="H6U-we-2dD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="pBU-5x-mF5" id="1J1-eJ-d74"/>
                         <outlet property="imageViewBottomConstraint" destination="kZ8-8W-6DM" id="mSD-Ke-qIT"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="FoyBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

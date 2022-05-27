@@ -32,11 +32,10 @@ struct MapsListDictionary {
         
     ]
 
-    let layerTypesDictionary: [String : Int] = [
-        "BaseLayer" : 0,
-        "TAC" : 1,
-        "Strongpoints" : 2,
-
+    let layerTypesDictionary: [String : String] = [
+        "TAC" : "displays grid lines on top of base layer",
+        "Strongpoints" : "displays strongpoints"
     ]
+    
     
 }

@@ -18,7 +18,13 @@ class StalingradBaseLayerViewController: BaseViewController {
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
     var photoName: String?
-    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+         let storyboard = UIStoryboard.init(name: "SelectLayer", bundle: nil)
+           if let controller = storyboard.instantiateViewController(identifier: "SelectLayerViewController") as? SelectLayerViewController {
+               controller.updateMapDelegate = self
+               self.navigationController?.present(controller, animated: true)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageView.image = getMap(mapName: .Stalingrad, layerType: .StalingradBaseLayer)
@@ -61,4 +67,19 @@ extension StalingradBaseLayerViewController: UIScrollViewDelegate {
   func scrollViewDidZoom(_ scrollView: UIScrollView) {
     updateConstraintsForSize(view.bounds.size)
   }
+}
+
+extension StalingradBaseLayerViewController: UpdateMapDelegate {
+    
+    func loadStrongpointsLayer() {
+        print("Carentan Strongpoints!!")
+        self.imageView.image = getMap(mapName: .Stalingrad, layerType: .StalingradStrongpoints)
+    }
+    
+    func loadTACLayer() {
+        print("Carentan TAC!!")
+
+        self.imageView.image = getMap(mapName: .Stalingrad, layerType: .StalingradTAC)
+
+    }
 }

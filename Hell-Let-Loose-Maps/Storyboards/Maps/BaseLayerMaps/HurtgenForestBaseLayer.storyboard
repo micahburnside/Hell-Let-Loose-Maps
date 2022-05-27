@@ -43,7 +43,14 @@
                             <constraint firstAttribute="bottomMargin" secondItem="WS8-IP-IOz" secondAttribute="bottom" constant="-34" id="oG6-AZ-24q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hürtgen Forest" id="rJo-eR-3lp"/>
+                    <navigationItem key="navigationItem" title="Hürtgen Forest" id="rJo-eR-3lp">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="1Dm-9E-auH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="rhK-Y0-w1M" id="zi3-i5-02f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="t1V-V0-xm4" id="3zh-LK-OLC"/>
                         <outlet property="imageViewBottomConstraint" destination="yAU-sH-Kzq" id="fOD-7b-iFx"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="HürtgenForestBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

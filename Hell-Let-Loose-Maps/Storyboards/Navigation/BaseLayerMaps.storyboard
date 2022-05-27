@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cqo-3b-x3g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fxL-el-1nk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,58 +8,57 @@
     </dependencies>
     <scenes>
         <!--BaseLayerMaps-->
-        <scene sceneID="eWe-pW-u9v">
+        <scene sceneID="XIM-Qd-Sly">
             <objects>
-                <viewController storyboardIdentifier="BaseLayerMapsViewController" title="BaseLayerMaps" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DuU-qR-maJ" customClass="BaseLayerMapsViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MRj-cy-UAx">
+                <viewController storyboardIdentifier="BaseLayerMapsViewController" title="BaseLayerMaps" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EU8-Zv-9qJ" customClass="BaseLayerMapsViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnJ-ru-3TU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SbN-Ps-c2g">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HeV-yf-OBm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="gOc-W3-bPk" id="Thr-E0-jxi"/>
+                                    <outlet property="dataSource" destination="B62-ii-2iP" id="IpH-0m-rIY"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="TD7-DX-Ki7"/>
+                        <viewLayoutGuide key="safeArea" id="XNx-iL-L41"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SbN-Ps-c2g" firstAttribute="top" secondItem="MRj-cy-UAx" secondAttribute="top" id="AFl-rD-j5v"/>
-                            <constraint firstItem="SbN-Ps-c2g" firstAttribute="leading" secondItem="TD7-DX-Ki7" secondAttribute="leading" id="PmU-5e-2ij"/>
-                            <constraint firstItem="SbN-Ps-c2g" firstAttribute="trailing" secondItem="TD7-DX-Ki7" secondAttribute="trailing" id="gdH-OH-PC7"/>
-                            <constraint firstAttribute="bottom" secondItem="SbN-Ps-c2g" secondAttribute="bottom" id="rOV-nK-VxT"/>
+                            <constraint firstItem="HeV-yf-OBm" firstAttribute="leading" secondItem="XNx-iL-L41" secondAttribute="leading" id="Ixz-f5-XtZ"/>
+                            <constraint firstAttribute="bottom" secondItem="HeV-yf-OBm" secondAttribute="bottom" id="MPI-OT-eyM"/>
+                            <constraint firstItem="HeV-yf-OBm" firstAttribute="trailing" secondItem="XNx-iL-L41" secondAttribute="trailing" id="V18-sX-TCI"/>
+                            <constraint firstItem="HeV-yf-OBm" firstAttribute="top" secondItem="cnJ-ru-3TU" secondAttribute="top" id="xw1-Jg-WO2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Base Layers" id="IT5-jL-d9x"/>
+                    <navigationItem key="navigationItem" title="Maps" id="IQG-ao-gbg"/>
                     <connections>
-                        <outlet property="baseLayerMapsDataSource" destination="gOc-W3-bPk" id="1TM-9y-DL9"/>
+                        <outlet property="baseLayerMapsDataSource" destination="B62-ii-2iP" id="mE2-6W-pcg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fKP-PJ-Tm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="gOc-W3-bPk" customClass="BaseLayerMapsDataSource" customModule="HLL_Maps" customModuleProvider="target">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm6-pg-DW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="B62-ii-2iP" customClass="BaseLayerMapsDataSource" customModule="HLL_Maps" customModuleProvider="target">
                     <connections>
-                        <outlet property="tableView" destination="SbN-Ps-c2g" id="41g-De-PW1"/>
+                        <outlet property="tableView" destination="HeV-yf-OBm" id="HvG-mw-aee"/>
                     </connections>
                 </customObject>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="6Zo-Tz-Qer">
+        <scene sceneID="Cz3-yL-M4c">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cqo-3b-x3g" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxL-el-1nk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QE9-hV-95M">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iv5-j2-toS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -69,10 +68,10 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="DuU-qR-maJ" kind="relationship" relationship="rootViewController" id="dGu-VH-T2U"/>
+                        <segue destination="EU8-Zv-9qJ" kind="relationship" relationship="rootViewController" id="oAw-2q-fSU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WeP-CQ-ux6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsE-JK-ZWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>

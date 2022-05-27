@@ -7,7 +7,10 @@
 
 import UIKit
 
-class CarentanBaseLayerViewController: BaseViewController, UIAdaptivePresentationControllerDelegate {
+class CarentanBaseLayerViewController: BaseViewController {
+
+
+    var updateMapDelegate: UpdateMapDelegate!
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -18,7 +21,11 @@ class CarentanBaseLayerViewController: BaseViewController, UIAdaptivePresentatio
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
     @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-
+         let storyboard = UIStoryboard.init(name: "SelectLayer", bundle: nil)
+           if let controller = storyboard.instantiateViewController(identifier: "SelectLayerViewController") as? SelectLayerViewController {
+               controller.updateMapDelegate = self
+               self.navigationController?.present(controller, animated: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -26,20 +33,23 @@ class CarentanBaseLayerViewController: BaseViewController, UIAdaptivePresentatio
             self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
         scrollView.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    }
+    
     override func viewWillLayoutSubviews() {
       super.viewWillLayoutSubviews()
         updateMinZoomScaleForSize(view.bounds.size)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navController = segue.destination as? UINavigationController,
-            let controller = navController.viewControllers.first as? SelectLayerViewController {            
-            controller.preferredContentSize = CGSize(width: 300, height: 150)
-            navController.presentationController?.delegate = self
-        }
+
     }
+    
 }
-//MARK:- Sizing
+
+//MARK: - Sizing
+
 extension CarentanBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
@@ -59,7 +69,11 @@ extension CarentanBaseLayerViewController {
       imageViewTrailingConstraint.constant = xOffset
 
       view.layoutIfNeeded()
+ 
+    
     }
+    
+
 }
 
 //MARK:- UIScrollViewDelegate
@@ -71,4 +85,26 @@ extension CarentanBaseLayerViewController: UIScrollViewDelegate {
   func scrollViewDidZoom(_ scrollView: UIScrollView) {
     updateConstraintsForSize(view.bounds.size)
   }
+}
+
+extension CarentanBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
+    }
+}
+
+
+extension CarentanBaseLayerViewController: UpdateMapDelegate {
+    
+    func loadStrongpointsLayer() {
+        print("Carentan Strongpoints!!")
+        self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanStrongpoints)
+    }
+    
+    func loadTACLayer() {
+        print("Carentan TAC!!")
+
+        self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanTAC)
+
+    }
 }

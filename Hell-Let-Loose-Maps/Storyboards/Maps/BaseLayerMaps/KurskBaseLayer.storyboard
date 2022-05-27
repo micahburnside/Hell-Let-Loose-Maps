@@ -43,7 +43,14 @@
                             <constraint firstItem="pKg-OK-qch" firstAttribute="leading" secondItem="560-dB-gza" secondAttribute="leading" id="keD-OS-iVJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kursk" id="X10-h9-PER"/>
+                    <navigationItem key="navigationItem" title="Kursk" id="X10-h9-PER">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="ass-QZ-Qiv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="bcJ-a0-eD3" id="qh5-qw-nYR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="ci9-Wv-9jj" id="i0t-zY-yY2"/>
                         <outlet property="imageViewBottomConstraint" destination="gZ9-bj-JeA" id="Qou-Q0-EF5"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="KurskBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

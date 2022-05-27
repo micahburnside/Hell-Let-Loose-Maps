@@ -18,7 +18,13 @@ class SainteMarieduMontBaseLayerViewController: BaseViewController {
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
     var photoName: String?
-    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+         let storyboard = UIStoryboard.init(name: "SelectLayer", bundle: nil)
+           if let controller = storyboard.instantiateViewController(identifier: "SelectLayerViewController") as? SelectLayerViewController {
+               controller.updateMapDelegate = self
+               self.navigationController?.present(controller, animated: true)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
             self.imageView.image = getMap(mapName: .SainteMarieduMont, layerType: .SainteMarieduMontBaseLayer)        
@@ -61,4 +67,19 @@ extension SainteMarieduMontBaseLayerViewController: UIScrollViewDelegate {
   func scrollViewDidZoom(_ scrollView: UIScrollView) {
     updateConstraintsForSize(view.bounds.size)
   }
+}
+
+extension SainteMarieduMontBaseLayerViewController: UpdateMapDelegate {
+    
+    func loadStrongpointsLayer() {
+        print("Carentan Strongpoints!!")
+        self.imageView.image = getMap(mapName: .SainteMarieduMont, layerType: .SainteMarieduMontStrongpoints)
+    }
+    
+    func loadTACLayer() {
+        print("Carentan TAC!!")
+
+        self.imageView.image = getMap(mapName: .SainteMarieduMont, layerType: .SainteMarieduMontTAC)
+
+    }
 }

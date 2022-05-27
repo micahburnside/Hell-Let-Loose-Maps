@@ -1,17 +1,17 @@
 //
-//  MapsListTableViewCell.swift
-//  Help Let Loose
+//  SelectLayerTableViewCell.swift
+//  HLL Maps
 //
-//  Created by Micah Burnside on 4/29/22.
+//  Created by Micah Burnside on 5/16/22.
 //
 
 import UIKit
 
-class TACMapsListTableViewCell: CustomUITableViewCell {
-
+class SelectLayerTableViewCell: CustomUITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        addUISwitch()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -19,5 +19,8 @@ class TACMapsListTableViewCell: CustomUITableViewCell {
 
         // Configure the view for the selected state
     }
+
     
+   
 }
+

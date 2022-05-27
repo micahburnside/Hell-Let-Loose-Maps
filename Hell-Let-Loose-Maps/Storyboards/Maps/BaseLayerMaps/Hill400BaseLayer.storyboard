@@ -43,7 +43,14 @@
                             <constraint firstAttribute="bottomMargin" secondItem="zgE-EG-S0S" secondAttribute="bottom" constant="-34" id="uXE-FZ-Z1v"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hill 400" id="zCK-m0-6Q9"/>
+                    <navigationItem key="navigationItem" title="Hill 400" id="zCK-m0-6Q9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="b5h-zN-h5Y">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="S4t-yV-gEj" id="CsP-nU-sVC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="EXN-zl-xrl" id="fBE-S5-1k0"/>
                         <outlet property="imageViewBottomConstraint" destination="hbq-Zt-0ap" id="eqQ-b2-3pq"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="Hill400BaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

@@ -43,7 +43,14 @@
                             <constraint firstAttribute="bottomMargin" secondItem="dIf-l6-R6b" secondAttribute="bottom" constant="-34" id="g1C-i6-fLU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Omaha Beach" id="GBd-K9-LGM"/>
+                    <navigationItem key="navigationItem" title="Omaha Beach" id="GBd-K9-LGM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="Qmh-EA-X3X">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="koJ-Da-j9B" id="gaZ-ZW-xRD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="wHB-5o-OyA" id="mbr-AR-YS4"/>
                         <outlet property="imageViewBottomConstraint" destination="umH-GO-RyP" id="S6s-xD-Hht"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="OmahaBeachBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

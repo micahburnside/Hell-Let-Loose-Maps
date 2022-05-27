@@ -43,7 +43,14 @@
                             <constraint firstItem="Awi-6V-MsK" firstAttribute="top" secondItem="Azn-cm-DWE" secondAttribute="top" id="wvU-3Q-Kbd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sainte Mère Église" id="9B8-C7-BkB"/>
+                    <navigationItem key="navigationItem" title="Sainte Mère Église" id="9B8-C7-BkB">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="iOj-Jh-MLv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="A8E-AF-QB4" id="lgz-DO-tKd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="pj0-Rk-xGW" id="m9d-5F-cuC"/>
                         <outlet property="imageViewBottomConstraint" destination="Rt7-k4-gdU" id="NTA-2b-fpA"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="SainteMereEgliseBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

@@ -43,7 +43,14 @@
                             <constraint firstItem="Qck-Bv-Ydh" firstAttribute="centerX" secondItem="mxS-wl-ptU" secondAttribute="centerX" id="fww-1e-fMA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Stalingrad" id="NJe-kC-ljH"/>
+                    <navigationItem key="navigationItem" title="Stalingrad" id="NJe-kC-ljH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="UbO-sS-H2W">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="Qm4-eN-r4j" id="xha-RD-xjZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="6gy-si-3iN" id="ldX-KQ-O7a"/>
                         <outlet property="imageViewBottomConstraint" destination="A80-rg-qu9" id="Osr-ZT-6iO"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="StalingradBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>

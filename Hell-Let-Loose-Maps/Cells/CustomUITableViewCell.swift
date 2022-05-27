@@ -14,6 +14,11 @@ class CustomUITableViewCell: UITableViewCell {
         self.accessoryType = .disclosureIndicator
     }
     
+    func addUISwitch() {
+        self.accessoryView = UISwitch()
+    }
+
+    
     @IBInspectable var primaryText: String = "" {
         didSet {
             var content = defaultContentConfiguration()

@@ -17,6 +17,14 @@ class FoyBaseLayerViewController: BaseViewController {
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+         let storyboard = UIStoryboard.init(name: "SelectLayer", bundle: nil)
+           if let controller = storyboard.instantiateViewController(identifier: "SelectLayerViewController") as? SelectLayerViewController {
+               controller.updateMapDelegate = self
+               self.navigationController?.present(controller, animated: true)
+        }
+    }
+    
     var photoName: String?
     
     override func viewDidLoad() {
@@ -61,4 +69,19 @@ extension FoyBaseLayerViewController: UIScrollViewDelegate {
   func scrollViewDidZoom(_ scrollView: UIScrollView) {
     updateConstraintsForSize(view.bounds.size)
   }
+}
+
+extension FoyBaseLayerViewController: UpdateMapDelegate {
+    
+    func loadStrongpointsLayer() {
+        print("Carentan Strongpoints!!")
+        self.imageView.image = getMap(mapName: .Foy, layerType: .FoyStrongpoints)
+    }
+    
+    func loadTACLayer() {
+        print("Carentan TAC!!")
+
+        self.imageView.image = getMap(mapName: .Carentan, layerType: .FoyTAC)
+
+    }
 }

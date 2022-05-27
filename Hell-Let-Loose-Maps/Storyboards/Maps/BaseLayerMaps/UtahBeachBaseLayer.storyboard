@@ -43,7 +43,14 @@
                             <constraint firstItem="Ipk-gm-maE" firstAttribute="top" secondItem="D7c-1d-ggR" secondAttribute="top" id="zLO-9h-Idn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Utah Beach" id="P9W-no-BX3"/>
+                    <navigationItem key="navigationItem" title="Utah Beach" id="P9W-no-BX3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="Pn0-aK-xQY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="layerButtonPressed:" destination="pE4-ik-yv9" id="huf-Nl-KMd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="UgK-8x-dQP" id="fiH-ly-WEl"/>
                         <outlet property="imageViewBottomConstraint" destination="fdu-OY-IkK" id="Cy4-vl-fTf"/>
@@ -87,5 +94,6 @@
     </scenes>
     <resources>
         <image name="UtahBeachBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>
