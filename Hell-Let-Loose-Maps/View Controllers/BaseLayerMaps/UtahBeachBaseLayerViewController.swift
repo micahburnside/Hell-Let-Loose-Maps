@@ -77,6 +77,5 @@ extension UtahBeachBaseLayerViewController: UpdateMapDelegate {
     
     func loadTACLayer() {
         self.imageView.image = getMap(mapName: .UtahBeach, layerType: .UtahBeachTAC)
-
     }
 }
