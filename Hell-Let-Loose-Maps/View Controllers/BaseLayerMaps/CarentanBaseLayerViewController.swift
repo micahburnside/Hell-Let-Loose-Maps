@@ -22,11 +22,11 @@ class CarentanBaseLayerViewController: BaseViewController {
     
     @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
          let storyboard = UIStoryboard.init(name: "SelectLayer", bundle: nil)
-
            if let controller = storyboard.instantiateViewController(identifier: "SelectLayerViewController") as? SelectLayerViewController {
                controller.updateMapDelegate = self
                if let sheet = controller.sheetPresentationController {
                    sheet.detents = [ .medium() ]
+                   sheet.prefersGrabberVisible = true
                }
                self.navigationController?.present(controller, animated: true)
         }
@@ -44,10 +44,6 @@ class CarentanBaseLayerViewController: BaseViewController {
     override func viewWillLayoutSubviews() {
       super.viewWillLayoutSubviews()
         updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
     }
     
 }
@@ -107,5 +103,9 @@ extension CarentanBaseLayerViewController: UpdateMapDelegate {
     func loadTACLayer() {
         self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanTAC)
 
+    }
+    
+    func loadBaseLayer() {
+        self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
     }
 }

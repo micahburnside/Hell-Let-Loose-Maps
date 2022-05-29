@@ -26,14 +26,6 @@ class SelectLayerDataSource: NSObject {
 }
 
 extension SelectLayerDataSource: UITableViewDelegate {
-    @objc func handleToggleAction(sender: UISwitch){
-        if sender.isOn {
-            print("Turned on")
-        }
-        else{
-            print("Turned off")
-        }
-    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.didSelectCell(indexPath: indexPath)
@@ -43,7 +35,25 @@ extension SelectLayerDataSource: UITableViewDelegate {
     }
 
 extension SelectLayerDataSource: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let selectViewTableView = UIView()
+        if section == 0 {
+            selectViewTableView.backgroundColor = .red
+            selectViewTableView.tintColor = .white
+            selectViewTableView.largeContentTitle = "Toggle Layer"
+
+        }
+
+        return selectViewTableView
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
         DispatchQueue.main.async {
             cell.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
             UIView.animate(withDuration: 0.3, animations: {
@@ -71,14 +81,33 @@ extension SelectLayerDataSource: UITableViewDataSource {
     }
     
     @objc func didChangeSwitch(_ sender: UISwitch) {
-
+        
+//        let switchControl = UISwitch()
+//        let switchControl.viewWithTag(0) = sender0
+//        let sender1 = switchControl.viewWithTag(1)
+//        let sender2 = switchControl.viewWithTag(2)
         switch sender.tag{
-                case 0:
-            self.updateMapDelegate?.loadStrongpointsLayer()
-                case 1:
-            self.updateMapDelegate?.loadTACLayer()
+            case 0:
+            if sender.isOn {
+                self.updateMapDelegate?.loadStrongpointsLayer()
 
+            } else {
+                if sender.isOn {
+                    self.updateMapDelegate?.loadTACLayer()
+                    sender.isOn = false
+                }
+                // remove whatever is added from above
+                self.updateMapDelegate?.loadBaseLayer()
+            }
+            break
+            case 1:
+            // same here
+            self.updateMapDelegate?.loadTACLayer()
+            break
         default:
+            
+            // same here
+            
             self.updateMapDelegate?.loadTACLayer()
 
         }

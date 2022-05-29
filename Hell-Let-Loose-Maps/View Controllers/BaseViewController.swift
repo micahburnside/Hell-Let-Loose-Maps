@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
         doubleTapGesture()
         
     }
-    
+
 //MARK: - Gesture Recognizers
     func doubleTapGesture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))

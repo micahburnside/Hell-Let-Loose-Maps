@@ -182,7 +182,6 @@
 				5414188F281CC21C00E0483B /* Storyboards */,
 				5414186A281CC1DD00E0483B /* View Controllers */,
 				543F7CD72835AC780035EEF1 /* Delegates */,
-				54D081FD282C6E1D00542CB7 /* Modals */,
 				54141870281CC20500E0483B /* Cells */,
 				5414186F281CC1FB00E0483B /* DataSources */,
 				54141897281CC24500E0483B /* Supporting Files */,
@@ -243,6 +242,7 @@
 		5414188F281CC21C00E0483B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				54D081FD282C6E1D00542CB7 /* Modals */,
 				54FA94B428248C040045EFD2 /* Navigation */,
 				54D081BC2829EFBE00542CB7 /* Maps */,
 			);

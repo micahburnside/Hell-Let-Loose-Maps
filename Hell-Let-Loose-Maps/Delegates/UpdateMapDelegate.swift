@@ -11,4 +11,5 @@ import UIKit
 protocol UpdateMapDelegate {
     func loadStrongpointsLayer()
     func loadTACLayer()
+    func loadBaseLayer()
 }

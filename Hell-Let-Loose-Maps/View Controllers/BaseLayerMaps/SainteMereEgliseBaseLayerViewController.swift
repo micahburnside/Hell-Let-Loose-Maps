@@ -19,11 +19,14 @@ class SainteMereEgliseBaseLayerViewController: BaseViewController {
     
     var photoName: String?
     @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-         let storyboard = UIStoryboard.init(name: "SelectLayer", bundle: nil)
-           if let controller = storyboard.instantiateViewController(identifier: "SelectLayerViewController") as? SelectLayerViewController {
-               controller.updateMapDelegate = self
-               self.navigationController?.present(controller, animated: true)
-        }
+        let storyboard = UIStoryboard.init(name: "SelectLayer", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectLayerViewController") as? SelectLayerViewController {
+              controller.updateMapDelegate = self
+              if let sheet = controller.sheetPresentationController {
+                  sheet.detents = [ .medium() ]
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,5 +81,9 @@ extension SainteMereEgliseBaseLayerViewController: UpdateMapDelegate {
     func loadTACLayer() {
         self.imageView.image = getMap(mapName: .SainteMereEglise, layerType: .SainteMereEgliseTAC)
 
+    }
+    
+    func loadBaseLayer() {
+        self.imageView.image = getMap(mapName: .SainteMereEglise, layerType: .SainteMereEgliseBaseLayer)
     }
 }
