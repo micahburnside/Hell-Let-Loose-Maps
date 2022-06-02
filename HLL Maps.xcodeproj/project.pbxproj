@@ -269,6 +269,7 @@
 		5414188F281CC21C00E0483B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				5488870B2848A22F0025993D /* Extensions */,
 				54AE2C8F2845CFF6000C4297 /* Data Persistence */,
 				54D081FD282C6E1D00542CB7 /* Modals */,
 				54FA94B428248C040045EFD2 /* Navigation */,
@@ -285,7 +286,6 @@
 				54141822281CC13100E0483B /* ViewController.swift */,
 				54141827281CC13200E0483B /* Assets.xcassets */,
 				54141829281CC13200E0483B /* LaunchScreen.storyboard */,
-				5488870928489DD90025993D /* UIColor+.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -306,6 +306,14 @@
 				5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		5488870B2848A22F0025993D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5488870928489DD90025993D /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		54AE2C8F2845CFF6000C4297 /* Data Persistence */ = {

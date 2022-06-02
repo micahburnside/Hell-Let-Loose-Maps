@@ -9,21 +9,21 @@ import Foundation
 import UIKit
 
 public protocol GetTerritoryColorSelectionDelegate {
-    func getTerritoryColorSelection(territoryColor: TerritoryColor) -> String
+    func getTerritoryColorSelection(territoryColor: TerritoryColor) -> UIColor
 }
 
 public enum TerritoryColor {
-    case Red, Blue, Neutral
+    case EnemyRed, FriendlyBlue, NeutralWhite
 }
 
-func getTerritoryColorSelection(territoryColor: TerritoryColor) -> String {
+func getTerritoryColorSelection(territoryColor: TerritoryColor) -> UIColor {
     switch territoryColor {
-    case .Blue:
-        return "Blue"
-    case .Neutral:
-        return "Neutral"
-    case .Red:
-        return "Red"
+    case .FriendlyBlue:
+        return .getFriendlyBlue()
+    case .NeutralWhite:
+        return .getNeutralWhite()
+    case .EnemyRed:
+        return .getEnemyRed()
     }
 }
 
