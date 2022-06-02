@@ -30,6 +30,7 @@
 		54888704284839ED0025993D /* FactionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54888703284839ED0025993D /* FactionSelectionDelegate.swift */; };
 		5488870628483AA70025993D /* CaptureStatusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870528483AA70025993D /* CaptureStatusDelegate.swift */; };
 		5488870828483B810025993D /* GetTerritoryColorSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */; };
+		5488870A28489DD90025993D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870928489DD90025993D /* UIColor+.swift */; };
 		549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AF31328404420005E1658 /* UpdateMapDelegate.swift */; };
 		54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */; };
 		54AE2C932845D190000C4297 /* MapSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE2C922845D190000C4297 /* MapSelection.swift */; };
@@ -115,6 +116,7 @@
 		54888703284839ED0025993D /* FactionSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionSelectionDelegate.swift; sourceTree = "<group>"; };
 		5488870528483AA70025993D /* CaptureStatusDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureStatusDelegate.swift; sourceTree = "<group>"; };
 		5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTerritoryColorSelectionDelegate.swift; sourceTree = "<group>"; };
+		5488870928489DD90025993D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		549AF31328404420005E1658 /* UpdateMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMapDelegate.swift; sourceTree = "<group>"; };
 		54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		54AE2C922845D190000C4297 /* MapSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelection.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				54141822281CC13100E0483B /* ViewController.swift */,
 				54141827281CC13200E0483B /* Assets.xcassets */,
 				54141829281CC13200E0483B /* LaunchScreen.storyboard */,
+				5488870928489DD90025993D /* UIColor+.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */,
 				54D081CF2829F14300542CB7 /* RemagenBaseLayerViewController.swift in Sources */,
 				54AE2C932845D190000C4297 /* MapSelection.swift in Sources */,
+				5488870A28489DD90025993D /* UIColor+.swift in Sources */,
 				54141893281CC22E00E0483B /* NSObject+.swift in Sources */,
 				548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */,
 				549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */,
