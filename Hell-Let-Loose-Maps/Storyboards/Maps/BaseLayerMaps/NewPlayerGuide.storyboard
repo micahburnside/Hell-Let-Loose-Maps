@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kRy-kH-qET">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NewPlayerGuide-->
+        <scene sceneID="wGm-Rc-cpw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHw-eW-bo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="NewPlayerGuideViewController" title="NewPlayerGuide" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MnH-gx-0cY" customClass="NewPlayerGuideViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W2j-z9-JL7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfh-eh-MDI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewPlayerGuidePDF" translatesAutoresizingMaskIntoConstraints="NO" id="02F-jf-abe">
+                                        <rect key="frame" x="0.0" y="-22" width="1735" height="1249"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="02F-jf-abe" secondAttribute="trailing" id="7zA-qY-Cbm"/>
+                                    <constraint firstItem="02F-jf-abe" firstAttribute="top" secondItem="jfh-eh-MDI" secondAttribute="top" constant="-22" id="VfV-58-ewK"/>
+                                    <constraint firstItem="02F-jf-abe" firstAttribute="leading" secondItem="jfh-eh-MDI" secondAttribute="leading" id="fLa-tr-rsG"/>
+                                    <constraint firstAttribute="bottom" secondItem="02F-jf-abe" secondAttribute="bottom" constant="-22" id="gjb-BR-0eW"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="HfL-N9-xyp"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="UEd-yD-V31"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hlf-9d-vxc"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jfh-eh-MDI" firstAttribute="centerX" secondItem="W2j-z9-JL7" secondAttribute="centerX" id="Eo7-wK-ujj"/>
+                            <constraint firstItem="jfh-eh-MDI" firstAttribute="top" secondItem="Hlf-9d-vxc" secondAttribute="top" id="ckM-lF-N9m"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jfh-eh-MDI" secondAttribute="bottom" constant="-34" id="uEY-gB-dTW"/>
+                            <constraint firstItem="jfh-eh-MDI" firstAttribute="leading" secondItem="Hlf-9d-vxc" secondAttribute="leading" id="yiI-km-Xgr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Player Guide" id="xQv-Pl-wmg"/>
+                    <connections>
+                        <outlet property="imageView" destination="02F-jf-abe" id="agD-ie-X1p"/>
+                        <outlet property="imageViewBottomConstraint" destination="gjb-BR-0eW" id="l0X-9S-zKO"/>
+                        <outlet property="imageViewLeadingConstraint" destination="fLa-tr-rsG" id="ViT-OP-odx"/>
+                        <outlet property="imageViewTopConstraint" destination="VfV-58-ewK" id="PBn-d5-2ZD"/>
+                        <outlet property="imageViewTrailingConstraint" destination="7zA-qY-Cbm" id="9SV-dv-jCq"/>
+                        <outlet property="scrollView" destination="jfh-eh-MDI" id="4Ww-eG-kbR"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hC5-Zi-Uu5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4J-nF-LJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRy-kH-qET" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AfM-JQ-z0H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MnH-gx-0cY" kind="relationship" relationship="rootViewController" id="VrT-3f-qoE"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NewPlayerGuidePDF" width="1735" height="1249"/>
+    </resources>
+</document>

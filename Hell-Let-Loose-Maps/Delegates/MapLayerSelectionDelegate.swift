@@ -22,7 +22,8 @@ public enum LayerType {
     case CarentanBaseLayer, CarentanTAC, CarentanStrongpoints, FoyBaseLayer, FoyTAC, FoyStrongpoints, Hill400BaseLayer, Hill400TAC, Hill400Strongpoints, HurtgenForestBaseLayer, HurtgenForestTAC, HurtgenForestStrongpoints, KurskBaseLayer, KurskTAC, KurskStrongpoints, OmahaBeachBaseLayer, OmahaBeachTAC, OmahaBeachStrongpoints, PurpleHeartLaneBaseLayer, PurpleHeartLaneTAC, PurpleHeartLaneStrongpoints, RemagenBaseLayer, RemagenTAC, RemagenStrongpoints, SainteMarieduMontBaseLayer, SainteMarieduMontTAC, SainteMarieduMontStrongpoints, SainteMereEgliseBaseLayer, SainteMereEgliseTAC, SainteMereEgliseStrongpoints, StalingradBaseLayer, StalingradTAC, StalingradStrongpoints, UtahBeachBaseLayer, UtahBeachTAC, UtahBeachStrongpoints
 }
 
-//MARK: - Get Map Methos
+
+//MARK: - Get Map Method
 func getMap(mapName: MapName, layerType: LayerType) -> UIImage  {
     switch mapName {
     case .Carentan:

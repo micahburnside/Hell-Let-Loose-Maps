@@ -10,6 +10,7 @@
         <!--StalingradBaseLayer-->
         <scene sceneID="onv-Pf-Zgy">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkd-lV-mQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="StalingradBaseLayerViewController" title="StalingradBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qm4-eN-r4j" customClass="StalingradBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mxS-wl-ptU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -60,13 +61,13 @@
                         <outlet property="scrollView" destination="Qck-Bv-Ydh" id="X7g-vJ-3MF"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nkd-lV-mQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W0U-X7-qkc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L2y-iz-kkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ST-1C-bbw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="je5-Mv-B4m">
@@ -87,7 +88,6 @@
                         <segue destination="Qm4-eN-r4j" kind="relationship" relationship="rootViewController" id="LUr-p3-qK4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L2y-iz-kkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
         </scene>

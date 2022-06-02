@@ -34,7 +34,8 @@ class CarentanBaseLayerViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
+        self.imageView.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
+        self.imageView.contentMode = .scaleAspectFit
         scrollView.delegate = self
     }
     
@@ -46,6 +47,10 @@ class CarentanBaseLayerViewController: BaseViewController {
         updateMinZoomScaleForSize(view.bounds.size)
     }
     
+//    func loadUserMapSelection() {
+//        self.imageView.image = StoredData.shared.getMapSelectionChoice(detailType: .Carentan)
+//            self.textFieldPassword.text = StoredData.shared.getTestUserInfo(detailType: .PASSWORD)
+//    }
 }
 
 //MARK: - Sizing

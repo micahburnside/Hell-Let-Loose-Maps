@@ -20,7 +20,19 @@
 		54141893281CC22E00E0483B /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141891281CC22E00E0483B /* NSObject+.swift */; };
 		54141896281CC24100E0483B /* MapsListDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141895281CC24100E0483B /* MapsListDictionary.swift */; };
 		54141899281CC2C500E0483B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141898281CC2C500E0483B /* BaseViewController.swift */; };
+		5470CF8D28458EE800AAEB0B /* NewPlayerGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */; };
+		5470CF8F28458F5C00AAEB0B /* NewPlayerGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470CF8E28458F5C00AAEB0B /* NewPlayerGuideViewController.swift */; };
+		548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */; };
+		548886FC284835450025993D /* StrongpointCircleSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886FB284835450025993D /* StrongpointCircleSelectionDelegate.swift */; };
+		548886FE284836920025993D /* ZoneSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886FD284836920025993D /* ZoneSelectionDelegate.swift */; };
+		548887002848379A0025993D /* StrongpointTitleSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886FF2848379A0025993D /* StrongpointTitleSelectionDelegate.swift */; };
+		54888702284839010025993D /* TerritorySelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54888701284839010025993D /* TerritorySelectionDelegate.swift */; };
+		54888704284839ED0025993D /* FactionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54888703284839ED0025993D /* FactionSelectionDelegate.swift */; };
+		5488870628483AA70025993D /* CaptureStatusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870528483AA70025993D /* CaptureStatusDelegate.swift */; };
+		5488870828483B810025993D /* GetTerritoryColorSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */; };
 		549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AF31328404420005E1658 /* UpdateMapDelegate.swift */; };
+		54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */; };
+		54AE2C932845D190000C4297 /* MapSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE2C922845D190000C4297 /* MapSelection.swift */; };
 		54D081BE2829EFEC00542CB7 /* CarentanBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */; };
 		54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */; };
 		54D081C32829F0EC00542CB7 /* FoyBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */; };
@@ -93,7 +105,19 @@
 		54141891281CC22E00E0483B /* NSObject+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		54141895281CC24100E0483B /* MapsListDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsListDictionary.swift; sourceTree = "<group>"; };
 		54141898281CC2C500E0483B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPlayerGuide.storyboard; sourceTree = "<group>"; };
+		5470CF8E28458F5C00AAEB0B /* NewPlayerGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerGuideViewController.swift; sourceTree = "<group>"; };
+		548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointLayerSelectionDelegate.swift; sourceTree = "<group>"; };
+		548886FB284835450025993D /* StrongpointCircleSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointCircleSelectionDelegate.swift; sourceTree = "<group>"; };
+		548886FD284836920025993D /* ZoneSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneSelectionDelegate.swift; sourceTree = "<group>"; };
+		548886FF2848379A0025993D /* StrongpointTitleSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointTitleSelectionDelegate.swift; sourceTree = "<group>"; };
+		54888701284839010025993D /* TerritorySelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerritorySelectionDelegate.swift; sourceTree = "<group>"; };
+		54888703284839ED0025993D /* FactionSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionSelectionDelegate.swift; sourceTree = "<group>"; };
+		5488870528483AA70025993D /* CaptureStatusDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureStatusDelegate.swift; sourceTree = "<group>"; };
+		5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTerritoryColorSelectionDelegate.swift; sourceTree = "<group>"; };
 		549AF31328404420005E1658 /* UpdateMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMapDelegate.swift; sourceTree = "<group>"; };
+		54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		54AE2C922845D190000C4297 /* MapSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelection.swift; sourceTree = "<group>"; };
 		54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarentanBaseLayer.storyboard; sourceTree = "<group>"; };
 		54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarentanBaseLayerViewController.swift; sourceTree = "<group>"; };
 		54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoyBaseLayerViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +238,7 @@
 				54D081D82829F19000542CB7 /* BaseLayerMapsViewController.swift */,
 				54D0826328330B2500542CB7 /* SelectLayerViewController.swift */,
 				54D081BF2829F00600542CB7 /* BaseLayerMaps */,
+				5470CF8E28458F5C00AAEB0B /* NewPlayerGuideViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -242,6 +267,7 @@
 		5414188F281CC21C00E0483B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				54AE2C8F2845CFF6000C4297 /* Data Persistence */,
 				54D081FD282C6E1D00542CB7 /* Modals */,
 				54FA94B428248C040045EFD2 /* Navigation */,
 				54D081BC2829EFBE00542CB7 /* Maps */,
@@ -267,8 +293,25 @@
 				5414186B281CC1F200E0483B /* DataSourceDelegate.swift */,
 				54D0825D283057CE00542CB7 /* MapLayerSelectionDelegate.swift */,
 				549AF31328404420005E1658 /* UpdateMapDelegate.swift */,
+				548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */,
+				548886FB284835450025993D /* StrongpointCircleSelectionDelegate.swift */,
+				548886FD284836920025993D /* ZoneSelectionDelegate.swift */,
+				548886FF2848379A0025993D /* StrongpointTitleSelectionDelegate.swift */,
+				54888701284839010025993D /* TerritorySelectionDelegate.swift */,
+				54888703284839ED0025993D /* FactionSelectionDelegate.swift */,
+				5488870528483AA70025993D /* CaptureStatusDelegate.swift */,
+				5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		54AE2C8F2845CFF6000C4297 /* Data Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */,
+				54AE2C922845D190000C4297 /* MapSelection.swift */,
+			);
+			path = "Data Persistence";
 			sourceTree = "<group>";
 		};
 		54D081BB2829EF9600542CB7 /* BaseLayerMaps */ = {
@@ -286,6 +329,7 @@
 				54D081F22829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard */,
 				54D081F42829F7C300542CB7 /* UtahBeachBaseLayer.storyboard */,
 				54D081F6282A131400542CB7 /* StalingradBaseLayer.storyboard */,
+				5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */,
 			);
 			path = BaseLayerMaps;
 			sourceTree = "<group>";
@@ -454,6 +498,7 @@
 				54D081F52829F7C300542CB7 /* UtahBeachBaseLayer.storyboard in Resources */,
 				54D081ED2829F78E00542CB7 /* PurpleHeartLaneBaseLayer.storyboard in Resources */,
 				54D081F12829F7A600542CB7 /* SainteMarieduMontBaseLayer.storyboard in Resources */,
+				5470CF8D28458EE800AAEB0B /* NewPlayerGuide.storyboard in Resources */,
 				54D081E12829F28F00542CB7 /* BaseLayerMapsTableViewCell.xib in Resources */,
 				54D081BE2829EFEC00542CB7 /* CarentanBaseLayer.storyboard in Resources */,
 				54D081EF2829F79800542CB7 /* RemagenBaseLayer.storyboard in Resources */,
@@ -481,12 +526,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5488870828483B810025993D /* GetTerritoryColorSelectionDelegate.swift in Sources */,
 				54D081D52829F16D00542CB7 /* StalingradBaseLayerViewController.swift in Sources */,
+				548886FE284836920025993D /* ZoneSelectionDelegate.swift in Sources */,
+				54888704284839ED0025993D /* FactionSelectionDelegate.swift in Sources */,
 				54141823281CC13100E0483B /* ViewController.swift in Sources */,
 				54141899281CC2C500E0483B /* BaseViewController.swift in Sources */,
 				54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */,
 				54D081CF2829F14300542CB7 /* RemagenBaseLayerViewController.swift in Sources */,
+				54AE2C932845D190000C4297 /* MapSelection.swift in Sources */,
 				54141893281CC22E00E0483B /* NSObject+.swift in Sources */,
+				548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */,
 				549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */,
 				54D081C92829F11100542CB7 /* KurskBaseLayerViewController.swift in Sources */,
 				5414181F281CC13100E0483B /* AppDelegate.swift in Sources */,
@@ -494,8 +544,11 @@
 				54141821281CC13100E0483B /* SceneDelegate.swift in Sources */,
 				54D081D92829F19000542CB7 /* BaseLayerMapsViewController.swift in Sources */,
 				54141896281CC24100E0483B /* MapsListDictionary.swift in Sources */,
+				54888702284839010025993D /* TerritorySelectionDelegate.swift in Sources */,
 				54D081C32829F0EC00542CB7 /* FoyBaseLayerViewController.swift in Sources */,
 				54141892281CC22E00E0483B /* CustomUITableViewCell.swift in Sources */,
+				548887002848379A0025993D /* StrongpointTitleSelectionDelegate.swift in Sources */,
+				5470CF8F28458F5C00AAEB0B /* NewPlayerGuideViewController.swift in Sources */,
 				54D0826428330B2500542CB7 /* SelectLayerViewController.swift in Sources */,
 				54D0826728330B6900542CB7 /* SelectLayerTableViewCell.swift in Sources */,
 				54D081D32829F16000542CB7 /* SainteMereEgliseBaseLayerViewController.swift in Sources */,
@@ -503,12 +556,15 @@
 				54D081E02829F28F00542CB7 /* BaseLayerMapsTableViewCell.swift in Sources */,
 				54D081D72829F17700542CB7 /* UtahBeachBaseLayerViewController.swift in Sources */,
 				54D081DD2829F25900542CB7 /* BaseLayerMapsDataSource.swift in Sources */,
+				548886FC284835450025993D /* StrongpointCircleSelectionDelegate.swift in Sources */,
 				54D081CB2829F12200542CB7 /* OmahaBeachBaseLayerViewController.swift in Sources */,
 				54D081C72829F10800542CB7 /* HurtgenForestBaseLayerViewController.swift in Sources */,
 				54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */,
+				54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */,
 				54D081D12829F15300542CB7 /* SainteMarieduMontBaseLayerViewController.swift in Sources */,
 				54D0826A28330B7300542CB7 /* SelectLayerDataSource.swift in Sources */,
 				5414186D281CC1F200E0483B /* DataSourceDelegate.swift in Sources */,
+				5488870628483AA70025993D /* CaptureStatusDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -70,6 +70,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectLayerTableViewCell", for: indexPath) as! SelectLayerTableViewCell
         let key = keys[indexPath.row]
         let switchControl = UISwitch()
+//        switchControl.tag = 000089998
         switchControl.tag = indexPath.row
         switchControl.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
         cell.accessoryView = switchControl
@@ -81,35 +82,39 @@ extension SelectLayerDataSource: UITableViewDataSource {
     }
     
     @objc func didChangeSwitch(_ sender: UISwitch) {
+        let tag = sender.tag == 0 ? 1 : 0
+        if let cell = self.tableView.cellForRow(at: IndexPath(row: tag, section: 0)) {
+            if let toggleSwitch = cell.viewWithTag(tag) as? UISwitch {
+//                if toggleSwitch == cell.viewWithTag(0)
+//                    let switch0 = toggleSwitch
+//                } else if toggleSwitch == cell.viewWithTag(1) {
+//                    let switch1 = toggleSwitch
+//                } else if toggleSwitch == cell.viewWithTag(2) {
+//                    let switch3 = toggleSwitch
+                    
+//                }
+                toggleSwitch.isOn = !toggleSwitch.isOn
+
+            }
+        }
         
-//        let switchControl = UISwitch()
-//        let switchControl.viewWithTag(0) = sender0
-//        let sender1 = switchControl.viewWithTag(1)
-//        let sender2 = switchControl.viewWithTag(2)
         switch sender.tag{
             case 0:
+            print("\(sender.tag)")
             if sender.isOn {
                 self.updateMapDelegate?.loadStrongpointsLayer()
-
             } else {
-                if sender.isOn {
-                    self.updateMapDelegate?.loadTACLayer()
-                    sender.isOn = false
-                }
-                // remove whatever is added from above
                 self.updateMapDelegate?.loadBaseLayer()
             }
             break
             case 1:
-            // same here
-            self.updateMapDelegate?.loadTACLayer()
+            print("\(sender.tag)")
+            if sender.isOn {
+                self.updateMapDelegate?.loadTACLayer()
+            }
             break
         default:
-            
-            // same here
-            
-            self.updateMapDelegate?.loadTACLayer()
-
+            self.updateMapDelegate?.loadBaseLayer()
         }
     }
 }
