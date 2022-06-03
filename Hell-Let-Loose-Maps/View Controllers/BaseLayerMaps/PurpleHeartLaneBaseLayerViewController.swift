@@ -73,6 +73,62 @@ extension PurpleHeartLaneBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension PurpleHeartLaneBaseLayerViewController: UpdateMapDelegate {
+    func loadStrongpoint1() {
+        
+    }
+    
+    func loadStrongpoint2() {
+        
+    }
+    
+    func loadStrongpoint3() {
+        
+    }
+    
+    func loadStrongpoint4() {
+        
+    }
+    
+    func loadStrongpoint5() {
+        
+    }
+    
+    func loadStrongpoint6() {
+        
+    }
+    
+    func loadStrongpoint7() {
+        
+    }
+    
+    func loadStrongpoint8() {
+        
+    }
+    
+    func loadStrongpoint9() {
+        
+    }
+    
+    func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint12() {
+        
+    }
+    
+    func loadStrongpoint13() {
+        
+    }
+    
+    func loadStrongpoint14() {
+        
+    }
+    
+    func loadStrongpoint15() {
+        
+    }
+    
     
     func loadStrongpointsLayer() {
         self.imageView.image = getMap(mapName: .PurpleHeartLane, layerType: .PurpleHeartLaneStrongpoints)

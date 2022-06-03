@@ -9,11 +9,6 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    public func createCustomColors() {
-        let friendlyBlue = getTerritoryColorSelection(territoryColor: .FriendlyBlue)
-        let enemyRed = getTerritoryColorSelection(territoryColor: .EnemyRed)
-        let neutralWhite = getTerritoryColorSelection(territoryColor: .NeutralWhite)
-    }
     func makeBackgroundRed() {
         self.view.backgroundColor = getTerritoryColorSelection(territoryColor: .EnemyRed)
     }
@@ -29,7 +24,6 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         doubleTapGesture()
-        createCustomColors()
     }
 
 //MARK: - Gesture Recognizers

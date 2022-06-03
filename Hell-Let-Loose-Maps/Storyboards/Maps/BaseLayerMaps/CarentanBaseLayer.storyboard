@@ -52,7 +52,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="Ay9-3w-oXZ" id="i9U-0u-ByF"/>
+                        <outlet property="imageView0" destination="Ay9-3w-oXZ" id="2KG-1c-72t"/>
                         <outlet property="imageViewBottomConstraint" destination="j76-iO-6wp" id="2aN-EQ-Z04"/>
                         <outlet property="imageViewLeadingConstraint" destination="uuR-KA-72F" id="P85-0O-tBK"/>
                         <outlet property="imageViewTopConstraint" destination="ERI-kc-d3L" id="vrc-R8-bFr"/>

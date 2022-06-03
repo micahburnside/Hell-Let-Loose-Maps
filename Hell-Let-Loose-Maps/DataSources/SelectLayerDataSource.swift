@@ -36,20 +36,40 @@ extension SelectLayerDataSource: UITableViewDelegate {
 
 extension SelectLayerDataSource: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Section \(section)"
+//    }
+//
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let selectViewTableView = UIView()
+//        if section == 0 {
+//            selectViewTableView.backgroundColor = .red
+//            selectViewTableView.tintColor = .white
+//            selectViewTableView.largeContentTitle = "Toggle Layer"
+//
+//        }
+//
+//        return selectViewTableView
+//    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
+        let title = UILabel()
+        title.font = UIFont.boldSystemFont(ofSize: 16)
+        title.textColor = .white
+        title.text = "Test"
+        view.addSubview(title)
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        title.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        return view
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let selectViewTableView = UIView()
-        if section == 0 {
-            selectViewTableView.backgroundColor = .red
-            selectViewTableView.tintColor = .white
-            selectViewTableView.largeContentTitle = "Toggle Layer"
-
-        }
-
-        return selectViewTableView
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
