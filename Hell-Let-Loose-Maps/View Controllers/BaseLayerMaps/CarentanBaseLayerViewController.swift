@@ -211,16 +211,16 @@ class CarentanBaseLayerViewController: BaseViewController {
         imageView1.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         imageView1.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         imageView1.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        imageView1.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 1920)
-        imageView1.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 1920)
+        imageView1.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 1920).isActive = true
+        imageView1.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 1920).isActive = true
 
         imageView2.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         imageView2.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         imageView2.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         imageView2.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         imageView2.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        imageView2.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 1920)
-        imageView2.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 1920)
+        imageView2.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 1920).isActive = true
+        imageView2.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 1920).isActive = true
 
         imageView3.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         imageView3.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
@@ -321,7 +321,7 @@ extension CarentanBaseLayerViewController {
 //MARK:- UIScrollViewDelegate
 extension CarentanBaseLayerViewController: UIScrollViewDelegate {
   func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-    return imageView1
+    return imageView0
   }
   
   func scrollViewDidZoom(_ scrollView: UIScrollView) {
@@ -338,75 +338,75 @@ extension CarentanBaseLayerViewController: UIAdaptivePresentationControllerDeleg
 
 extension CarentanBaseLayerViewController: UpdateMapDelegate {
     func loadStrongpoint1() {
-        self.imageView1.image = getStrongpoint(strongpoint: .StrongpointBlactot)
+        self.imageView1.image = getStrongpoint(strongpoint: .StrongpointCarentanBlactot)
         
     }
     
     func loadStrongpoint2() {
-        self.imageView2.image = getStrongpoint(strongpoint: .Strongpoint502ndStart)
+        self.imageView2.image = getStrongpoint(strongpoint: .StrongpointCarentan502ndStart)
 
     }
     
     func loadStrongpoint3() {
-        self.imageView3.image = getStrongpoint(strongpoint: .StrongpointFarmRuins)
+        self.imageView3.image = getStrongpoint(strongpoint: .StrongpointCarentanFarmRuins)
 
     }
     
     func loadStrongpoint4() {
-        self.imageView4.image = getStrongpoint(strongpoint: .StrongpointPumpingStation)
+        self.imageView4.image = getStrongpoint(strongpoint: .StrongpointCarentanPumpingStation)
 
     }
     
     func loadStrongpoint5() {
-        self.imageView5.image = getStrongpoint(strongpoint: .StrongpointRuins)
+        self.imageView5.image = getStrongpoint(strongpoint: .StrongpointCarentanRuins)
 
     }
     
     func loadStrongpoint6() {
-        self.imageView6.image = getStrongpoint(strongpoint: .StrongpointDerailedTrain)
+        self.imageView6.image = getStrongpoint(strongpoint: .StrongpointCarentanDerailedTrain)
 
     }
     
     func loadStrongpoint7() {
-        self.imageView7.image = getStrongpoint(strongpoint: .StrongpointCanalCrossing)
+        self.imageView7.image = getStrongpoint(strongpoint: .StrongpointCarentanCanalCrossing)
 
     }
     
     func loadStrongpoint8() {
-        self.imageView8.image = getStrongpoint(strongpoint: .StrongpointTownCenter)
+        self.imageView8.image = getStrongpoint(strongpoint: .StrongpointCarentanTownCenter)
 
     }
     
     func loadStrongpoint9() {
-        self.imageView9.image = getStrongpoint(strongpoint: .StrongpointTrainStation)
+        self.imageView9.image = getStrongpoint(strongpoint: .StrongpointCarentanTrainStation)
 
     }
     
     func loadStrongpoint10() {
-        self.imageView10.image = getStrongpoint(strongpoint: .StrongpointCustoms)
+        self.imageView10.image = getStrongpoint(strongpoint: .StrongpointCarentanCustoms)
     }
     
     func loadStrongpoint11() {
-        self.imageView11.image = getStrongpoint(strongpoint: .StrongpointRailCauseway)
+        self.imageView11.image = getStrongpoint(strongpoint: .StrongpointCarentanRailCauseway)
 
     }
     
     func loadStrongpoint12() {
-        self.imageView12.image = getStrongpoint(strongpoint: .StrongpointMountHalais)
+        self.imageView12.image = getStrongpoint(strongpoint: .StrongpointCarentanMountHalais)
 
     }
     
     func loadStrongpoint13() {
-        self.imageView13.image = getStrongpoint(strongpoint: .StrongpointCanalLocks)
+        self.imageView13.image = getStrongpoint(strongpoint: .StrongpointCarentanCanalLocks)
 
     }
     
     func loadStrongpoint14() {
-        self.imageView14.image = getStrongpoint(strongpoint: .StrongpointRailCauseway)
+        self.imageView14.image = getStrongpoint(strongpoint: .StrongpointCarentanRailCauseway)
 
     }
     func loadStrongpoint15() {
-        self.imageView15.image = getStrongpoint(strongpoint: .StrongpointLaMaisonDesOrmes)
+        self.imageView15.image = getStrongpoint(strongpoint: .StrongpointCarentanLaMaisonDesOrmes)
 
     }
     

@@ -45,23 +45,19 @@ extension BaseLayerMapsViewController: DataSourceDelegate {
         case 4:
             self.pushToViewController(storyboardName: "KurskBaseLayer", identifier: "KurskBaseLayerViewController")
         case 5:
-            self.pushToViewController(storyboardName: "NewPlayerGuide", identifier: "NewPlayerGuideViewController")
-        case 6:
             self.pushToViewController(storyboardName: "OmahaBeachBaseLayer", identifier: "OmahaBeachBaseLayerViewController")
-        case 7:
+        case 6:
             self.pushToViewController(storyboardName: "PurpleHeartLaneBaseLayer", identifier: "PurpleHeartLaneBaseLayerViewController")
-        case 8:
+        case 7:
             self.pushToViewController(storyboardName: "RemagenBaseLayer", identifier: "RemagenBaseLayerViewController")
-        case 9:
+        case 8:
             self.pushToViewController(storyboardName: "SainteMarieduMontBaseLayer", identifier: "SainteMarieduMontBaseLayerViewController")
-        case 10:
+        case 9:
             self.pushToViewController(storyboardName: "SainteMereEgliseBaseLayer", identifier: "SainteMereEgliseBaseLayerViewController")
-        case 11:
+        case 10:
             self.pushToViewController(storyboardName: "StalingradBaseLayer", identifier: "StalingradBaseLayerViewController")
-        case 12:
+        case 11:
             self.pushToViewController(storyboardName: "UtahBeachBaseLayer", identifier: "UtahBeachBaseLayerViewController")
-        case 13:
-            self.pushToViewController(storyboardName: "NewPlayerGuide", identifier: "NewPlayerGuideViewController")
         default:
         break
         }

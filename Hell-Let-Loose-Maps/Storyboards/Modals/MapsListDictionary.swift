@@ -29,7 +29,7 @@ struct MapsListDictionary {
         "Sainte Mère Église" : "America vs Germany",
         "Stalingrad" : "Germany vs Soviet Union",
         "Utah Beach" : "America vs Germay",
-        "New Player Guide" : "Test PDF",
+//        "New Player Guide" : "Test PDF",
     ]
 
     let layerTypesDictionary: [String : String] = [
