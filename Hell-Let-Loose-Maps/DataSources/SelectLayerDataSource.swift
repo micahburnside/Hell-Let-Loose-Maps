@@ -54,12 +54,13 @@ extension SelectLayerDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
+        view.backgroundColor = .black
         let title = UILabel()
-        title.font = UIFont.boldSystemFont(ofSize: 16)
+        title.font = UIFont.boldSystemFont(ofSize: 24)
         title.textColor = .white
-        title.text = "Test"
+        title.text = "Layer Selection"
         view.addSubview(title)
+        title.textAlignment = .justified
         title.translatesAutoresizingMaskIntoConstraints = false
         title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         title.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
