@@ -53,7 +53,7 @@ extension BaseLayerMapsDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BaseLayerMapsTableViewCell", for: indexPath) as! BaseLayerMapsTableViewCell
         let key = keys[indexPath.row]
-
+        
         cell.primaryText = "\(key)"
         // get value from mapsListDictionary using the key
         cell.secondaryText = "\(self.mapsList[key] ?? "")"

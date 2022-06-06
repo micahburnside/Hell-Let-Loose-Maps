@@ -36,9 +36,19 @@ extension SelectLayerDataSource: UITableViewDelegate {
 
 extension SelectLayerDataSource: UITableViewDataSource {
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Section \(section)"
-//    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "\(String(describing: ZoneTableViewSection.zone1))"
+        case 1: return "\(String(describing: ZoneTableViewSection.zone2))"
+        case 2: return "\(String(describing: ZoneTableViewSection.zone3))"
+        case 3: return "\(String(describing: ZoneTableViewSection.zone4))"
+        case 4: return "\(String(describing: ZoneTableViewSection.zone5))"
+        default:
+            break
+        }
+        print("\(section.description)")
+        return section.description
+    }
 //
 //    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let selectViewTableView = UIView()
@@ -58,7 +68,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 24)
         title.textColor = .white
-        title.text = "Layer Selection"
+        title.text = "Layer Selection" // need array of strings
         view.addSubview(title)
         title.textAlignment = .justified
         title.translatesAutoresizingMaskIntoConstraints = false
@@ -82,13 +92,22 @@ extension SelectLayerDataSource: UITableViewDataSource {
             })
         }
     }
-    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return ZoneTableViewSection.allCases.count
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.keys.count
+        
+//        [[]]
+        
+//        switch section {
+//        case 0: return
+//        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectLayerTableViewCell", for: indexPath) as! SelectLayerTableViewCell
+        
         let key = keys[indexPath.row]
         let switchControl = UISwitch()
 //        switchControl.tag = 000089998
