@@ -73,6 +73,10 @@ extension OmahaBeachBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension OmahaBeachBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -110,6 +114,10 @@ extension OmahaBeachBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

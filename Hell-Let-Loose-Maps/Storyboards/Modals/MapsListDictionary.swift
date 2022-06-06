@@ -32,9 +32,24 @@ struct MapsListDictionary {
 //        "New Player Guide" : "Test PDF",
     ]
 
-    let layerTypesDictionary: [String : String] = [
-        "TAC" : "displays grid lines on top of base layer",
-        "Strongpoints" : "displays strongpoints"
+    let carentanStrongpointsDictionary: [String : String] = [
+//        "TAC" : "displays grid lines on top of base layer",
+//        "Strongpoints" : "displays strongpoints",
+        "1 - Blactot" : "",
+        "2 - 502nd Start" : "",
+        "3 - Farm Ruins" : "",
+        "4 - PumpingStation" : "",
+        "5 - Ruins" : "",
+        "6 - Derailed Train" : "",
+        "7 - Canal Crossing" : "",
+        "8 - Town Center" : "",
+        "9 - Train Station" : "",
+        "10 - Customs" : "",
+        "11 - Rail Causeway" : "",
+        "12 - Mount Halais" : "",
+        "13 - Canal Locks" : "",
+        "14 -Rail Causeway" : "",
+        "15 - La Maison Des Ormes" : ""
     ]
     
     

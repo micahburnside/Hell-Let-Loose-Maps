@@ -73,6 +73,14 @@ extension PurpleHeartLaneBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension PurpleHeartLaneBaseLayerViewController: UpdateMapDelegate {
+    func loadStrongpoint11() {
+        
+    }
+    
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }

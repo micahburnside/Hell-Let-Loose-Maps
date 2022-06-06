@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class SelectLayerDataSource: NSObject {
-    private var layerTypes = MapsListDictionary().layerTypesDictionary
+    private var layerTypes = MapsListDictionary().carentanStrongpointsDictionary
     var updateMapDelegate: UpdateMapDelegate?
     var delegate: DataSourceDelegate?
     @IBOutlet weak var tableView: UITableView!
@@ -122,7 +122,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
     }
     
     @objc func didChangeSwitch(_ sender: UISwitch) {
-        let tag = sender.tag == 0 ? 1 : 0
+        let tag = sender.tag
         if let cell = self.tableView.cellForRow(at: IndexPath(row: tag, section: 0)) {
             if let toggleSwitch = cell.viewWithTag(tag) as? UISwitch {
 //                if toggleSwitch == cell.viewWithTag(0)
@@ -133,26 +133,146 @@ extension SelectLayerDataSource: UITableViewDataSource {
 //                    let switch3 = toggleSwitch
                     
 //                }
-                toggleSwitch.isOn = !toggleSwitch.isOn
+//                toggleSwitch.isOn = !toggleSwitch.isOn
 
             }
         }
         
         switch sender.tag{
-            case 0:
-            print("\(sender.tag)")
-            if sender.isOn {
-                self.updateMapDelegate?.loadStrongpointsLayer()
-            } else {
-                self.updateMapDelegate?.loadBaseLayer()
-            }
-            break
-            case 1:
-            print("\(sender.tag)")
-            if sender.isOn {
-                self.updateMapDelegate?.loadTACLayer()
-            }
-            break
+//            case 0:
+//            print("\(sender.tag)")
+//            if sender.isOn {
+//                self.updateMapDelegate?.loadStrongpointsLayer()
+//            } else {
+//                self.updateMapDelegate?.loadBaseLayer()
+//            }
+//            break
+//            case 1:
+//            print("\(sender.tag)")
+//            if sender.isOn {
+//                self.updateMapDelegate?.loadTACLayer()
+//            }
+//            break
+        case 0:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint1()
+        } else {
+            self.updateMapDelegate?.removeStrongpoint()
+        }
+        break
+        case 1:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint2()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 2:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint3()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 3:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint4()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 4:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint5()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 5:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint6()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 6:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint7()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 7:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint8()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 8:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint9()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 9:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint10()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 10:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint11()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 11:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint12()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 12:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint13()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 13:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint14()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
+        case 14:
+        print("\(sender.tag)")
+        if sender.isOn {
+            self.updateMapDelegate?.loadStrongpoint15()
+        } else {
+            self.updateMapDelegate?.loadBaseLayer()
+        }
+        break
         default:
             self.updateMapDelegate?.loadBaseLayer()
         }

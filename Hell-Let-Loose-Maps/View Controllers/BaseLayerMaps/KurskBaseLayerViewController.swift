@@ -75,6 +75,10 @@ extension KurskBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension KurskBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -112,6 +116,10 @@ extension KurskBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

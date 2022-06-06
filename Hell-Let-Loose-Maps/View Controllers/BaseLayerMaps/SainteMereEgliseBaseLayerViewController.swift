@@ -73,6 +73,10 @@ extension SainteMereEgliseBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension SainteMereEgliseBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -110,6 +114,10 @@ extension SainteMereEgliseBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

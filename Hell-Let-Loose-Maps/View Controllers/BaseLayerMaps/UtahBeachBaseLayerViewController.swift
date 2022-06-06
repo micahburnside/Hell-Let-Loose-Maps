@@ -74,6 +74,10 @@ extension UtahBeachBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension UtahBeachBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -111,6 +115,10 @@ extension UtahBeachBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

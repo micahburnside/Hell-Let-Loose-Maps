@@ -73,6 +73,11 @@ extension HurtgenForestBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension HurtgenForestBaseLayerViewController: UpdateMapDelegate {
+    
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -110,6 +115,10 @@ extension HurtgenForestBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

@@ -73,6 +73,10 @@ extension StalingradBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension StalingradBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -110,6 +114,10 @@ extension StalingradBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

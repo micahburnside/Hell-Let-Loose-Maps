@@ -150,12 +150,26 @@ class CarentanBaseLayerViewController: BaseViewController {
                self.navigationController?.present(controller, animated: true)
         }
     }
-    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+        
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            if scrollView.zoomScale == 1 {
+                scrollView.setZoomScale(2, animated: true)
+            } else {
+                scrollView.setZoomScale(1, animated: true)
+            }
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageView0.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
         scrollView.delegate = self
         createImageViewLayerSubViews()
+        doubleTapGesture()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -167,17 +181,12 @@ class CarentanBaseLayerViewController: BaseViewController {
         updateMinZoomScaleForSize(view.bounds.size)
     }
     
-//    func loadUserMapSelection() {
-//        self.imageView.image = StoredData.shared.getMapSelectionChoice(detailType: .Carentan)
-//            self.textFieldPassword.text = StoredData.shared.getTestUserInfo(detailType: .PASSWORD)
-//    }
-    
 //MARK: - Create ImageView SubViews
     
     // Create imageViews and add them to the View Heierarchy
     func createImageViewLayerSubViews() {
         //Add imageViews to the View Heierarchy
-         imageView0.addSubview(imageView1)
+        imageView0.addSubview(imageView1)
         imageView0.addSubview(imageView2)
         imageView0.addSubview(imageView3)
         imageView0.addSubview(imageView4)
@@ -197,9 +206,6 @@ class CarentanBaseLayerViewController: BaseViewController {
         imageView1.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
         imageView1.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
         imageView1.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-//        imageView1.widthAnchor.constraint(equalTo: imageView0.widthAnchor, constant: 1920).isActive = true
-//        imageView1.heightAnchor.constraint(equalTo: imageView0.heightAnchor, constant: 1920).isActive = true
-
 
         imageView2.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
         imageView2.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
@@ -279,10 +285,8 @@ class CarentanBaseLayerViewController: BaseViewController {
 extension CarentanBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
         scrollView.minimumZoomScale = 0.2
         scrollView.maximumZoomScale = 5.0
-                
     }
     
     func updateConstraintsForSize(_ size: CGSize) {
@@ -293,10 +297,7 @@ extension CarentanBaseLayerViewController {
       let xOffset = max(0, (size.width - imageView0.frame.width) / 2)
       imageViewLeadingConstraint.constant = xOffset
       imageViewTrailingConstraint.constant = xOffset
-
       view.layoutIfNeeded()
- 
-    
     }
     
 
@@ -311,7 +312,6 @@ extension CarentanBaseLayerViewController: UIScrollViewDelegate {
   
   func scrollViewDidZoom(_ scrollView: UIScrollView) {
     updateConstraintsForSize(view.bounds.size)
-
   }
 }
 
@@ -323,9 +323,12 @@ extension CarentanBaseLayerViewController: UIAdaptivePresentationControllerDeleg
 
 
 extension CarentanBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        self.imageView1.removeFromSuperview()
+    }
+    
     func loadStrongpoint1() {
         self.imageView1.image = getStrongpoint(strongpoint: .StrongpointCarentanBlactot)
-        
     }
     
     func loadStrongpoint2() {

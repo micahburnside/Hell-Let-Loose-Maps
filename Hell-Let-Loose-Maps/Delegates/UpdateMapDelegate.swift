@@ -22,8 +22,10 @@ protocol UpdateMapDelegate {
     func loadStrongpoint8()
     func loadStrongpoint9()
     func loadStrongpoint10()
+    func loadStrongpoint11()
     func loadStrongpoint12()
     func loadStrongpoint13()
     func loadStrongpoint14()
     func loadStrongpoint15()
+    func removeStrongpoint()
 }

@@ -74,6 +74,10 @@ extension Hill400BaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension Hill400BaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -111,6 +115,10 @@ extension Hill400BaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

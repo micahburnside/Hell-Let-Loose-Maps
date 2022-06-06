@@ -23,21 +23,9 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doubleTapGesture()
+//        doubleTapGesture()
     }
 
-//MARK: - Gesture Recognizers
-    func doubleTapGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            tap.numberOfTapsRequired = 2
-            view.addGestureRecognizer(tap)
-    }
-
-    
-    @objc func doubleTapPressed() {
-        print("doubleTap Pressed")
-
-    }
     
 //MARK: - View Controller Life Cycle Methods
     

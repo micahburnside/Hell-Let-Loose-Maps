@@ -73,6 +73,10 @@ extension RemagenBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension RemagenBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -110,6 +114,10 @@ extension RemagenBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

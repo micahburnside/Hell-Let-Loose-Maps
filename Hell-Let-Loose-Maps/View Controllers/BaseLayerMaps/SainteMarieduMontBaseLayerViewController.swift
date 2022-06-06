@@ -73,6 +73,10 @@ extension SainteMarieduMontBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension SainteMarieduMontBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+        
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -110,6 +114,10 @@ extension SainteMarieduMontBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     

@@ -75,6 +75,10 @@ extension FoyBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension FoyBaseLayerViewController: UpdateMapDelegate {
+    func removeStrongpoint() {
+    
+    }
+    
     func loadStrongpoint1() {
         
     }
@@ -112,6 +116,10 @@ extension FoyBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint10() {
+        
+    }
+    
+    func loadStrongpoint11() {
         
     }
     
