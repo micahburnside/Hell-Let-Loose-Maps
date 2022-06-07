@@ -6,55 +6,29 @@
 //
 
 import Foundation
+import UIKit
 
 class StoredData: NSObject {
     static let shared = StoredData()
-    
-    /// Get access token and refresh token
-    func getToken(tokenType: StoredDataKeys) -> String {
-        return UserDefaults.standard.string(forKey: tokenType.rawValue) ?? ""
-    }
-    /// Get TestUser Country Code, Phone Number, Email, and Password Keys
-    func getTestUserInfo(detailType: StoredUserKeys) -> String {
-        return UserDefaults.standard.string(forKey: detailType.rawValue) ?? ""
-    }
-    /// Get Supabase Developer Credentials
-    func getSupbaseDevDetails(detailType: StoredSupabaseDevKeys) -> String {
-        return UserDefaults.standard.string(forKey: detailType.rawValue) ?? ""
-    }
-    
-    /// Saves Test User Values to User Defaults
-    func setTestUserDefaults(countrycode: String, phoneNumber: String, email: String, password: String) {
-        UserDefaults.standard.set(countrycode, forKey: StoredUserKeys.COUNTRY_CODE.rawValue)
-        UserDefaults.standard.set(phoneNumber, forKey: StoredUserKeys.PHONE_NUMBER.rawValue)
-        UserDefaults.standard.set(email, forKey: StoredUserKeys.EMAIL.rawValue)
-        UserDefaults.standard.set(password, forKey: StoredUserKeys.PASSWORD.rawValue)
-    }
-    
-    /// Set Developer Credentials
-    func setTokens(accessToken: String, refreshToken: String) {
-        UserDefaults.standard.set(accessToken, forKey: StoredDataKeys.ACCESS_TOKEN.rawValue)
-        UserDefaults.standard.set(refreshToken, forKey: StoredDataKeys.REFRESH_TOKEN.rawValue)
-    }
 
-    func setSupaBaseDevDetails(apiKey: String, databaseURL: String) {
-        UserDefaults.standard.set(apiKey, forKey: StoredSupabaseDevKeys.API_KEY.rawValue)
-        UserDefaults.standard.set(databaseURL, forKey: StoredSupabaseDevKeys.DEV_DATABASE_URL.rawValue)
+    /// Get toggle switch state from User Defaults
+    func getToggleSwitchState(switchKey: ToggleSwitchKeys) -> String {
+        return UserDefaults.standard.string(forKey: switchKey.rawValue) ?? ""
     }
     
-    /// Supabase Response: Access Token, Refresh Token Keys
-    enum StoredDataKeys: String {
-        case ACCESS_TOKEN, REFRESH_TOKEN
+    /// Save user switch selection choice for ON
+    func setToggleSwitchOn(switchKey: ToggleSwitchKeys) {
+        UserDefaults.standard.set(switchKey, forKey: ToggleSwitchKeys.IS_ON.rawValue)
     }
     
-    /// Test User Country Code, Phone Number, Email, and Password Keys
-    enum StoredUserKeys: String {
-        case COUNTRY_CODE, PHONE_NUMBER, EMAIL, PASSWORD
+    /// Save user switch selection choice for OFF
+    func setToggleSwitchOff(switchKey: ToggleSwitchKeys) {
+        UserDefaults.standard.set(switchKey, forKey: ToggleSwitchKeys.IS_OFF.rawValue)
     }
     
-    /// Supabase Developer API Key, Database URL Key Save
-    enum StoredSupabaseDevKeys: String {
-        case API_KEY, DEV_DATABASE_URL
+    /// Toggle Switch settings
+    enum ToggleSwitchKeys: String {
+        case IS_ON, IS_OFF
     }
 
 }

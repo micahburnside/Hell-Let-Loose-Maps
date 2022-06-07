@@ -278,6 +278,7 @@ class CarentanBaseLayerViewController: BaseViewController {
         imageView15.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
     }
     
+    
 }
 
 //MARK: - Sizing
@@ -376,7 +377,7 @@ extension CarentanBaseLayerViewController: UpdateMapDelegate {
     }
     
     func loadStrongpoint11() {
-        self.imageView11.image = getStrongpoint(strongpoint: .StrongpointCarentanRailCauseway)
+        self.imageView11.image = getStrongpoint(strongpoint: .StrongpointCarentanRailCrossing)
 
     }
     

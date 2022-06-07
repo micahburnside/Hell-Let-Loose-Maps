@@ -29,7 +29,6 @@ struct MapsListDictionary {
         "Sainte Mère Église" : "America vs Germany",
         "Stalingrad" : "Germany vs Soviet Union",
         "Utah Beach" : "America vs Germay",
-//        "New Player Guide" : "Test PDF",
     ]
 
     let carentanStrongpointsDictionary: [String : String] = [
@@ -45,10 +44,10 @@ struct MapsListDictionary {
         "8 - Town Center" : "",
         "9 - Train Station" : "",
         "10 - Customs" : "",
-        "11 - Rail Causeway" : "",
+        "11 - Rail Crossing" : "",
         "12 - Mount Halais" : "",
         "13 - Canal Locks" : "",
-        "14 -Rail Causeway" : "",
+        "14 - Rail Causeway" : "",
         "15 - La Maison Des Ormes" : ""
     ]
     

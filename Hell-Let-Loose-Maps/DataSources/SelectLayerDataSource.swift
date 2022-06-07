@@ -108,6 +108,9 @@ extension SelectLayerDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectLayerTableViewCell", for: indexPath) as! SelectLayerTableViewCell
         
+
+        
+        
         let key = keys[indexPath.row]
         let switchControl = UISwitch()
 //        switchControl.tag = 000089998
@@ -117,9 +120,32 @@ extension SelectLayerDataSource: UITableViewDataSource {
         cell.primaryText = "\(key)"
         cell.secondaryText = "\(self.layerTypes[key] ?? "")"
         cell.backgroundColor = .black
+        
+        // UserDefaults
+        if (UserDefaults.standard.object(forKey: "switchState") == nil)
+           {
+              switchControl.setOn(true, animated: true)
 
+            }
+            else
+             {
+                switchControl.setOn(false, animated: true)
+             }
+             switchControl.tag = indexPath.row
+        switchControl.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
+        
         return cell
     }
+    
+    @objc func switchChanged(_ switchState: UISwitch) {
+        if switchState.isOn {
+            UserDefaults.standard.set(true, forKey: "switchState")
+            } else {
+                UserDefaults.standard.set(false, forKey: "switchState")
+            }
+        
+//        self.tableView.reloadData()
+     }
     
     @objc func didChangeSwitch(_ sender: UISwitch) {
         let tag = sender.tag
