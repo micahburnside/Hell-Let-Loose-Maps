@@ -107,10 +107,6 @@ extension SelectLayerDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectLayerTableViewCell", for: indexPath) as! SelectLayerTableViewCell
-        
-
-        
-        
         let key = keys[indexPath.row]
         let switchControl = UISwitch()
 //        switchControl.tag = 000089998
@@ -184,7 +180,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint1()
         } else {
-            self.updateMapDelegate?.removeStrongpoint()
+            self.updateMapDelegate?.removeStrongpoint1()
         }
         break
         case 1:
@@ -192,7 +188,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint2()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint2()
         }
         break
         case 2:
@@ -200,7 +196,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint3()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint3()
         }
         break
         case 3:
@@ -208,7 +204,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint4()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint4()
         }
         break
         case 4:
@@ -216,7 +212,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint5()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint5()
         }
         break
         case 5:
@@ -224,7 +220,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint6()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint6()
         }
         break
         case 6:
@@ -232,7 +228,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint7()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint7()
         }
         break
         case 7:
@@ -240,7 +236,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint8()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint8()
         }
         break
         case 8:
@@ -248,7 +244,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint9()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint9()
         }
         break
         case 9:
@@ -256,7 +252,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint10()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint10()
         }
         break
         case 10:
@@ -264,7 +260,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint11()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint11()
         }
         break
         case 11:
@@ -272,7 +268,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint12()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint12()
         }
         break
         case 12:
@@ -280,7 +276,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint13()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint13()
         }
         break
         case 13:
@@ -288,7 +284,7 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint14()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint14()
         }
         break
         case 14:
@@ -296,11 +292,12 @@ extension SelectLayerDataSource: UITableViewDataSource {
         if sender.isOn {
             self.updateMapDelegate?.loadStrongpoint15()
         } else {
-            self.updateMapDelegate?.loadBaseLayer()
+            self.updateMapDelegate?.removeStrongpoint15()
         }
         break
         default:
-            self.updateMapDelegate?.loadBaseLayer()
+            break
+            
         }
     }
 }

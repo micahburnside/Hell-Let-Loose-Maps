@@ -73,7 +73,63 @@ extension StalingradBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension StalingradBaseLayerViewController: UpdateMapDelegate {
-    func removeStrongpoint() {
+    func removeStrongpoint1() {
+        
+    }
+    
+    func removeStrongpoint2() {
+        
+    }
+    
+    func removeStrongpoint3() {
+        
+    }
+    
+    func removeStrongpoint4() {
+        
+    }
+    
+    func removeStrongpoint5() {
+        
+    }
+    
+    func removeStrongpoint6() {
+        
+    }
+    
+    func removeStrongpoint7() {
+        
+    }
+    
+    func removeStrongpoint8() {
+        
+    }
+    
+    func removeStrongpoint9() {
+        
+    }
+    
+    func removeStrongpoint10() {
+        
+    }
+    
+    func removeStrongpoint11() {
+        
+    }
+    
+    func removeStrongpoint12() {
+        
+    }
+    
+    func removeStrongpoint13() {
+        
+    }
+    
+    func removeStrongpoint14() {
+        
+    }
+    
+    func removeStrongpoint15() {
         
     }
     
