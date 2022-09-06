@@ -259,7 +259,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_FOY_EASTERN_OURTHE, isOn: sender.isOn)
             self.updateFoyMapDelegate?.loadFoyEasternOurthe()
         } else {
-            self.updateFoyMapDelegate?.loadFoyEasternOurthe()
+            self.updateFoyMapDelegate?.removeFoyEasternOurthe()
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_FOY_EASTERN_OURTHE, isOn: false)
         }
         break

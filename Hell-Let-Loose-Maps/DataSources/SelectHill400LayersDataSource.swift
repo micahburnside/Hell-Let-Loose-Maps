@@ -217,10 +217,10 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         print("\(sender.tag)")
         if sender.isOn {
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_HILL400_HILL400, isOn: sender.isOn)
-            self.updateHill400MapDelegate?.loadHill400Kirchweg()
+            self.updateHill400MapDelegate?.loadHill400Hill400()
         } else {
-            self.updateHill400MapDelegate?.removeHill400Kirchweg()
-            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_HILL400_FLAKPITS, isOn: false)
+            self.updateHill400MapDelegate?.removeHill400Hill400()
+            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_HILL400_HILL400, isOn: false)
         }
         break
     case 8:

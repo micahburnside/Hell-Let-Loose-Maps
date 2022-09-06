@@ -54,7 +54,7 @@
                             <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="fv0-I8-Fsm">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="shareMapLayer:" destination="UJp-Pu-hvI" id="O56-T8-0q0"/>
+                                    <action selector="shareCarentanMapLayer:" destination="UJp-Pu-hvI" id="urC-gs-6kK"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
