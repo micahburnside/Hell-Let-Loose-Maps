@@ -13,12 +13,12 @@ public protocol MapLayerSelectionDelegate {
     func getMap(mapName: MapName, layerType: LayerType) -> UIImage?
 }
 
-public enum MapName {
+public enum MapName: String {
     case Carentan, Foy, Hill400, HurtgenForest, Kursk, OmahaBeach, PurpleHeartLane, Remagen, SainteMarieduMont, SainteMereEglise, Stalingrad, UtahBeach
 }
 
 //MARK: - All Map Layers
-public enum LayerType {
+public enum LayerType: String {
     case CarentanBaseLayer, CarentanTAC, CarentanStrongpoints, FoyBaseLayer, FoyTAC, FoyStrongpoints, Hill400BaseLayer, Hill400TAC, Hill400Strongpoints, HurtgenForestBaseLayer, HurtgenForestTAC, HurtgenForestStrongpoints, KurskBaseLayer, KurskTAC, KurskStrongpoints, OmahaBeachBaseLayer, OmahaBeachTAC, OmahaBeachStrongpoints, PurpleHeartLaneBaseLayer, PurpleHeartLaneTAC, PurpleHeartLaneStrongpoints, RemagenBaseLayer, RemagenTAC, RemagenStrongpoints, SainteMarieduMontBaseLayer, SainteMarieduMontTAC, SainteMarieduMontStrongpoints, SainteMereEgliseBaseLayer, SainteMereEgliseTAC, SainteMereEgliseStrongpoints, StalingradBaseLayer, StalingradTAC, StalingradStrongpoints, UtahBeachBaseLayer, UtahBeachTAC, UtahBeachStrongpoints
 }
 

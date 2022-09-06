@@ -32,6 +32,7 @@ extension BaseLayerMapsViewController: UITableViewDelegate {
 }
 
 extension BaseLayerMapsViewController: DataSourceDelegate {
+    
     func didSelectCell(indexPath: IndexPath) {
         switch indexPath.row {
         case 0:

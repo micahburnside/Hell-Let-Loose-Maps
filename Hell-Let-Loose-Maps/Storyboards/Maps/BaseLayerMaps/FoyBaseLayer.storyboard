@@ -44,15 +44,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Foy" id="Pzm-77-ihZ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="8hp-CF-f0F">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="layerButtonPressed:" destination="609-Mh-kZw" id="H6U-we-2dD"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="8hp-CF-f0F">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="609-Mh-kZw" id="H6U-we-2dD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="VfD-xu-x3K">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareFoyMapLayer:" destination="609-Mh-kZw" id="tWI-bD-c5G"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="pBU-5x-mF5" id="1J1-eJ-d74"/>
+                        <outlet property="imageView" destination="pBU-5x-mF5" id="hOA-6h-yEr"/>
                         <outlet property="imageViewBottomConstraint" destination="kZ8-8W-6DM" id="mSD-Ke-qIT"/>
                         <outlet property="imageViewLeadingConstraint" destination="mhj-HG-sHh" id="96d-Ew-XoI"/>
                         <outlet property="imageViewTopConstraint" destination="526-U3-G2d" id="hZy-gV-6Vb"/>
@@ -94,6 +102,7 @@
     </scenes>
     <resources>
         <image name="FoyBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
     </resources>
 </document>

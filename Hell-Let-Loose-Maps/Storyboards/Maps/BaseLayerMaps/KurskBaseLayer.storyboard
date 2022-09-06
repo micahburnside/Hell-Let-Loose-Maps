@@ -44,12 +44,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kursk" id="X10-h9-PER">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="ass-QZ-Qiv">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="layerButtonPressed:" destination="bcJ-a0-eD3" id="qh5-qw-nYR"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="ass-QZ-Qiv">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="bcJ-a0-eD3" id="qh5-qw-nYR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="WaO-wh-F9F">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareKurskMapLayer:" destination="bcJ-a0-eD3" id="A2L-ND-Npk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="ci9-Wv-9jj" id="i0t-zY-yY2"/>
@@ -94,6 +102,7 @@
     </scenes>
     <resources>
         <image name="KurskBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
     </resources>
 </document>

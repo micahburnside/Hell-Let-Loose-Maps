@@ -9,14 +9,17 @@ import Foundation
 import UIKit
 
 class BaseLayerMapsDataSource: NSObject {
+    
     private var mapsList = MapsListDictionary().mapsListDictionary
 
     var delegate: DataSourceDelegate?
 
     @IBOutlet weak var tableView: UITableView!
+    
     private var keys = Array<String>()
 
     func setup(dataSourceDelegate: DataSourceDelegate) {
+        
         self.delegate = dataSourceDelegate
         self.tableView.register(UINib(nibName: "BaseLayerMapsTableViewCell", bundle: nil), forCellReuseIdentifier: "BaseLayerMapsTableViewCell")
         self.tableView?.delegate = self
@@ -24,6 +27,7 @@ class BaseLayerMapsDataSource: NSObject {
         self.keys = Array(self.mapsList.keys.sorted(by: {$0.localizedStandardCompare($1) == .orderedAscending}))
         self.tableView.backgroundColor = .clear
         self.tableView.reloadData()
+        
     }
     
 }

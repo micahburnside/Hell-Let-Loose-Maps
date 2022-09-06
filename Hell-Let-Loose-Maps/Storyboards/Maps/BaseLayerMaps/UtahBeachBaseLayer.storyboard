@@ -44,12 +44,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Utah Beach" id="P9W-no-BX3">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="Pn0-aK-xQY">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="layerButtonPressed:" destination="pE4-ik-yv9" id="huf-Nl-KMd"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="Pn0-aK-xQY">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="pE4-ik-yv9" id="huf-Nl-KMd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="wXG-M4-RqD">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareUtahBeachMapLayer:" destination="pE4-ik-yv9" id="JDu-eM-nJR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="UgK-8x-dQP" id="fiH-ly-WEl"/>
@@ -94,6 +102,7 @@
     </scenes>
     <resources>
         <image name="UtahBeachBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
     </resources>
 </document>

@@ -8,7 +8,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
+
     func makeBackgroundRed() {
         self.view.backgroundColor = getTerritoryColorSelection(territoryColor: .EnemyRed)
     }
@@ -57,5 +57,6 @@ class BaseViewController: UIViewController {
     }
     
 }
+
 
 

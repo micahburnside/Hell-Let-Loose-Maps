@@ -44,12 +44,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hürtgen Forest" id="rJo-eR-3lp">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="1Dm-9E-auH">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="layerButtonPressed:" destination="rhK-Y0-w1M" id="zi3-i5-02f"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="1Dm-9E-auH">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="rhK-Y0-w1M" id="zi3-i5-02f"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="zqH-CD-R8i">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareHurtgenForestMapLayer:" destination="rhK-Y0-w1M" id="e18-0F-gDG"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="t1V-V0-xm4" id="3zh-LK-OLC"/>
@@ -94,6 +102,7 @@
     </scenes>
     <resources>
         <image name="HürtgenForestBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
     </resources>
 </document>

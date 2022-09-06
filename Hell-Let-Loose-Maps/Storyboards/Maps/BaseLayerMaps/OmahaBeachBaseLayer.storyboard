@@ -44,12 +44,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Omaha Beach" id="GBd-K9-LGM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="Qmh-EA-X3X">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="layerButtonPressed:" destination="koJ-Da-j9B" id="gaZ-ZW-xRD"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="Qmh-EA-X3X">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="koJ-Da-j9B" id="gaZ-ZW-xRD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="spV-bZ-T4Q">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareOmahaBeachMapLayer:" destination="koJ-Da-j9B" id="8dt-gT-AVQ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="wHB-5o-OyA" id="mbr-AR-YS4"/>
@@ -94,6 +102,7 @@
     </scenes>
     <resources>
         <image name="OmahaBeachBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
     </resources>
 </document>

@@ -44,12 +44,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Purple Heart Lane" id="uEV-2B-rOt">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map.fill" catalog="system" id="7O4-SJ-7EK">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="layerButtonPressed:" destination="BQ2-Y2-0rm" id="lVR-xh-oTn"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="7O4-SJ-7EK">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="BQ2-Y2-0rm" id="lVR-xh-oTn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="bTu-Ts-wSd">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sharePurpleHeartLaneMapLayer:" destination="BQ2-Y2-0rm" id="U2H-Qz-nEN"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="SxF-bV-pDd" id="my9-nw-pS4"/>
@@ -94,6 +102,7 @@
     </scenes>
     <resources>
         <image name="PurpleHeartLaneBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
     </resources>
 </document>

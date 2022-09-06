@@ -14,46 +14,46 @@ public protocol StrongpointLayerSelectionDelegate {
 
 //MARK: - Strongpoints
 public enum Strongpoint {
-    case StrongpointCarentan502ndStart, StrongpointCarentanBlactot, StrongpointCarentanCanalCrossing, StrongpointCarentanCanalLocks, StrongpointCarentanCustoms, StrongpointCarentanDerailedTrain, StrongpointCarentanFarmRuins, StrongpointCarentanLaMaisonDesOrmes, StrongpointCarentanMountHalais, StrongpointCarentanPumpingStation, StrongpointCarentanRailCauseway, StrongpointCarentanRailCrossing, StrongpointCarentanRuins, StrongpointCarentanTownCenter, StrongpointCarentanTrainStation, StrongpointFoyRoadToRecogne, StrongpointFoyCobrueApproach, StrongpointFoyRoadToNoville, StrongpointFoyCobruFactory, StrongpointFoyFoy, StrongpointFoyFlakBattery, StrongpointFoyWestBend, StrongpointFoySouthernEdge, StrongpointFoyDugoutBarn, StrongpointFoyN30Highway, StrongpointFoyBizroyFoyRoad, StrongpointFoyEasternOurthe, StrongpointFoyRoadToBastogne, StrongpointFoyBoisJoacues, StrongpointFoyForestOutskirt, StrongpointConvoyAmbush, StrongpointHill400FedercheckeJunction, StrongpointHill400StuckchenFarm, StrongpointHill400RoerRiverHouse, StrongpointHill400BergesteinChurch, StrongpointHill400Kirchweg, StrongpointHill400FlakPits, StrongpointHill400Hill400, StrongpointHill400SouthernApproach, StrongpointHill400EselswegJunction, StrongpointHill400EasternSlope, StrongpointHill400TrainWreck, StrongpointHill400RoerRiverCrossing, StrongpointHill400Zerkall,StrongpointHill400PaperMill, StrongpointMausbachApproach, StrongpointHurtgenForestReserveStation, StrongpointHurtgenForestLumberYard, StrongpointHurtgenForestWehbachOverlook, StrongpointHurtgenForestKallTrail, StrongpointHurtgenForestTheRuin, StrongpointHurtgenForestNorthPass, StrongpointHurtgenForestTheScar, StrongpointHurtgenForestTheSiegfriedLine, StrongpointHurtgenForestHill15, StrongpointHurtgenForestJacobsBarn, StrongpointHurtgenForestSalient42, StrongpointHurtgenForestGrosshauApproach, StrongpointHurtgenForestHurtgenApproach, StrongpointHurtgenForestLoggingCamp, StrongpointArtilleryPosition, StrongpointKurskGrushki, StrongpointKurskGruskiFlank, StrongpointKurskPanzersEnd, StrongpointKurskDefenceInDepth, StrongpointKurskListeningPost, StrongpointKurskTheWindmills, StrongpointKurskYamki, StrongpointKurskOlegsHouse, StrongpointKurskRudno, StrongpointKurskDestroyedBattery, StrongpointKurskTheMuddyChurn, StrongpointKurskRoadToKursk, StrongpointKurskAmmoDump, StrongpointKurskEasternPosition, StrongpointOmahaBeachBeaumontRoad, StrongpointOmahaBeachCrossroads, StrongpointOmahaBeachLesIsles, StrongpointOmahaBeachRearBattery, StrongpointOmahaBeachChurchRoad, StrongpointOmahaBeachTheOrchards, StrongpointOmahaBeachWestVierville, StrongpointOmahaBeachViervilleSurmer, StrongpointOmahaBeachArtilleryBattery, StrongpointOmahaBeachWN73, StrongpointOmahaBeachWN71, StrongpointOmahaBeachWN70, StrongpointOmahaBeachDogGreen, StrongpointOmahaBeachTheDraw, StrongpoinOmahaBeachtDogWhite, StrongpointPurpleHeartLaneBloodyBend, StrongpointPurpleHeartLaneDeadMansCrossing, StrongpointPurpleHeartLaneForwardBattery, StrongpointPurpleHeartLaneJourdansCanal, StrongpointPurpleHeartLaneDouveBridge, StrongpointPurpleHeartLaneDouveRiverBattery, StrongpointPurpleHeartLaneGroultPillbox, StrongpointPurpleHeartLaneCarentanCauseway, StrongpointPurpleHeartLaneFlakPosition, StrongpointPurpleHeartLaneMadeleineFarm, StrongpointPurpleHeartLaneMadeleineBridge, StrongpointPurpleHeartLaneAidStation, StrongpointPurpleHeartLaneIngoufCrossroads, StrongpointPurpleHeartLaneRoadToCarentan, StrongpointPurpleHeartLaneCabbagePatch, StrongpointRemagenAlteLiebeBarsch, StrongpointRemagenBewaldetKreuzung, StrongpointRemagenDanRadart512, StrongpointRemagenErpel, StrongpointRemagenErpelerLey, StrongpointRemagenKasbackOutlook, StrongpointRemagenStSeverinChapen, StrongpointRemagenLudendorffBridge, StrongpointRemagenBauernhofAmRhein,   StrongpointRemagenRemagen, StrongpointRemagenMobelfabrik, StrongpointRemagenSchlieffenAusweg, StrongpointRemagenWaldburg, StrongpointRemagenMuhlenweg, StrongpointRemagenHagelkreuz, StrongpointSainteMarieduMontWintersLanding, StrongpointSainteMarieduMontLeGrandChemin, StrongpointSainteMarieduMontTheBarn, StrongpointSainteMarieduMontBrecourtBattery, StrongpointSainteMarieduMontCattlesheds, StrongpointSainteMarieduMontRueDeLaGare, StrongpointSainteMarieduMontTheDugout, StrongpointSainteMarieduMontAANetwork, StrongpointSainteMarieduMontPierresFarm, StrongpointSainteMarieduMontHugosFarm, StrongpointSainteMarieduMontTheHamlet, StrongpointSainteMarieduMontSteMarieDuMont, StrongpointSainteMarieduMontTheCorner, StrongpointSainteMarieduMontHill6, StrongpointSainteMarieduMontTheFields, StrongpointSainteMereEgliseFlakPosition, StrongpointSainteMereEgliseVaulaville, StrongpointSainteMereEgliseLaPrairie, StrongpointSainteMereEgliseRouteDeHaras, StrongpointSainteMereEgliseWesternApproach, StrongpointSainteMereEgliseRueDeGambosville, StrongpointSainteMereEgliseHospice, StrongpointSainteMereEgliseSteMereEglise, StrongpointSainteMereEgliseCheckpoint, StrongpointSainteMereEgliseArtilleryBattery, StrongpointSainteMereEgliseTheCemetary, StrongpointSainteMereEgliseMaisonDuCrique, StrongpointSainteMereEgliseLesVieuxVergers, StrongpointSainteMereEgliseTheDraw, StrongpointSainteMereEgliseRuisseauDeFerme, StrongpointStalingradMamayevApproach, StrongpointStalingradNailFactory, StrongpointStalingradCityOverlook, StrongpointStalingradDolgiyRavine, StrongpointStalingradYellowHouse, StrongpointStalingradKomsomolHQ, StrongpointStalingradRailwayCrossing, StrongpointStalingradCarriageDepot, StrongpointStalingradTrainStation, StrongpointStalingradHouseOfTheWorkers, StrongpointStalingradPavlovsHouse, StrongpointStalingradTheBrewery, StrongpointStalingradLShapedHouse, StrongpointStalingradGrudininsMill, StrongpointStalingradVolgaBanks, StrongpointUtahBeachMammutRadar, StrongpointUtahBeachFloodedHouse, StrongpointUtahBeachSainteMarieApproach, StrongpointUtahBeachSunkenBridge, StrongpointUtahBeachLaGrandeCrique, StrongpointUtahBeachDrownedFields, StrongpointUtahBeachWN4, StrongpointUtahBeachTheChapel, StrongpointUtahBeachWN7, StrongpointUtahBeachAABattery, StrongpointUtahBeachHill5, StrongpointUtahBeachWN5, StrongpointUtahBeachTareGreen, StrongpointUtahBeachRedRoofHouse, StrongpointUtahBeachUncleRed
+    case StrongpointCarentan502ndStart, StrongpointCarentanBlactot, StrongpointCarentanCanalCrossing, StrongpointCarentanCanalLocks, StrongpointCarentanCustoms, StrongpointCarentanDerailedTrain, StrongpointCarentanFarmRuins, StrongpointCarentanLaMaisonDesOrmes, StrongpointCarentanMountHalais, StrongpointCarentanPumpingStation, StrongpointCarentanRailCauseway, StrongpointCarentanRailCrossing, StrongpointCarentanRuins, StrongpointCarentanTownCenter, StrongpointCarentanTrainStation, StrongpointFoyRoadToRecogne, StrongpointFoyCobruApproach, StrongpointFoyRoadToNoville, StrongpointFoyCobruFactory, StrongpointFoyFoy, StrongpointFoyFlakBattery, StrongpointFoyWestBend, StrongpointFoySouthernEdge, StrongpointFoyDugoutBarn, StrongpointFoyN30Highway, StrongpointFoyBizoryFoyRoad, StrongpointFoyEasternOurthe, StrongpointFoyRoadToBastogne, StrongpointFoyBoisJoacues, StrongpointFoyForestOutskirt, StrongpointHill400ConvoyAmbush, StrongpointHill400FedercheckeJunction, StrongpointHill400StuckchenFarm, StrongpointHill400RoerRiverHouse, StrongpointHill400BergsteinChurch, StrongpointHill400Kirchweg, StrongpointHill400FlakPits, StrongpointHill400Hill400, StrongpointHill400SouthernApproach, StrongpointHill400EselswegJunction, StrongpointHill400EasternSlope, StrongpointHill400TrainWreck, StrongpointHill400RoerRiverCrossing, StrongpointHill400Zerkall,StrongpointHill400PaperMill, StrongpointHurtgenForestTheMasbauchApproach, StrongpointHurtgenForestReserveStation, StrongpointHurtgenForestLumberYard, StrongpointHurtgenForestWehebachOverlook, StrongpointHurtgenForestKallTrail, StrongpointHurtgenForestTheRuin, StrongpointHurtgenForestNorthPass, StrongpointHurtgenForestTheScar, StrongpointHurtgenForestTheSiegfriedLine, StrongpointHurtgenForestHill15, StrongpointHurtgenForestJacobsBarn, StrongpointHurtgenForestSalient42, StrongpointHurtgenForestGrosshauApproach, StrongpointHurtgenForestHurtgenApproach, StrongpointHurtgenForestLoggingCamp, StrongpointArtilleryPosition, StrongpointKurskGrushki, StrongpointKurskGruskiFlank, StrongpointKurskPanzersEnd, StrongpointKurskDefenceInDepth, StrongpointKurskListeningPost, StrongpointKurskTheWindmills, StrongpointKurskYamki, StrongpointKurskOlegsHouse, StrongpointKurskRudno, StrongpointKurskDestroyedBattery, StrongpointKurskTheMuddyChurn, StrongpointKurskRoadToKursk, StrongpointKurskAmmoDump, StrongpointKurskEasternPosition, StrongpointOmahaBeachBeaumontRoad, StrongpointOmahaBeachCrossroads, StrongpointOmahaBeachLesIsles, StrongpointOmahaBeachRearBattery, StrongpointOmahaBeachChurchRoad, StrongpointOmahaBeachTheOrchards, StrongpointOmahaBeachWestVierville, StrongpointOmahaBeachViervilleSurmer, StrongpointOmahaBeachArtilleryBattery, StrongpointOmahaBeachWN73, StrongpointOmahaBeachWN71, StrongpointOmahaBeachWN70, StrongpointOmahaBeachDogGreen, StrongpointOmahaBeachTheDraw, StrongpoinOmahaBeachtDogWhite, StrongpointPurpleHeartLaneBloodyBend, StrongpointPurpleHeartLaneDeadMansCorner, StrongpointPurpleHeartLaneForwardBattery, StrongpointPurpleHeartLaneJourdansCanal, StrongpointPurpleHeartLaneDouveBridge, StrongpointPurpleHeartLaneDouveRiverBattery, StrongpointPurpleHeartLaneGroultPillbox, StrongpointPurpleHeartLaneCarentanCauseway, StrongpointPurpleHeartLaneFlakPosition, StrongpointPurpleHeartLaneMadeleineFarm, StrongpointPurpleHeartLaneMadeleineBridge, StrongpointPurpleHeartLaneAidStation, StrongpointPurpleHeartLaneIngoufCrossroads, StrongpointPurpleHeartLaneRoadToCarentan, StrongpointPurpleHeartLaneCabbagePatch, StrongpointRemagenAlteLiebeBarsch, StrongpointRemagenBewaldetKreuzung, StrongpointRemagenDanRadart512, StrongpointRemagenErpel, StrongpointRemagenErpelerLey, StrongpointRemagenKasbackOutlook, StrongpointRemagenStSeverinChapen, StrongpointRemagenLudendorffBridge, StrongpointRemagenBauernhofAmRhein,   StrongpointRemagenRemagen, StrongpointRemagenMobelfabrik, StrongpointRemagenSchlieffenAusweg, StrongpointRemagenWaldburg, StrongpointRemagenMuhlenweg, StrongpointRemagenHagelkreuz, StrongpointSainteMarieduMontWintersLanding, StrongpointSainteMarieduMontLeGrandChemin, StrongpointSainteMarieduMontTheBarn, StrongpointSainteMarieduMontBrecourtBattery, StrongpointSainteMarieduMontCattlesheds, StrongpointSainteMarieduMontRueDeLaGare, StrongpointSainteMarieduMontTheDugout, StrongpointSainteMarieduMontAANetwork, StrongpointSainteMarieduMontPierresFarm, StrongpointSainteMarieduMontHugosFarm, StrongpointSainteMarieduMontTheHamlet, StrongpointSainteMarieduMontSteMarieDuMont, StrongpointSainteMarieduMontTheCorner, StrongpointSainteMarieduMontHill6, StrongpointSainteMarieduMontTheFields, StrongpointSainteMereEgliseFlakPosition, StrongpointSainteMereEgliseVaulaville, StrongpointSainteMereEgliseLaPrairie, StrongpointSainteMereEgliseRouteDuHaras, StrongpointSainteMereEgliseWesternApproach, StrongpointSainteMereEgliseRueDeGambosville, StrongpointSainteMereEgliseHospice, StrongpointSainteMereEgliseSteMereEglise, StrongpointSainteMereEgliseCheckpoint, StrongpointSainteMereEgliseArtilleryBattery, StrongpointSainteMereEgliseTheCemetary, StrongpointSainteMereEgliseMaisonDuCrique, StrongpointSainteMereEgliseLesVieuxVergers, StrongpointSainteMereEgliseTheDraw, StrongpointSainteMereEgliseRusseauDeFerme, StrongpointStalingradMamayevApproach, StrongpointStalingradNailFactory, StrongpointStalingradCityOverlook, StrongpointStalingradDolgiyRavine, StrongpointStalingradYellowHouse, StrongpointStalingradKomsomolHQ, StrongpointStalingradRailwayCrossing, StrongpointStalingradCarriageDepot, StrongpointStalingradTrainStation, StrongpointStalingradHouseOfTheWorkers, StrongpointStalingradPavlovsHouse, StrongpointStalingradTheBrewery, StrongpointStalingradLShapedHouse, StrongpointStalingradGrudininsMill, StrongpointStalingradVolgaBanks, StrongpointUtahBeachMammutRadar, StrongpointUtahBeachFloodedHouse, StrongpointUtahBeachSainteMarieApproach, StrongpointUtahBeachSunkenBridge, StrongpointUtahBeachLaGrandeCrique, StrongpointUtahBeachDrownedFields, StrongpointUtahBeachWN4, StrongpointUtahBeachTheChapel, StrongpointUtahBeachWN7, StrongpointUtahBeachAABattery, StrongpointUtahBeachHill5, StrongpointUtahBeachWN5, StrongpointUtahBeachTareGreen, StrongpointUtahBeachRedRoofHouse, StrongpointUtahBeachUncleRed
 }
 
 //MARK: - GetStrongpoint
 func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
     switch strongpoint {
     case .StrongpointCarentan502ndStart:
-        return UIImage(named: "Strongpoint502ndStart.png")!
+        return UIImage(named: "StrongpointCarentan502ndStart.png")!
     case .StrongpointCarentanBlactot:
-        return UIImage(named: "StrongpointBlactot.png")!
+        return UIImage(named: "StrongpointCarentanBlactot.png")!
     case .StrongpointCarentanCanalCrossing:
-        return UIImage(named: "StrongpointCanalCrossing.png")!
+        return UIImage(named: "StrongpointCarentanCanalCrossing.png")!
     case .StrongpointCarentanCanalLocks:
-        return UIImage(named: "StrongpointCanalLocks.png")!
+        return UIImage(named: "StrongpointCarentanCanalLocks.png")!
     case .StrongpointCarentanCustoms:
-        return UIImage(named: "StrongpointCustoms.png")!
+        return UIImage(named: "StrongpointCarentanCustoms.png")!
     case .StrongpointCarentanDerailedTrain:
-        return UIImage(named: "StrongpointDerailedTrain.png")!
+        return UIImage(named: "StrongpointCarentanDerailedTrain.png")!
     case .StrongpointCarentanFarmRuins:
-        return UIImage(named: "StrongpointFarmRuins.png")!
+        return UIImage(named: "StrongpointCarentanFarmRuins.png")!
     case .StrongpointCarentanLaMaisonDesOrmes:
-        return UIImage(named: "StrongpointLaMaisonDesOrmes.png")!
+        return UIImage(named: "StrongpointCarentanLaMaisonDesOrmes.png")!
     case .StrongpointCarentanMountHalais:
-        return UIImage(named: "StrongpointMountHalais.png")!
+        return UIImage(named: "StrongpointCarentanMountHalais.png")!
     case .StrongpointCarentanPumpingStation:
-        return UIImage(named: "StrongpointPumpingStation.png")!
+        return UIImage(named: "StrongpointCarentanPumpingStation.png")!
     case .StrongpointCarentanRailCauseway:
-        return UIImage(named: "StrongpointRailCauseway.png")!
+        return UIImage(named: "StrongpointCarentanRailCauseway.png")!
     case .StrongpointCarentanRailCrossing:
-        return UIImage(named: "StrongpointRailCrossing.png")!
+        return UIImage(named: "StrongpointCarentanRailCrossing.png")!
     case .StrongpointCarentanRuins:
-        return UIImage(named: "StrongpointRuins.png")!
+        return UIImage(named: "StrongpointCarentanRuins.png")!
     case .StrongpointCarentanTownCenter:
-        return UIImage(named: "StrongpointTownCenter.png")!
+        return UIImage(named: "StrongpointCarentanTownCenter.png")!
     case .StrongpointCarentanTrainStation:
-        return UIImage(named: "StrongpointTrainStation.png")!
+        return UIImage(named: "StrongpointCarentanTrainStation.png")!
     case .StrongpointFoyRoadToRecogne:
         return UIImage(named: "StrongpointFoyRoadToRecogne.png")!
-    case .StrongpointFoyCobrueApproach:
-        return UIImage(named: "StrongpointFoyCobrueApproach.png")!
+    case .StrongpointFoyCobruApproach:
+        return UIImage(named: "StrongpointFoyCobruApproach.png")!
     case .StrongpointFoyRoadToNoville:
         return UIImage(named: "StrongpointFoyRoadToNoville.png")!
     case .StrongpointFoyCobruFactory:
@@ -70,26 +70,26 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
         return UIImage(named: "StrongpointFoyDugoutBarn.png")!
     case .StrongpointFoyN30Highway:
         return UIImage(named: "StrongpointFoyN30Highway.png")!
-    case .StrongpointFoyBizroyFoyRoad:
-        return UIImage(named: "StrongpointFoyBizroyFoyRoad.png")!
+    case .StrongpointFoyBizoryFoyRoad:
+        return UIImage(named: "StrongpointFoyBizoryFoyRoad.png")!
     case .StrongpointFoyEasternOurthe:
         return UIImage(named: "StrongpointFoyEasternOurthe.png")!
     case .StrongpointFoyRoadToBastogne:
         return UIImage(named: "StrongpointFoyRoadToBastogne.png")!
     case .StrongpointFoyBoisJoacues:
-        return UIImage(named: "StrongpointFoyBoisJoacues.png")!
+        return UIImage(named: "StrongpointFoyBoisJacques.png")!
     case .StrongpointFoyForestOutskirt:
-        return UIImage(named: "StrongpointFoyForestOutskirt.png")!
-    case .StrongpointConvoyAmbush:
-        return UIImage(named: "StrongpointConvoyAmbush.png")!
+        return UIImage(named: "StrongpointFoyForestOutskirts.png")!
+    case .StrongpointHill400ConvoyAmbush:
+        return UIImage(named: "StrongpointHill400ConvoyAmbush.png")!
     case .StrongpointHill400FedercheckeJunction:
         return UIImage(named: "StrongpointHill400FedercheckeJunction.png")!
     case .StrongpointHill400StuckchenFarm:
         return UIImage(named: "StrongpointHill400StuckchenFarm.png")!
     case .StrongpointHill400RoerRiverHouse:
         return UIImage(named: "StrongpointHill400RoerRiverHouse.png")!
-    case .StrongpointHill400BergesteinChurch:
-        return UIImage(named: "StrongpointHill400BergesteinChurch.png")!
+    case .StrongpointHill400BergsteinChurch:
+        return UIImage(named: "StrongpointHill400BergsteinChurch.png")!
     case .StrongpointHill400Kirchweg:
         return UIImage(named: "StrongpointHill400Kirchweg.png")!
     case .StrongpointHill400FlakPits:
@@ -110,14 +110,14 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
         return UIImage(named: "StrongpointHill400Zerkall.png")!
     case .StrongpointHill400PaperMill:
         return UIImage(named: "StrongpointHill400PaperMill.png")!
-    case .StrongpointMausbachApproach:
-        return UIImage(named: "StrongpointMausbachApproach.png")!
+    case .StrongpointHurtgenForestTheMasbauchApproach:
+        return UIImage(named: "StrongpointHurtgenForestTheMasbauchApproach.png")!
     case .StrongpointHurtgenForestReserveStation:
         return UIImage(named: "StrongpointHurtgenForestReserveStation.png")!
     case .StrongpointHurtgenForestLumberYard:
         return UIImage(named: "StrongpointHurtgenForestLumberYard.png")!
-    case .StrongpointHurtgenForestWehbachOverlook:
-        return UIImage(named: "StrongpointHurtgenForestWehbachOverlook.png")!
+    case .StrongpointHurtgenForestWehebachOverlook:
+        return UIImage(named: "StrongpointHurtgenForestWehebachOverlook.png")!
     case .StrongpointHurtgenForestKallTrail:
         return UIImage(named: "StrongpointHurtgenForestKallTrail.png")!
     case .StrongpointHurtgenForestTheRuin:
@@ -141,11 +141,11 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
     case .StrongpointHurtgenForestLoggingCamp:
         return UIImage(named: "StrongpointHurtgenForestLoggingCamp.png")!
     case .StrongpointArtilleryPosition:
-        return UIImage(named: "StrongpointArtilleryPosition.png")!
+        return UIImage(named: "StrongpointKurskArtilleryPosition.png")!
     case .StrongpointKurskGrushki:
         return UIImage(named: "StrongpointKurskGrushki.png")!
     case .StrongpointKurskGruskiFlank:
-        return UIImage(named: "StrongpointKurskGruskiFlank.png")!
+        return UIImage(named: "StrongpointKurskGrushkiFlank.png")!
     case .StrongpointKurskPanzersEnd:
         return UIImage(named: "StrongpointKurskPanzersEnd.png")!
     case .StrongpointKurskDefenceInDepth:
@@ -155,7 +155,7 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
     case .StrongpointKurskTheWindmills:
         return UIImage(named: "StrongpointKurskTheWindmills.png")!
     case .StrongpointKurskYamki:
-        return UIImage(named: "StrongpoStrongpointKurskYamkiintTrainStation.png")!
+        return UIImage(named: "StrongpointKurskYamki.png")!
     case .StrongpointKurskOlegsHouse:
         return UIImage(named: "StrongpointKurskOlegsHouse.png")!
     case .StrongpointKurskRudno:
@@ -185,7 +185,7 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
     case .StrongpointOmahaBeachWestVierville:
         return UIImage(named: "StrongpointOmahaBeachWestVierville.png")!
     case .StrongpointOmahaBeachViervilleSurmer:
-        return UIImage(named: "StrongpointOmahaBeachViervilleSurmer.png")!
+        return UIImage(named: "StrongpointOmahaBeachViervilleSurMer.png")!
     case .StrongpointOmahaBeachArtilleryBattery:
         return UIImage(named: "StrongpointOmahaBeachArtilleryBattery.png")!
     case .StrongpointOmahaBeachWN73:
@@ -199,15 +199,15 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
     case .StrongpointOmahaBeachTheDraw:
         return UIImage(named: "StrongpointOmahaBeachTheDraw.png")!
     case .StrongpoinOmahaBeachtDogWhite:
-        return UIImage(named: "StrongpoinOmahaBeachtDogWhite.png")!
+        return UIImage(named: "StrongpointOmahaBeachDogWhite.png")!
     case .StrongpointPurpleHeartLaneBloodyBend:
         return UIImage(named: "StrongpointPurpleHeartLaneBloodyBend.png")!
-    case .StrongpointPurpleHeartLaneDeadMansCrossing:
-        return UIImage(named: "StrongpointPurpleHeartLaneBloodyBend.png")!
+    case .StrongpointPurpleHeartLaneDeadMansCorner:
+        return UIImage(named: "StrongpointPurpleHeartLaneDeadMansCorner.png")!
     case .StrongpointPurpleHeartLaneForwardBattery:
         return UIImage(named: "StrongpointPurpleHeartLaneForwardBattery.png")!
     case .StrongpointPurpleHeartLaneJourdansCanal:
-        return UIImage(named: "StrongpointPurpleHeartLaneJourdansCanal.png")!
+        return UIImage(named: "StrongpointPurpleHeartLaneJourdanCanal.png")!
     case .StrongpointPurpleHeartLaneDouveBridge:
         return UIImage(named: "StrongpointPurpleHeartLaneDouveBridge.png")!
     case .StrongpointPurpleHeartLaneDouveRiverBattery:
@@ -241,9 +241,9 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
     case .StrongpointRemagenErpelerLey:
         return UIImage(named: "StrongpointRemagenErpelerLey.png")!
     case .StrongpointRemagenKasbackOutlook:
-        return UIImage(named: "StrongpointRemagenKasbackOutlook.png")!
+        return UIImage(named: "StrongpointRemagenKasbachOutlook.png")!
     case .StrongpointRemagenStSeverinChapen:
-        return UIImage(named: "StrongpointRemagenStSeverinChapen.png")!
+        return UIImage(named: "StrongpointRemagenStSeverinChapel.png")!
     case .StrongpointRemagenLudendorffBridge:
         return UIImage(named: "StrongpointRemagenLudendorffBridge.png")!
     case .StrongpointRemagenBauernhofAmRhein:
@@ -296,8 +296,8 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
         return UIImage(named: "StrongpointSainteMereEgliseVaulaville.png")!
     case .StrongpointSainteMereEgliseLaPrairie:
         return UIImage(named: "StrongpointSainteMereEgliseLaPrairie.png")!
-    case .StrongpointSainteMereEgliseRouteDeHaras:
-        return UIImage(named: "StrongpointSainteMereEgliseRouteDeHaras.png")!
+    case .StrongpointSainteMereEgliseRouteDuHaras:
+        return UIImage(named: "StrongpointSainteMereEgliseRouteDuHaras.png")!
     case .StrongpointSainteMereEgliseWesternApproach:
         return UIImage(named: "StrongpointSainteMereEgliseWesternApproach.png")!
     case .StrongpointSainteMereEgliseRueDeGambosville:
@@ -311,15 +311,15 @@ func getStrongpoint(strongpoint: Strongpoint) -> UIImage {
     case .StrongpointSainteMereEgliseArtilleryBattery:
         return UIImage(named: "StrongpointSainteMereEgliseArtilleryBattery.png")!
     case .StrongpointSainteMereEgliseTheCemetary:
-        return UIImage(named: "StrongpointSainteMereEgliseTheCemetary.png")!
+        return UIImage(named: "StrongpointSainteMereEgliseTheCemetery.png")!
     case .StrongpointSainteMereEgliseMaisonDuCrique:
         return UIImage(named: "StrongpointSainteMereEgliseMaisonDuCrique.png")!
     case .StrongpointSainteMereEgliseLesVieuxVergers:
         return UIImage(named: "StrongpointSainteMereEgliseLesVieuxVergers.png")!
     case .StrongpointSainteMereEgliseTheDraw:
         return UIImage(named: "StrongpointSainteMereEgliseTheDraw.png")!
-    case .StrongpointSainteMereEgliseRuisseauDeFerme:
-        return UIImage(named: "StrongpointSainteMereEgliseRuisseauDeFerme.png")!
+    case .StrongpointSainteMereEgliseRusseauDeFerme:
+        return UIImage(named: "StrongpointSainteMereEgliseRusseauDeFerme.png")!
     case .StrongpointStalingradMamayevApproach:
         return UIImage(named: "StrongpointStalingradMamayevApproach.png")!
     case .StrongpointStalingradNailFactory:
