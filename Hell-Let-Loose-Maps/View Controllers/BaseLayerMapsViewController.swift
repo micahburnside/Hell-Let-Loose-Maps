@@ -12,12 +12,18 @@ class BaseLayerMapsViewController: BaseViewController {
     @IBOutlet var baseLayerMapsDataSource: BaseLayerMapsDataSource!
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadMapsListDataSource()
+
+        setNeedsStatusBarAppearanceUpdate()
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMapsListDataSource()
+        navigationController?.navigationBar.tintColor = .white
     }
     
     func loadMapsListDataSource() {

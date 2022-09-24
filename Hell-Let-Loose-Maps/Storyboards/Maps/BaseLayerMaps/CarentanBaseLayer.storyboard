@@ -24,6 +24,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Ay9-3w-oXZ" firstAttribute="top" secondItem="K7e-Zp-Aev" secondAttribute="top" id="ERI-kc-d3L"/>
                                     <constraint firstAttribute="trailing" secondItem="Ay9-3w-oXZ" secondAttribute="trailing" id="MRw-v8-DCW"/>
@@ -34,7 +36,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hYs-cC-S3M"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="K7e-Zp-Aev" secondAttribute="bottom" constant="-34" id="a8I-So-e9n"/>
                             <constraint firstItem="K7e-Zp-Aev" firstAttribute="leading" secondItem="Bvk-oC-wuu" secondAttribute="leading" id="e6r-KL-Bfz"/>

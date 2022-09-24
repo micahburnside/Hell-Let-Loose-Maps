@@ -381,7 +381,6 @@
 			isa = PBXGroup;
 			children = (
 				54D081BF2829F00600542CB7 /* BaseLayerViewControllers */,
-				54022BCF286AFB050080AF63 /* LayerSelection */,
 				54141898281CC2C500E0483B /* BaseViewController.swift */,
 				54D081D82829F19000542CB7 /* BaseLayerMapsViewController.swift */,
 			);
@@ -534,6 +533,7 @@
 		54D081BF2829F00600542CB7 /* BaseLayerViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				54022BCF286AFB050080AF63 /* LayerSelection */,
 				54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */,
 				54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */,
 				54D081C42829F0F800542CB7 /* Hill400BaseLayerViewController.swift */,
@@ -1005,6 +1005,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1040,6 +1041,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -8,7 +8,6 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
     func makeBackgroundRed() {
         self.view.backgroundColor = getTerritoryColorSelection(territoryColor: .EnemyRed)
     }
@@ -23,16 +22,15 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
-    //MARK: - Device Orientation Handler
 
     
 //MARK: - View Controller Life Cycle Methods
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barTintColor = .black
+                
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
     }
     override func viewDidAppear(_ animated: Bool) {
