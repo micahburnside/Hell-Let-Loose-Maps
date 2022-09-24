@@ -277,7 +277,7 @@ class OmahaBeachBaseLayerViewController: BaseViewController {
             let pointInView = sender.location(in: imageView)
            
             // 2
-            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            let scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
             
             // 3
             if scale != scrollView.zoomScale {

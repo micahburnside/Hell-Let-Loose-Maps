@@ -288,6 +288,7 @@ class CarentanBaseLayerViewController: BaseViewController {
             }
         }
     }
+    
     ///snapshotCarentanMap takes a snapshot of imageView0 including all of it's subviews and returns the image based on the current context of imageView0
     func snapshotCarentanMap() -> UIImage?
     {
@@ -305,6 +306,7 @@ class CarentanBaseLayerViewController: BaseViewController {
             doubleTapRecognizer.numberOfTapsRequired = 2
                 view.addGestureRecognizer(doubleTapRecognizer)
         }
+    
 //MARK: - Presenting Select Carentan Map Layers View Controller
     
     ///doubleTapPressed - when user double taps the screen, this zooms the view and updates the origin to ewhere the user tapped on the screen. When max zoom is reached, the view zooms all the way out and re-centers the image.
@@ -313,7 +315,7 @@ class CarentanBaseLayerViewController: BaseViewController {
         let pointInView = sender.location(in: imageView0)
        
         // 2
-        var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+        let scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
         
         // 3
         if scale != scrollView.zoomScale {
