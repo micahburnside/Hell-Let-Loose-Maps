@@ -27,9 +27,7 @@ class BaseLayerMapsDataSource: NSObject {
         self.keys = Array(self.mapsList.keys.sorted(by: {$0.localizedStandardCompare($1) == .orderedAscending}))
         self.tableView.backgroundColor = .clear
         self.tableView.reloadData()
-        
     }
-    
 }
 
 extension BaseLayerMapsDataSource: UITableViewDelegate {

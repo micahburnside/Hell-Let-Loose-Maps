@@ -11,6 +11,13 @@ class KurskBaseLayerViewController: BaseViewController {
     
     var updateKurskMapDelegate: UpdateKurskMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewArtilleryPosition: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,187 +136,6 @@ class KurskBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectKurskLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectKurskLayersViewController") as? SelectKurskLayersViewController {
-              controller.updateKurskMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showKurskStrongpoints()
-        hideKurskStrongpoints()
-    }
-    @IBAction func shareKurskMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotKurskMap() else { return }
-        
-        shareKurskMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareKurskMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotKurskMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    func showKurskStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ARTILLERYPOSITION) {
-            self.loadKurskArtilleryPosition()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKI) {
-            self.loadKurskGrushki()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKIFLANK) {
-            self.loadKurskGrushkiFlank()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_PANZERSEND) {
-            self.loadKurskPanzersEnd()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DEFENCEINDEPTH) {
-            self.loadKurskDefenceInDepth()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_LISTENINGPOST) {
-            self.loadKurskListeningPost()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEWINDMILLS) {
-            self.loadKurskTheWindmills()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_YAMKI) {
-            self.loadKurskYamki()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_OLEGSHOUSE) {
-            self.loadKurskOlegsHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_RUDNO) {
-            self.loadKurskRudno()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DESTROYEDBATTERY) {
-            self.loadKurskDestroyedBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEMUDDYCHURN) {
-            self.loadKurskTheMuddyChurn()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ROADTOKURSK) {
-            self.loadKurskRoadToKursk()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_AMMODUMP) {
-            self.loadKurskAmmoDump()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_EASTERNPOSITION) {
-            self.loadKurskEasternPosition()
-        }
-    }
-    
-    func hideKurskStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ARTILLERYPOSITION) == false {
-            self.removeKurskArtilleryPosition()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKI) == false {
-            self.removeKurskGrushki()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKIFLANK) == false {
-            self.removeKurskGrushkiFlank()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_PANZERSEND) == false {
-            self.removeKurskPanzersEnd()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DEFENCEINDEPTH) == false {
-            self.removeKurskDefenceInDepth()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_LISTENINGPOST) == false {
-            self.removeKurskListeningPost()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEWINDMILLS) == false {
-            self.removeKurskTheWindmills()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_YAMKI) == false {
-            self.removeKurskYamki()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_OLEGSHOUSE) == false {
-            self.removeKurskOlegsHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_RUDNO) == false {
-            self.removeKurskRudno()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DESTROYEDBATTERY) == false {
-            self.removeKurskDestroyedBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEMUDDYCHURN) == false {
-            self.removeKurskTheMuddyChurn()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ROADTOKURSK) == false {
-            self.removeKurskRoadToKursk()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_AMMODUMP) == false {
-            self.removeKurskAmmoDump()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_EASTERNPOSITION) == false {
-            self.removeKurskEasternPosition()
-        }
-    }
     
     func createImageViewLayerSubViews() {
         
@@ -421,14 +247,212 @@ class KurskBaseLayerViewController: BaseViewController {
         imageViewEasternPosition.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showKurskStrongpoints()
+        hideKurskStrongpoints()
+    }
+    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectKurskLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectKurskLayersViewController") as? SelectKurskLayersViewController {
+              controller.updateKurskMapDelegate = self
+              controller.modalPresentationStyle = .popover
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+    
+
+
+    @IBAction func shareKurskMapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotKurskMap() else { return }
+        shareKurskMapImage(screenshot: screenshot)
+        func shareKurskMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func snapshotKurskMap() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    func showKurskStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ARTILLERYPOSITION) {
+            self.loadKurskArtilleryPosition()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKI) {
+            self.loadKurskGrushki()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKIFLANK) {
+            self.loadKurskGrushkiFlank()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_PANZERSEND) {
+            self.loadKurskPanzersEnd()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DEFENCEINDEPTH) {
+            self.loadKurskDefenceInDepth()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_LISTENINGPOST) {
+            self.loadKurskListeningPost()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEWINDMILLS) {
+            self.loadKurskTheWindmills()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_YAMKI) {
+            self.loadKurskYamki()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_OLEGSHOUSE) {
+            self.loadKurskOlegsHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_RUDNO) {
+            self.loadKurskRudno()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DESTROYEDBATTERY) {
+            self.loadKurskDestroyedBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEMUDDYCHURN) {
+            self.loadKurskTheMuddyChurn()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ROADTOKURSK) {
+            self.loadKurskRoadToKursk()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_AMMODUMP) {
+            self.loadKurskAmmoDump()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_EASTERNPOSITION) {
+            self.loadKurskEasternPosition()
+        }
+    }
+    
+    func hideKurskStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ARTILLERYPOSITION) == false {
+            self.removeKurskArtilleryPosition()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKI) == false {
+            self.removeKurskGrushki()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_GRUSHKIFLANK) == false {
+            self.removeKurskGrushkiFlank()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_PANZERSEND) == false {
+            self.removeKurskPanzersEnd()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DEFENCEINDEPTH) == false {
+            self.removeKurskDefenceInDepth()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_LISTENINGPOST) == false {
+            self.removeKurskListeningPost()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEWINDMILLS) == false {
+            self.removeKurskTheWindmills()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_YAMKI) == false {
+            self.removeKurskYamki()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_OLEGSHOUSE) == false {
+            self.removeKurskOlegsHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_RUDNO) == false {
+            self.removeKurskRudno()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_DESTROYEDBATTERY) == false {
+            self.removeKurskDestroyedBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_THEMUDDYCHURN) == false {
+            self.removeKurskTheMuddyChurn()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_ROADTOKURSK) == false {
+            self.removeKurskRoadToKursk()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_AMMODUMP) == false {
+            self.removeKurskAmmoDump()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_KURSK_EASTERNPOSITION) == false {
+            self.removeKurskEasternPosition()
+        }
+    }
+    
 }
 //MARK:- Sizing
 extension KurskBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -605,15 +629,9 @@ extension KurskBaseLayerViewController: UpdateKurskMapDelegate {
         self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskBaseLayer)
     }
 }
-//func loadStrongpointsLayer() {
-//    self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskStrongpoints)
-//}
-//
-//func loadTACLayer() {
-//    self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskTAC)
-//
-//}
-//
-//func loadBaseLayer() {
-//    self.imageView.image = getMap(mapName: .Kursk, layerType: .KurskBaseLayer)
-//}
+
+extension KurskBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
+    }
+}

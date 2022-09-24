@@ -11,6 +11,13 @@ class SainteMereEgliseBaseLayerViewController: BaseViewController {
     
     var updateSainteMereEgliseMapDelegate: UpdateSainteMereEgliseMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewFlakPosition: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,189 +136,6 @@ class SainteMereEgliseBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectSainteMereEgliseLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectSainteMereEgliseLayersViewController") as? SelectSainteMereEgliseLayersViewController {
-              controller.updateSainteMereEgliseMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .SainteMereEglise, layerType: .SainteMereEgliseBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showSainteMereEgliseStrongpoints()
-        hideSainteMereEgliseStrongpoints()
-    }
-    
-    @IBAction func shareSainteMereEgliseMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotSainteMereEgliseMap() else { return }
-        
-        shareSainteMereEgliseMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareSainteMereEgliseMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotSainteMereEgliseMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showSainteMereEgliseStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_FLAKPOSITION) {
-            self.loadSainteMereEgliseFlakPosition()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_VAULAVILLE) {
-            self.loadSainteMereEgliseVaulaville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LAPRAIRIE) {
-            self.loadSainteMereEgliseRouteDuHaras()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ROUTEDUHARAS) {
-            self.loadSainteMereEgliseWesternApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_WESTERNAPPROACH) {
-            self.loadSainteMereEgliseRueDeGambosville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUEDEGAMBOSVILLE) {
-            self.loadSainteMereEgliseHospice()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_HOSPICE) {
-            self.loadSainteMereEgliseSteMereEglise()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_STEMEREEGLISE) {
-            self.loadSainteMereEgliseCheckpoint()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CHECKPOINT) {
-            self.loadSainteMereEgliseArtilleryBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ARTILLERYBATTERY) {
-            self.loadSainteMereEgliseTheCemetery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THECEMETERY) {
-            self.loadSainteMereEgliseMaisonDuCrique()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_MAISONDUCRIQUE) {
-            self.loadSainteMereEgliseLaPrairie()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LESVIEUXVERGERS) {
-            self.loadSainteMereEgliseLesVieuxVergers()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW) {
-            self.loadSainteMereEgliseTheDraw()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUSSEAUDEFERME) {
-            self.loadSainteMereEgliseRusseauDeFerme()
-        }
-    }
-    
-    func hideSainteMereEgliseStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_FLAKPOSITION) == false {
-            self.removeSainteMereEgliseFlakPosition()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_VAULAVILLE) == false {
-            self.removeSainteMereEgliseVaulaville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LAPRAIRIE) == false {
-            self.removeSainteMereEgliseLaPrairie()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ROUTEDUHARAS) == false {
-            self.removeSainteMereEgliseRouteDuHaras()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_WESTERNAPPROACH) == false {
-            self.removeSainteMereEgliseWesternApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUEDEGAMBOSVILLE) == false {
-            self.removeSainteMereEgliseRueDeGambosville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_HOSPICE) == false {
-            self.removeSainteMereEgliseHospice()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_STEMEREEGLISE) == false {
-            self.removeSainteMereEgliseSteMereEglise()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CHECKPOINT) == false {
-            self.removeSainteMereEgliseCheckpoint()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ARTILLERYBATTERY) == false {
-            self.removeSainteMereEgliseArtilleryBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THECEMETERY) == false {
-            self.removeSainteMereEgliseTheCemetery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_MAISONDUCRIQUE) == false {
-            self.removeSainteMereEgliseMaisonDuCrique()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LESVIEUXVERGERS) == false {
-            self.removeSainteMereEgliseLesVieuxVergers()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW) == false {
-            self.removeSainteMereEgliseTheDraw()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUSSEAUDEFERME) == false {
-            self.removeSainteMereEgliseRusseauDeFerme()
-        }
-    }
     
     func createImageViewLayerSubViews() {
         
@@ -423,15 +247,216 @@ class SainteMereEgliseBaseLayerViewController: BaseViewController {
         (imageViewRusseauDeFerme).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
         (imageViewRusseauDeFerme).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .SainteMereEglise, layerType: .SainteMereEgliseTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showSainteMereEgliseStrongpoints()
+        hideSainteMereEgliseStrongpoints()
+    }
+    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectSainteMereEgliseLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectSainteMereEgliseLayersViewController") as? SelectSainteMereEgliseLayersViewController {
+              controller.modalPresentationStyle = .popover
+              controller.updateSainteMereEgliseMapDelegate = self
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+    
+    @IBAction func shareSainteMereEgliseMapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotSainteMereEgliseMap() else { return }
+        shareSainteMereEgliseMapImage(screenshot: screenshot)
+        func shareSainteMereEgliseMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+
+    
+    func snapshotSainteMereEgliseMap() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func showSainteMereEgliseStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_FLAKPOSITION) {
+            self.loadSainteMereEgliseFlakPosition()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_VAULAVILLE) {
+            self.loadSainteMereEgliseVaulaville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LAPRAIRIE) {
+            self.loadSainteMereEgliseRouteDuHaras()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ROUTEDUHARAS) {
+            self.loadSainteMereEgliseWesternApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_WESTERNAPPROACH) {
+            self.loadSainteMereEgliseRueDeGambosville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUEDEGAMBOSVILLE) {
+            self.loadSainteMereEgliseHospice()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_HOSPICE) {
+            self.loadSainteMereEgliseSteMereEglise()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_STEMEREEGLISE) {
+            self.loadSainteMereEgliseCheckpoint()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CHECKPOINT) {
+            self.loadSainteMereEgliseArtilleryBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ARTILLERYBATTERY) {
+            self.loadSainteMereEgliseTheCemetery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THECEMETERY) {
+            self.loadSainteMereEgliseMaisonDuCrique()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_MAISONDUCRIQUE) {
+            self.loadSainteMereEgliseLaPrairie()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LESVIEUXVERGERS) {
+            self.loadSainteMereEgliseLesVieuxVergers()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW) {
+            self.loadSainteMereEgliseTheDraw()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUSSEAUDEFERME) {
+            self.loadSainteMereEgliseRusseauDeFerme()
+        }
+    }
+    
+    func hideSainteMereEgliseStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_FLAKPOSITION) == false {
+            self.removeSainteMereEgliseFlakPosition()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_VAULAVILLE) == false {
+            self.removeSainteMereEgliseVaulaville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LAPRAIRIE) == false {
+            self.removeSainteMereEgliseLaPrairie()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ROUTEDUHARAS) == false {
+            self.removeSainteMereEgliseRouteDuHaras()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_WESTERNAPPROACH) == false {
+            self.removeSainteMereEgliseWesternApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUEDEGAMBOSVILLE) == false {
+            self.removeSainteMereEgliseRueDeGambosville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_HOSPICE) == false {
+            self.removeSainteMereEgliseHospice()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_STEMEREEGLISE) == false {
+            self.removeSainteMereEgliseSteMereEglise()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CHECKPOINT) == false {
+            self.removeSainteMereEgliseCheckpoint()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_ARTILLERYBATTERY) == false {
+            self.removeSainteMereEgliseArtilleryBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THECEMETERY) == false {
+            self.removeSainteMereEgliseTheCemetery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_MAISONDUCRIQUE) == false {
+            self.removeSainteMereEgliseMaisonDuCrique()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LESVIEUXVERGERS) == false {
+            self.removeSainteMereEgliseLesVieuxVergers()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW) == false {
+            self.removeSainteMereEgliseTheDraw()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUSSEAUDEFERME) == false {
+            self.removeSainteMereEgliseRusseauDeFerme()
+        }
+    }
     
 }
 //MARK:- Sizing
 extension SainteMereEgliseBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -593,5 +618,11 @@ extension SainteMereEgliseBaseLayerViewController: UpdateSainteMereEgliseMapDele
     func loadSainteMereEgliseRusseauDeFerme() {
         self.imageViewRusseauDeFerme.isHidden = false
         self.imageViewRusseauDeFerme.image = getStrongpoint(strongpoint: .StrongpointSainteMereEgliseRusseauDeFerme)
+    }
+}
+
+extension SainteMereEgliseBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }

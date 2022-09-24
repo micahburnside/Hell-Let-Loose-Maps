@@ -33,29 +33,11 @@ extension SelectRemagenLayersDataSource: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.delegate?.didSelectCell(indexPath: indexPath)
     self.tableView.deselectRow(at: indexPath, animated: true)
-    let cell = tableView.dequeueReusableCell(withIdentifier: "SelectRemagenLayersTableViewCell", for: indexPath) as! SelectRemagenLayersTableViewCell
+    _ = tableView.dequeueReusableCell(withIdentifier: "SelectRemagenLayersTableViewCell", for: indexPath) as! SelectRemagenLayersTableViewCell
 }
 }
 
 extension SelectRemagenLayersDataSource: UITableViewDataSource {
-
-func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-}
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "\(String(describing: ZoneTableViewSection.zone1))"
-        case 1: return "\(String(describing: ZoneTableViewSection.zone2))"
-        case 2: return "\(String(describing: ZoneTableViewSection.zone3))"
-        case 3: return "\(String(describing: ZoneTableViewSection.zone4))"
-        case 4: return "\(String(describing: ZoneTableViewSection.zone5))"
-        default:
-            break
-        }
-        print("\(section.description)")
-        return section.description
-    }
-
 
 func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = UIView()
@@ -180,9 +162,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         print("\(sender.tag)")
         if sender.isOn {
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPEL, isOn: sender.isOn)
-            self.updateRemagenMapDelegate?.removeRemagenErpel()
-        } else {
             self.updateRemagenMapDelegate?.loadRemagenErpel()
+        } else {
+            self.updateRemagenMapDelegate?.removeRemagenErpel()
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPEL, isOn: false)
         }
         break
@@ -282,7 +264,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_REMAGEN_MUHLENWEG, isOn: sender.isOn)
             self.updateRemagenMapDelegate?.loadRemagenMuhlenweg()
         } else {
-            self.updateRemagenMapDelegate?.removeRemagenWaldburg()
+            self.updateRemagenMapDelegate?.removeRemagenMuhlenweg()
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_REMAGEN_MUHLENWEG, isOn: false)
         }
         break

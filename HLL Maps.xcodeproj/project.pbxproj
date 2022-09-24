@@ -23,21 +23,12 @@
 		54141893281CC22E00E0483B /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141891281CC22E00E0483B /* NSObject+.swift */; };
 		54141896281CC24100E0483B /* MapsListDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141895281CC24100E0483B /* MapsListDictionary.swift */; };
 		54141899281CC2C500E0483B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141898281CC2C500E0483B /* BaseViewController.swift */; };
+		542BC28728D815240064922E /* PresentationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542BC28628D815240064922E /* PresentationHelper.swift */; };
 		5470CF8D28458EE800AAEB0B /* NewPlayerGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */; };
-		5470CF8F28458F5C00AAEB0B /* NewPlayerGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470CF8E28458F5C00AAEB0B /* NewPlayerGuideViewController.swift */; };
 		548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */; };
-		548886FC284835450025993D /* StrongpointCircleSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886FB284835450025993D /* StrongpointCircleSelectionDelegate.swift */; };
-		548886FE284836920025993D /* ZoneSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886FD284836920025993D /* ZoneSelectionDelegate.swift */; };
-		548887002848379A0025993D /* StrongpointTitleSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886FF2848379A0025993D /* StrongpointTitleSelectionDelegate.swift */; };
-		54888702284839010025993D /* TerritorySelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54888701284839010025993D /* TerritorySelectionDelegate.swift */; };
-		54888704284839ED0025993D /* FactionSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54888703284839ED0025993D /* FactionSelectionDelegate.swift */; };
-		5488870628483AA70025993D /* CaptureStatusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870528483AA70025993D /* CaptureStatusDelegate.swift */; };
 		5488870828483B810025993D /* GetTerritoryColorSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */; };
 		5488870A28489DD90025993D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870928489DD90025993D /* UIColor+.swift */; };
-		54888749284A9E2E0025993D /* ZoneTableViewSectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54888748284A9E2E0025993D /* ZoneTableViewSectionTitle.swift */; };
-		549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549AF31328404420005E1658 /* UpdateMapDelegate.swift */; };
 		54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */; };
-		54B564A528B5436A00FC7390 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B564A428B5436A00FC7390 /* UIView+.swift */; };
 		54CCCA24288E869A00539EFF /* SelectFoyLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA23288E869A00539EFF /* SelectFoyLayers.storyboard */; };
 		54CCCA28288F32F700539EFF /* SelectFoyLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA27288F32F700539EFF /* SelectFoyLayersDataSource.swift */; };
 		54CCCA2B288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA29288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift */; };
@@ -105,8 +96,6 @@
 		54CCCAAE28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCAAD28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift */; };
 		54CCCAB128A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCAAF28A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift */; };
 		54CCCAB228A9C26F00539EFF /* SelectCarentanLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCAB028A9C26F00539EFF /* SelectCarentanLayersTableViewCell.xib */; };
-		54CCCAB428AC652C00539EFF /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCAB328AC652C00539EFF /* ImageSaver.swift */; };
-		54CCCAB628AC656700539EFF /* SaveImageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCAB528AC656700539EFF /* SaveImageProtocol.swift */; };
 		54D081BE2829EFEC00542CB7 /* CarentanBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */; };
 		54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */; };
 		54D081C32829F0EC00542CB7 /* FoyBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */; };
@@ -180,21 +169,13 @@
 		54141891281CC22E00E0483B /* NSObject+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		54141895281CC24100E0483B /* MapsListDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsListDictionary.swift; sourceTree = "<group>"; };
 		54141898281CC2C500E0483B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		542BC28628D815240064922E /* PresentationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationHelper.swift; sourceTree = "<group>"; };
+		544132D728DE514D00FC141A /* HLL Maps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HLL Maps.entitlements"; sourceTree = "<group>"; };
 		5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPlayerGuide.storyboard; sourceTree = "<group>"; };
-		5470CF8E28458F5C00AAEB0B /* NewPlayerGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerGuideViewController.swift; sourceTree = "<group>"; };
 		548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointLayerSelectionDelegate.swift; sourceTree = "<group>"; };
-		548886FB284835450025993D /* StrongpointCircleSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointCircleSelectionDelegate.swift; sourceTree = "<group>"; };
-		548886FD284836920025993D /* ZoneSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneSelectionDelegate.swift; sourceTree = "<group>"; };
-		548886FF2848379A0025993D /* StrongpointTitleSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointTitleSelectionDelegate.swift; sourceTree = "<group>"; };
-		54888701284839010025993D /* TerritorySelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerritorySelectionDelegate.swift; sourceTree = "<group>"; };
-		54888703284839ED0025993D /* FactionSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionSelectionDelegate.swift; sourceTree = "<group>"; };
-		5488870528483AA70025993D /* CaptureStatusDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureStatusDelegate.swift; sourceTree = "<group>"; };
 		5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTerritoryColorSelectionDelegate.swift; sourceTree = "<group>"; };
 		5488870928489DD90025993D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
-		54888748284A9E2E0025993D /* ZoneTableViewSectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneTableViewSectionTitle.swift; sourceTree = "<group>"; };
-		549AF31328404420005E1658 /* UpdateMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMapDelegate.swift; sourceTree = "<group>"; };
 		54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
-		54B564A428B5436A00FC7390 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		54CCCA23288E869A00539EFF /* SelectFoyLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectFoyLayers.storyboard; sourceTree = "<group>"; };
 		54CCCA27288F32F700539EFF /* SelectFoyLayersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFoyLayersDataSource.swift; sourceTree = "<group>"; };
 		54CCCA29288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFoyLayersTableViewCell.swift; sourceTree = "<group>"; };
@@ -262,8 +243,6 @@
 		54CCCAAD28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCarentanMapDelegate.swift; sourceTree = "<group>"; };
 		54CCCAAF28A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarentanLayersTableViewCell.swift; sourceTree = "<group>"; };
 		54CCCAB028A9C26F00539EFF /* SelectCarentanLayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCarentanLayersTableViewCell.xib; sourceTree = "<group>"; };
-		54CCCAB328AC652C00539EFF /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
-		54CCCAB528AC656700539EFF /* SaveImageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImageProtocol.swift; sourceTree = "<group>"; };
 		54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarentanBaseLayer.storyboard; sourceTree = "<group>"; };
 		54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarentanBaseLayerViewController.swift; sourceTree = "<group>"; };
 		54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoyBaseLayerViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +325,7 @@
 		54141812281CC13100E0483B = {
 			isa = PBXGroup;
 			children = (
+				544132D728DE514D00FC141A /* HLL Maps.entitlements */,
 				5414181D281CC13100E0483B /* Hell-Let-Loose-Maps */,
 				54141834281CC13200E0483B /* Hell-Let-Loose-MapsTests */,
 				5414183E281CC13200E0483B /* Hell-Let-Loose-MapsUITests */,
@@ -404,7 +384,6 @@
 				54022BCF286AFB050080AF63 /* LayerSelection */,
 				54141898281CC2C500E0483B /* BaseViewController.swift */,
 				54D081D82829F19000542CB7 /* BaseLayerMapsViewController.swift */,
-				5470CF8E28458F5C00AAEB0B /* NewPlayerGuideViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -489,15 +468,7 @@
 			children = (
 				5414186B281CC1F200E0483B /* DataSourceDelegate.swift */,
 				54D0825D283057CE00542CB7 /* MapLayerSelectionDelegate.swift */,
-				549AF31328404420005E1658 /* UpdateMapDelegate.swift */,
 				548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */,
-				548886FB284835450025993D /* StrongpointCircleSelectionDelegate.swift */,
-				548886FD284836920025993D /* ZoneSelectionDelegate.swift */,
-				548886FF2848379A0025993D /* StrongpointTitleSelectionDelegate.swift */,
-				54888701284839010025993D /* TerritorySelectionDelegate.swift */,
-				54888703284839ED0025993D /* FactionSelectionDelegate.swift */,
-				5488870528483AA70025993D /* CaptureStatusDelegate.swift */,
-				5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */,
 				54022BCB286AE96D0080AF63 /* UpdateFoyMapDelegate.swift */,
 				54CCCA33288FFED200539EFF /* UpdateHill400MapDelegate.swift */,
 				54CCCA3928989D2500539EFF /* UpdateHurtgenForestMapDelegate.swift */,
@@ -510,7 +481,7 @@
 				54CCCA6F2899018500539EFF /* UpdatePurpleHeartLaneMapDelegate.swift */,
 				54CCCA71289901A300539EFF /* UpdateSainteMarieduMontMapDelegate.swift */,
 				54CCCAAD28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift */,
-				54CCCAB528AC656700539EFF /* SaveImageProtocol.swift */,
+				5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -518,7 +489,6 @@
 		5488870B2848A22F0025993D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				54B564A428B5436A00FC7390 /* UIView+.swift */,
 				5488870928489DD90025993D /* UIColor+.swift */,
 			);
 			path = Extensions;
@@ -585,8 +555,7 @@
 			children = (
 				54141891281CC22E00E0483B /* NSObject+.swift */,
 				54141895281CC24100E0483B /* MapsListDictionary.swift */,
-				54888748284A9E2E0025993D /* ZoneTableViewSectionTitle.swift */,
-				54CCCAB328AC652C00539EFF /* ImageSaver.swift */,
+				542BC28628D815240064922E /* PresentationHelper.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -784,8 +753,6 @@
 				54D081D52829F16D00542CB7 /* StalingradBaseLayerViewController.swift in Sources */,
 				54CCCA8A289973E600539EFF /* SelectRemagenLayersDataSource.swift in Sources */,
 				54CCCA3C28989E5B00539EFF /* SelectHurtgenForestLayersDataSource.swift in Sources */,
-				548886FE284836920025993D /* ZoneSelectionDelegate.swift in Sources */,
-				54888704284839ED0025993D /* FactionSelectionDelegate.swift in Sources */,
 				54141823281CC13100E0483B /* ViewController.swift in Sources */,
 				54141899281CC2C500E0483B /* BaseViewController.swift in Sources */,
 				54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */,
@@ -801,8 +768,8 @@
 				5488870A28489DD90025993D /* UIColor+.swift in Sources */,
 				54141893281CC22E00E0483B /* NSObject+.swift in Sources */,
 				548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */,
+				542BC28728D815240064922E /* PresentationHelper.swift in Sources */,
 				54CCCA7A2899703400539EFF /* SelectRemagenLayersViewController.swift in Sources */,
-				549AF31428404420005E1658 /* UpdateMapDelegate.swift in Sources */,
 				54D081C92829F11100542CB7 /* KurskBaseLayerViewController.swift in Sources */,
 				54022BCC286AE96D0080AF63 /* UpdateFoyMapDelegate.swift in Sources */,
 				54CCCA28288F32F700539EFF /* SelectFoyLayersDataSource.swift in Sources */,
@@ -825,8 +792,6 @@
 				54CCCA7E2899706500539EFF /* SelectSainteMarieduMontLayersViewController.swift in Sources */,
 				54CCCA86289973C400539EFF /* SelectKurskLayersDataSource.swift in Sources */,
 				54CCCA30288FFB1A00539EFF /* SelectHill400LayersViewController.swift in Sources */,
-				54888702284839010025993D /* TerritorySelectionDelegate.swift in Sources */,
-				54CCCAB628AC656700539EFF /* SaveImageProtocol.swift in Sources */,
 				54CCCA4B2898E11200539EFF /* SelectOmahaBeachLayersTableViewCell.swift in Sources */,
 				54CCCA32288FFBFC00539EFF /* SelectHill400LayersDataSource.swift in Sources */,
 				54022BCE286AFAED0080AF63 /* SelectFoyLayersViewController.swift in Sources */,
@@ -835,9 +800,7 @@
 				54CCCA842899709A00539EFF /* SelectUtahBeachLayersViewController.swift in Sources */,
 				54D081C32829F0EC00542CB7 /* FoyBaseLayerViewController.swift in Sources */,
 				54141892281CC22E00E0483B /* CustomUITableViewCell.swift in Sources */,
-				548887002848379A0025993D /* StrongpointTitleSelectionDelegate.swift in Sources */,
 				54CCCA72289901A300539EFF /* UpdateSainteMarieduMontMapDelegate.swift in Sources */,
-				5470CF8F28458F5C00AAEB0B /* NewPlayerGuideViewController.swift in Sources */,
 				54CCCA3A28989D2500539EFF /* UpdateHurtgenForestMapDelegate.swift in Sources */,
 				54D0826428330B2500542CB7 /* SelectCarentanLayersViewController.swift in Sources */,
 				54D081D32829F16000542CB7 /* SainteMereEgliseBaseLayerViewController.swift in Sources */,
@@ -846,18 +809,14 @@
 				54D081D72829F17700542CB7 /* UtahBeachBaseLayerViewController.swift in Sources */,
 				54CCCAAE28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift in Sources */,
 				54D081DD2829F25900542CB7 /* BaseLayerMapsDataSource.swift in Sources */,
-				548886FC284835450025993D /* StrongpointCircleSelectionDelegate.swift in Sources */,
 				54D081CB2829F12200542CB7 /* OmahaBeachBaseLayerViewController.swift in Sources */,
 				54D081C72829F10800542CB7 /* HurtgenForestBaseLayerViewController.swift in Sources */,
 				54CCCA2B288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift in Sources */,
 				54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */,
-				54CCCAB428AC652C00539EFF /* ImageSaver.swift in Sources */,
 				54CCCA782899702500539EFF /* SelectOmahaBeachLayersViewController.swift in Sources */,
 				54022BCA28606C680080AF63 /* ToggleSwitchChoice.xcdatamodeld in Sources */,
 				54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */,
-				54888749284A9E2E0025993D /* ZoneTableViewSectionTitle.swift in Sources */,
 				54CCCA4F2898E19200539EFF /* SelectRemagenLayersTableViewCell.swift in Sources */,
-				54B564A528B5436A00FC7390 /* UIView+.swift in Sources */,
 				54D081D12829F15300542CB7 /* SainteMarieduMontBaseLayerViewController.swift in Sources */,
 				54CCCA6A2899012A00539EFF /* UpdateSainteMereEgliseMapDelegate.swift in Sources */,
 				54CCCA532898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.swift in Sources */,
@@ -867,7 +826,6 @@
 				54CCCA702899018500539EFF /* UpdatePurpleHeartLaneMapDelegate.swift in Sources */,
 				54CCCAB128A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift in Sources */,
 				54CCCA8C289973F600539EFF /* SelectPurpleHeartLaneLayersDataSource.swift in Sources */,
-				5488870628483AA70025993D /* CaptureStatusDelegate.swift in Sources */,
 				54CCCA372890012D00539EFF /* SelectHill400LayersTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -966,7 +924,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1020,7 +978,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1035,17 +993,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HLL Maps.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DZHXZ94XN9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hell-Let-Loose-Maps/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "HLL Maps";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Hell Let Loose Maps needs permission to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1053,6 +1013,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "micahburnside.Hell-Let-Loose-Maps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1064,17 +1027,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HLL Maps.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DZHXZ94XN9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hell-Let-Loose-Maps/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "HLL Maps";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Hell Let Loose Maps needs permission to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1082,6 +1047,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "micahburnside.Hell-Let-Loose-Maps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

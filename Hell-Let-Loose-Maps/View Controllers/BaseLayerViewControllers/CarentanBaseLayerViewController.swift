@@ -6,15 +6,17 @@
 //
 
 import UIKit
-import CoreData
 
-//CarentanBaseLayerViewController presents
 class CarentanBaseLayerViewController: BaseViewController {
-
-//    var carentenMapUserSettings = [CarentanMapUserSettings]()
     
-//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var updateCarentanMapDelegate: UpdateCarentanMapDelegate!
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView0: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
     private let imageViewBlactot: UIImageView = {
     let iv1 = UIImageView()
@@ -135,169 +137,227 @@ class CarentanBaseLayerViewController: BaseViewController {
         return iv15
     }()
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView0: UIImageView!
-    @IBOutlet weak var layerButton: UIBarButtonItem!
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-         let storyboard = UIStoryboard.init(name: "SelectCarentanLayers", bundle: nil)
-           if let controller = storyboard.instantiateViewController(identifier: "SelectCarentanLayersViewController") as? SelectCarentanLayersViewController {
-               controller.updateCarentanMapDelegate = self
-               if let sheet = controller.sheetPresentationController {
-                   sheet.detents = [ .medium() ]
-                   sheet.prefersGrabberVisible = true
-               }
-               self.navigationController?.present(controller, animated: true)
-        }
+    //MARK: - Create ImageView SubViews
+        
+        // Create imageViews and add them to the View Heierarchy
+    func createImageViewLayerSubViews() {
+        
+        ///Adds each imageView as a subView to imageView0
+        imageView0.addSubview(imageViewBlactot)
+        imageView0.addSubview(imageView502ndStart)
+        imageView0.addSubview(imageViewFarmRuins)
+        imageView0.addSubview(imageViewPumpingStation)
+        imageView0.addSubview(imageViewRuins)
+        imageView0.addSubview(imageViewDerailedTrain)
+        imageView0.addSubview(imageViewCanalCrossing)
+        imageView0.addSubview(imageViewTownCenter)
+        imageView0.addSubview(imageViewTrainStation)
+        imageView0.addSubview(imageViewCustoms)
+        imageView0.addSubview(imageViewRailCrossing)
+        imageView0.addSubview(imageViewMountHalais)
+        imageView0.addSubview(imageViewCanalLocks)
+        imageView0.addSubview(imageViewRailCauseway)
+        imageView0.addSubview(imageViewLaMasionDesOrmes)
+        
+        ///sets imageViewBlactot subView constraints to be equal to the anchors of it's parent view imageView0 which is constrained to scrollView
+        imageViewBlactot.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewBlactot.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewBlactot.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewBlactot.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageView502ndStart subView constraints to be equal to the anchors of it's parent view imageView0 that is constrained to scrollView
+        imageView502ndStart.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageView502ndStart.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageView502ndStart.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageView502ndStart.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewFarmRuins subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewFarmRuins.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewFarmRuins.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewFarmRuins.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewFarmRuins.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewPumpingStation subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewPumpingStation.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewPumpingStation.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewPumpingStation.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewPumpingStation.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewRuins subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewRuins.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewRuins.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewRuins.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewRuins.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewDerailedTrain subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewDerailedTrain.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewDerailedTrain.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewDerailedTrain.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewDerailedTrain.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewCanalCrossing subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewCanalCrossing.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewCanalCrossing.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewCanalCrossing.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewCanalCrossing.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewTownCenter subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewTownCenter.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewTownCenter.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewTownCenter.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewTownCenter.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewTrainStation subView constraints to be equal to anchors of it's parent view imageView0 that is constrained toscrollView
+        imageViewTrainStation.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewTrainStation.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewTrainStation.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewTrainStation.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewCustoms subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewCustoms.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewCustoms.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewCustoms.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewCustoms.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewRailCrossing subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewRailCrossing.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewRailCrossing.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewRailCrossing.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewRailCrossing.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewMountHalais subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewMountHalais.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewMountHalais.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewMountHalais.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewMountHalais.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewCanalLocks subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewCanalLocks.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewCanalLocks.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewCanalLocks.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewCanalLocks.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewRailCauseway subView constraints to be equal to anchors of it's parent view imageView0 that is constrained to scrollView
+        imageViewRailCauseway.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewRailCauseway.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewRailCauseway.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewRailCauseway.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
+        
+        ///sets imageViewLaMasionDesOrmes subView constraints to be equal to anchors of it's parent view imageView0 that is iconstrained to scrollView
+        imageViewLaMasionDesOrmes.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
+        imageViewLaMasionDesOrmes.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
+        imageViewLaMasionDesOrmes.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
+        imageViewLaMasionDesOrmes.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
     }
-    
-
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-    
-    private func zoomRectangle(scale: CGFloat, center: CGPoint) -> CGRect {
-            var zoomRect = CGRect.zero
-            zoomRect.size.height = imageView0.frame.size.height / scale
-            zoomRect.size.width  = imageView0.frame.size.width  / scale
-            zoomRect.origin.x = center.x - (center.x * scrollView.zoomScale)
-            zoomRect.origin.y = center.y - (center.y * scrollView.zoomScale)
-            
-            return zoomRect
-        }
-
-    private func zoomOutRectangle(scale: CGFloat, center: CGPoint) -> CGRect {
-            var zoomOutRect = CGRect.zero
-        zoomOutRect.size.height = scrollView.frame.size.height
-        zoomOutRect.size.width  = scrollView.frame.size.width
-//            zoomRect.origin.x = center.x - (center.x * scrollView.zoomScale)
-//            zoomRect.origin.y = center.y - (center.y * scrollView.zoomScale)
-            
-            return zoomOutRect
-        }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imageView0.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
-        scrollView.delegate = self
+        self.imageView0.image = getMap(mapName: .Carentan, layerType: .CarentanTAC)
+        self.scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
         createImageViewLayerSubViews()
         doubleTapGesture()
-
-      
-//        let request : NSFetchRequest<CarentanMapUserSettings> = CarentanMapUserSettings.fetchRequest()
-//        let predicate = NSPredicate(format: "CarentanMapUserSettings")
-//        loadItems(with: request, predicate: predicate)
-//        print("\(request)")
-//        print("\(loadItems(with: request, predicate: predicate))")
-
-
-    }
-    
-
-//    func loadItems(with request: NSFetchRequest<CarentanMapUserSettings> = CarentanMapUserSettings.fetchRequest(), predicate: NSPredicate? = nil) {
-//        
-//        let carentanPredicate = NSPredicate(format: "CarentanMapUserSettings")
-//            request.predicate = carentanPredicate
-//        do {
-//        try context.fetch(request)
-//        } catch {
-//            print("Error fetching data from context \(error)")
-//        }
         
-//        tableView.reloadData()
-        
-//    }
-    
-    
-    func documentDirectoryPath() -> URL? {
-        let path = FileManager.default.urls(for: .documentDirectory,
-                                            in: .userDomainMask)
-        return path.first
     }
-    
-    func savePng(_ image: UIImage) {
-        if let pngData = image.pngData(),
-            let path = documentDirectoryPath()?.appendingPathComponent("examplePng.png") {
-            try? pngData.write(to: path)
-        }
-    }
-    
-    
-
-    
+   
     override func viewWillLayoutSubviews() {
-        
       super.viewWillLayoutSubviews()
-        
         updateMinZoomScaleForSize(view.bounds.size)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         showStrongpoints()
-        
         hideStrongpoints()
-        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
+//MARK: - Exporting And Sharing Layers
     
+    /// shareCarentanMapLayer shares an image from snapshotCarentanMap using a UIActivityController as a popOverPresentationController. This particular presentation style is required for iPad.
     @IBAction func shareCarentanMapLayer(_ sender: UIBarButtonItem) {
         
         guard let screenshot = self.snapshotCarentanMap() else { return }
         
         shareCarentanMapImage(screenshot: screenshot)
         
+        func shareCarentanMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
     }
+    ///snapshotCarentanMap takes a snapshot of imageView0 including all of it's subviews and returns the image based on the current context of imageView0
+    func snapshotCarentanMap() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView0.intrinsicContentSize)
+        imageView0.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    //MARK: - Double Tap Gesture
+
+    /// doubleTapGesture creates a double tap gesture recognizer and is set for 2 taps to trigger the function
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+//MARK: - Presenting Select Carentan Map Layers View Controller
     
-    func shareCarentanMapImage(screenshot: UIImage) {
-        // save or share
+    ///doubleTapPressed - when user double taps the screen, this zooms the view and updates the origin to ewhere the user tapped on the screen. When max zoom is reached, the view zooms all the way out and re-centers the image.
+    @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+        // 1
+        let pointInView = sender.location(in: imageView0)
+       
+        // 2
+        var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
         
-        DispatchQueue.main.async {
+        // 3
+        if scale != scrollView.zoomScale {
+
+            let scrollViewSize = scrollView.bounds.size
+            let w = scrollViewSize.width / scale
+            let h = scrollViewSize.height / scale
+            let x = pointInView.x - (w / 2.0)
+            let y = pointInView.y - (h / 2.0)
+           
+            let rectToZoomTo = CGRectMake(x, y, w, h);
+           
+            // 4
+
+            scrollView.zoom(to: rectToZoomTo, animated: true)
             
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
+        } else {
+            if scale == scrollView.maximumZoomScale {
+                scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+            }
         }
 
     }
     
-    func snapshotCarentanMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView0.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView0.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView0.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView0.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+         let storyboard = UIStoryboard.init(name: "SelectCarentanLayers", bundle: nil)
+           if let controller = storyboard.instantiateViewController(identifier: "SelectCarentanLayersViewController") as? SelectCarentanLayersViewController {
+               controller.modalPresentationStyle = .popover
+               controller.updateCarentanMapDelegate = self
+               if let popover = controller.popoverPresentationController {
+                   popover.barButtonItem = sender
+                   let sheet = popover.adaptiveSheetPresentationController
+                   sheet.detents = [
+                       .large()
+                   ]
+                           sheet.largestUndimmedDetentIdentifier = .medium
+                           sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                           sheet.prefersEdgeAttachedInCompactHeight = true
+                           sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                   sheet.prefersGrabberVisible = true
+               }
+               self.navigationController?.present(controller, animated: true)
+        }
     }
-           
-
     
     func showStrongpoints() {
         if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_BLACTOT) {
@@ -394,128 +454,19 @@ class CarentanBaseLayerViewController: BaseViewController {
             self.removeCarentanLaMasionDesOrmes()
         }
     }
-//MARK: - Create ImageView SubViews
-    
-    // Create imageViews and add them to the View Heierarchy
-    func createImageViewLayerSubViews() {
-        
-        ///Adds each strongpoint .png image layer as a subview to imageView0
-        imageView0.addSubview(imageViewBlactot)
-        imageView0.addSubview(imageView502ndStart)
-        imageView0.addSubview(imageViewFarmRuins)
-        imageView0.addSubview(imageViewPumpingStation)
-        imageView0.addSubview(imageViewRuins)
-        imageView0.addSubview(imageViewDerailedTrain)
-        imageView0.addSubview(imageViewCanalCrossing)
-        imageView0.addSubview(imageViewTownCenter)
-        imageView0.addSubview(imageViewTrainStation)
-        imageView0.addSubview(imageViewCustoms)
-        imageView0.addSubview(imageViewRailCrossing)
-        imageView0.addSubview(imageViewMountHalais)
-        imageView0.addSubview(imageViewCanalLocks)
-        imageView0.addSubview(imageViewRailCauseway)
-        imageView0.addSubview(imageViewLaMasionDesOrmes)
-        
-        ///pins imageViewBlactot subView constraints to  imageView0 which is constrained to the ScrollView
-        imageViewBlactot.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewBlactot.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewBlactot.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewBlactot.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView2 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageView502ndStart.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageView502ndStart.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageView502ndStart.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageView502ndStart.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView3 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewFarmRuins.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewFarmRuins.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewFarmRuins.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewFarmRuins.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView4 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewPumpingStation.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewPumpingStation.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewPumpingStation.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewPumpingStation.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView5 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewRuins.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewRuins.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewRuins.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewRuins.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView6 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewDerailedTrain.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewDerailedTrain.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewDerailedTrain.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewDerailedTrain.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView7 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewCanalCrossing.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewCanalCrossing.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewCanalCrossing.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewCanalCrossing.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-
-        ///sets imageView8 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewTownCenter.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewTownCenter.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewTownCenter.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewTownCenter.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView9 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewTrainStation.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewTrainStation.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewTrainStation.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewTrainStation.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-
-        ///sets imageView10 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewCustoms.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewCustoms.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewCustoms.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewCustoms.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-
-        ///sets imageView11 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewRailCrossing.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewRailCrossing.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewRailCrossing.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewRailCrossing.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView12 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewMountHalais.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewMountHalais.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewMountHalais.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewMountHalais.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView13 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewCanalLocks.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewCanalLocks.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewCanalLocks.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewCanalLocks.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-
-        ///sets imageView14 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewRailCauseway.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewRailCauseway.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewRailCauseway.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewRailCauseway.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-        
-        ///sets imageView15 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewLaMasionDesOrmes.leadingAnchor.constraint(equalTo: imageView0.leadingAnchor).isActive = true
-        imageViewLaMasionDesOrmes.trailingAnchor.constraint(equalTo: imageView0.trailingAnchor).isActive = true
-        imageViewLaMasionDesOrmes.topAnchor.constraint(equalTo: imageView0.topAnchor).isActive = true
-        imageViewLaMasionDesOrmes.bottomAnchor.constraint(equalTo: imageView0.bottomAnchor).isActive = true
-    }
-    
 }
 
-//MARK: - Sizing
+//MARK: - Scaling
 
 extension CarentanBaseLayerViewController {
     ///sets zoom scaling min / max
     func updateMinZoomScaleForSize(_ size: CGSize) {
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView0.bounds.width
+        let heightScale = size.height / imageView0.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
     }
     
     func updateConstraintsForSize(_ size: CGSize) {
@@ -527,33 +478,26 @@ extension CarentanBaseLayerViewController {
       imageViewLeadingConstraint.constant = xOffset
       imageViewTrailingConstraint.constant = xOffset
       view.layoutIfNeeded()
-    }
 
+    }
+    
 }
 
-//MARK:- UIScrollViewDelegate
+//MARK: - UIScrollViewDelegate
 extension CarentanBaseLayerViewController: UIScrollViewDelegate {
-    ///Sets imageView0 as the parent imageView
+    ///Sets imageView0 as the view that will be zoomed in the scrollview
   func viewForZooming(in scrollView: UIScrollView) -> UIView? {
       return imageView0
   }
-    
+
   ///Updates constraints as view zooms in and out
   func scrollViewDidZoom(_ scrollView: UIScrollView) {
     updateConstraintsForSize(view.bounds.size)
   }
-}
 
-extension CarentanBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-    return .none
-    }
 }
 
 extension CarentanBaseLayerViewController: UpdateCarentanMapDelegate {
-    func removeStrongpoint() {
-    print("This doesn't need to do anything yet")
-    }
     func removeCarentanBlactot() {
         self.imageViewBlactot.isHidden = true
     }
@@ -572,7 +516,6 @@ extension CarentanBaseLayerViewController: UpdateCarentanMapDelegate {
     
     func removeCarentanRuins() {
         self.imageViewRuins.isHidden = true
-
     }
     
     func removeCarentanDerailedTrain() {
@@ -702,5 +645,10 @@ extension CarentanBaseLayerViewController: UpdateCarentanMapDelegate {
     func loadBaseLayer() {
         self.imageView0.image = getMap(mapName: .Carentan, layerType: .CarentanBaseLayer)
     }
-    
+}
+
+extension CarentanBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
+    }
 }

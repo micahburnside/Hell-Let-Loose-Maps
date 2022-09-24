@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qme-4j-Kxe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qme-4j-Kxe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7e-Zp-Aev">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7e-Zp-Aev">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarentanBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="Ay9-3w-oXZ">
                                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1920"/>
@@ -26,21 +27,19 @@
                                 <constraints>
                                     <constraint firstItem="Ay9-3w-oXZ" firstAttribute="top" secondItem="K7e-Zp-Aev" secondAttribute="top" id="ERI-kc-d3L"/>
                                     <constraint firstAttribute="trailing" secondItem="Ay9-3w-oXZ" secondAttribute="trailing" id="MRw-v8-DCW"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ay9-3w-oXZ" secondAttribute="bottom" constant="-22" id="j76-iO-6wp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ay9-3w-oXZ" secondAttribute="bottom" id="j76-iO-6wp"/>
                                     <constraint firstItem="Ay9-3w-oXZ" firstAttribute="leading" secondItem="K7e-Zp-Aev" secondAttribute="leading" id="uuR-KA-72F"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="hX6-GI-Qwe"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="74K-Ia-k58"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hYs-cC-S3M"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="K7e-Zp-Aev" firstAttribute="leading" secondItem="hYs-cC-S3M" secondAttribute="leading" id="CHd-Gk-cvN"/>
                             <constraint firstAttribute="bottomMargin" secondItem="K7e-Zp-Aev" secondAttribute="bottom" constant="-34" id="a8I-So-e9n"/>
-                            <constraint firstItem="K7e-Zp-Aev" firstAttribute="centerX" secondItem="Bvk-oC-wuu" secondAttribute="centerX" id="e6r-KL-Bfz"/>
-                            <constraint firstItem="K7e-Zp-Aev" firstAttribute="top" secondItem="hYs-cC-S3M" secondAttribute="top" id="h6R-Ao-7Zv"/>
+                            <constraint firstItem="K7e-Zp-Aev" firstAttribute="leading" secondItem="Bvk-oC-wuu" secondAttribute="leading" id="e6r-KL-Bfz"/>
+                            <constraint firstItem="K7e-Zp-Aev" firstAttribute="top" secondItem="Bvk-oC-wuu" secondAttribute="top" id="h6R-Ao-7Zv"/>
+                            <constraint firstItem="K7e-Zp-Aev" firstAttribute="centerX" secondItem="Bvk-oC-wuu" secondAttribute="centerX" id="tTR-EX-4zd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Carentan" id="9xJ-vZ-Ac5">
@@ -65,7 +64,6 @@
                         <outlet property="imageViewLeadingConstraint" destination="uuR-KA-72F" id="P85-0O-tBK"/>
                         <outlet property="imageViewTopConstraint" destination="ERI-kc-d3L" id="vrc-R8-bFr"/>
                         <outlet property="imageViewTrailingConstraint" destination="MRw-v8-DCW" id="WuK-Yy-TRA"/>
-                        <outlet property="layerButton" destination="Jnk-30-mAG" id="vVd-Sx-VPL"/>
                         <outlet property="scrollView" destination="K7e-Zp-Aev" id="9nQ-kR-lQL"/>
                     </connections>
                 </viewController>
@@ -79,7 +77,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qme-4j-Kxe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WzN-zE-fIl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,12 +96,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wU-aY-9mX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1557" y="119"/>
+            <point key="canvasLocation" x="-1690" y="119"/>
         </scene>
     </scenes>
     <resources>
         <image name="CarentanBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="32" height="32"/>
-        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

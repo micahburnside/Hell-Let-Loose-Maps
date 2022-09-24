@@ -11,6 +11,13 @@ class StalingradBaseLayerViewController: BaseViewController {
     
     var updateStalingradMapDelegate: UpdateStalingradMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewMamayevApproach: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,189 +136,6 @@ class StalingradBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectStalingradLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectStalingradLayersViewController") as? SelectStalingradLayersViewController {
-              controller.updateStalingradMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .Stalingrad, layerType: .StalingradBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showStalingradStrongpoints()
-        hideStalingradStrongpoints()
-    }
-    
-    @IBAction func shareStalingradMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotStalingradMap() else { return }
-        
-        shareStalingradMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareStalingradMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotStalingradMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showStalingradStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_MAMAYEVAPPROACH) {
-            self.loadStalingradMamayevApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_NAILFACTORY) {
-            self.loadStalingradNailFactory()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CITYOVERLOOK) {
-            self.loadStalingradCityOverlook()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_DOLGIYRAVINE) {
-            self.loadStalingradDolgiyRavine()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_YELLOWHOUSE) {
-            self.loadStalingradYellowHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_KOMSOMOLHQ) {
-            self.loadStalingradKomsomolHQ()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_RAILWAYCROSSING) {
-            self.loadStalingradRailwayCrossing()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CARRIAGEDEPOT) {
-            self.loadStalingradCarriageDepot()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_TRAINSTATION) {
-            self.loadStalingradTrainStation()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_HOUSEOFTHEWORKERS) {
-            self.loadStalingradHouseOfTheWorkers()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_PAVLOVSHOUSE) {
-            self.loadStalingradPavlovsHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_THEBREWERY) {
-            self.loadStalingradTheBrewery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_LSHAPEDHOUSE) {
-            self.loadStalingradLShapedHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_GRUDININSMILL) {
-            self.loadStalingradGrudininsMill()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_VOLGABANKS) {
-            self.loadStalingradVolgaBanks()
-        }
-    }
-    
-    func hideStalingradStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_MAMAYEVAPPROACH) == false {
-            self.removeStalingradMamayevApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_NAILFACTORY) == false {
-            self.removeStalingradNailFactory()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CITYOVERLOOK) == false {
-            self.removeStalingradCityOverlook()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_DOLGIYRAVINE) == false {
-            self.removeStalingradDolgiyRavine()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_YELLOWHOUSE) == false {
-            self.removeStalingradYellowHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_KOMSOMOLHQ) == false {
-            self.removeStalingradKomsomolHQ()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_RAILWAYCROSSING) == false {
-            self.removeStalingradRailwayCrossing()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CARRIAGEDEPOT) == false {
-            self.removeStalingradCarriageDepot()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_TRAINSTATION) == false {
-            self.removeStalingradTrainStation()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_HOUSEOFTHEWORKERS) == false {
-            self.removeStalingradHouseOfTheWorkers()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_PAVLOVSHOUSE) == false {
-            self.removeStalingradPavlovsHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_THEBREWERY) == false {
-            self.removeStalingradTheBrewery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_LSHAPEDHOUSE) == false {
-            self.removeStalingradLShapedHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_GRUDININSMILL) == false {
-            self.removeStalingradGrudininsMill()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_VOLGABANKS) == false {
-            self.removeStalingradVolgaBanks()
-        }
-    }
     
     func createImageViewLayerSubViews() {
         
@@ -423,15 +247,213 @@ class StalingradBaseLayerViewController: BaseViewController {
         (imageViewVolgaBanks).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
         (imageViewVolgaBanks).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .Stalingrad, layerType: .StalingradTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showStalingradStrongpoints()
+        hideStalingradStrongpoints()
+    }
+    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectStalingradLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectStalingradLayersViewController") as? SelectStalingradLayersViewController {
+              controller.modalPresentationStyle = .popover
+              controller.updateStalingradMapDelegate = self
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+    
+    
+    @IBAction func shareStalingradMapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotStalingradMap() else { return }
+        shareStalingradMapImage(screenshot: screenshot)
+        func shareStalingradMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+    func snapshotStalingradMap() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func showStalingradStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_MAMAYEVAPPROACH) {
+            self.loadStalingradMamayevApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_NAILFACTORY) {
+            self.loadStalingradNailFactory()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CITYOVERLOOK) {
+            self.loadStalingradCityOverlook()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_DOLGIYRAVINE) {
+            self.loadStalingradDolgiyRavine()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_YELLOWHOUSE) {
+            self.loadStalingradYellowHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_KOMSOMOLHQ) {
+            self.loadStalingradKomsomolHQ()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_RAILWAYCROSSING) {
+            self.loadStalingradRailwayCrossing()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CARRIAGEDEPOT) {
+            self.loadStalingradCarriageDepot()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_TRAINSTATION) {
+            self.loadStalingradTrainStation()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_HOUSEOFTHEWORKERS) {
+            self.loadStalingradHouseOfTheWorkers()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_PAVLOVSHOUSE) {
+            self.loadStalingradPavlovsHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_THEBREWERY) {
+            self.loadStalingradTheBrewery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_LSHAPEDHOUSE) {
+            self.loadStalingradLShapedHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_GRUDININSMILL) {
+            self.loadStalingradGrudininsMill()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_VOLGABANKS) {
+            self.loadStalingradVolgaBanks()
+        }
+    }
+    
+    func hideStalingradStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_MAMAYEVAPPROACH) == false {
+            self.removeStalingradMamayevApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_NAILFACTORY) == false {
+            self.removeStalingradNailFactory()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CITYOVERLOOK) == false {
+            self.removeStalingradCityOverlook()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_DOLGIYRAVINE) == false {
+            self.removeStalingradDolgiyRavine()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_YELLOWHOUSE) == false {
+            self.removeStalingradYellowHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_KOMSOMOLHQ) == false {
+            self.removeStalingradKomsomolHQ()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_RAILWAYCROSSING) == false {
+            self.removeStalingradRailwayCrossing()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_CARRIAGEDEPOT) == false {
+            self.removeStalingradCarriageDepot()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_TRAINSTATION) == false {
+            self.removeStalingradTrainStation()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_HOUSEOFTHEWORKERS) == false {
+            self.removeStalingradHouseOfTheWorkers()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_PAVLOVSHOUSE) == false {
+            self.removeStalingradPavlovsHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_THEBREWERY) == false {
+            self.removeStalingradTheBrewery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_LSHAPEDHOUSE) == false {
+            self.removeStalingradLShapedHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_GRUDININSMILL) == false {
+            self.removeStalingradGrudininsMill()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_STALINGRAD_VOLGABANKS) == false {
+            self.removeStalingradVolgaBanks()
+        }
+    }
     
 }
 //MARK:- Sizing
 extension StalingradBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -593,5 +615,11 @@ extension StalingradBaseLayerViewController: UpdateStalingradMapDelegate {
     func loadStalingradVolgaBanks() {
         self.imageViewVolgaBanks.isHidden = false
         self.imageViewVolgaBanks.image = getStrongpoint(strongpoint: .StrongpointStalingradVolgaBanks)
+    }
+}
+
+extension StalingradBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }

@@ -11,6 +11,14 @@ class RemagenBaseLayerViewController: BaseViewController {
     
     var updateRemagenMapDelegate: UpdateRemagenMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+
+    
     private let imageViewAlteLiebeBarsch: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,189 +137,6 @@ class RemagenBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectRemagenLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectRemagenLayersViewController") as? SelectRemagenLayersViewController {
-              controller.updateRemagenMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .Remagen, layerType: .RemagenBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showRemagenStrongpoints()
-        hideRemagenStrongpoints()
-    }
-    
-    @IBAction func shareRemagenMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotRemagenMap() else { return }
-        
-        shareRemagenMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareRemagenMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotRemagenMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showRemagenStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ALTELIEBEBARSCH) {
-            self.loadRemagenAlteLiebeBarsch()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BEWALDETKREUZUNG) {
-            self.loadRemagenBewaldetKreuzung()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_DANRADART512) {
-            self.loadRemagenDanRadart512()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPEL) {
-            self.loadRemagenErpel()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPELERLEY) {
-            self.loadRemagenErpelerLey()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_KASBACHOVERLOOK) {
-            self.loadRemagenKasbachOutlook()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_STSEVERINCHAPEL) {
-            self.loadRemagenStSeverinChapel()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_LUDENDORFFBRIDGE) {
-            self.loadRemagenLudendorffBridge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BAUERNHOFAMRHEIN) {
-            self.loadRemagenBauernhofAmRhein()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_REMAGEN) {
-            self.loadRemagenRemagen()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MOBELFABRIK) {
-            self.loadRemagenMobelfabrik()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_SCHLIEFFENAUSWEG) {
-            self.loadRemagenSchlieffenAusweg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_WALDBURG) {
-            self.loadRemagenWaldburg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MUHLENWEG) {
-            self.loadRemagenMuhlenweg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_HAGELKREUZUNG) {
-            self.loadRemagenHagelkreuz()
-        }
-    }
-    
-    func hideRemagenStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ALTELIEBEBARSCH) == false {
-            self.removeRemagenAlteLiebeBarsch()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BEWALDETKREUZUNG) == false {
-            self.removeRemagenBewaldetKreuzung()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_DANRADART512) == false {
-            self.removeRemagenDanRadart512()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPEL) == false {
-            self.removeRemagenErpel()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPELERLEY) == false {
-            self.removeRemagenErpelerLey()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_KASBACHOVERLOOK) == false {
-            self.removeRemagenKasbachOutlook()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_STSEVERINCHAPEL) == false {
-            self.removeRemagenStSeverinChapel()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_LUDENDORFFBRIDGE) == false {
-            self.removeRemagenLudendorffBridge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BAUERNHOFAMRHEIN) == false {
-            self.removeRemagenBauernhofAmRhein()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_REMAGEN) == false {
-            self.removeRemagenRemagen()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MOBELFABRIK) == false {
-            self.removeRemagenMobelfabrik()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_SCHLIEFFENAUSWEG) == false {
-            self.removeRemagenSchlieffenAusweg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_WALDBURG) == false {
-            self.removeRemagenWaldburg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MUHLENWEG) == false {
-            self.removeRemagenMuhlenweg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_HAGELKREUZUNG) == false {
-            self.removeRemagenHagelkreuz()
-        }
-    }
     
     func createImageViewLayerSubViews() {
         
@@ -423,14 +248,213 @@ class RemagenBaseLayerViewController: BaseViewController {
         (imageViewHagelkreuz).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .Remagen, layerType: .RemagenTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showRemagenStrongpoints()
+        hideRemagenStrongpoints()
+    }
+    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectRemagenLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectRemagenLayersViewController") as? SelectRemagenLayersViewController {
+              controller.modalPresentationStyle = .popover
+              controller.updateRemagenMapDelegate = self
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+
+    
+    @IBAction func shareRemagenMapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotRemagenMap() else { return }
+        shareRemagenMapImage(screenshot: screenshot)
+        func shareRemagenMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+        
+    }
+
+    func snapshotRemagenMap() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func showRemagenStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ALTELIEBEBARSCH) {
+            self.loadRemagenAlteLiebeBarsch()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BEWALDETKREUZUNG) {
+            self.loadRemagenBewaldetKreuzung()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_DANRADART512) {
+            self.loadRemagenDanRadart512()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPEL) {
+            self.loadRemagenErpel()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPELERLEY) {
+            self.loadRemagenErpelerLey()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_KASBACHOVERLOOK) {
+            self.loadRemagenKasbachOutlook()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_STSEVERINCHAPEL) {
+            self.loadRemagenStSeverinChapel()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_LUDENDORFFBRIDGE) {
+            self.loadRemagenLudendorffBridge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BAUERNHOFAMRHEIN) {
+            self.loadRemagenBauernhofAmRhein()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_REMAGEN) {
+            self.loadRemagenRemagen()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MOBELFABRIK) {
+            self.loadRemagenMobelfabrik()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_SCHLIEFFENAUSWEG) {
+            self.loadRemagenSchlieffenAusweg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_WALDBURG) {
+            self.loadRemagenWaldburg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MUHLENWEG) {
+            self.loadRemagenMuhlenweg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_HAGELKREUZUNG) {
+            self.loadRemagenHagelkreuz()
+        }
+    }
+    
+    func hideRemagenStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ALTELIEBEBARSCH) == false {
+            self.removeRemagenAlteLiebeBarsch()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BEWALDETKREUZUNG) == false {
+            self.removeRemagenBewaldetKreuzung()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_DANRADART512) == false {
+            self.removeRemagenDanRadart512()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPEL) == false {
+            self.removeRemagenErpel()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_ERPELERLEY) == false {
+            self.removeRemagenErpelerLey()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_KASBACHOVERLOOK) == false {
+            self.removeRemagenKasbachOutlook()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_STSEVERINCHAPEL) == false {
+            self.removeRemagenStSeverinChapel()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_LUDENDORFFBRIDGE) == false {
+            self.removeRemagenLudendorffBridge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_BAUERNHOFAMRHEIN) == false {
+            self.removeRemagenBauernhofAmRhein()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_REMAGEN) == false {
+            self.removeRemagenRemagen()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MOBELFABRIK) == false {
+            self.removeRemagenMobelfabrik()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_SCHLIEFFENAUSWEG) == false {
+            self.removeRemagenSchlieffenAusweg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_WALDBURG) == false {
+            self.removeRemagenWaldburg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_MUHLENWEG) == false {
+            self.removeRemagenMuhlenweg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_REMAGEN_HAGELKREUZUNG) == false {
+            self.removeRemagenHagelkreuz()
+        }
+    }
+    
 }
 //MARK:- Sizing
 extension RemagenBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -593,5 +617,11 @@ extension RemagenBaseLayerViewController: UpdateRemagenMapDelegate {
     func loadRemagenHagelkreuz() {
         self.imageViewHagelkreuz.isHidden = false
         self.imageViewHagelkreuz.image = getStrongpoint(strongpoint: .StrongpointRemagenHagelkreuz)
+    }
+}
+
+extension RemagenBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }

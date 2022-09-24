@@ -11,6 +11,13 @@ class HurtgenForestBaseLayerViewController: BaseViewController {
     
     var updateHurtgenForestMapDelegate: UpdateHurtgenForestMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewTheMasbauchApproach: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,189 +136,6 @@ class HurtgenForestBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectHurtgenForestLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectHurtgenForestLayersViewController") as? SelectHurtgenForestLayersViewController {
-              controller.updateHurtgenForestMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .HurtgenForest, layerType: .HurtgenForestBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showHurgtenForestStrongpoints()
-        hideHurtgenForestStrongpoints()
-    }
-    
-    @IBAction func shareHurtgenForestMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotHurtgenForestMap() else { return }
-        
-        shareHurtgenForestMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareHurtgenForestMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotHurtgenForestMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showHurgtenForestStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THEMASBAUCHAPPROACH) {
-            self.loadHurtgenForestTheMasbauchApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_RESERVESTATION) {
-            self.loadHurtgenForestReserveStation()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LUMBERYARD) {
-            self.loadHurtgenForestLumberyard()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_WEHEBACHOVERLOOK) {
-            self.loadHurtgenForestWehebachOverlook()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_KALLTRAIL) {
-            self.loadHurtgenForestKallTrail()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THERUIN) {
-            self.loadHurtgenForestTheRuin()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_NORTHPASS) {
-            self.loadHurtgenForestNorthPass()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESCAR) {
-            self.loadHurtgenForestTheScar()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESIEGFRIEDLINE) {
-            self.loadHurtgenForestTheSiegfriedLine()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HILL15) {
-            self.loadHurtgenForestHill15()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_JACOBSBARN) {
-            self.loadHurtgenForestJacobsBarn()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_SALIENT42) {
-            self.loadHurtgenForestSalient42()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_GROSSHAUAPPROACH) {
-            self.loadHurtgenForestGrosshauApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HURTGENAPPROACH) {
-            self.loadHurtgenForestHurtgenApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LOGGINGCAMP) {
-            self.loadHurtgenForestLoggingCamp()
-        }
-    }
-    
-    func hideHurtgenForestStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THEMASBAUCHAPPROACH) == false {
-            self.removeHurtgenForestTheMasbauchApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_RESERVESTATION) == false {
-            self.removeHurtgenForestReserveStation()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LUMBERYARD) == false {
-            self.removeHurtgenForestLumberyard()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_WEHEBACHOVERLOOK) == false {
-            self.removeHurtgenForestWehebachOverlook()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_KALLTRAIL) == false {
-            self.removeHurtgenForestKallTrail()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THERUIN) == false {
-            self.removeHurtgenForestTheRuin()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_NORTHPASS) == false {
-            self.removeHurtgenForestNorthPass()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESCAR) == false {
-            self.removeHurtgenForestTheScar()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESIEGFRIEDLINE) == false {
-            self.removeHurtgenForestTheSiegfriedLine()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HILL15) == false {
-            self.removeHurtgenForestHill15()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_JACOBSBARN) == false {
-            self.removeHurtgenForestJacobsBarn()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_SALIENT42) == false {
-            self.removeHurtgenForestSalient42()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_GROSSHAUAPPROACH) == false {
-            self.removeHurtgenForestGrosshauApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HURTGENAPPROACH) == false {
-            self.removeHurtgenForestHurtgenApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LOGGINGCAMP) == false {
-            self.removeHurtgenForestLoggingCamp()
-        }
-    }
     
     func createImageViewLayerSubViews() {
         
@@ -423,14 +247,212 @@ class HurtgenForestBaseLayerViewController: BaseViewController {
         imageViewLoggingCamp.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
     
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectHurtgenForestLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectHurtgenForestLayersViewController") as? SelectHurtgenForestLayersViewController {
+              controller.modalPresentationStyle = .popover
+              controller.updateHurtgenForestMapDelegate = self
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .HurtgenForest, layerType: .HurtgenForestTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showHurgtenForestStrongpoints()
+        hideHurtgenForestStrongpoints()
+    }
+    
+    @IBAction func shareHurtgenForestMapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotHurtgenForestMap() else { return }
+        shareHurtgenForestMapImage(screenshot: screenshot)
+        func shareHurtgenForestMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+    func snapshotHurtgenForestMap() -> UIImage?
+{
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func showHurgtenForestStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THEMASBAUCHAPPROACH) {
+            self.loadHurtgenForestTheMasbauchApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_RESERVESTATION) {
+            self.loadHurtgenForestReserveStation()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LUMBERYARD) {
+            self.loadHurtgenForestLumberyard()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_WEHEBACHOVERLOOK) {
+            self.loadHurtgenForestWehebachOverlook()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_KALLTRAIL) {
+            self.loadHurtgenForestKallTrail()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THERUIN) {
+            self.loadHurtgenForestTheRuin()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_NORTHPASS) {
+            self.loadHurtgenForestNorthPass()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESCAR) {
+            self.loadHurtgenForestTheScar()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESIEGFRIEDLINE) {
+            self.loadHurtgenForestTheSiegfriedLine()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HILL15) {
+            self.loadHurtgenForestHill15()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_JACOBSBARN) {
+            self.loadHurtgenForestJacobsBarn()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_SALIENT42) {
+            self.loadHurtgenForestSalient42()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_GROSSHAUAPPROACH) {
+            self.loadHurtgenForestGrosshauApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HURTGENAPPROACH) {
+            self.loadHurtgenForestHurtgenApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LOGGINGCAMP) {
+            self.loadHurtgenForestLoggingCamp()
+        }
+    }
+    
+    func hideHurtgenForestStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THEMASBAUCHAPPROACH) == false {
+            self.removeHurtgenForestTheMasbauchApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_RESERVESTATION) == false {
+            self.removeHurtgenForestReserveStation()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LUMBERYARD) == false {
+            self.removeHurtgenForestLumberyard()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_WEHEBACHOVERLOOK) == false {
+            self.removeHurtgenForestWehebachOverlook()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_KALLTRAIL) == false {
+            self.removeHurtgenForestKallTrail()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THERUIN) == false {
+            self.removeHurtgenForestTheRuin()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_NORTHPASS) == false {
+            self.removeHurtgenForestNorthPass()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESCAR) == false {
+            self.removeHurtgenForestTheScar()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_THESIEGFRIEDLINE) == false {
+            self.removeHurtgenForestTheSiegfriedLine()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HILL15) == false {
+            self.removeHurtgenForestHill15()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_JACOBSBARN) == false {
+            self.removeHurtgenForestJacobsBarn()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_SALIENT42) == false {
+            self.removeHurtgenForestSalient42()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_GROSSHAUAPPROACH) == false {
+            self.removeHurtgenForestGrosshauApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_HURTGENAPPROACH) == false {
+            self.removeHurtgenForestHurtgenApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HURTGENFOREST_LOGGINGCAMP) == false {
+            self.removeHurtgenForestLoggingCamp()
+        }
+    }
+    
 }
 //MARK:- Sizing
 extension HurtgenForestBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -605,5 +627,11 @@ extension HurtgenForestBaseLayerViewController: UpdateHurtgenForestMapDelegate {
     
     func loadBaseLayer() {
         self.imageView.image = getMap(mapName: .HurtgenForest, layerType: .HurtgenForestBaseLayer)
+    }
+}
+
+extension HurtgenForestBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }

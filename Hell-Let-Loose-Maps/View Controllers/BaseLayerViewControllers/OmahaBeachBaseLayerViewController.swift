@@ -11,6 +11,13 @@ class OmahaBeachBaseLayerViewController: BaseViewController {
     
     var updateOmahaBeachMapDelegate: UpdateOmahaBeachMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewBeaumontRoad: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,189 +136,6 @@ class OmahaBeachBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectOmahaBeachLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectOmahaBeachLayersViewController") as? SelectOmahaBeachLayersViewController {
-              controller.updateOmahaBeachMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .OmahaBeach, layerType: .OmahaBeachBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showOmahaBeachStrongpoints()
-        hideOmahaBeachStrongpoints()
-    }
-    
-    @IBAction func shareOmahaBeachMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotOmahaBeachMap() else { return }
-        
-        shareOmahaBeachMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareOmahaBeachMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotOmahaBeachMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showOmahaBeachStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_BEAUMONTROAD) {
-            self.loadOmahaBeachBeaumontRoad()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CROSSROADS) {
-            self.loadOmahaBeachCrossroads()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_LESISLES) {
-            self.loadOmahaBeachLesIsles()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_REARBATTERY) {
-            self.loadOmahaBeachRearBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CHURCHROAD) {
-            self.loadOmahaBeachChurchRoad()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEORCHARDS) {
-            self.loadOmahaBeachTheOrchards()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WESTVIERVILLE) {
-            self.loadOmahaBeachWestVierville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_VIERVILLESURMER) {
-            self.loadOmahaBeachViervilleSurMer()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_ARTILLERYBATTERY) {
-            self.loadOmahaBeachArtilleryBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN73) {
-            self.loadOmahaBeachWN73()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN70) {
-            self.loadOmahaBeachWN71()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN71) {
-            self.loadOmahaBeachWN70()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGGREEN) {
-            self.loadOmahaBeachDogGreen()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEDRAW) {
-            self.loadOmahaBeachTheDraw()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGWHITE) {
-            self.loadOmahaBeachDogWhite()
-        }
-    }
-    
-    func hideOmahaBeachStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_BEAUMONTROAD) == false {
-            self.removeOmahaBeachBeaumontRoad()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CROSSROADS) == false {
-            self.removeOmahaBeachCrossroads()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_LESISLES) == false {
-            self.removeOmahaBeachLesIsles()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_REARBATTERY) == false {
-            self.removeOmahaBeachRearBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CHURCHROAD) == false {
-            self.removeOmahaBeachChurchRoad()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEORCHARDS) == false {
-            self.removeOmahaBeachTheOrchards()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WESTVIERVILLE) == false {
-            self.removeOmahaBeachWestVierville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_VIERVILLESURMER) == false {
-            self.removeOmahaBeachViervilleSurMer()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_ARTILLERYBATTERY) == false {
-            self.removeOmahaBeachArtilleryBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN73) == false {
-            self.removeOmahaBeachWN73()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN70) == false {
-            self.removeOmahaBeachWN71()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN71) == false {
-            self.removeOmahaBeachWN70()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGGREEN) == false {
-            self.removeOmahaBeachDogGreen()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEDRAW) == false {
-            self.removeOmahaBeachTheDraw()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGWHITE) == false {
-            self.removeOmahaBeachDogWhite()
-        }
-    }
     
     func createImageViewLayerSubViews() {
         
@@ -422,15 +246,215 @@ class OmahaBeachBaseLayerViewController: BaseViewController {
         imageViewDogWhite.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
         imageViewDogWhite.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .OmahaBeach, layerType: .OmahaBeachTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showOmahaBeachStrongpoints()
+        hideOmahaBeachStrongpoints()
+    }
+
+//MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    @IBAction func shareOmahaBeachMapLayer(_ sender: UIBarButtonItem) {
+        
+        guard let screenshot = self.snapshotOmahaBeachMap() else { return }
+        
+        shareOmahaBeachMapImage(screenshot: screenshot)
+        
+        func shareOmahaBeachMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+    func snapshotOmahaBeachMap() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectOmahaBeachLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectOmahaBeachLayersViewController") as? SelectOmahaBeachLayersViewController {
+              controller.updateOmahaBeachMapDelegate = self
+              controller.modalPresentationStyle = .popover
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+    
+    func showOmahaBeachStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_BEAUMONTROAD) {
+            self.loadOmahaBeachBeaumontRoad()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CROSSROADS) {
+            self.loadOmahaBeachCrossroads()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_LESISLES) {
+            self.loadOmahaBeachLesIsles()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_REARBATTERY) {
+            self.loadOmahaBeachRearBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CHURCHROAD) {
+            self.loadOmahaBeachChurchRoad()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEORCHARDS) {
+            self.loadOmahaBeachTheOrchards()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WESTVIERVILLE) {
+            self.loadOmahaBeachWestVierville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_VIERVILLESURMER) {
+            self.loadOmahaBeachViervilleSurMer()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_ARTILLERYBATTERY) {
+            self.loadOmahaBeachArtilleryBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN73) {
+            self.loadOmahaBeachWN73()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN70) {
+            self.loadOmahaBeachWN71()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN71) {
+            self.loadOmahaBeachWN70()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGGREEN) {
+            self.loadOmahaBeachDogGreen()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEDRAW) {
+            self.loadOmahaBeachTheDraw()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGWHITE) {
+            self.loadOmahaBeachDogWhite()
+        }
+    }
+    
+    func hideOmahaBeachStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_BEAUMONTROAD) == false {
+            self.removeOmahaBeachBeaumontRoad()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CROSSROADS) == false {
+            self.removeOmahaBeachCrossroads()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_LESISLES) == false {
+            self.removeOmahaBeachLesIsles()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_REARBATTERY) == false {
+            self.removeOmahaBeachRearBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_CHURCHROAD) == false {
+            self.removeOmahaBeachChurchRoad()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEORCHARDS) == false {
+            self.removeOmahaBeachTheOrchards()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WESTVIERVILLE) == false {
+            self.removeOmahaBeachWestVierville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_VIERVILLESURMER) == false {
+            self.removeOmahaBeachViervilleSurMer()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_ARTILLERYBATTERY) == false {
+            self.removeOmahaBeachArtilleryBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN73) == false {
+            self.removeOmahaBeachWN73()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN70) == false {
+            self.removeOmahaBeachWN71()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_WN71) == false {
+            self.removeOmahaBeachWN70()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGGREEN) == false {
+            self.removeOmahaBeachDogGreen()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_THEDRAW) == false {
+            self.removeOmahaBeachTheDraw()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_OMAHABEACH_DOGWHITE) == false {
+            self.removeOmahaBeachDogWhite()
+        }
+    }
     
 }
 //MARK:- Sizing
 extension OmahaBeachBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -592,5 +616,11 @@ extension OmahaBeachBaseLayerViewController: UpdateOmahaBeachMapDelegate {
     func loadOmahaBeachDogWhite() {
         self.imageViewDogWhite.isHidden = false
         self.imageViewDogWhite.image = getStrongpoint(strongpoint: .StrongpoinOmahaBeachtDogWhite)
+    }
+}
+
+extension OmahaBeachBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }

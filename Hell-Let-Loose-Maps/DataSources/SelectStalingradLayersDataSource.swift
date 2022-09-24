@@ -31,29 +31,11 @@ extension SelectStalingradLayersDataSource: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.delegate?.didSelectCell(indexPath: indexPath)
     self.tableView.deselectRow(at: indexPath, animated: true)
-    let cell = tableView.dequeueReusableCell(withIdentifier: "SelectStalingradLayersTableViewCell", for: indexPath) as! SelectStalingradLayersTableViewCell
+    _ = tableView.dequeueReusableCell(withIdentifier: "SelectStalingradLayersTableViewCell", for: indexPath) as! SelectStalingradLayersTableViewCell
 }
 }
 
 extension SelectStalingradLayersDataSource: UITableViewDataSource {
-
-func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-}
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "\(String(describing: ZoneTableViewSection.zone1))"
-        case 1: return "\(String(describing: ZoneTableViewSection.zone2))"
-        case 2: return "\(String(describing: ZoneTableViewSection.zone3))"
-        case 3: return "\(String(describing: ZoneTableViewSection.zone4))"
-        case 4: return "\(String(describing: ZoneTableViewSection.zone5))"
-        default:
-            break
-        }
-        print("\(section.description)")
-        return section.description
-    }
-
 
 func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = UIView()
@@ -290,7 +272,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_STALINGRAD_VOLGABANKS, isOn: sender.isOn)
             self.updateStalingradMapDelegate?.loadStalingradVolgaBanks()
         } else {
-            self.updateStalingradMapDelegate?.loadStalingradVolgaBanks()
+            self.updateStalingradMapDelegate?.removeStalingradVolgaBanks()
             StoredData.shared.setToggleState(switchKey: .STRONGPOINT_STALINGRAD_VOLGABANKS, isOn: false)
         }
         break

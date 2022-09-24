@@ -11,6 +11,13 @@ class Hill400BaseLayerViewController: BaseViewController {
     
     var updateHill400MapDelegate: UpdateHill400MapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewConvoyAmbush: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,186 +136,7 @@ class Hill400BaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-        
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectHill400Layers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectHill400LayersViewController") as? SelectHill400LayersViewController {
-              controller.updateHill400MapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .Hill400, layerType: .Hill400BaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showHill400Strongpoints()
-        hideHill400Strongpoints()
-    }
-    
-    @IBAction func shareHill400MapLayer(_ sender: UIBarButtonItem) {
-        guard let screenshot = self.snapshotHill400Map() else { return }
-        
-        shareHill400MapImage(screenshot: screenshot)
-    }
-    
-    func shareHill400MapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotHill400Map() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showHill400Strongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_CONVOYAMBUSH) {
-            self.loadHill400ConvoyAmbush()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FEDERCHECKEJUNCTION) {
-            self.loadHill400FedercheckeJunction()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_STUCKCHENFARM) {
-            self.loadHill400StuckchenFarm()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERHOUSE) {
-            self.loadHill400RoerRiverHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_BERGSTEINCHURCH) {
-            self.loadHill400BergsteinChurch()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_KIRCHWEG) {
-            self.loadHill400Kirchweg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FLAKPITS) {
-            self.loadHill400FlakPits()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_HILL400) {
-            self.loadHill400Hill400()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_SOUTHERNAPPROACH) {
-            self.loadHill400SouthernApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ESELSWEG_JUNCTION) {
-            self.loadHill400EselswegJunction()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_EASTERNSLOPE) {
-            self.loadHill400EasternSlope()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_TRAINWRECK) {
-            self.loadHill400TrainWreck()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERCROSSING) {
-            self.loadHill400RoerRiverCrossing()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ZERKALL) {
-            self.loadHill400Zerkall()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_PAPERMILL) {
-            self.loadHill400PaperMill()
-        }
-    }
-    
-    func hideHill400Strongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_CONVOYAMBUSH) == false {
-            self.removeHill400ConvoyAmbush()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FEDERCHECKEJUNCTION) == false {
-            self.removeHill400FedercheckeJunction()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_STUCKCHENFARM) == false {
-            self.removeHill400StuckchenFarm()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERHOUSE) == false {
-            self.removeHill400RoerRiverHouse()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_BERGSTEINCHURCH) == false {
-            self.removeHill400BergsteinChurch()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_KIRCHWEG) == false {
-            self.removeHill400Kirchweg()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FLAKPITS) == false {
-            self.removeHill400FlakPits()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_HILL400) == false {
-            self.removeHill400Hill400()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_SOUTHERNAPPROACH) == false {
-            self.removeHill400SouthernApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ESELSWEG_JUNCTION) == false {
-            self.removeHill400EselswegJunction()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_EASTERNSLOPE) == false {
-            self.removeHill400EasternSlope()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_TRAINWRECK) == false {
-            self.removeHill400TrainWreck()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERCROSSING) == false {
-            self.removeHill400RoerRiverCrossing()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ZERKALL) == false {
-            self.removeHill400Zerkall()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_PAPERMILL) == false {
-            self.removeHill400PaperMill()
-        }
-    }
     func createImageViewLayerSubViews() {
         
         ///Add imageViews to the View Heierarchy
@@ -418,14 +246,212 @@ class Hill400BaseLayerViewController: BaseViewController {
         imageViewPaperMill.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
         imageViewPaperMill.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .Hill400, layerType: .Hill400TAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showHill400Strongpoints()
+        hideHill400Strongpoints()
+    }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectHill400Layers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectHill400LayersViewController") as? SelectHill400LayersViewController {
+              controller.modalPresentationStyle = .popover
+              controller.updateHill400MapDelegate = self
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+        
+    
+    @IBAction func shareHill400MapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotHill400Map() else { return }
+        shareHill400MapImage(screenshot: screenshot)
+        func shareHill400MapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func snapshotHill400Map() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func showHill400Strongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_CONVOYAMBUSH) {
+            self.loadHill400ConvoyAmbush()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FEDERCHECKEJUNCTION) {
+            self.loadHill400FedercheckeJunction()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_STUCKCHENFARM) {
+            self.loadHill400StuckchenFarm()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERHOUSE) {
+            self.loadHill400RoerRiverHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_BERGSTEINCHURCH) {
+            self.loadHill400BergsteinChurch()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_KIRCHWEG) {
+            self.loadHill400Kirchweg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FLAKPITS) {
+            self.loadHill400FlakPits()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_HILL400) {
+            self.loadHill400Hill400()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_SOUTHERNAPPROACH) {
+            self.loadHill400SouthernApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ESELSWEG_JUNCTION) {
+            self.loadHill400EselswegJunction()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_EASTERNSLOPE) {
+            self.loadHill400EasternSlope()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_TRAINWRECK) {
+            self.loadHill400TrainWreck()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERCROSSING) {
+            self.loadHill400RoerRiverCrossing()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ZERKALL) {
+            self.loadHill400Zerkall()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_PAPERMILL) {
+            self.loadHill400PaperMill()
+        }
+    }
+    
+    func hideHill400Strongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_CONVOYAMBUSH) == false {
+            self.removeHill400ConvoyAmbush()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FEDERCHECKEJUNCTION) == false {
+            self.removeHill400FedercheckeJunction()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_STUCKCHENFARM) == false {
+            self.removeHill400StuckchenFarm()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERHOUSE) == false {
+            self.removeHill400RoerRiverHouse()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_BERGSTEINCHURCH) == false {
+            self.removeHill400BergsteinChurch()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_KIRCHWEG) == false {
+            self.removeHill400Kirchweg()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_FLAKPITS) == false {
+            self.removeHill400FlakPits()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_HILL400) == false {
+            self.removeHill400Hill400()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_SOUTHERNAPPROACH) == false {
+            self.removeHill400SouthernApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ESELSWEG_JUNCTION) == false {
+            self.removeHill400EselswegJunction()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_EASTERNSLOPE) == false {
+            self.removeHill400EasternSlope()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_TRAINWRECK) == false {
+            self.removeHill400TrainWreck()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ROERRIVERCROSSING) == false {
+            self.removeHill400RoerRiverCrossing()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_ZERKALL) == false {
+            self.removeHill400Zerkall()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_HILL400_PAPERMILL) == false {
+            self.removeHill400PaperMill()
+        }
+    }
 }
 //MARK:- Sizing
 extension Hill400BaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -603,5 +629,11 @@ extension Hill400BaseLayerViewController: UpdateHill400MapDelegate {
     
     func loadBaseLayer() {
         self.imageView.image = getMap(mapName: .Hill400, layerType: .Hill400BaseLayer)
+    }
+}
+
+extension Hill400BaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }

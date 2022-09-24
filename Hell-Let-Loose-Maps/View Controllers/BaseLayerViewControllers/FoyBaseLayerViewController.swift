@@ -11,6 +11,14 @@ class FoyBaseLayerViewController: BaseViewController {
     
     var updateFoyMapDelegate: UpdateFoyMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var layerButton: UIBarButtonItem!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewRoadToRecogne: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -130,196 +138,8 @@ class FoyBaseLayerViewController: BaseViewController {
         return iv15
     }()
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectFoyLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectFoyLayersViewController") as? SelectFoyLayersViewController {
-              controller.updateFoyMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
+//MARK: - Create ImageView SubViews
 
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-//            if scrollView.zoomScale == scrollView.minimumZoomScale {
-//                scrollView.zoom(to: zoomRectangle(scale: scrollView.maximumZoomScale, center: sender.location(in: sender.view)), animated: true)
-//            } else {
-//                scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
-//            }
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-    
-    var photoName: String?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .Foy, layerType: .FoyBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-        
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showFoyStrongpoints()
-        hideFoyStrongpoints()
-    }
-    
-    @IBAction func shareFoyMapLayer(_ sender: UIBarButtonItem) {
-        guard let screenshot = self.snapshotFoyMap() else { return }
-        
-        shareFoyMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareFoyMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotFoyMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showFoyStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTORECOGNE) {
-            self.loadFoyRoadToRecogne()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRUAPPROACH) {
-            self.loadFoyCobruApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTONOVILLE) {
-            self.loadFoyRoadToNoville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRU_FACTORY) {
-            self.loadFoyCobruFactory()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FOY) {
-            self.loadFoyFoy()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FLAKBATTERY) {
-            self.loadFoyFlakBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_WESTBEND) {
-            self.loadFoyWestBend()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_SOUTHERNEDGE) {
-            self.loadFoySouthernEdge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_DUGOUTBARN) {
-            self.loadFoyDugoutBarn()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_N30HIGHWAY) {
-            self.loadFoyN30Highway()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BIZORYFOYROAD) {
-            self.loadFoyBizoryFoyRoad()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_EASTERN_OURTHE) {
-            self.loadFoyEasternOurthe()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTOBASTOGNE) {
-            self.loadFoyRoadToBastogne()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BOISJACUES) {
-            self.loadFoyBoisJacques()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FORESTOUTSKIRTS) {
-            self.loadFoyForestOutskirts()
-        }
-    }
-    
-    func hideFoyStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTORECOGNE) == false {
-            self.removeFoyRoadToRecogne()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRUAPPROACH) == false {
-            self.removeFoyCobruApproach()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTONOVILLE) == false {
-            self.removeFoyRoadToNoville()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRU_FACTORY) == false {
-            self.removeFoyCobruFactory()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FOY) == false {
-            self.removeFoyFoy()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FLAKBATTERY) == false {
-            self.removeFoyFlakBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_WESTBEND) == false {
-            self.removeFoyWestBend()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_SOUTHERNEDGE) == false {
-            self.removeFoySouthernEdge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_DUGOUTBARN) == false {
-            self.removeFoyDugoutBarn()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_N30HIGHWAY) == false {
-            self.removeFoyN30Highway()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BIZORYFOYROAD) == false {
-            self.removeFoyBizoryFoyRoad()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_EASTERN_OURTHE) == false {
-            self.removeFoyEasternOurthe()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTOBASTOGNE) == false {
-            self.removeFoyRoadToBastogne()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BOISJACUES) == false {
-            self.removeFoyBoisJacques()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FORESTOUTSKIRTS) == false {
-            self.removeFoyForestOutskirts()
-        }
-    }
-    
     func createImageViewLayerSubViews() {
         
         ///Add imageViews to the View Heierarchy
@@ -429,16 +249,217 @@ class FoyBaseLayerViewController: BaseViewController {
         imageViewForestOutskirts.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
         imageViewForestOutskirts.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .Foy, layerType: .FoyTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showFoyStrongpoints()
+        hideFoyStrongpoints()
+    }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectFoyLayers", bundle: nil)
+        if let controller = storyboard.instantiateViewController(identifier: "SelectFoyLayersViewController") as? SelectFoyLayersViewController {
+            controller.modalPresentationStyle = .popover
+            controller.updateFoyMapDelegate = self
+            if let popover = controller.popoverPresentationController {
+                popover.barButtonItem = sender
+                let sheet = popover.adaptiveSheetPresentationController
+                sheet.detents = [
+                    .large()
+                ]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                sheet.prefersEdgeAttachedInCompactHeight = true
+                sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                sheet.prefersGrabberVisible = true
+            }
+            self.navigationController?.present(controller, animated: true)
+        }
+    }
+
+
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    func updateMinZoomScaleForSize(_ size: CGSize) {
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
+    }
+    
+    @IBAction func shareFoyMapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotFoyMap() else { return }
+        
+        shareFoyMapImage(screenshot: screenshot)
+        func shareFoyMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func snapshotFoyMap() -> UIImage? {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+        
+    }
+    
+    func showFoyStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTORECOGNE) {
+            self.loadFoyRoadToRecogne()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRUAPPROACH) {
+            self.loadFoyCobruApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTONOVILLE) {
+            self.loadFoyRoadToNoville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRU_FACTORY) {
+            self.loadFoyCobruFactory()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FOY) {
+            self.loadFoyFoy()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FLAKBATTERY) {
+            self.loadFoyFlakBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_WESTBEND) {
+            self.loadFoyWestBend()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_SOUTHERNEDGE) {
+            self.loadFoySouthernEdge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_DUGOUTBARN) {
+            self.loadFoyDugoutBarn()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_N30HIGHWAY) {
+            self.loadFoyN30Highway()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BIZORYFOYROAD) {
+            self.loadFoyBizoryFoyRoad()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_EASTERN_OURTHE) {
+            self.loadFoyEasternOurthe()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTOBASTOGNE) {
+            self.loadFoyRoadToBastogne()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BOISJACUES) {
+            self.loadFoyBoisJacques()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FORESTOUTSKIRTS) {
+            self.loadFoyForestOutskirts()
+        }
+    }
+    
+    func hideFoyStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTORECOGNE) == false {
+            self.removeFoyRoadToRecogne()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRUAPPROACH) == false {
+            self.removeFoyCobruApproach()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTONOVILLE) == false {
+            self.removeFoyRoadToNoville()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_COBRU_FACTORY) == false {
+            self.removeFoyCobruFactory()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FOY) == false {
+            self.removeFoyFoy()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FLAKBATTERY) == false {
+            self.removeFoyFlakBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_WESTBEND) == false {
+            self.removeFoyWestBend()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_SOUTHERNEDGE) == false {
+            self.removeFoySouthernEdge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_DUGOUTBARN) == false {
+            self.removeFoyDugoutBarn()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_N30HIGHWAY) == false {
+            self.removeFoyN30Highway()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BIZORYFOYROAD) == false {
+            self.removeFoyBizoryFoyRoad()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_EASTERN_OURTHE) == false {
+            self.removeFoyEasternOurthe()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_ROADTOBASTOGNE) == false {
+            self.removeFoyRoadToBastogne()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_BOISJACUES) == false {
+            self.removeFoyBoisJacques()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FOY_FORESTOUTSKIRTS) == false {
+            self.removeFoyForestOutskirts()
+        }
+    }
+    
 }
 //MARK:- Sizing
 extension FoyBaseLayerViewController {
-    
-    func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
-        
-    }
     
     func updateConstraintsForSize(_ size: CGSize) {
       let yOffset = max(0, (size.height - imageView.frame.height) / 2)
@@ -613,4 +634,9 @@ extension FoyBaseLayerViewController: UpdateFoyMapDelegate {
         self.imageView.image = getMap(mapName: .Carentan, layerType: .FoyBaseLayer)
     }
     
+}
+extension FoyBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
+    }
 }

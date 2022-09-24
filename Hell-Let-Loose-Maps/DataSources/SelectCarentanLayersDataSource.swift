@@ -9,6 +9,11 @@ import Foundation
 import UIKit
 
 class SelectCarentanLayersDataSource: NSObject {
+
+    func newFunctionTestingDocumentation() {
+        
+    }
+    
     private var layerTypes = MapsListDictionary().carentanStrongpointsDictionary
     var updateCarentanMapDelegate: UpdateCarentanMapDelegate?
     var delegate: DataSourceDelegate?
@@ -31,31 +36,12 @@ extension SelectCarentanLayersDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.didSelectCell(indexPath: indexPath)
         self.tableView.deselectRow(at: indexPath, animated: true)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SelectCarentanLayersTableViewCell", for: indexPath) as! SelectCarentanLayersTableViewCell
+        _ = tableView.dequeueReusableCell(withIdentifier: "SelectCarentanLayersTableViewCell", for: indexPath) as! SelectCarentanLayersTableViewCell
     }
 }
 
 extension SelectCarentanLayersDataSource: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            switch section {
-            case 0: return "\(String(describing: ZoneTableViewSection.zone1))"
-            case 1: return "\(String(describing: ZoneTableViewSection.zone2))"
-            case 2: return "\(String(describing: ZoneTableViewSection.zone3))"
-            case 3: return "\(String(describing: ZoneTableViewSection.zone4))"
-            case 4: return "\(String(describing: ZoneTableViewSection.zone5))"
-            default:
-                break
-            }
-            
-            print("\(section.description)")
-            return section.description
-        }
 
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = .black
@@ -63,8 +49,8 @@ extension SelectCarentanLayersDataSource: UITableViewDataSource {
         title.font = UIFont.boldSystemFont(ofSize: 24)
         title.textColor = .white
         title.text = "Strongpoints" // need array of strings
+        title.textAlignment = .center
         view.addSubview(title)
-        title.textAlignment = .justified
         title.translatesAutoresizingMaskIntoConstraints = false
         title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         title.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true

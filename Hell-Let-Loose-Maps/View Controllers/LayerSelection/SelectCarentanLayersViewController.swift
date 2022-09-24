@@ -14,6 +14,7 @@ class SelectCarentanLayersViewController: BaseViewController {
     var updateCarentanMapDelegate: UpdateCarentanMapDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
+        PresentationHelper.sharedInstance.prefersScrollingExpandsWhenScrolledToEdge = false
         loadSelectLayerDataSource()
     }
     

@@ -102,7 +102,7 @@
     </scenes>
     <resources>
         <image name="FoyBaseLayer" width="1920" height="1920"/>
-        <image name="map.fill" catalog="system" width="32" height="32"/>
-        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

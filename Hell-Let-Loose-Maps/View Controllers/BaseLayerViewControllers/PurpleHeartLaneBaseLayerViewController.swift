@@ -11,6 +11,13 @@ class PurpleHeartLaneBaseLayerViewController: BaseViewController {
     
     var updatePurpleHeartLaneMapDelegate: UpdatePurpleHeartLaneMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewBloodyBend: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,188 +136,6 @@ class PurpleHeartLaneBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectPurpleHeartLaneLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectPurpleHeartLaneLayersViewController") as? SelectPurpleHeartLaneLayersViewController {
-              controller.updatePurpleHeartLaneMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
-    }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .PurpleHeartLane, layerType: .PurpleHeartLaneBaseLayer)
-        scrollView.delegate = self
-        createImageViewLayerSubViews()
-        doubleTapGesture()
-    }
-    override func viewWillLayoutSubviews() {
-      super.viewWillLayoutSubviews()
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showPurpleHeartLaneStrongpoints()
-        hidePurpleHeartLaneStrongpoints()
-    }
-    @IBAction func sharePurpleHeartLaneMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotPurpleHeartLaneMap() else { return }
-        
-        sharePurpleHeartLaneMapImage(screenshot: screenshot)
-        
-    }
-    
-    func sharePurpleHeartLaneMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
-        }
-
-    }
-    
-    func snapshotPurpleHeartLaneMap() -> UIImage?
-    {
-        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    func showPurpleHeartLaneStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_BLOODYBEND) {
-            self.loadPurpleHeartLaneBloodyBend()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DEADMANSCORNER) {
-            self.loadPurpleHeartLaneDeadMansCorner()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FORWARDBATTERY) {
-            self.loadPurpleHeartLaneForwardBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_JOURDANCANAL) {
-            self.loadPurpleHeartLaneJourdanCanal()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DOUVEBRIDGE) {
-            self.loadPurpleHeartLaneDouveBridge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_RIVERBATTERY) {
-            self.loadPurpleHeartLaneDouveRiverBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_GROULTPILLBOX) {
-            self.loadPurpleHeartLaneGroultPillbox()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CARENTANCAUSEWAY) {
-            self.loadPurpleHeartLaneCarentanCauseway()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FLAKPOSITION) {
-            self.loadPurpleHeartLaneFlakPosition()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEFARM) {
-            self.loadPurpleHeartLaneMadeleineFarm()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEBRIDGE) {
-            self.loadPurpleHeartLaneMadeleineBridge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_AIDSTATION) {
-            self.loadPurpleHeartLaneAidStation()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_INGOUFCROSSROADS) {
-            self.loadPurpleHeartLaneIngoufCrossroads()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_ROADTOCARENTAN) {
-            self.loadPurpleHeartLaneRoadToCarentan()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CABBAGEPATCH) {
-            self.loadPurpleHeartLaneCabbagePatch()
-        }
-    }
-    
-    func hidePurpleHeartLaneStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_BLOODYBEND) == false {
-            self.removePurpleHeartLaneBloodyBend()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DEADMANSCORNER) == false {
-            self.removePurpleHeartLaneDeadMansCorner()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FORWARDBATTERY) == false {
-            self.removePurpleHeartLaneForwardBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_JOURDANCANAL) == false {
-            self.removePurpleHeartLaneJourdanCanal()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DOUVEBRIDGE) == false {
-            self.removePurpleHeartLaneDouveBridge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_RIVERBATTERY) == false {
-            self.removePurpleHeartLaneDouveRiverBattery()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_GROULTPILLBOX) == false {
-            self.removePurpleHeartLaneGroultPillbox()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CARENTANCAUSEWAY) == false {
-            self.removePurpleHeartLaneCarentanCauseway()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FLAKPOSITION) == false {
-            self.removePurpleHeartLaneFlakPosition()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEFARM) == false {
-            self.removePurpleHeartLaneMadeleineFarm()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEBRIDGE) == false {
-            self.removePurpleHeartLaneMadeleineBridge()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_AIDSTATION) == false {
-            self.removePurpleHeartLaneAidStation()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_INGOUFCROSSROADS) == false {
-            self.removePurpleHeartLaneIngoufCrossroads()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_ROADTOCARENTAN) == false {
-            self.removePurpleHeartLaneRoadToCarentan()
-        }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CABBAGEPATCH) == false {
-            self.removePurpleHeartLaneCabbagePatch()
-        }
-    }
     
     func createImageViewLayerSubViews() {
         
@@ -422,14 +247,214 @@ class PurpleHeartLaneBaseLayerViewController: BaseViewController {
         imageViewCabbagePatch.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            self.imageView.image = getMap(mapName: .PurpleHeartLane, layerType: .PurpleHeartLaneTAC)
+        scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
+        createImageViewLayerSubViews()
+        doubleTapGesture()
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showPurpleHeartLaneStrongpoints()
+        hidePurpleHeartLaneStrongpoints()
+    }
+    
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
+        }
+
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectPurpleHeartLaneLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectPurpleHeartLaneLayersViewController") as? SelectPurpleHeartLaneLayersViewController {
+              controller.modalPresentationStyle = .popover
+              controller.updatePurpleHeartLaneMapDelegate = self
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
+    }
+
+    @IBAction func sharePurpleHeartLaneMapLayer(_ sender: UIBarButtonItem) {
+        
+        guard let screenshot = self.snapshotPurpleHeartLaneMap() else { return }
+        
+        sharePurpleHeartLaneMapImage(screenshot: screenshot)
+        func sharePurpleHeartLaneMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+    func snapshotPurpleHeartLaneMap() -> UIImage?
+    {
+        UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func showPurpleHeartLaneStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_BLOODYBEND) {
+            self.loadPurpleHeartLaneBloodyBend()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DEADMANSCORNER) {
+            self.loadPurpleHeartLaneDeadMansCorner()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FORWARDBATTERY) {
+            self.loadPurpleHeartLaneForwardBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_JOURDANCANAL) {
+            self.loadPurpleHeartLaneJourdanCanal()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DOUVEBRIDGE) {
+            self.loadPurpleHeartLaneDouveBridge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_RIVERBATTERY) {
+            self.loadPurpleHeartLaneDouveRiverBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_GROULTPILLBOX) {
+            self.loadPurpleHeartLaneGroultPillbox()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CARENTANCAUSEWAY) {
+            self.loadPurpleHeartLaneCarentanCauseway()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FLAKPOSITION) {
+            self.loadPurpleHeartLaneFlakPosition()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEFARM) {
+            self.loadPurpleHeartLaneMadeleineFarm()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEBRIDGE) {
+            self.loadPurpleHeartLaneMadeleineBridge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_AIDSTATION) {
+            self.loadPurpleHeartLaneAidStation()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_INGOUFCROSSROADS) {
+            self.loadPurpleHeartLaneIngoufCrossroads()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_ROADTOCARENTAN) {
+            self.loadPurpleHeartLaneRoadToCarentan()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CABBAGEPATCH) {
+            self.loadPurpleHeartLaneCabbagePatch()
+        }
+    }
+    
+    func hidePurpleHeartLaneStrongpoints() {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_BLOODYBEND) == false {
+            self.removePurpleHeartLaneBloodyBend()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DEADMANSCORNER) == false {
+            self.removePurpleHeartLaneDeadMansCorner()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FORWARDBATTERY) == false {
+            self.removePurpleHeartLaneForwardBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_JOURDANCANAL) == false {
+            self.removePurpleHeartLaneJourdanCanal()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_DOUVEBRIDGE) == false {
+            self.removePurpleHeartLaneDouveBridge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_RIVERBATTERY) == false {
+            self.removePurpleHeartLaneDouveRiverBattery()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_GROULTPILLBOX) == false {
+            self.removePurpleHeartLaneGroultPillbox()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CARENTANCAUSEWAY) == false {
+            self.removePurpleHeartLaneCarentanCauseway()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_FLAKPOSITION) == false {
+            self.removePurpleHeartLaneFlakPosition()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEFARM) == false {
+            self.removePurpleHeartLaneMadeleineFarm()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_MADELEINEBRIDGE) == false {
+            self.removePurpleHeartLaneMadeleineBridge()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_AIDSTATION) == false {
+            self.removePurpleHeartLaneAidStation()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_INGOUFCROSSROADS) == false {
+            self.removePurpleHeartLaneIngoufCrossroads()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_ROADTOCARENTAN) == false {
+            self.removePurpleHeartLaneRoadToCarentan()
+        }
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PURPLEHEARTLANE_CABBAGEPATCH) == false {
+            self.removePurpleHeartLaneCabbagePatch()
+        }
+    }
+    
 }
 //MARK:- Sizing
 extension PurpleHeartLaneBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
         
     }
     
@@ -592,5 +617,11 @@ extension PurpleHeartLaneBaseLayerViewController: UpdatePurpleHeartLaneMapDelega
     func loadPurpleHeartLaneCabbagePatch() {
         self.imageViewCabbagePatch.isHidden = false
         self.imageViewCabbagePatch.image = getStrongpoint(strongpoint: .StrongpointPurpleHeartLaneCabbagePatch)
+    }
+}
+
+extension PurpleHeartLaneBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }

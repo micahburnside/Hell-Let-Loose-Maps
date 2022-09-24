@@ -8,7 +8,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
+    
     func makeBackgroundRed() {
         self.view.backgroundColor = getTerritoryColorSelection(territoryColor: .EnemyRed)
     }
@@ -23,8 +23,10 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        doubleTapGesture()
+        
     }
+
+    //MARK: - Device Orientation Handler
 
     
 //MARK: - View Controller Life Cycle Methods
@@ -55,8 +57,5 @@ class BaseViewController: UIViewController {
         let controller = storyboard.instantiateViewController(identifier: identifier)
         self.navigationController?.present(controller, animated: true)
     }
-    
+
 }
-
-
-

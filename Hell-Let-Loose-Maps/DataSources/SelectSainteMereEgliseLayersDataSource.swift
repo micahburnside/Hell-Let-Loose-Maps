@@ -31,30 +31,12 @@ extension SelectSainteMereEgliseLayersDataSource: UITableViewDelegate {
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.delegate?.didSelectCell(indexPath: indexPath)
     self.tableView.deselectRow(at: indexPath, animated: true)
-    let cell = tableView.dequeueReusableCell(withIdentifier: "SelectSainteMereEgliseLayersTableViewCell", for: indexPath) as! SelectSainteMereEgliseLayersTableViewCell
+    _ = tableView.dequeueReusableCell(withIdentifier: "SelectSainteMereEgliseLayersTableViewCell", for: indexPath) as! SelectSainteMereEgliseLayersTableViewCell
 }
 }
 
 extension SelectSainteMereEgliseLayersDataSource: UITableViewDataSource {
-
-func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-}
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "\(String(describing: ZoneTableViewSection.zone1))"
-        case 1: return "\(String(describing: ZoneTableViewSection.zone2))"
-        case 2: return "\(String(describing: ZoneTableViewSection.zone3))"
-        case 3: return "\(String(describing: ZoneTableViewSection.zone4))"
-        case 4: return "\(String(describing: ZoneTableViewSection.zone5))"
-        default:
-            break
-        }
-        print("\(section.description)")
-        return section.description
-    }
-
-
+    
 func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = UIView()
     view.backgroundColor = .black

@@ -11,6 +11,13 @@ class UtahBeachBaseLayerViewController: BaseViewController {
     
     var updateUtahBeachMapDelegate: UpdateUtahBeachMapDelegate!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
     private let imageViewMammutRadar: UIImageView = {
     let iv1 = UIImageView()
         iv1.contentMode = .scaleAspectFill
@@ -129,48 +136,127 @@ class UtahBeachBaseLayerViewController: BaseViewController {
         iv15.translatesAutoresizingMaskIntoConstraints = false
         return iv15
     }()
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-    
-    var photoName: String?
-    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard.init(name: "SelectUtahBeachLayers", bundle: nil)
-          if let controller = storyboard.instantiateViewController(identifier: "SelectUtahBeachLayersViewController") as? SelectUtahBeachLayersViewController {
-              controller.updateUtahBeachMapDelegate = self
-              if let sheet = controller.sheetPresentationController {
-                  sheet.detents = [ .medium() ]
-              }
-              self.navigationController?.present(controller, animated: true)
-       }
+    func createImageViewLayerSubViews() {
+        
+        ///Add imageViews to the View Heierarchy
+        imageView.addSubview(imageViewMammutRadar)
+        imageView.addSubview(imageViewFloodedHouse)
+        imageView.addSubview(imageViewSainteMarieApproach)
+        imageView.addSubview(imageViewSunkenBridge)
+        imageView.addSubview(imageViewLaGrandeCrique)
+        imageView.addSubview(imageViewDrownedFields)
+        imageView.addSubview(imageViewWN4)
+        imageView.addSubview(imageViewTheChapel)
+        imageView.addSubview(imageViewWN7)
+        imageView.addSubview(imageViewAABattery)
+        imageView.addSubview(imageViewHill5)
+        imageView.addSubview(imageViewWN5)
+        imageView.addSubview(imageViewRedRoofHouse)
+        imageView.addSubview(imageViewTareGreen)
+        imageView.addSubview(imageViewUncleRed)
+        
+        
+        ///sets imageView1 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewMammutRadar.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewMammutRadar.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewMammutRadar.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewMammutRadar.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView2 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewFloodedHouse.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewFloodedHouse.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewFloodedHouse.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewFloodedHouse.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView3 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewSainteMarieApproach.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewSainteMarieApproach.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewSainteMarieApproach.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewSainteMarieApproach.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView4 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewSunkenBridge.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewSunkenBridge.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewSunkenBridge.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewSunkenBridge.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView5 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewLaGrandeCrique.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewLaGrandeCrique.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewLaGrandeCrique.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewLaGrandeCrique.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView6 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewDrownedFields.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewDrownedFields.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewDrownedFields.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewDrownedFields.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView7 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewWN4.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewWN4.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewWN4.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewWN4.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView8 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        (imageViewTheChapel).leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        (imageViewTheChapel).trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        (imageViewTheChapel).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        (imageViewTheChapel).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView9 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewWN7.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewWN7.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewWN7.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewWN7.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView11 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewAABattery.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewAABattery.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewAABattery.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewAABattery.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView12 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewHill5.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewHill5.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewHill5.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewHill5.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView13 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewWN5.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewWN5.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewWN5.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewWN5.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView14 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        imageViewRedRoofHouse.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        imageViewRedRoofHouse.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        imageViewRedRoofHouse.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        imageViewRedRoofHouse.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView15 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        (imageViewTareGreen).leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        (imageViewTareGreen).trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        (imageViewTareGreen).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        (imageViewTareGreen).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        
+        ///sets imageView15 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
+        (imageViewUncleRed).leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+        (imageViewUncleRed).trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
+        (imageViewUncleRed).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        (imageViewUncleRed).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
     }
-    
-    //MARK: - Gesture Recognizers
-        func doubleTapGesture() {
-            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
-            doubleTapRecognizer.numberOfTapsRequired = 2
-                view.addGestureRecognizer(doubleTapRecognizer)
-        }
-
-        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
-            if scrollView.zoomScale == 1 {
-                scrollView.setZoomScale(2, animated: true)
-            } else {
-                scrollView.setZoomScale(1, animated: true)
-            }
-        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            self.imageView.image = getMap(mapName: .UtahBeach, layerType: .UtahBeachBaseLayer)
+            self.imageView.image = getMap(mapName: .UtahBeach, layerType: .UtahBeachTAC)
         scrollView.delegate = self
+        scrollView.maximumZoomScale = 5.0
         createImageViewLayerSubViews()
         doubleTapGesture()
     }
+    
     override func viewWillLayoutSubviews() {
       super.viewWillLayoutSubviews()
         updateMinZoomScaleForSize(view.bounds.size)
@@ -181,40 +267,84 @@ class UtahBeachBaseLayerViewController: BaseViewController {
         hideUtahBeachStrongpoints()
     }
     
-    @IBAction func shareUtahBeachMapLayer(_ sender: UIBarButtonItem) {
-        
-        guard let screenshot = self.snapshotUtahBeachMap() else { return }
-        
-        shareUtahBeachMapImage(screenshot: screenshot)
-        
-    }
-    
-    func shareUtahBeachMapImage(screenshot: UIImage) {
-        // save or share
-        
-        DispatchQueue.main.async {
-            
-            let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
-             
-             self.present(shareSheet, animated: true, completion: nil)
-            
+    //MARK: - Gesture Recognizers
+        func doubleTapGesture() {
+            let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapPressed))
+            doubleTapRecognizer.numberOfTapsRequired = 2
+                view.addGestureRecognizer(doubleTapRecognizer)
         }
 
+        @objc private func doubleTapPressed(_ sender: UITapGestureRecognizer) {
+            // 1
+            let pointInView = sender.location(in: imageView)
+           
+            // 2
+            var scale = min(scrollView.zoomScale * 2, scrollView.maximumZoomScale)
+            
+            // 3
+            if scale != scrollView.zoomScale {
+
+                let scrollViewSize = scrollView.bounds.size
+                let w = scrollViewSize.width / scale
+                let h = scrollViewSize.height / scale
+                let x = pointInView.x - (w / 2.0)
+                let y = pointInView.y - (h / 2.0)
+               
+                let rectToZoomTo = CGRectMake(x, y, w, h);
+               
+                // 4
+
+                scrollView.zoom(to: rectToZoomTo, animated: true)
+                
+            } else {
+                if scale == scrollView.maximumZoomScale {
+                    scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+                }
+            }
+        }
+    
+    @IBAction func shareUtahBeachMapLayer(_ sender: UIBarButtonItem) {
+        guard let screenshot = self.snapshotUtahBeachMap() else { return }
+        shareUtahBeachMapImage(screenshot: screenshot)
+        func shareUtahBeachMapImage(screenshot: UIImage) {
+            // save or share
+            DispatchQueue.main.async {
+                let shareSheet = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+                shareSheet.popoverPresentationController?.barButtonItem = sender
+                self.present(shareSheet, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     func snapshotUtahBeachMap() -> UIImage?
     {
         UIGraphicsBeginImageContext(imageView.intrinsicContentSize)
-        let savedContentOffset = scrollView.contentOffset
-        let savedFrame = scrollView.frame
-        scrollView.contentOffset = CGPoint.zero
-        imageView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
         imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
-        scrollView.contentOffset = savedContentOffset
-        imageView.frame = savedFrame
         UIGraphicsEndImageContext()
         return image
+    }
+    
+    @IBAction func layerButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "SelectUtahBeachLayers", bundle: nil)
+          if let controller = storyboard.instantiateViewController(identifier: "SelectUtahBeachLayersViewController") as? SelectUtahBeachLayersViewController {
+              controller.modalPresentationStyle = .popover
+              controller.updateUtahBeachMapDelegate = self
+              if let popover = controller.popoverPresentationController {
+                  popover.barButtonItem = sender
+                  let sheet = popover.adaptiveSheetPresentationController
+                  sheet.detents = [
+                      .large()
+                  ]
+                          sheet.largestUndimmedDetentIdentifier = .medium
+                          sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                          sheet.prefersEdgeAttachedInCompactHeight = true
+                          sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                  sheet.prefersGrabberVisible = true
+              }
+              self.navigationController?.present(controller, animated: true)
+       }
     }
     
     func showUtahBeachStrongpoints() {
@@ -276,7 +406,7 @@ class UtahBeachBaseLayerViewController: BaseViewController {
             self.removeUtahBeachSainteMarieApproach()
         }
         if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_UTAHBEACH_SUNKENBRIDGE) == false {
-            self.removeUtahBeachSainteMarieApproach()
+            self.removeUtahBeachSunkenBridge()
         }
         if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_UTAHBEACH_LAGRANDECRIQUE) == false {
             self.removeUtahBeachLaGrandeCrique()
@@ -313,126 +443,17 @@ class UtahBeachBaseLayerViewController: BaseViewController {
         }
     }
     
-    func createImageViewLayerSubViews() {
-        
-        ///Add imageViews to the View Heierarchy
-        imageView.addSubview(imageViewMammutRadar)
-        imageView.addSubview(imageViewFloodedHouse)
-        imageView.addSubview(imageViewSainteMarieApproach)
-        imageView.addSubview(imageViewSunkenBridge)
-        imageView.addSubview(imageViewLaGrandeCrique)
-        imageView.addSubview(imageViewDrownedFields)
-        imageView.addSubview(imageViewWN4)
-        imageView.addSubview(imageViewTheChapel)
-        imageView.addSubview(imageViewWN7)
-        imageView.addSubview(imageViewAABattery)
-        imageView.addSubview(imageViewHill5)
-        imageView.addSubview(imageViewWN5)
-        imageView.addSubview(imageViewRedRoofHouse)
-        imageView.addSubview(imageViewTareGreen)
-        imageView.addSubview(imageViewUncleRed)
-
-        
-        ///sets imageView1 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewMammutRadar.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewMammutRadar.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewMammutRadar.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewMammutRadar.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView2 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewFloodedHouse.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewFloodedHouse.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewFloodedHouse.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewFloodedHouse.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView3 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewSainteMarieApproach.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewSainteMarieApproach.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewSainteMarieApproach.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewSainteMarieApproach.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView4 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewSunkenBridge.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewSunkenBridge.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewSunkenBridge.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewSunkenBridge.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView5 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewLaGrandeCrique.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewLaGrandeCrique.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewLaGrandeCrique.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewLaGrandeCrique.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView6 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewDrownedFields.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewDrownedFields.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewDrownedFields.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewDrownedFields.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView7 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewWN4.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewWN4.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewWN4.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewWN4.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-
-        ///sets imageView8 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        (imageViewTheChapel).leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        (imageViewTheChapel).trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        (imageViewTheChapel).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        (imageViewTheChapel).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView9 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewWN7.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewWN7.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewWN7.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewWN7.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-
-        ///sets imageView11 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewAABattery.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewAABattery.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewAABattery.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewAABattery.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView12 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewHill5.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewHill5.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewHill5.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewHill5.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView13 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewWN5.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewWN5.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewWN5.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewWN5.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-
-        ///sets imageView14 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        imageViewRedRoofHouse.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        imageViewRedRoofHouse.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        imageViewRedRoofHouse.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        imageViewRedRoofHouse.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView15 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        (imageViewTareGreen).leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        (imageViewTareGreen).trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        (imageViewTareGreen).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        (imageViewTareGreen).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-        
-        ///sets imageView15 subView constraints to be equal to it's parent view imageView0 that is inside a scrollView
-        (imageViewUncleRed).leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        (imageViewUncleRed).trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
-        (imageViewUncleRed).topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-        (imageViewUncleRed).bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-    }
-    
 }
 //MARK:- Sizing
 extension UtahBeachBaseLayerViewController {
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
-
-        scrollView.minimumZoomScale = 0.2
-        scrollView.maximumZoomScale = 5.0
-        
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let minScale = min(widthScale, heightScale)
+          
+        scrollView.minimumZoomScale = minScale
+        scrollView.zoomScale = minScale
     }
     
     func updateConstraintsForSize(_ size: CGSize) {
@@ -443,9 +464,9 @@ extension UtahBeachBaseLayerViewController {
       let xOffset = max(0, (size.width - imageView.frame.width) / 2)
       imageViewLeadingConstraint.constant = xOffset
       imageViewTrailingConstraint.constant = xOffset
-
       view.layoutIfNeeded()
     }
+    
 }
 
 //MARK:- UIScrollViewDelegate
@@ -593,5 +614,11 @@ extension UtahBeachBaseLayerViewController: UpdateUtahBeachMapDelegate {
     func loadUtahBeachUncleRed() {
         self.imageViewUncleRed.isHidden = false
         self.imageViewUncleRed.image = getStrongpoint(strongpoint: .StrongpointUtahBeachUncleRed)
+    }
+}
+
+extension UtahBeachBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    return .none
     }
 }
