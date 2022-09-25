@@ -44,7 +44,7 @@ func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) ->
     let title = UILabel()
     title.font = UIFont.boldSystemFont(ofSize: 24)
     title.textColor = .white
-    title.text = "Sainte Marie du Mont Strongpoints" // need array of strings
+    title.text = "Sainte Marie du Mont" // need array of strings
     view.addSubview(title)
     title.textAlignment = .justified
     title.translatesAutoresizingMaskIntoConstraints = false
