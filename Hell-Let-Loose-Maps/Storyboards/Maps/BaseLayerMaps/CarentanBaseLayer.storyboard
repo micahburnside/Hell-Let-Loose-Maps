@@ -45,7 +45,7 @@
                             <constraint firstItem="mbl-MF-qKc" firstAttribute="centerX" secondItem="hfK-2D-CCd" secondAttribute="centerX" id="rbV-Jd-xeG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Foy" id="ful-bh-Iud">
+                    <navigationItem key="navigationItem" title="Carentan" id="ful-bh-Iud">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="map.fill" catalog="system" id="Fa7-4H-xno">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +56,7 @@
                             <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="UuP-Is-hNz">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="shareFoyMapLayer:" destination="uRQ-aR-cuq" id="Vbj-Ds-wUr"/>
+                                    <action selector="shareCarentanMapLayer:" destination="uRQ-aR-cuq" id="Axz-h6-Pdh"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
