@@ -20,10 +20,10 @@ class BaseLayerMapsViewController: BaseViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMapsListDataSource()
-        navigationController?.navigationBar.tintColor = .white
     }
     
     func loadMapsListDataSource() {

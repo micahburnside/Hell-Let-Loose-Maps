@@ -31,6 +31,8 @@ class BaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
                 
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+             self.navigationController?.navigationBar.barTintColor = .black
+
 
     }
     override func viewDidAppear(_ animated: Bool) {

@@ -27,7 +27,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XNx-iL-L41"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HeV-yf-OBm" firstAttribute="leading" secondItem="XNx-iL-L41" secondAttribute="leading" id="Ixz-f5-XtZ"/>
                             <constraint firstAttribute="bottom" secondItem="HeV-yf-OBm" secondAttribute="bottom" id="MPI-OT-eyM"/>
