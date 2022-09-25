@@ -48,7 +48,7 @@ extension SelectCarentanLayersDataSource: UITableViewDataSource {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 24)
         title.textColor = .white
-        title.text = "Strongpoints" // need array of strings
+        title.text = "Carentan" // need array of strings
         title.textAlignment = .center
         view.addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
