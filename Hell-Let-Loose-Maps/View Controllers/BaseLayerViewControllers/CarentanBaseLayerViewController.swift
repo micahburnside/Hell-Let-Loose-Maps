@@ -269,7 +269,7 @@ class CarentanBaseLayerViewController: BaseViewController {
         showStrongpoints()
         hideStrongpoints()
     }
-
+    
 //MARK: - Exporting And Sharing Layers
     
     /// shareCarentanMapLayer shares an image from snapshotCarentanMap using a UIActivityController as a popOverPresentationController. This particular presentation style is required for iPad.
