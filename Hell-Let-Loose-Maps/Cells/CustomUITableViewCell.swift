@@ -26,7 +26,6 @@ class CustomUITableViewCell: UITableViewCell {
             // Configure content.
             content.text = primaryText
             content.secondaryText = content.secondaryText
-            
             content.attributedText = NSAttributedString(string: primaryText, attributes:  [ NSAttributedString.Key.foregroundColor: UIColor.white ])
             
             content.secondaryAttributedText = NSAttributedString(string: secondaryText, attributes:  [ NSAttributedString.Key.foregroundColor: UIColor.lightGray ])

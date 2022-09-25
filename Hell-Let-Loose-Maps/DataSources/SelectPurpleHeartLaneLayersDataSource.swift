@@ -44,7 +44,7 @@ func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) ->
     let title = UILabel()
     title.font = UIFont.boldSystemFont(ofSize: 24)
     title.textColor = .white
-    title.text = "Remagen Strongpoints" // need array of strings
+    title.text = "Strongpoints" // need array of strings
     view.addSubview(title)
     title.textAlignment = .justified
     title.translatesAutoresizingMaskIntoConstraints = false
