@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 class CarentanBaseLayerViewController: BaseViewController {
-    
     var updateCarentanMapDelegate: UpdateCarentanMapDelegate!
+
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView0: UIImageView!
@@ -257,6 +258,7 @@ class CarentanBaseLayerViewController: BaseViewController {
         scrollView.maximumZoomScale = 5.0
         createImageViewLayerSubViews()
         doubleTapGesture()
+        
         
     }
    

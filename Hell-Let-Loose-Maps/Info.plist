@@ -11,14 +11,14 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
-					<key>UIViewControllerBasedStatusBarAppearance</key>
-					<true/>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
 					<string>BaseLayerMaps</string>
+					<key>UIViewControllerBasedStatusBarAppearance</key>
+					<true/>
 				</dict>
 			</array>
 		</dict>
