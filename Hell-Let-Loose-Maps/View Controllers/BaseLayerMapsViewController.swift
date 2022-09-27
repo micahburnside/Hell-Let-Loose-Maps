@@ -14,9 +14,12 @@ class BaseLayerMapsViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadMapsListDataSource()
-
+        
+        //Required method to tell the device to update the status bar appearance
         setNeedsStatusBarAppearanceUpdate()
+        
     }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
