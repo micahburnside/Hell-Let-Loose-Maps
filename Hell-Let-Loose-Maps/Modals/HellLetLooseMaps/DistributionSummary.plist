@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HLL Maps.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>B670C56DBEC8204407F9EAAFCE3B4490C167C126</string>
+				<key>dateExpires</key>
+				<string>4/30/23</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>DZHXZ94XN9.micahburnside.Hell-Let-Loose-Maps</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>DZHXZ94XN9</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>HLL Maps.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>51e7f143-462a-4f6e-87da-ffb02f88e563</string>
+				<key>dateExpires</key>
+				<string>4/30/23</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: micahburnside.Hell-Let-Loose-Maps</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>DZHXZ94XN9</string>
+				<key>name</key>
+				<string>Micah Burnside</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0.1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
