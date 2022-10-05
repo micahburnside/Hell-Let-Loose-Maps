@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wsj-7g-op3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CarentanBaseLayer-->
+        <scene sceneID="I6J-8N-3Tj">
+            <objects>
+                <viewController storyboardIdentifier="CarentanBaseLayerViewController" title="CarentanBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uRQ-aR-cuq" customClass="CarentanBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfK-2D-CCd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-MF-qKc">
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarentanBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="5yL-Iq-ap0">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5yL-Iq-ap0" secondAttribute="bottom" constant="-22" id="QKx-4C-QH2"/>
+                                    <constraint firstAttribute="trailing" secondItem="5yL-Iq-ap0" secondAttribute="trailing" id="ZD2-xQ-McP"/>
+                                    <constraint firstItem="5yL-Iq-ap0" firstAttribute="leading" secondItem="mbl-MF-qKc" secondAttribute="leading" id="adT-b9-2v8"/>
+                                    <constraint firstItem="5yL-Iq-ap0" firstAttribute="top" secondItem="mbl-MF-qKc" secondAttribute="top" constant="-22" id="ni2-Vc-QKL"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="WZI-5B-xVe"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0K1-iZ-Xb7"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N6B-l7-Bc6"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mbl-MF-qKc" firstAttribute="top" secondItem="N6B-l7-Bc6" secondAttribute="top" id="DxR-0G-BX2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="mbl-MF-qKc" secondAttribute="bottom" constant="-34" id="Hcw-P3-k1X"/>
+                            <constraint firstItem="mbl-MF-qKc" firstAttribute="leading" secondItem="N6B-l7-Bc6" secondAttribute="leading" id="nrQ-I7-rQr"/>
+                            <constraint firstItem="mbl-MF-qKc" firstAttribute="centerX" secondItem="hfK-2D-CCd" secondAttribute="centerX" id="rbV-Jd-xeG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Carentan" id="ful-bh-Iud">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="Fa7-4H-xno">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="uRQ-aR-cuq" id="GLj-rl-IPe"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="UuP-Is-hNz">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareCarentanMapLayer:" destination="uRQ-aR-cuq" id="Axz-h6-Pdh"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView0" destination="5yL-Iq-ap0" id="SvP-Eu-9pU"/>
+                        <outlet property="imageViewBottomConstraint" destination="QKx-4C-QH2" id="GhY-oQ-mBi"/>
+                        <outlet property="imageViewLeadingConstraint" destination="adT-b9-2v8" id="hES-oF-1Xv"/>
+                        <outlet property="imageViewTopConstraint" destination="ni2-Vc-QKL" id="1i5-hM-5Dc"/>
+                        <outlet property="imageViewTrailingConstraint" destination="ZD2-xQ-McP" id="nfV-gQ-TKN"/>
+                        <outlet property="scrollView" destination="mbl-MF-qKc" id="gRw-cT-2Rg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdZ-cS-8gn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vs4-nQ-hjv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wsj-7g-op3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="okO-Yo-dcV">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uRQ-aR-cuq" kind="relationship" relationship="rootViewController" id="pCn-Hv-wRF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEq-hV-YSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CarentanBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

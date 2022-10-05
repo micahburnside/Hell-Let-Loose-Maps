@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F0P-ym-u80">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FoyBaseLayer-->
+        <scene sceneID="EM9-ia-8xQ">
+            <objects>
+                <viewController storyboardIdentifier="FoyBaseLayerViewController" title="FoyBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="609-Mh-kZw" customClass="FoyBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wd2-Br-Dvd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-gC-YoU">
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FoyBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="pBU-5x-mF5">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pBU-5x-mF5" firstAttribute="top" secondItem="QVf-gC-YoU" secondAttribute="top" constant="-22" id="526-U3-G2d"/>
+                                    <constraint firstAttribute="trailing" secondItem="pBU-5x-mF5" secondAttribute="trailing" id="aGg-3X-0hA"/>
+                                    <constraint firstAttribute="bottom" secondItem="pBU-5x-mF5" secondAttribute="bottom" constant="-22" id="kZ8-8W-6DM"/>
+                                    <constraint firstItem="pBU-5x-mF5" firstAttribute="leading" secondItem="QVf-gC-YoU" secondAttribute="leading" id="mhj-HG-sHh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="3i4-zc-9yP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="P19-kl-YwS"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bbj-q9-3Jr"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="QVf-gC-YoU" secondAttribute="bottom" constant="-34" id="J6E-Nv-mWp"/>
+                            <constraint firstItem="QVf-gC-YoU" firstAttribute="top" secondItem="bbj-q9-3Jr" secondAttribute="top" id="NCv-Xa-CdN"/>
+                            <constraint firstItem="QVf-gC-YoU" firstAttribute="leading" secondItem="bbj-q9-3Jr" secondAttribute="leading" id="Veu-si-izl"/>
+                            <constraint firstItem="QVf-gC-YoU" firstAttribute="centerX" secondItem="wd2-Br-Dvd" secondAttribute="centerX" id="ukG-fj-kV8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Foy" id="Pzm-77-ihZ">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="8hp-CF-f0F">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="609-Mh-kZw" id="H6U-we-2dD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="VfD-xu-x3K">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareFoyMapLayer:" destination="609-Mh-kZw" id="tWI-bD-c5G"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="pBU-5x-mF5" id="hOA-6h-yEr"/>
+                        <outlet property="imageViewBottomConstraint" destination="kZ8-8W-6DM" id="mSD-Ke-qIT"/>
+                        <outlet property="imageViewLeadingConstraint" destination="mhj-HG-sHh" id="96d-Ew-XoI"/>
+                        <outlet property="imageViewTopConstraint" destination="526-U3-G2d" id="hZy-gV-6Vb"/>
+                        <outlet property="imageViewTrailingConstraint" destination="aGg-3X-0hA" id="ZyV-KK-G9U"/>
+                        <outlet property="scrollView" destination="QVf-gC-YoU" id="lSM-YS-YLz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rb2-w2-8iz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hda-E3-UuC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F0P-ym-u80" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Wl-Ap-5Ah">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="609-Mh-kZw" kind="relationship" relationship="rootViewController" id="XDr-dT-aCt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxl-4l-9nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FoyBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

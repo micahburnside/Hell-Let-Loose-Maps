@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jub-3F-Csi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SelectSainteMarieduMontLayers-->
+        <scene sceneID="JYB-wg-gPu">
+            <objects>
+                <viewController storyboardIdentifier="SelectSainteMarieduMontLayersViewController" title="SelectSainteMarieduMontLayers" useStoryboardIdentifierAsRestorationIdentifier="YES" id="msJ-me-AKm" customClass="SelectSainteMarieduMontLayersViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpc-rQ-RYF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qAu-Q0-X6X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5IQ-dt-EWd"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qAu-Q0-X6X" secondAttribute="trailing" id="nJV-0C-wAE"/>
+                            <constraint firstAttribute="bottom" secondItem="qAu-Q0-X6X" secondAttribute="bottom" id="nc2-lX-NXE"/>
+                            <constraint firstItem="qAu-Q0-X6X" firstAttribute="top" secondItem="fpc-rQ-RYF" secondAttribute="top" id="oZP-gg-BFa"/>
+                            <constraint firstItem="qAu-Q0-X6X" firstAttribute="leading" secondItem="fpc-rQ-RYF" secondAttribute="leading" id="vR4-QU-C6X"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Toggle Strongpoints" largeTitleDisplayMode="always" id="rdW-XL-yyv"/>
+                    <connections>
+                        <outlet property="selectSainteMarieduMontLayersDataSource" destination="OQU-Z3-baL" id="2hq-OS-Lv7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qa-9x-1Wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="OQU-Z3-baL" customClass="SelectSainteMarieduMontLayersDataSource" customModule="HLL_Maps" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="qAu-Q0-X6X" id="kSL-84-uCo"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="108.48214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="es0-9E-giC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jub-3F-Csi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4QL-m2-Ld0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="msJ-me-AKm" kind="relationship" relationship="rootViewController" id="69s-T2-yen"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6B-mS-HFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+</document>

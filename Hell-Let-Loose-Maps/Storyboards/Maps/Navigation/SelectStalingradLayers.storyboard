@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gLO-GX-98p">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SelectStalingradLayers-->
+        <scene sceneID="ZPN-Fu-5Vo">
+            <objects>
+                <viewController storyboardIdentifier="SelectStalingradLayersViewController" title="SelectStalingradLayers" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kow-VO-xhh" customClass="SelectStalingradLayersViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n7a-TD-F8h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Va0-AP-FVk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g9w-dL-RUE"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Va0-AP-FVk" secondAttribute="bottom" id="25Z-47-zgP"/>
+                            <constraint firstAttribute="trailing" secondItem="Va0-AP-FVk" secondAttribute="trailing" id="2wB-IM-Wwd"/>
+                            <constraint firstItem="Va0-AP-FVk" firstAttribute="leading" secondItem="n7a-TD-F8h" secondAttribute="leading" id="Da9-sO-Dhf"/>
+                            <constraint firstItem="Va0-AP-FVk" firstAttribute="top" secondItem="n7a-TD-F8h" secondAttribute="top" id="cRI-9X-7LH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Toggle Strongpoints" largeTitleDisplayMode="always" id="A42-1Q-3lN"/>
+                    <connections>
+                        <outlet property="selectStalingradLayersDataSource" destination="AeI-Gx-aEX" id="QSe-xq-fJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zE6-8l-qQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="AeI-Gx-aEX" customClass="SelectStalingradLayersDataSource" customModule="HLL_Maps" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="Va0-AP-FVk" id="FXM-qj-ATx"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="108.48214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cgG-S8-GVb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gLO-GX-98p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="d2b-SA-nXT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kow-VO-xhh" kind="relationship" relationship="rootViewController" id="T0w-Mk-Htk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzZ-fE-ejN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+</document>

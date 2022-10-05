@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="daV-dQ-U6F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PurpleHeartLaneBaseLayer-->
+        <scene sceneID="SC7-mF-aR4">
+            <objects>
+                <viewController storyboardIdentifier="PurpleHeartLaneBaseLayerViewController" title="PurpleHeartLaneBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BQ2-Y2-0rm" customClass="PurpleHeartLaneBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9iV-am-62Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVH-jQ-4yp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PurpleHeartLaneBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="SxF-bV-pDd">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SxF-bV-pDd" firstAttribute="top" secondItem="TVH-jQ-4yp" secondAttribute="top" constant="-22" id="TUa-H3-RcC"/>
+                                    <constraint firstAttribute="bottom" secondItem="SxF-bV-pDd" secondAttribute="bottom" constant="-22" id="XWX-pK-sJH"/>
+                                    <constraint firstItem="SxF-bV-pDd" firstAttribute="leading" secondItem="TVH-jQ-4yp" secondAttribute="leading" id="oY0-Ks-jim"/>
+                                    <constraint firstAttribute="trailing" secondItem="SxF-bV-pDd" secondAttribute="trailing" id="qAL-Lq-cUr"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bhg-mz-deW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6Tf-eM-IjU"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HJW-Z5-QGI"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TVH-jQ-4yp" firstAttribute="top" secondItem="HJW-Z5-QGI" secondAttribute="top" id="KyF-SE-lNf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TVH-jQ-4yp" secondAttribute="bottom" constant="-34" id="Nke-gX-lqR"/>
+                            <constraint firstItem="TVH-jQ-4yp" firstAttribute="leading" secondItem="HJW-Z5-QGI" secondAttribute="leading" id="htB-8F-b2h"/>
+                            <constraint firstItem="TVH-jQ-4yp" firstAttribute="centerX" secondItem="9iV-am-62Y" secondAttribute="centerX" id="sov-rc-TTi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Purple Heart Lane" id="uEV-2B-rOt">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="7O4-SJ-7EK">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="BQ2-Y2-0rm" id="lVR-xh-oTn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="bTu-Ts-wSd">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sharePurpleHeartLaneMapLayer:" destination="BQ2-Y2-0rm" id="U2H-Qz-nEN"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="SxF-bV-pDd" id="my9-nw-pS4"/>
+                        <outlet property="imageViewBottomConstraint" destination="XWX-pK-sJH" id="1nF-VP-dD5"/>
+                        <outlet property="imageViewLeadingConstraint" destination="oY0-Ks-jim" id="Bz3-vj-1Mz"/>
+                        <outlet property="imageViewTopConstraint" destination="TUa-H3-RcC" id="aVS-jr-2cc"/>
+                        <outlet property="imageViewTrailingConstraint" destination="qAL-Lq-cUr" id="dCD-Tm-1pf"/>
+                        <outlet property="scrollView" destination="TVH-jQ-4yp" id="vkV-ZD-ZFb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQa-TV-EVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ak2-DG-wj8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="daV-dQ-U6F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gYn-0a-05l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BQ2-Y2-0rm" kind="relationship" relationship="rootViewController" id="Phi-De-lvp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQ1-0a-d2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PurpleHeartLaneBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
+    </resources>
+</document>

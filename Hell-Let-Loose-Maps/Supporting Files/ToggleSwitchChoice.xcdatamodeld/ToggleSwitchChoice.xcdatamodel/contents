@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Map" representedClassName="Map" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="strongpoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StrongPoint" inverseName="map" inverseEntity="StrongPoint"/>
+    </entity>
+    <entity name="StrongPoint" representedClassName="StrongPoint" syncable="YES" codeGenerationType="class">
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="isEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="map" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Map" inverseName="strongpoints" inverseEntity="Map"/>
+    </entity>
+    <elements>
+        <element name="StrongPoint" positionX="189.5" positionY="-54" width="128" height="88"/>
+        <element name="Map" positionX="-54" positionY="-129.5" width="128" height="73"/>
+    </elements>
+</model>

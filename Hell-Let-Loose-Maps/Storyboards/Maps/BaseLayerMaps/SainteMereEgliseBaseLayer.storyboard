@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lGf-h3-Hdw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SainteMereEgliseBaseLayer-->
+        <scene sceneID="aqN-eZ-2vd">
+            <objects>
+                <viewController storyboardIdentifier="SainteMereEgliseBaseLayerViewController" title="SainteMereEgliseBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A8E-AF-QB4" customClass="SainteMereEgliseBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5j-Jp-0Kd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awi-6V-MsK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SainteMereEgliseBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-Rk-xGW">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pj0-Rk-xGW" firstAttribute="leading" secondItem="Awi-6V-MsK" secondAttribute="leading" id="3d5-aq-oyK"/>
+                                    <constraint firstAttribute="bottom" secondItem="pj0-Rk-xGW" secondAttribute="bottom" constant="-22" id="Rt7-k4-gdU"/>
+                                    <constraint firstItem="pj0-Rk-xGW" firstAttribute="top" secondItem="Awi-6V-MsK" secondAttribute="top" constant="-22" id="wvc-KN-IeY"/>
+                                    <constraint firstAttribute="trailing" secondItem="pj0-Rk-xGW" secondAttribute="trailing" id="zqk-yk-hYN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="U3i-9o-exX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="co4-a8-fTg"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Azn-cm-DWE"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Awi-6V-MsK" firstAttribute="leading" secondItem="Azn-cm-DWE" secondAttribute="leading" id="Akd-ju-1Tw"/>
+                            <constraint firstItem="Awi-6V-MsK" firstAttribute="centerX" secondItem="q5j-Jp-0Kd" secondAttribute="centerX" id="db4-cb-d7G"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Awi-6V-MsK" secondAttribute="bottom" constant="-34" id="nZW-hU-AOr"/>
+                            <constraint firstItem="Awi-6V-MsK" firstAttribute="top" secondItem="Azn-cm-DWE" secondAttribute="top" id="wvU-3Q-Kbd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sainte Mère Église" id="9B8-C7-BkB">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="iOj-Jh-MLv">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="A8E-AF-QB4" id="lgz-DO-tKd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="Ayn-9B-pMP">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareSainteMereEgliseMapLayer:" destination="A8E-AF-QB4" id="Ru2-nF-otk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="pj0-Rk-xGW" id="m9d-5F-cuC"/>
+                        <outlet property="imageViewBottomConstraint" destination="Rt7-k4-gdU" id="NTA-2b-fpA"/>
+                        <outlet property="imageViewLeadingConstraint" destination="3d5-aq-oyK" id="Cok-OF-WnU"/>
+                        <outlet property="imageViewTopConstraint" destination="wvc-KN-IeY" id="8Gy-if-gEM"/>
+                        <outlet property="imageViewTrailingConstraint" destination="zqk-yk-hYN" id="APe-Ba-05M"/>
+                        <outlet property="scrollView" destination="Awi-6V-MsK" id="7WP-TB-zce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akT-fy-Glv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oF3-k6-DyS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lGf-h3-Hdw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vnt-qy-yGK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A8E-AF-QB4" kind="relationship" relationship="rootViewController" id="ZNH-kt-UjL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dER-ad-1Dd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SainteMereEgliseBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

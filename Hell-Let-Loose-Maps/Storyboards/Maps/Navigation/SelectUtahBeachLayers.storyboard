@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RGl-lm-W9O">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SelectUtahBeachLayers-->
+        <scene sceneID="SNP-Gu-xR7">
+            <objects>
+                <viewController storyboardIdentifier="SelectUtahBeachLayersViewController" title="SelectUtahBeachLayers" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oAj-Nw-yRe" customClass="SelectUtahBeachLayersViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s3t-cV-CwN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uGD-fh-SPc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gzc-p1-0F5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uGD-fh-SPc" firstAttribute="top" secondItem="s3t-cV-CwN" secondAttribute="top" id="57H-t1-TpL"/>
+                            <constraint firstAttribute="bottom" secondItem="uGD-fh-SPc" secondAttribute="bottom" id="DfJ-qB-3ek"/>
+                            <constraint firstAttribute="trailing" secondItem="uGD-fh-SPc" secondAttribute="trailing" id="H9l-Gc-2wR"/>
+                            <constraint firstItem="uGD-fh-SPc" firstAttribute="leading" secondItem="s3t-cV-CwN" secondAttribute="leading" id="oAd-SK-A2H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Toggle Strongpoints" largeTitleDisplayMode="always" id="Nxv-Yf-mcF"/>
+                    <connections>
+                        <outlet property="selectUtahBeachLayersDataSource" destination="Ect-4g-QnI" id="b9c-zg-k5P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esq-E7-srG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Ect-4g-QnI" customClass="SelectUtahBeachLayersDataSource" customModule="HLL_Maps" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="uGD-fh-SPc" id="htr-My-OfA"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="108.48214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tcg-kc-gIl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RGl-lm-W9O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RQy-qE-Q8s">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oAj-Nw-yRe" kind="relationship" relationship="rootViewController" id="HKl-km-WR2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3z-w3-Yxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+</document>
