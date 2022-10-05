@@ -1,0 +1,1560 @@
+2022-09-26 21:47:32 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x2eaf3c030; archive(resolved)="<IDEArchive: 0x60000ac4e760>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	Chain (16, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x2eaf3c030; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x2eaf3e740; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x1476f38c0; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x137654150; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x147686a40; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x137688470; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x1476d3760; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x137658590; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x1376f3880; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x147624320; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x14764d920; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x14764d720; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x137659d90; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6000010cda80; teamID='DZHXZ94XN9', teamName='Micah Burnside', teamType='Individual', username='micahburnside@protonmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x1376d88c0; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="(null)">
+	<IDEDistributionContext: 0x2eaf85da0; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x600008bcffe0>", team="(null)">
+	<IDEDistributionContext: 0x2ec6fb5f0; archive = "<IDEArchive: 0x60000ac4e760>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x2eaf3c030>
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionCreateDestRootStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionCopyItemStep
+2022-09-26 21:47:32 +0000  Running /usr/bin/ditto '-V' '/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app'
+2022-09-26 21:47:32 +0000  >>> Copying /Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app 
+2022-09-26 21:47:32 +0000  copying file ./_CodeSignature/CodeResources ... 
+2022-09-26 21:47:32 +0000  39829 bytes for ./_CodeSignature/CodeResources
+2022-09-26 21:47:32 +0000  copying file ./RemagenBaseLayer.storyboardc/RemagenBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1976 bytes for ./RemagenBaseLayer.storyboardc/RemagenBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./RemagenBaseLayer.storyboardc/jAl-ET-Fnr-view-cX6-cu-AoP.nib ... 
+2022-09-26 21:47:32 +0000  3454 bytes for ./RemagenBaseLayer.storyboardc/jAl-ET-Fnr-view-cX6-cu-AoP.nib
+2022-09-26 21:47:32 +0000  copying file ./RemagenBaseLayer.storyboardc/UINavigationController-Gyc-hN-KJM.nib ... 
+2022-09-26 21:47:32 +0000  2851 bytes for ./RemagenBaseLayer.storyboardc/UINavigationController-Gyc-hN-KJM.nib
+2022-09-26 21:47:32 +0000  copying file ./RemagenBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  357 bytes for ./RemagenBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectSainteMereEgliseLayers.storyboardc/UINavigationController-vPG-Bi-cCO.nib ... 
+2022-09-26 21:47:32 +0000  2578 bytes for ./SelectSainteMereEgliseLayers.storyboardc/UINavigationController-vPG-Bi-cCO.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectSainteMereEgliseLayers.storyboardc/7fF-5b-SOb-view-xyR-WV-g6f.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectSainteMereEgliseLayers.storyboardc/7fF-5b-SOb-view-xyR-WV-g6f.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectSainteMereEgliseLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  381 bytes for ./SelectSainteMereEgliseLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectSainteMereEgliseLayers.storyboardc/SelectSainteMereEgliseLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1524 bytes for ./SelectSainteMereEgliseLayers.storyboardc/SelectSainteMereEgliseLayersViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectSainteMarieduMontLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1697 bytes for ./SelectSainteMarieduMontLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./BaseLayerMaps.storyboardc/BaseLayerMapsViewController.nib ... 
+2022-09-26 21:47:32 +0000  1434 bytes for ./BaseLayerMaps.storyboardc/BaseLayerMapsViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./BaseLayerMaps.storyboardc/UINavigationController-fxL-el-1nk.nib ... 
+2022-09-26 21:47:32 +0000  2462 bytes for ./BaseLayerMaps.storyboardc/UINavigationController-fxL-el-1nk.nib
+2022-09-26 21:47:32 +0000  copying file ./BaseLayerMaps.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  351 bytes for ./BaseLayerMaps.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./BaseLayerMaps.storyboardc/EU8-Zv-9qJ-view-cnJ-ru-3TU.nib ... 
+2022-09-26 21:47:32 +0000  3075 bytes for ./BaseLayerMaps.storyboardc/EU8-Zv-9qJ-view-cnJ-ru-3TU.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectCarentanLayers.storyboardc/UINavigationController-Smh-uh-EcC.nib ... 
+2022-09-26 21:47:32 +0000  2538 bytes for ./SelectCarentanLayers.storyboardc/UINavigationController-Smh-uh-EcC.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectCarentanLayers.storyboardc/Iaq-vs-o7V-view-1fE-84-8ig.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectCarentanLayers.storyboardc/Iaq-vs-o7V-view-1fE-84-8ig.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectCarentanLayers.storyboardc/SelectCarentanLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1484 bytes for ./SelectCarentanLayers.storyboardc/SelectCarentanLayersViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectCarentanLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  365 bytes for ./SelectCarentanLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SainteMarieduMontBaseLayer.storyboardc/Aty-wk-lWf-view-wNs-K9-OFn.nib ... 
+2022-09-26 21:47:32 +0000  3464 bytes for ./SainteMarieduMontBaseLayer.storyboardc/Aty-wk-lWf-view-wNs-K9-OFn.nib
+2022-09-26 21:47:32 +0000  copying file ./SainteMarieduMontBaseLayer.storyboardc/UINavigationController-hSv-hx-afa.nib ... 
+2022-09-26 21:47:32 +0000  2895 bytes for ./SainteMarieduMontBaseLayer.storyboardc/UINavigationController-hSv-hx-afa.nib
+2022-09-26 21:47:32 +0000  copying file ./SainteMarieduMontBaseLayer.storyboardc/SainteMarieduMontBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  2020 bytes for ./SainteMarieduMontBaseLayer.storyboardc/SainteMarieduMontBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SainteMarieduMontBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  377 bytes for ./SainteMarieduMontBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectHurtgenForestLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1693 bytes for ./SelectHurtgenForestLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./AppIcon60x60@2x.png ... 
+2022-09-26 21:47:32 +0000  4780 bytes for ./AppIcon60x60@2x.png
+2022-09-26 21:47:32 +0000  copying file ./SelectFoyLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1683 bytes for ./SelectFoyLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./Hill400BaseLayer.storyboardc/UINavigationController-c8b-CO-P1A.nib ... 
+2022-09-26 21:47:32 +0000  2852 bytes for ./Hill400BaseLayer.storyboardc/UINavigationController-c8b-CO-P1A.nib
+2022-09-26 21:47:32 +0000  copying file ./Hill400BaseLayer.storyboardc/Hill400BaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1977 bytes for ./Hill400BaseLayer.storyboardc/Hill400BaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./Hill400BaseLayer.storyboardc/S4t-yV-gEj-view-5jB-t8-Kuh.nib ... 
+2022-09-26 21:47:32 +0000  3454 bytes for ./Hill400BaseLayer.storyboardc/S4t-yV-gEj-view-5jB-t8-Kuh.nib
+2022-09-26 21:47:32 +0000  copying file ./Hill400BaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  357 bytes for ./Hill400BaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectSainteMereEgliseLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1696 bytes for ./SelectSainteMereEgliseLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectStalingradLayers.storyboardc/UINavigationController-gLO-GX-98p.nib ... 
+2022-09-26 21:47:32 +0000  2548 bytes for ./SelectStalingradLayers.storyboardc/UINavigationController-gLO-GX-98p.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectStalingradLayers.storyboardc/SelectStalingradLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1494 bytes for ./SelectStalingradLayers.storyboardc/SelectStalingradLayersViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectStalingradLayers.storyboardc/kow-VO-xhh-view-n7a-TD-F8h.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectStalingradLayers.storyboardc/kow-VO-xhh-view-n7a-TD-F8h.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectStalingradLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  369 bytes for ./SelectStalingradLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./ToggleSwitchChoice.momd/ToggleSwitchChoice.mom ... 
+2022-09-26 21:47:32 +0000  2042 bytes for ./ToggleSwitchChoice.momd/ToggleSwitchChoice.mom
+2022-09-26 21:47:32 +0000  copying file ./ToggleSwitchChoice.momd/VersionInfo.plist ... 
+2022-09-26 21:47:32 +0000  204 bytes for ./ToggleSwitchChoice.momd/VersionInfo.plist
+2022-09-26 21:47:32 +0000  copying file ./HLL Maps ... 
+2022-09-26 21:47:32 +0000  917808 bytes for ./HLL Maps
+copying file ./SelectRemagenLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1687 bytes for ./SelectRemagenLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/itm-2t-IqW-view-uU8-o3-N0p.nib ... 
+2022-09-26 21:47:32 +0000  2776 bytes for ./Base.lproj/LaunchScreen.storyboardc/itm-2t-IqW-view-uU8-o3-N0p.nib
+2022-09-26 21:47:32 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-itm-2t-IqW.nib ... 
+2022-09-26 21:47:32 +0000  896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-itm-2t-IqW.nib
+2022-09-26 21:47:32 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectKurskLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1513 bytes for ./SelectKurskLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./BaseLayerMapsTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1790 bytes for ./BaseLayerMapsTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectKurskLayers.storyboardc/UINavigationController-XYo-Ab-s6Z.nib ... 
+2022-09-26 21:47:32 +0000  2523 bytes for ./SelectKurskLayers.storyboardc/UINavigationController-XYo-Ab-s6Z.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectKurskLayers.storyboardc/4nS-zo-nlb-view-MfB-cB-niU.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectKurskLayers.storyboardc/4nS-zo-nlb-view-MfB-cB-niU.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectKurskLayers.storyboardc/SelectKurskLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1469 bytes for ./SelectKurskLayers.storyboardc/SelectKurskLayersViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectKurskLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  359 bytes for ./SelectKurskLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./NewPlayerGuide.storyboardc/MnH-gx-0cY-view-W2j-z9-JL7.nib ... 
+2022-09-26 21:47:32 +0000  3455 bytes for ./NewPlayerGuide.storyboardc/MnH-gx-0cY-view-W2j-z9-JL7.nib
+2022-09-26 21:47:32 +0000  copying file ./NewPlayerGuide.storyboardc/NewPlayerGuideViewController.nib ... 
+2022-09-26 21:47:32 +0000  1242 bytes for ./NewPlayerGuide.storyboardc/NewPlayerGuideViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./NewPlayerGuide.storyboardc/UINavigationController-kRy-kH-qET.nib ... 
+2022-09-26 21:47:32 +0000  2267 bytes for ./NewPlayerGuide.storyboardc/UINavigationController-kRy-kH-qET.nib
+2022-09-26 21:47:32 +0000  copying file ./NewPlayerGuide.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  353 bytes for ./NewPlayerGuide.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./UtahBeachBaseLayer.storyboardc/UtahBeachBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1987 bytes for ./UtahBeachBaseLayer.storyboardc/UtahBeachBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./UtahBeachBaseLayer.storyboardc/pE4-ik-yv9-view-V57-8U-m71.nib ... 
+2022-09-26 21:47:32 +0000  3456 bytes for ./UtahBeachBaseLayer.storyboardc/pE4-ik-yv9-view-V57-8U-m71.nib
+2022-09-26 21:47:32 +0000  copying file ./UtahBeachBaseLayer.storyboardc/UINavigationController-PqQ-bF-rau.nib ... 
+2022-09-26 21:47:32 +0000  2862 bytes for ./UtahBeachBaseLayer.storyboardc/UINavigationController-PqQ-bF-rau.nib
+2022-09-26 21:47:32 +0000  copying file ./UtahBeachBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  361 bytes for ./UtahBeachBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectCarentanLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1516 bytes for ./SelectCarentanLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./StalingradBaseLayer.storyboardc/UINavigationController-1ST-1C-bbw.nib ... 
+2022-09-26 21:47:32 +0000  2866 bytes for ./StalingradBaseLayer.storyboardc/UINavigationController-1ST-1C-bbw.nib
+2022-09-26 21:47:32 +0000  copying file ./StalingradBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  363 bytes for ./StalingradBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./StalingradBaseLayer.storyboardc/Qm4-eN-r4j-view-mxS-wl-ptU.nib ... 
+2022-09-26 21:47:32 +0000  3457 bytes for ./StalingradBaseLayer.storyboardc/Qm4-eN-r4j-view-mxS-wl-ptU.nib
+2022-09-26 21:47:32 +0000  copying file ./StalingradBaseLayer.storyboardc/StalingradBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1991 bytes for ./StalingradBaseLayer.storyboardc/StalingradBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./Assets.car ... 
+2022-09-26 21:47:32 +0000  274997208 bytes for ./Assets.car
+2022-09-26 21:47:32 +0000  copying file ./SelectHurtgenForestLayers.storyboardc/SelectHurtgenForestLayersViewController.nib ... 
+1509 bytes for ./SelectHurtgenForestLayers.storyboardc/SelectHurtgenForestLayersViewController.nib
+copying file ./SelectHurtgenForestLayers.storyboardc/UINavigationController-gHT-IY-jTm.nib ... 
+2563 bytes for ./SelectHurtgenForestLayers.storyboardc/UINavigationController-gHT-IY-jTm.nib
+copying file ./SelectHurtgenForestLayers.storyboardc/Asw-ka-7fh-view-M0P-dr-89a.nib ... 
+2622 bytes for ./SelectHurtgenForestLayers.storyboardc/Asw-ka-7fh-view-M0P-dr-89a.nib
+copying file ./SelectHurtgenForestLayers.storyboardc/Info.plist ... 
+375 bytes for ./SelectHurtgenForestLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2022-09-26 21:47:32 +0000  5758 bytes for ./AppIcon76x76@2x~ipad.png
+2022-09-26 21:47:32 +0000  copying file ./CarentanBaseLayer.storyboardc/uRQ-aR-cuq-view-hfK-2D-CCd.nib ... 
+2022-09-26 21:47:32 +0000  3462 bytes for ./CarentanBaseLayer.storyboardc/uRQ-aR-cuq-view-hfK-2D-CCd.nib
+copying file ./CarentanBaseLayer.storyboardc/CarentanBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1981 bytes for ./CarentanBaseLayer.storyboardc/CarentanBaseLayerViewController.nib
+copying file ./CarentanBaseLayer.storyboardc/UINavigationController-Wsj-7g-op3.nib ... 
+2022-09-26 21:47:32 +0000  2856 bytes for ./CarentanBaseLayer.storyboardc/UINavigationController-Wsj-7g-op3.nib
+copying file ./CarentanBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  359 bytes for ./CarentanBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectOmahaBeachLayers.storyboardc/DID-S5-aqM-view-zLg-3b-msa.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectOmahaBeachLayers.storyboardc/DID-S5-aqM-view-zLg-3b-msa.nib
+copying file ./SelectOmahaBeachLayers.storyboardc/SelectOmahaBeachLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1494 bytes for ./SelectOmahaBeachLayers.storyboardc/SelectOmahaBeachLayersViewController.nib
+copying file ./SelectOmahaBeachLayers.storyboardc/UINavigationController-i7j-xh-bau.nib ... 
+2022-09-26 21:47:32 +0000  2548 bytes for ./SelectOmahaBeachLayers.storyboardc/UINavigationController-i7j-xh-bau.nib
+copying file ./SelectOmahaBeachLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  369 bytes for ./SelectOmahaBeachLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectPurpleHeartLaneLayers.storyboardc/SelectPurpleHeartLaneLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1519 bytes for ./SelectPurpleHeartLaneLayers.storyboardc/SelectPurpleHeartLaneLayersViewController.nib
+copying file ./SelectPurpleHeartLaneLayers.storyboardc/dJL-z8-cvK-view-cgS-n7-M45.nib ... 
+2022-09-26 21:47:32 +0000  2667 bytes for ./SelectPurpleHeartLaneLayers.storyboardc/dJL-z8-cvK-view-cgS-n7-M45.nib
+copying file ./SelectPurpleHeartLaneLayers.storyboardc/UINavigationController-Zy1-iR-TFr.nib ... 
+2022-09-26 21:47:32 +0000  2573 bytes for ./SelectPurpleHeartLaneLayers.storyboardc/UINavigationController-Zy1-iR-TFr.nib
+copying file ./SelectPurpleHeartLaneLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  379 bytes for ./SelectPurpleHeartLaneLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectSainteMarieduMontLayers.storyboardc/SelectSainteMarieduMontLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1529 bytes for ./SelectSainteMarieduMontLayers.storyboardc/SelectSainteMarieduMontLayersViewController.nib
+copying file ./SelectSainteMarieduMontLayers.storyboardc/UINavigationController-jub-3F-Csi.nib ... 
+2022-09-26 21:47:32 +0000  2583 bytes for ./SelectSainteMarieduMontLayers.storyboardc/UINavigationController-jub-3F-Csi.nib
+copying file ./SelectSainteMarieduMontLayers.storyboardc/msJ-me-AKm-view-fpc-rQ-RYF.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectSainteMarieduMontLayers.storyboardc/msJ-me-AKm-view-fpc-rQ-RYF.nib
+copying file ./SelectSainteMarieduMontLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  383 bytes for ./SelectSainteMarieduMontLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./PurpleHeartLaneBaseLayer.storyboardc/PurpleHeartLaneBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  2018 bytes for ./PurpleHeartLaneBaseLayer.storyboardc/PurpleHeartLaneBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./PurpleHeartLaneBaseLayer.storyboardc/BQ2-Y2-0rm-view-9iV-am-62Y.nib ... 
+2022-09-26 21:47:32 +0000  3462 bytes for ./PurpleHeartLaneBaseLayer.storyboardc/BQ2-Y2-0rm-view-9iV-am-62Y.nib
+2022-09-26 21:47:32 +0000  copying file ./PurpleHeartLaneBaseLayer.storyboardc/UINavigationController-daV-dQ-U6F.nib ... 
+2022-09-26 21:47:32 +0000  2893 bytes for ./PurpleHeartLaneBaseLayer.storyboardc/UINavigationController-daV-dQ-U6F.nib
+2022-09-26 21:47:32 +0000  copying file ./PurpleHeartLaneBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  373 bytes for ./PurpleHeartLaneBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectOmahaBeachLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1690 bytes for ./SelectOmahaBeachLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./OmahaBeachBaseLayer.storyboardc/OmahaBeachBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1992 bytes for ./OmahaBeachBaseLayer.storyboardc/OmahaBeachBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./OmahaBeachBaseLayer.storyboardc/koJ-Da-j9B-view-mcj-RR-x9o.nib ... 
+2022-09-26 21:47:32 +0000  3457 bytes for ./OmahaBeachBaseLayer.storyboardc/koJ-Da-j9B-view-mcj-RR-x9o.nib
+2022-09-26 21:47:32 +0000  copying file ./OmahaBeachBaseLayer.storyboardc/UINavigationController-Ipc-1W-mwd.nib ... 
+2022-09-26 21:47:32 +0000  2867 bytes for ./OmahaBeachBaseLayer.storyboardc/UINavigationController-Ipc-1W-mwd.nib
+2022-09-26 21:47:32 +0000  copying file ./OmahaBeachBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  363 bytes for ./OmahaBeachBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./FoyBaseLayer.storyboardc/609-Mh-kZw-view-wd2-Br-Dvd.nib ... 
+2022-09-26 21:47:32 +0000  3456 bytes for ./FoyBaseLayer.storyboardc/609-Mh-kZw-view-wd2-Br-Dvd.nib
+2022-09-26 21:47:32 +0000  copying file ./FoyBaseLayer.storyboardc/FoyBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1956 bytes for ./FoyBaseLayer.storyboardc/FoyBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./FoyBaseLayer.storyboardc/UINavigationController-F0P-ym-u80.nib ... 
+2022-09-26 21:47:32 +0000  2831 bytes for ./FoyBaseLayer.storyboardc/UINavigationController-F0P-ym-u80.nib
+2022-09-26 21:47:32 +0000  copying file ./FoyBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  349 bytes for ./FoyBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./KurskBaseLayer.storyboardc/KurskBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  1966 bytes for ./KurskBaseLayer.storyboardc/KurskBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./KurskBaseLayer.storyboardc/UINavigationController-XjS-Qj-qqd.nib ... 
+2022-09-26 21:47:32 +0000  2841 bytes for ./KurskBaseLayer.storyboardc/UINavigationController-XjS-Qj-qqd.nib
+2022-09-26 21:47:32 +0000  copying file ./KurskBaseLayer.storyboardc/bcJ-a0-eD3-view-P45-23-QWM.nib ... 
+2022-09-26 21:47:32 +0000  3452 bytes for ./KurskBaseLayer.storyboardc/bcJ-a0-eD3-view-P45-23-QWM.nib
+2022-09-26 21:47:32 +0000  copying file ./KurskBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  353 bytes for ./KurskBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectUtahBeachLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1689 bytes for ./SelectUtahBeachLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectUtahBeachLayers.storyboardc/oAj-Nw-yRe-view-s3t-cV-CwN.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectUtahBeachLayers.storyboardc/oAj-Nw-yRe-view-s3t-cV-CwN.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectUtahBeachLayers.storyboardc/UINavigationController-RGl-lm-W9O.nib ... 
+2022-09-26 21:47:32 +0000  2543 bytes for ./SelectUtahBeachLayers.storyboardc/UINavigationController-RGl-lm-W9O.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectUtahBeachLayers.storyboardc/SelectUtahBeachLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1489 bytes for ./SelectUtahBeachLayers.storyboardc/SelectUtahBeachLayersViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectUtahBeachLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  367 bytes for ./SelectUtahBeachLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./embedded.mobileprovision ... 
+2022-09-26 21:47:32 +0000  16284 bytes for ./embedded.mobileprovision
+2022-09-26 21:47:32 +0000  copying file ./SelectPurpleHeartLaneLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1695 bytes for ./SelectPurpleHeartLaneLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectRemagenLayers.storyboardc/UINavigationController-aJ1-k4-bfn.nib ... 
+2022-09-26 21:47:32 +0000  2533 bytes for ./SelectRemagenLayers.storyboardc/UINavigationController-aJ1-k4-bfn.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectRemagenLayers.storyboardc/FLT-6S-rxM-view-VgN-iz-lTA.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectRemagenLayers.storyboardc/FLT-6S-rxM-view-VgN-iz-lTA.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectRemagenLayers.storyboardc/SelectRemagenLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1479 bytes for ./SelectRemagenLayers.storyboardc/SelectRemagenLayersViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectRemagenLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  363 bytes for ./SelectRemagenLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectHill400Layers.storyboardc/UINavigationController-DnT-Si-O4b.nib ... 
+2022-09-26 21:47:32 +0000  2533 bytes for ./SelectHill400Layers.storyboardc/UINavigationController-DnT-Si-O4b.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectHill400Layers.storyboardc/9fG-et-oli-view-pkF-En-nA7.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectHill400Layers.storyboardc/9fG-et-oli-view-pkF-En-nA7.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectHill400Layers.storyboardc/SelectHill400LayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1479 bytes for ./SelectHill400Layers.storyboardc/SelectHill400LayersViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectHill400Layers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  363 bytes for ./SelectHill400Layers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./HurtgenForestBaseLayer.storyboardc/rhK-Y0-w1M-view-7Yu-qW-J7h.nib ... 
+2022-09-26 21:47:32 +0000  3462 bytes for ./HurtgenForestBaseLayer.storyboardc/rhK-Y0-w1M-view-7Yu-qW-J7h.nib
+2022-09-26 21:47:32 +0000  copying file ./HurtgenForestBaseLayer.storyboardc/HurtgenForestBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  2008 bytes for ./HurtgenForestBaseLayer.storyboardc/HurtgenForestBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./HurtgenForestBaseLayer.storyboardc/UINavigationController-aLz-cu-apT.nib ... 
+2022-09-26 21:47:32 +0000  2883 bytes for ./HurtgenForestBaseLayer.storyboardc/UINavigationController-aLz-cu-apT.nib
+2022-09-26 21:47:32 +0000  copying file ./HurtgenForestBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  369 bytes for ./HurtgenForestBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./Info.plist ... 
+2022-09-26 21:47:32 +0000  1794 bytes for ./Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SainteMereEgliseBaseLayer.storyboardc/SainteMereEgliseBaseLayerViewController.nib ... 
+2022-09-26 21:47:32 +0000  2025 bytes for ./SainteMereEgliseBaseLayer.storyboardc/SainteMereEgliseBaseLayerViewController.nib
+2022-09-26 21:47:32 +0000  copying file ./SainteMereEgliseBaseLayer.storyboardc/A8E-AF-QB4-view-q5j-Jp-0Kd.nib ... 
+2022-09-26 21:47:32 +0000  3463 bytes for ./SainteMereEgliseBaseLayer.storyboardc/A8E-AF-QB4-view-q5j-Jp-0Kd.nib
+2022-09-26 21:47:32 +0000  copying file ./SainteMereEgliseBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  375 bytes for ./SainteMereEgliseBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SainteMereEgliseBaseLayer.storyboardc/UINavigationController-lGf-h3-Hdw.nib ... 
+2022-09-26 21:47:32 +0000  2900 bytes for ./SainteMereEgliseBaseLayer.storyboardc/UINavigationController-lGf-h3-Hdw.nib
+2022-09-26 21:47:32 +0000  copying file ./PkgInfo ... 
+2022-09-26 21:47:32 +0000  8 bytes for ./PkgInfo
+2022-09-26 21:47:32 +0000  copying file ./SelectStalingradLayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1690 bytes for ./SelectStalingradLayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectHill400LayersTableViewCell.nib ... 
+2022-09-26 21:47:32 +0000  1687 bytes for ./SelectHill400LayersTableViewCell.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectFoyLayers.storyboardc/BAO-HR-63Y-view-l2x-VR-5jB.nib ... 
+2022-09-26 21:47:32 +0000  2622 bytes for ./SelectFoyLayers.storyboardc/BAO-HR-63Y-view-l2x-VR-5jB.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectFoyLayers.storyboardc/UINavigationController-1Zh-cQ-Sca.nib ... 
+2022-09-26 21:47:32 +0000  2512 bytes for ./SelectFoyLayers.storyboardc/UINavigationController-1Zh-cQ-Sca.nib
+2022-09-26 21:47:32 +0000  copying file ./SelectFoyLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:32 +0000  355 bytes for ./SelectFoyLayers.storyboardc/Info.plist
+2022-09-26 21:47:32 +0000  copying file ./SelectFoyLayers.storyboardc/SelectFoyLayersViewController.nib ... 
+2022-09-26 21:47:32 +0000  1458 bytes for ./SelectFoyLayers.storyboardc/SelectFoyLayersViewController.nib
+2022-09-26 21:47:32 +0000  /usr/bin/ditto exited with 0
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionEmbedProfileStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionInfoPlistStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionItemRemovalStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2022-09-26 21:47:32 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2022-09-26 21:47:32 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionSymbolsStep
+2022-09-26 21:47:32 +0000  Processing symbols for HLL Maps.app
+2022-09-26 21:47:32 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app' '--link-dest' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs'
+2022-09-26 21:47:32 +0000  building file list ... 
+2022-09-26 21:47:32 +0000   0 files...2022-09-26 21:47:32 +0000   100 files...2022-09-26 21:47:32 +0000  161 files to consider
+2022-09-26 21:47:32 +0000  HLL Maps.app/
+2022-09-26 21:47:32 +0000  HLL Maps.app/Base.lproj/
+HLL Maps.app/Base.lproj/LaunchScreen.storyboardc/
+HLL Maps.app/BaseLayerMaps.storyboardc/
+HLL Maps.app/CarentanBaseLayer.storyboardc/
+HLL Maps.app/FoyBaseLayer.storyboardc/
+HLL Maps.app/Hill400BaseLayer.storyboardc/
+HLL Maps.app/HurtgenForestBaseLayer.storyboardc/
+HLL Maps.app/KurskBaseLayer.storyboardc/
+HLL Maps.app/NewPlayerGuide.storyboardc/
+HLL Maps.app/OmahaBeachBaseLayer.storyboardc/
+HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/
+HLL Maps.app/RemagenBaseLayer.storyboardc/
+HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/
+HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/
+HLL Maps.app/SelectCarentanLayers.storyboardc/
+2022-09-26 21:47:32 +0000  HLL Maps.app/SelectFoyLayers.storyboardc/
+HLL Maps.app/SelectHill400Layers.storyboardc/
+HLL Maps.app/SelectHurtgenForestLayers.storyboardc/
+HLL Maps.app/SelectKurskLayers.storyboardc/
+HLL Maps.app/SelectOmahaBeachLayers.storyboardc/
+HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/
+HLL Maps.app/SelectRemagenLayers.storyboardc/
+HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/
+HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/
+HLL Maps.app/SelectStalingradLayers.storyboardc/
+HLL Maps.app/SelectUtahBeachLayers.storyboardc/
+HLL Maps.app/StalingradBaseLayer.storyboardc/
+HLL Maps.app/ToggleSwitchChoice.momd/
+HLL Maps.app/UtahBeachBaseLayer.storyboardc/
+HLL Maps.app/_CodeSignature/
+2022-09-26 21:47:32 +0000  
+2022-09-26 21:47:32 +0000  sent 7.02K bytes  received 206 bytes  14.44K bytes/sec
+total size is 263.41M  speedup is 37366.14
+2022-09-26 21:47:32 +0000  /usr/bin/rsync exited with 0
+2022-09-26 21:47:32 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/dSYMs/' '--link-dest' '/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/dSYMs/' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs'
+2022-09-26 21:47:32 +0000  building file list ... 
+2022-09-26 21:47:32 +0000   0 files...2022-09-26 21:47:32 +0000  7 files to consider
+2022-09-26 21:47:32 +0000  ./
+2022-09-26 21:47:32 +0000  HLL Maps.app.dSYM/
+HLL Maps.app.dSYM/Contents/
+HLL Maps.app.dSYM/Contents/Resources/
+2022-09-26 21:47:32 +0000  HLL Maps.app.dSYM/Contents/Resources/DWARF/
+2022-09-26 21:47:32 +0000  
+2022-09-26 21:47:32 +0000  sent 244 bytes  received 50 bytes  588.00 bytes/sec
+total size is 3.48M  speedup is 12420.51
+2022-09-26 21:47:32 +0000  /usr/bin/rsync exited with 0
+2022-09-26 21:47:32 +0000  Writing /var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Symbols/728F5D1F-2AB5-3301-A876-FE4817BE71D2.symbols
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionAppThinningStep
+2022-09-26 21:47:32 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionArchThinningStep
+2022-09-26 21:47:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app/HLL Maps' '-verify_arch' 'arm64e'
+2022-09-26 21:47:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2022-09-26 21:47:32 +0000  Skipping architecture thinning for item "HLL Maps" because arch "arm64e" wasn't found
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionODRStep
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionStripXattrsStep
+2022-09-26 21:47:32 +0000  Running /usr/bin/xattr '-crs' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app'
+2022-09-26 21:47:32 +0000  /usr/bin/xattr exited with 0
+2022-09-26 21:47:32 +0000  Processing step: IDEDistributionCodesignStep
+2022-09-26 21:47:32 +0000  Entitlements for <IDEDistributionItem: 0x60000ac2b3c0; bundleID='micahburnside.Hell-Let-Loose-Maps', path='<DVTFilePath:0x60000a1d8770:'/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60001aad3ac0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003d64000; name='Apple Development: Micah Burnside (Z27VB5MT32)', hash='C9D1484466DE67F57DE1722222982BF8C0A24E4F', serialNumber='5B29BC76A007E05408E8D72FC8575630', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2022-03-14 00:00:19 +0000''>', entitlements='{
+    "application-identifier" = "DZHXZ94XN9.micahburnside.Hell-Let-Loose-Maps";
+    "com.apple.developer.team-identifier" = DZHXZ94XN9;
+    "get-task-allow" = 1;
+}', teamID='DZHXZ94XN9', identifier='micahburnside.Hell-Let-Loose-Maps', executablePath='<DVTFilePath:0x60000a22fb80:'/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app/HLL Maps'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "DZHXZ94XN9.micahburnside.Hell-Let-Loose-Maps";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = DZHXZ94XN9;
+    "get-task-allow" = 0;
+}
+2022-09-26 21:47:32 +0000  Entitlements for <IDEDistributionItem: 0x60000ac2b3c0; bundleID='micahburnside.Hell-Let-Loose-Maps', path='<DVTFilePath:0x60000a1d8770:'/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60001aad3ac0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003d64210; name='Apple Development: Micah Burnside (Z27VB5MT32)', hash='C9D1484466DE67F57DE1722222982BF8C0A24E4F', serialNumber='5B29BC76A007E05408E8D72FC8575630', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2022-03-14 00:00:19 +0000''>', entitlements='{
+    "application-identifier" = "DZHXZ94XN9.micahburnside.Hell-Let-Loose-Maps";
+    "com.apple.developer.team-identifier" = DZHXZ94XN9;
+    "get-task-allow" = 1;
+}', teamID='DZHXZ94XN9', identifier='micahburnside.Hell-Let-Loose-Maps', executablePath='<DVTFilePath:0x60000a22fb80:'/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app/HLL Maps'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "DZHXZ94XN9.micahburnside.Hell-Let-Loose-Maps";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = DZHXZ94XN9;
+    "get-task-allow" = 0;
+}
+2022-09-26 21:47:32 +0000  Writing entitlements for <IDEDistributionItem: 0x60000ac2b3c0; bundleID='micahburnside.Hell-Let-Loose-Maps', path='<DVTFilePath:0x60000a1d8770:'/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x60001aad3ac0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003d64370; name='Apple Development: Micah Burnside (Z27VB5MT32)', hash='C9D1484466DE67F57DE1722222982BF8C0A24E4F', serialNumber='5B29BC76A007E05408E8D72FC8575630', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2022-03-14 00:00:19 +0000''>', entitlements='{
+    "application-identifier" = "DZHXZ94XN9.micahburnside.Hell-Let-Loose-Maps";
+    "com.apple.developer.team-identifier" = DZHXZ94XN9;
+    "get-task-allow" = 1;
+}', teamID='DZHXZ94XN9', identifier='micahburnside.Hell-Let-Loose-Maps', executablePath='<DVTFilePath:0x60000a22fb80:'/Users/micahburnside/Library/Developer/Xcode/Archives/2022-09-26/HLL Maps 9-26-22, 5.46 PM.xcarchive/Products/Applications/HLL Maps.app/HLL Maps'>', hardenedRuntime='0'>'> to: /var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/entitlements~~~S1u7E7
+2022-09-26 21:47:32 +0000  Sending request 49791E35-581D-4320-8CD9-3A059357AA02 to <https://developerservices2.apple.com/services/QH65B2/listTeams.action?clientId=XABBG36SBA> for session <DVTServicesAccountBasedSession: 0x60000ac59740; account='<DVTAppleIDBasedDeveloperAccount: 0x600002878af0; username='micahburnside@protonmail.com'>'>.
+Method: POST
+
+Headers:
+{
+    Accept = "text/x-xml-plist";
+    "Accept-Encoding" = "gzip, deflate";
+    "Content-Length" = 368;
+    "Content-Type" = "text/x-xml-plist";
+    "User-Agent" = Xcode;
+    "X-Apple-App-Info" = "com.apple.gs.xcode.auth";
+    "X-Apple-GS-Token" = "AAAABLwIAAAAAGIuh8URDWdzLnhjb2RlLmF1dGi9AA8tqaDfIBOdeX3RtwMinCiE7yd8swtpM0clUSdCgGvuDpfW7ugLLYTDas3r6qS/bmf+fpRSqAninMm65QApUxvQj7eljz+aWmc+giP5Sq7qvfK37sg8KowkiJuVipD7x2RxBVBEIZEsaxqLEC+KFeKs22sm";
+    "X-Apple-I-Client-Time" = "2022-09-26T21:47:32Z";
+    "X-Apple-I-Identity-Id" = "000097-05-d91a2c9b-0a7e-4442-a610-2e387b7bbd89";
+    "X-Apple-I-Locale" = "en_US";
+    "X-Apple-I-MD" = "AAAABQAAABBjIgynmSzo+MQAhT5fzqsmAAAAAQ==";
+    "X-Apple-I-MD-LU" = B1439CC155964BAF7272E198E8FD6DEC111B49D0526C3F57CD37C02D6D8AA4C0;
+    "X-Apple-I-MD-M" = "oNeYAGiR88Exr/is3yJPO5q8EfBQ5X+HvmN06QUgbF7wy9PfRSZAd9spG32jL8e5KWSj/Jmk8igYqQk0";
+    "X-Apple-I-MD-RINFO" = 50660608;
+    "X-Apple-I-TimeZone" = EDT;
+    "X-MMe-Client-Info" = "<MacBookPro18,2> <macOS;12.5.1;21G83> <com.apple.AuthKit/1 (com.apple.dt.Xcode/21335)>";
+    "X-Mme-Device-Id" = "DE56B9A6-7FBB-5D39-B929-1F005A49874E";
+    "X-Xcode-Version" = "14.0 (14A309)";
+}
+
+Payload:
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>clientId</key>
+	<string>XABBG36SBA</string>
+	<key>protocolVersion</key>
+	<string>QH65B2</string>
+	<key>requestId</key>
+	<string>49791E35-581D-4320-8CD9-3A059357AA02</string>
+</dict>
+</plist>
+2022-09-26 21:47:32 +0000  Received response for 49791E35-581D-4320-8CD9-3A059357AA02 @ <https://developerservices2.apple.com/services/QH65B2/listTeams.action?clientId=XABBG36SBA>. Code = 0
+2022-09-26 21:47:32 +0000  Response payload: {
+    creationTimestamp = "2022-09-26T21:47:32Z";
+    protocolVersion = QH65B2;
+    requestId = "49791E35-581D-4320-8CD9-3A059357AA02";
+    requestUrl = "https://developerservices2.apple.com:443/services/QH65B2/listTeams.action?clientId=XABBG36SBA";
+    responseId = "2965b432-2b86-4316-b576-b6b622d8acd6";
+    resultCode = 0;
+    teams =     (
+                {
+            currentTeamMember =             {
+                developerStatus = active;
+                email = "micahburnside@protonmail.com";
+                firstName = Micah;
+                lastName = Burnside;
+                personId = 109782589;
+                privileges =                 {
+                };
+                roles =                 (
+                    AGENT,
+                    "TEAM_ADMIN",
+                    "MAC_PROGRAM_TEAM_ADMIN",
+                    "XCODE_FREE_USER"
+                );
+                teamMemberId = Z27VB5MT32;
+            };
+            dateCreated = "2011-12-22 21:53:01 +0000";
+            extendedTeamAttributes =             {
+            };
+            memberships =             (
+                                {
+                    dateExpire = "2023-09-24 23:59:00 +0000";
+                    dateStart = "2022-09-24 22:11:00 +0000";
+                    deleteDevicesOnExpiry = 0;
+                    inIosDeviceResetWindow = 1;
+                    inRenewalWindow = 0;
+                    membershipId = 44TRX23W3G;
+                    membershipProductId = ad19;
+                    name = "Apple Developer Program";
+                    platform = ios;
+                    status = active;
+                },
+                                {
+                    dateExpire = "2023-09-24 23:59:00 +0000";
+                    dateStart = "2022-09-24 22:11:00 +0000";
+                    deleteDevicesOnExpiry = 0;
+                    inIosDeviceResetWindow = 1;
+                    inRenewalWindow = 0;
+                    membershipId = 44TRX23W3G;
+                    membershipProductId = ad19;
+                    name = "Apple Developer Program";
+                    platform = mac;
+                    status = active;
+                },
+                                {
+                    dateExpire = "2023-09-24 23:59:00 +0000";
+                    dateStart = "2022-09-24 22:11:00 +0000";
+                    deleteDevicesOnExpiry = 0;
+                    inIosDeviceResetWindow = 1;
+                    inRenewalWindow = 0;
+                    membershipId = 44TRX23W3G;
+                    membershipProductId = ad19;
+                    name = "Apple Developer Program";
+                    platform = safari;
+                    status = active;
+                },
+                                {
+                    dateStart = "2019-12-04 02:07:08 +0000";
+                    deleteDevicesOnExpiry = 0;
+                    inIosDeviceResetWindow = 0;
+                    inRenewalWindow = 0;
+                    membershipId = 2MRF4R6S29;
+                    membershipProductId = fp22;
+                    name = "Xcode Free Provisioning Program";
+                    platform = ios;
+                    status = activeNeverExpire;
+                }
+            );
+            name = "Micah Burnside";
+            status = active;
+            teamAgent =             {
+                developerStatus = active;
+                email = "micahburnside@protonmail.com";
+                firstName = Micah;
+                lastName = Burnside;
+                personId = 109782589;
+                teamMemberId = Z27VB5MT32;
+            };
+            teamId = DZHXZ94XN9;
+            type = Individual;
+            xcodeFreeOnly = 0;
+        }
+    );
+    userLocale = "en_US";
+}
+
+2022-09-26 21:47:32 +0000  invoking codesign: <NSConcreteTask: 0x60001a8ffd40; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    "-",
+    "--signature-size",
+    16000,
+    "--entitlements",
+    "/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/entitlements~~~S1u7E7",
+    "--requirements",
+    "=designated => anchor apple generic and identifier \"micahburnside.Hell-Let-Loose-Maps\" and certificate leaf[subject.CN] = \"Apple Distribution: Micah Burnside (DZHXZ94XN9)\" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */",
+    "--preserve-metadata=identifier,flags,runtime",
+    "--omit-adhoc-flag",
+    "--team-identifier",
+    DZHXZ94XN9,
+    "--generate-entitlement-der",
+    "-vvv",
+    "/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app"
+)'>
+2022-09-26 21:47:33 +0000  codesign output: /var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app: replacing existing signature
+/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app: signed app bundle with Mach-O thin (arm64) [micahburnside.Hell-Let-Loose-Maps]
+2022-09-26 21:47:33 +0000  Remote code signing '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app' with signature slices '[<DVTCodeSignatureSlice: 0x600004469290; architecture='arm64', cmsDigest='<DVTCodeSignatureHash: 0x600004d237e0; digestAlgorithmDescription='sha256', cdHashHexEncoded='45f745bf54a9617aa18d79877d03a8ddab32bc774f92a924d8724534896d4026'>', codeSignatureHashes='{(
+    <DVTCodeSignatureHash: 0x600004d230a0; digestAlgorithmDescription='sha256', cdHashHexEncoded='45f745bf54a9617aa18d79877d03a8ddab32bc774f92a924d8724534896d4026'>
+)}', cmsHexEncoded=''>]' and configuration 'RemoteSigningToolConfiguration(path: <DVTFilePath:0x60000a1a2140:'/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app'>, signingCertificate: <DVTSigningCertificate: 0x600003d8c000; name='Apple Distribution: Micah Burnside (DZHXZ94XN9)', hash='B670C56DBEC8204407F9EAAFCE3B4490C167C126', serialNumber='29A7DA34238EAD0BD5483181E72A0CF0', certificateKinds='(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2022-05-01 00:48:08 +0000''>, session: <DVTServicesAccountBasedSession: 0x60000ac59740; account='<DVTAppleIDBasedDeveloperAccount: 0x600002878af0; username='micahburnside@protonmail.com'>'>, team: <DVTPortalTeam: 0x6000056a4e00; name='Micah Burnside', teamID='DZHXZ94XN9', type='Individual', memberships='(
+    "<DVTPortalMembership: 0x6000086df2d0; programs='{(\n    <DVTPortalProgram: 0x600002834500; <DVTPortalProgram: 0x600002834500; identifier='Xcode.Portal.Program.iOS'>>\n)}'>",
+    "<DVTPortalMembership: 0x60000877d5f0; programs='{(\n    <DVTPortalProgram: 0x6000028340f0; <DVTPortalProgram: 0x6000028340f0; identifier='Xcode.Portal.Program.Mac'>>\n)}'>"
+)'>, codeResourcesDictionary: [AnyHashable("rules2"): {
+    ".*\\.dSYM($|/)" =     {
+        weight = 11;
+    };
+    "^(.*/)?\\.DS_Store$" =     {
+        omit = 1;
+        weight = 2000;
+    };
+    "^.*" = 1;
+    "^.*\\.lproj/" =     {
+        optional = 1;
+        weight = 1000;
+    };
+    "^.*\\.lproj/locversion.plist$" =     {
+        omit = 1;
+        weight = 1100;
+    };
+    "^Base\\.lproj/" =     {
+        weight = 1010;
+    };
+    "^Info\\.plist$" =     {
+        omit = 1;
+        weight = 20;
+    };
+    "^PkgInfo$" =     {
+        omit = 1;
+        weight = 20;
+    };
+    "^embedded\\.provisionprofile$" =     {
+        weight = 20;
+    };
+    "^version\\.plist$" =     {
+        weight = 20;
+    };
+}, AnyHashable("files"): {
+    "AppIcon60x60@2x.png" = {length = 20, bytes = 0x4e3b0a752dd913a8b7965149c540af9e468345df};
+    "AppIcon76x76@2x~ipad.png" = {length = 20, bytes = 0xa838be1c699798f5e3ac3912493b7dcd87a66aa0};
+    "Assets.car" = {length = 20, bytes = 0xf5b919188c56e853f292fd4dbdf7fc599a7ca5b4};
+    "Base.lproj/LaunchScreen.storyboardc/Info.plist" = {length = 20, bytes = 0xfa7b113f09043d50bf0051c9f9cdeefb81e26e99};
+    "Base.lproj/LaunchScreen.storyboardc/UIViewController-itm-2t-IqW.nib" = {length = 20, bytes = 0x3e4649dfb5a11d128ea20d6f5ac05b3f50ede982};
+    "Base.lproj/LaunchScreen.storyboardc/itm-2t-IqW-view-uU8-o3-N0p.nib" = {length = 20, bytes = 0x74f83ae5b7ce795c34d7a0dee89579f0c307abed};
+    "BaseLayerMaps.storyboardc/BaseLayerMapsViewController.nib" = {length = 20, bytes = 0xab4689d6a362f323460542751d8ff48da2639e1f};
+    "BaseLayerMaps.storyboardc/EU8-Zv-9qJ-view-cnJ-ru-3TU.nib" = {length = 20, bytes = 0x9b4d0a4c35ec0ee37938e90e3837f28e6b0e16ac};
+    "BaseLayerMaps.storyboardc/Info.plist" = {length = 20, bytes = 0x1bcd82ea214ae56af827d39f653633a4c815a7b0};
+    "BaseLayerMaps.storyboardc/UINavigationController-fxL-el-1nk.nib" = {length = 20, bytes = 0x895ab73c7281e760f06765ed0956a3b8632f301f};
+    "BaseLayerMapsTableViewCell.nib" = {length = 20, bytes = 0x67439f3ef87d0100ec5ea9c092ea7c0316c837f4};
+    "CarentanBaseLayer.storyboardc/CarentanBaseLayerViewController.nib" = {length = 20, bytes = 0x22d216da1330eec11810b968b19a3e3789e28114};
+    "CarentanBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0xa526cea2844e512f900b82e2115e08d2c24ed572};
+    "CarentanBaseLayer.storyboardc/UINavigationController-Wsj-7g-op3.nib" = {length = 20, bytes = 0x25e95dae840a8ac769beed8f9bcf7e3c3047f290};
+    "CarentanBaseLayer.storyboardc/uRQ-aR-cuq-view-hfK-2D-CCd.nib" = {length = 20, bytes = 0x4612f6aa8ffa3e7f5266e60b8b1f1d94a4c6199e};
+    "FoyBaseLayer.storyboardc/609-Mh-kZw-view-wd2-Br-Dvd.nib" = {length = 20, bytes = 0x95bd3c2a69a4866198e655cd79c247d1bbc20634};
+    "FoyBaseLayer.storyboardc/FoyBaseLayerViewController.nib" = {length = 20, bytes = 0x7d8b058d1ce76fa97ced79def050e2b13f3253f1};
+    "FoyBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0x6ecb1aa81a3cfc34de6dce1095f47b8e4aacb15a};
+    "FoyBaseLayer.storyboardc/UINavigationController-F0P-ym-u80.nib" = {length = 20, bytes = 0xc1a7f1d8f1a11d956389bbbdab4f8652d76056d6};
+    "Hill400BaseLayer.storyboardc/Hill400BaseLayerViewController.nib" = {length = 20, bytes = 0x829fab96ee50c4fe650bd4100fa9ee67d32f7f43};
+    "Hill400BaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0xf464937facc19e73ab14d719bf8f0f27ff7460bc};
+    "Hill400BaseLayer.storyboardc/S4t-yV-gEj-view-5jB-t8-Kuh.nib" = {length = 20, bytes = 0x6356ef7bb6ae0e90eaeb098a29bdabf87a62be61};
+    "Hill400BaseLayer.storyboardc/UINavigationController-c8b-CO-P1A.nib" = {length = 20, bytes = 0xbc30019d9ee4b71143aa929e4326e102938074d6};
+    "HurtgenForestBaseLayer.storyboardc/HurtgenForestBaseLayerViewController.nib" = {length = 20, bytes = 0xc1d5c5d37de9aca6898fb53536f94b017748f5fa};
+    "HurtgenForestBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0x2d47fada9a3358368b9f4107b394f25f657fc144};
+    "HurtgenForestBaseLayer.storyboardc/UINavigationController-aLz-cu-apT.nib" = {length = 20, bytes = 0x31a1164a3529d7f522baa3396673979835be462b};
+    "HurtgenForestBaseLayer.storyboardc/rhK-Y0-w1M-view-7Yu-qW-J7h.nib" = {length = 20, bytes = 0x89d19e37934df2e2a0c2b580ee2cf6a36409c315};
+    "Info.plist" = {length = 20, bytes = 0x7edfa6a81ed32e0baf0cb3d6e87ad3a5bbcf3631};
+    "KurskBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0x4c5fe3c9bfea69fe1d2e161204a9ff96fc326fff};
+    "KurskBaseLayer.storyboardc/KurskBaseLayerViewController.nib" = {length = 20, bytes = 0xf3ffe1d05232722ed9bf5b272bb73b2a07aea919};
+    "KurskBaseLayer.storyboardc/UINavigationController-XjS-Qj-qqd.nib" = {length = 20, bytes = 0xf47629f2753ebe07d6db27214b98e354404921b5};
+    "KurskBaseLayer.storyboardc/bcJ-a0-eD3-view-P45-23-QWM.nib" = {length = 20, bytes = 0x95d8b4cd9a352eba8ef6788d1243fc129bb1bb22};
+    "NewPlayerGuide.storyboardc/Info.plist" = {length = 20, bytes = 0xf072ed0f8495454b573d5889fe7681caa5350989};
+    "NewPlayerGuide.storyboardc/MnH-gx-0cY-view-W2j-z9-JL7.nib" = {length = 20, bytes = 0x627c87cee3cc1ca0863d6fddb9819b5c47602bc2};
+    "NewPlayerGuide.storyboardc/NewPlayerGuideViewController.nib" = {length = 20, bytes = 0x8a64bae3adf4e3d3d7d6842800f99a658edaf7d5};
+    "NewPlayerGuide.storyboardc/UINavigationController-kRy-kH-qET.nib" = {length = 20, bytes = 0xc1c06e47868315423ffddcd815d3272938c47fba};
+    "OmahaBeachBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0x3c4e2d6d535163a32bb076a9e7ff6329dd0935e2};
+    "OmahaBeachBaseLayer.storyboardc/OmahaBeachBaseLayerViewController.nib" = {length = 20, bytes = 0x5ee83294fc1d4f1a6fbd7bd01bf884e6e47f274d};
+    "OmahaBeachBaseLayer.storyboardc/UINavigationController-Ipc-1W-mwd.nib" = {length = 20, bytes = 0xfa58d94cf36f5733a1a15ecec96c32b47f714f0c};
+    "OmahaBeachBaseLayer.storyboardc/koJ-Da-j9B-view-mcj-RR-x9o.nib" = {length = 20, bytes = 0xa23052353ac00a2475ae12c5b34bbffcb7704c1e};
+    PkgInfo = {length = 20, bytes = 0x9f9eea0cfe2d65f2c3d6b092e375b40782d08f31};
+    "PurpleHeartLaneBaseLayer.storyboardc/BQ2-Y2-0rm-view-9iV-am-62Y.nib" = {length = 20, bytes = 0x36d3997d96b3ebfe297d5cedd09a2dac17dbda92};
+    "PurpleHeartLaneBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0x38be862c792e377c834ac08e3b065d154ea526ac};
+    "PurpleHeartLaneBaseLayer.storyboardc/PurpleHeartLaneBaseLayerViewController.nib" = {length = 20, bytes = 0xde8d5e708154daee8194b8c30f0360087d2b8175};
+    "PurpleHeartLaneBaseLayer.storyboardc/UINavigationController-daV-dQ-U6F.nib" = {length = 20, bytes = 0x71fe80a8115d428ac82c95f375e4041ff9b196a6};
+    "RemagenBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0xd6f7ac11719c09331b3e221625742994c688ab9e};
+    "RemagenBaseLayer.storyboardc/RemagenBaseLayerViewController.nib" = {length = 20, bytes = 0x1f88886ba3606729d051a58d5581c75042bc478b};
+    "RemagenBaseLayer.storyboardc/UINavigationController-Gyc-hN-KJM.nib" = {length = 20, bytes = 0xd448180fea53f07875b9de910cc316d24c083772};
+    "RemagenBaseLayer.storyboardc/jAl-ET-Fnr-view-cX6-cu-AoP.nib" = {length = 20, bytes = 0x44805c324080c7b4d8a7f34ac26b7915826dc9ee};
+    "SainteMarieduMontBaseLayer.storyboardc/Aty-wk-lWf-view-wNs-K9-OFn.nib" = {length = 20, bytes = 0x3574d745d6b68931b8ace996b95195cf126ce641};
+    "SainteMarieduMontBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0xfa56ea550e4416e56273709e4a1019eda5618d7c};
+    "SainteMarieduMontBaseLayer.storyboardc/SainteMarieduMontBaseLayerViewController.nib" = {length = 20, bytes = 0xe951fbe0292fc70c91744accc6082ad2173534f3};
+    "SainteMarieduMontBaseLayer.storyboardc/UINavigationController-hSv-hx-afa.nib" = {length = 20, bytes = 0x1db6b89990cc347e9325288547a712a4679a5b08};
+    "SainteMereEgliseBaseLayer.storyboardc/A8E-AF-QB4-view-q5j-Jp-0Kd.nib" = {length = 20, bytes = 0x576401c1de8c0c6f15637c95da8a7f225dde2fc3};
+    "SainteMereEgliseBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0xea5e1b99a1cd515f90f852ec8312f33081a03454};
+    "SainteMereEgliseBaseLayer.storyboardc/SainteMereEgliseBaseLayerViewController.nib" = {length = 20, bytes = 0xfed6e939904c9841b1ef51be989f9dff19bae758};
+    "SainteMereEgliseBaseLayer.storyboardc/UINavigationController-lGf-h3-Hdw.nib" = {length = 20, bytes = 0xa914bf32f16dbf2b46e550d22df5ed38b3bfdfe0};
+    "SelectCarentanLayers.storyboardc/Iaq-vs-o7V-view-1fE-84-8ig.nib" = {length = 20, bytes = 0x336a2a6908c4d89a3abfd2d09cb7b65c9467aac4};
+    "SelectCarentanLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x2b68e0ce2c9ee48ea956ad2a2344934dc90dc150};
+    "SelectCarentanLayers.storyboardc/SelectCarentanLayersViewController.nib" = {length = 20, bytes = 0x468d7ec49a4ef7684fd1859e4b4e241770328eda};
+    "SelectCarentanLayers.storyboardc/UINavigationController-Smh-uh-EcC.nib" = {length = 20, bytes = 0xdfa29046fd950fc7dc7c25f2c7e82e915827124f};
+    "SelectCarentanLayersTableViewCell.nib" = {length = 20, bytes = 0xd17f224b9e9989d36388b3edf963e7ec6c567c9a};
+    "SelectFoyLayers.storyboardc/BAO-HR-63Y-view-l2x-VR-5jB.nib" = {length = 20, bytes = 0x30f0b7d8031c1c13f4d7449b220e43090ed07288};
+    "SelectFoyLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x4ad784f9ab4b31d46f30ef570b13b56c6c41d4b9};
+    "SelectFoyLayers.storyboardc/SelectFoyLayersViewController.nib" = {length = 20, bytes = 0xecb6578f5f3fb0ff0d3b534c0c350f3d0df63f58};
+    "SelectFoyLayers.storyboardc/UINavigationController-1Zh-cQ-Sca.nib" = {length = 20, bytes = 0x80b69cfb9195f326b0e49e3a31822478fd2d4924};
+    "SelectFoyLayersTableViewCell.nib" = {length = 20, bytes = 0x59384df56d5edaafb08745592d9ccba660e1dd0e};
+    "SelectHill400Layers.storyboardc/9fG-et-oli-view-pkF-En-nA7.nib" = {length = 20, bytes = 0xf95949256329cc5480b910f9b12324eade6d88db};
+    "SelectHill400Layers.storyboardc/Info.plist" = {length = 20, bytes = 0x6123ebf5d6389b6b25a52a3cfbb4332b5fdce480};
+    "SelectHill400Layers.storyboardc/SelectHill400LayersViewController.nib" = {length = 20, bytes = 0x8fbd08103cff4cdef5535f1a026240b4ffae7365};
+    "SelectHill400Layers.storyboardc/UINavigationController-DnT-Si-O4b.nib" = {length = 20, bytes = 0xb167136d44de790bd811f8e24b5b661cb6feea77};
+    "SelectHill400LayersTableViewCell.nib" = {length = 20, bytes = 0xcd2e2e179c19b14070bc53551a0c793a1778d81c};
+    "SelectHurtgenForestLayers.storyboardc/Asw-ka-7fh-view-M0P-dr-89a.nib" = {length = 20, bytes = 0x27f39f3d94d75ce7969d44e97dfa67b8bd87e8b4};
+    "SelectHurtgenForestLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x23db6570856e3613662603eed5dd53e475e59a3a};
+    "SelectHurtgenForestLayers.storyboardc/SelectHurtgenForestLayersViewController.nib" = {length = 20, bytes = 0x410a04094c824437ac2d0443df6a07c785c57e83};
+    "SelectHurtgenForestLayers.storyboardc/UINavigationController-gHT-IY-jTm.nib" = {length = 20, bytes = 0x6364ccf5853d6d100d5e021f8e43eccb36f4737e};
+    "SelectHurtgenForestLayersTableViewCell.nib" = {length = 20, bytes = 0x92494778743056bcc5f24bf91aa04f03f8981073};
+    "SelectKurskLayers.storyboardc/4nS-zo-nlb-view-MfB-cB-niU.nib" = {length = 20, bytes = 0x7e8ae8fa2cb0ab33ec12a58133bc518013bb52b1};
+    "SelectKurskLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x8fce225a2e6fd1bb236a4c5f6164ed44e6c2f488};
+    "SelectKurskLayers.storyboardc/SelectKurskLayersViewController.nib" = {length = 20, bytes = 0xbeddf6e4bef340eaac3fe77e7e71ee9151321172};
+    "SelectKurskLayers.storyboardc/UINavigationController-XYo-Ab-s6Z.nib" = {length = 20, bytes = 0x962ae75a199acfae391641b4ceb75b7fa5110683};
+    "SelectKurskLayersTableViewCell.nib" = {length = 20, bytes = 0xa2a21a480eae8b5c0e85d0cfa383c6f5c7af2ed3};
+    "SelectOmahaBeachLayers.storyboardc/DID-S5-aqM-view-zLg-3b-msa.nib" = {length = 20, bytes = 0x30f0b7d8031c1c13f4d7449b220e43090ed07288};
+    "SelectOmahaBeachLayers.storyboardc/Info.plist" = {length = 20, bytes = 0xc56acab69d0726669550b7320836d6780438a359};
+    "SelectOmahaBeachLayers.storyboardc/SelectOmahaBeachLayersViewController.nib" = {length = 20, bytes = 0x3b3b4d601f5977039ebecba45658cb76c275a864};
+    "SelectOmahaBeachLayers.storyboardc/UINavigationController-i7j-xh-bau.nib" = {length = 20, bytes = 0x233b9464ef85f89d76ab73304684c336278aa307};
+    "SelectOmahaBeachLayersTableViewCell.nib" = {length = 20, bytes = 0x05a5dddbe500e3cf2a76eca70c087e9249489830};
+    "SelectPurpleHeartLaneLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x523fcc866af58dfab1d2848727ce19d7052cfa04};
+    "SelectPurpleHeartLaneLayers.storyboardc/SelectPurpleHeartLaneLayersViewController.nib" = {length = 20, bytes = 0xa3666d3e036d70b9f3368a46648c1db7fe6dfcb5};
+    "SelectPurpleHeartLaneLayers.storyboardc/UINavigationController-Zy1-iR-TFr.nib" = {length = 20, bytes = 0x6284e06ba06167792168920facae97fdb6953b8d};
+    "SelectPurpleHeartLaneLayers.storyboardc/dJL-z8-cvK-view-cgS-n7-M45.nib" = {length = 20, bytes = 0xcdc21ccb5182e1a678ac91679eae80403998f7ce};
+    "SelectPurpleHeartLaneLayersTableViewCell.nib" = {length = 20, bytes = 0xb2c8382ed36eeba1852280cfab6bcaec44e5dddd};
+    "SelectRemagenLayers.storyboardc/FLT-6S-rxM-view-VgN-iz-lTA.nib" = {length = 20, bytes = 0x4e9206156a1eb866d7c5e3a6840ff4ab9326d0b6};
+    "SelectRemagenLayers.storyboardc/Info.plist" = {length = 20, bytes = 0xca11b4b71fdfb3cffc57731505c6d4825acb3cd7};
+    "SelectRemagenLayers.storyboardc/SelectRemagenLayersViewController.nib" = {length = 20, bytes = 0x0b4abe07ace8201a1b48f2f2622d9eb98791c164};
+    "SelectRemagenLayers.storyboardc/UINavigationController-aJ1-k4-bfn.nib" = {length = 20, bytes = 0xd7ac7385b0d420c31014a52329d659fa64e98d88};
+    "SelectRemagenLayersTableViewCell.nib" = {length = 20, bytes = 0xfe548201b7a93648cf8259e5ed0d14f521ed56d2};
+    "SelectSainteMarieduMontLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x25c4e61764fe0b9c7452cd8ef3a0f4756358a786};
+    "SelectSainteMarieduMontLayers.storyboardc/SelectSainteMarieduMontLayersViewController.nib" = {length = 20, bytes = 0xf76971f96335896e3853bfb46b1fdcbf6f06c54b};
+    "SelectSainteMarieduMontLayers.storyboardc/UINavigationController-jub-3F-Csi.nib" = {length = 20, bytes = 0x1dce713b6034fddb49bf58b8d1b966c83ab47729};
+    "SelectSainteMarieduMontLayers.storyboardc/msJ-me-AKm-view-fpc-rQ-RYF.nib" = {length = 20, bytes = 0x940c81561bc7fcd6ecbdcea24f665357e06a322d};
+    "SelectSainteMarieduMontLayersTableViewCell.nib" = {length = 20, bytes = 0xaf74df1e51e335200e132052d87605283c5ff4e5};
+    "SelectSainteMereEgliseLayers.storyboardc/7fF-5b-SOb-view-xyR-WV-g6f.nib" = {length = 20, bytes = 0x940c81561bc7fcd6ecbdcea24f665357e06a322d};
+    "SelectSainteMereEgliseLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x5d4d23b69f8e6bba9e45d1f3f5956fb7f3bd64c3};
+    "SelectSainteMereEgliseLayers.storyboardc/SelectSainteMereEgliseLayersViewController.nib" = {length = 20, bytes = 0xdd069937b85aede7c34fe8bb6d829c1c2370aa40};
+    "SelectSainteMereEgliseLayers.storyboardc/UINavigationController-vPG-Bi-cCO.nib" = {length = 20, bytes = 0x38cf28144a3649191fce5adc4f2b9d56ecda8b62};
+    "SelectSainteMereEgliseLayersTableViewCell.nib" = {length = 20, bytes = 0x37bc649c329150ccc515c9e132993ecd47f1dbd2};
+    "SelectStalingradLayers.storyboardc/Info.plist" = {length = 20, bytes = 0xd4d8d97beb515229feba3faf1b90af96d6d77b88};
+    "SelectStalingradLayers.storyboardc/SelectStalingradLayersViewController.nib" = {length = 20, bytes = 0x94993b2038ab640ecbf950f626041b26284d6586};
+    "SelectStalingradLayers.storyboardc/UINavigationController-gLO-GX-98p.nib" = {length = 20, bytes = 0xa0e9b78f87dd20cda3bf6de318f1e1e6da005abf};
+    "SelectStalingradLayers.storyboardc/kow-VO-xhh-view-n7a-TD-F8h.nib" = {length = 20, bytes = 0x6a6e591623dcdd3bbb63633d9de66836e7a5ed39};
+    "SelectStalingradLayersTableViewCell.nib" = {length = 20, bytes = 0x067a3d9d8fd9b3f5f32d5586f1438c061d767029};
+    "SelectUtahBeachLayers.storyboardc/Info.plist" = {length = 20, bytes = 0x166c790df62be41914755da58e410c8f7b9a4627};
+    "SelectUtahBeachLayers.storyboardc/SelectUtahBeachLayersViewController.nib" = {length = 20, bytes = 0x0fba045957aa8d92f8282afbff8125d35649971a};
+    "SelectUtahBeachLayers.storyboardc/UINavigationController-RGl-lm-W9O.nib" = {length = 20, bytes = 0x5cb6ba00db464ef4f84ac2b9249fc5ee708dac3a};
+    "SelectUtahBeachLayers.storyboardc/oAj-Nw-yRe-view-s3t-cV-CwN.nib" = {length = 20, bytes = 0x2012a8574d27edcbc1943cc1b82c5adf2faeee5c};
+    "SelectUtahBeachLayersTableViewCell.nib" = {length = 20, bytes = 0x85cb82b484b3705e780324eeeeaa1168e6d2facd};
+    "StalingradBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0xadac1767387d428940430ec0968d71d58d1a7438};
+    "StalingradBaseLayer.storyboardc/Qm4-eN-r4j-view-mxS-wl-ptU.nib" = {length = 20, bytes = 0x2f76b404a6bc06250d33111ea84d62ffe77c6062};
+    "StalingradBaseLayer.storyboardc/StalingradBaseLayerViewController.nib" = {length = 20, bytes = 0xbbe95c68ae1c6d43b9117795c3a6c9e6dc0a54fb};
+    "StalingradBaseLayer.storyboardc/UINavigationController-1ST-1C-bbw.nib" = {length = 20, bytes = 0xf5d228675b1bc3405f971dd205082b372f44501c};
+    "ToggleSwitchChoice.momd/ToggleSwitchChoice.mom" = {length = 20, bytes = 0xb3a716f963c11148cf6e1e5b62836531fd4addc8};
+    "ToggleSwitchChoice.momd/VersionInfo.plist" = {length = 20, bytes = 0xccdd17fde961dd57baaa3fe68a7f1a4d33104b2b};
+    "UtahBeachBaseLayer.storyboardc/Info.plist" = {length = 20, bytes = 0x08f673eb7dc02232dc1d96ce027c0cf1820ebe9b};
+    "UtahBeachBaseLayer.storyboardc/UINavigationController-PqQ-bF-rau.nib" = {length = 20, bytes = 0x06b09fc5ef2a032986a707559a5cf1b824e55117};
+    "UtahBeachBaseLayer.storyboardc/UtahBeachBaseLayerViewController.nib" = {length = 20, bytes = 0x4826cd2c88da6d6687b16cb643c1d6f8f4393717};
+    "UtahBeachBaseLayer.storyboardc/pE4-ik-yv9-view-V57-8U-m71.nib" = {length = 20, bytes = 0x1eb0d88958ae6697d82d673b37f733b662d73bc1};
+    "embedded.mobileprovision" = {length = 20, bytes = 0x5238c398094914ee80d87ef794c84710d4c4ce03};
+}, AnyHashable("files2"): {
+    "AppIcon60x60@2x.png" =     {
+        hash2 = {length = 32, bytes = 0x4b13f172 8eeaee14 cd1570e1 408fa7c9 ... cee94f3d a5789fa2 };
+    };
+    "AppIcon76x76@2x~ipad.png" =     {
+        hash2 = {length = 32, bytes = 0x979bb0ab 4b4b2ca5 9dcd62f9 c7d4710f ... 86d09506 6c8bc882 };
+    };
+    "Assets.car" =     {
+        hash2 = {length = 32, bytes = 0x7d35abc1 62e1b1a8 02f73f22 bc2b9d4e ... 453f778a f6d33570 };
+    };
+    "Base.lproj/LaunchScreen.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x4d6603af dc1a93aa 2f3ccc7c 8187e307 ... 4d126236 7c64dee5 };
+    };
+    "Base.lproj/LaunchScreen.storyboardc/UIViewController-itm-2t-IqW.nib" =     {
+        hash2 = {length = 32, bytes = 0xb0a9e4b5 3f49d882 3a5a040d c4668b35 ... f3942422 e7fadd9f };
+    };
+    "Base.lproj/LaunchScreen.storyboardc/itm-2t-IqW-view-uU8-o3-N0p.nib" =     {
+        hash2 = {length = 32, bytes = 0xc90216c0 c4f32cbb 86af211b d3f1d25d ... 0e2386f6 38067227 };
+    };
+    "BaseLayerMaps.storyboardc/BaseLayerMapsViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0xfc86d291 75b989bd 21e154f4 36ddb10c ... 0e44df5a d83e0ed1 };
+    };
+    "BaseLayerMaps.storyboardc/EU8-Zv-9qJ-view-cnJ-ru-3TU.nib" =     {
+        hash2 = {length = 32, bytes = 0xa56d1c32 537a1575 6da0dcbb 2a16c789 ... 15ee6c86 32eb7abb };
+    };
+    "BaseLayerMaps.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x9b0d5a81 3efc1ba2 d96587dd 4045622a ... 3fafb45f 94232594 };
+    };
+    "BaseLayerMaps.storyboardc/UINavigationController-fxL-el-1nk.nib" =     {
+        hash2 = {length = 32, bytes = 0x7c03e329 24a14905 832d6c60 58fcc0db ... efbc9ba5 e8d37701 };
+    };
+    "BaseLayerMapsTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0xc552f5eb aa62df7f 5ae8b783 708fe3a0 ... 7f8a9432 5ca7314f };
+    };
+    "CarentanBaseLayer.storyboardc/CarentanBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x1409eea9 50366f4e b7ba72f8 3aeb699d ... e78db462 72d51686 };
+    };
+    "CarentanBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x6de7c859 9358738c 7d7ec9c1 7fd36cc3 ... 78d1a077 db138e60 };
+    };
+    "CarentanBaseLayer.storyboardc/UINavigationController-Wsj-7g-op3.nib" =     {
+        hash2 = {length = 32, bytes = 0x4c5f9b12 d4c7817a ebfc6004 feba6e8a ... 0ca03e0f 408cfef3 };
+    };
+    "CarentanBaseLayer.storyboardc/uRQ-aR-cuq-view-hfK-2D-CCd.nib" =     {
+        hash2 = {length = 32, bytes = 0xa1f969bd 13619593 e35fabfd f35369ff ... c836cd2d ee96b89b };
+    };
+    "FoyBaseLayer.storyboardc/609-Mh-kZw-view-wd2-Br-Dvd.nib" =     {
+        hash2 = {length = 32, bytes = 0xf8fe572a 081e70da 0a56db93 c2ff82e0 ... 206c0ea5 9df436f5 };
+    };
+    "FoyBaseLayer.storyboardc/FoyBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x851b9474 98728ba4 4bdee914 fe528d24 ... 735efb17 da1a0ad1 };
+    };
+    "FoyBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x1f08e886 ba18a8a9 0d7c9c8f 92e7afaa ... 840dd5e3 ba534018 };
+    };
+    "FoyBaseLayer.storyboardc/UINavigationController-F0P-ym-u80.nib" =     {
+        hash2 = {length = 32, bytes = 0x6edf9cac 1452b883 027215ea afbbe880 ... 98337a1b f3252947 };
+    };
+    "Hill400BaseLayer.storyboardc/Hill400BaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0xdeffe8d3 fe871c02 096f499b 09f564e2 ... 11c27d7b b0f2ac3a };
+    };
+    "Hill400BaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x836644e9 abdae48b 4162df5c dcdd611e ... 042c0c5e 66c81830 };
+    };
+    "Hill400BaseLayer.storyboardc/S4t-yV-gEj-view-5jB-t8-Kuh.nib" =     {
+        hash2 = {length = 32, bytes = 0xfd3b40c1 4362b3d2 9ec3566e bfb8d57a ... 4c355a27 fe9dc715 };
+    };
+    "Hill400BaseLayer.storyboardc/UINavigationController-c8b-CO-P1A.nib" =     {
+        hash2 = {length = 32, bytes = 0xdcac4bb7 4975b2d3 23d5b13a 0ffe5a52 ... 1084f91f 1758257f };
+    };
+    "HurtgenForestBaseLayer.storyboardc/HurtgenForestBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x75d0d184 181d4801 718869b7 2eca545d ... 3e785eb5 6c227d86 };
+    };
+    "HurtgenForestBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x6ea6a901 265d06ba f991adf7 e5279ca9 ... 43dbe3c9 3d064d84 };
+    };
+    "HurtgenForestBaseLayer.storyboardc/UINavigationController-aLz-cu-apT.nib" =     {
+        hash2 = {length = 32, bytes = 0x23f751a6 8de050ee 05a57e11 6d28b49c ... 277f0cd7 c35fdbd6 };
+    };
+    "HurtgenForestBaseLayer.storyboardc/rhK-Y0-w1M-view-7Yu-qW-J7h.nib" =     {
+        hash2 = {length = 32, bytes = 0xf01839f3 554e6c11 42dd7fed f45d40d2 ... c4c2ad10 2fe46d59 };
+    };
+    "KurskBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x5b749ee4 dbf52c42 0c3ec05e 01a99921 ... 43f12e44 5c285e27 };
+    };
+    "KurskBaseLayer.storyboardc/KurskBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x8cbcd3d1 fa28bf2a fd2f0f43 c6300aa4 ... 3bb4f779 e058f82c };
+    };
+    "KurskBaseLayer.storyboardc/UINavigationController-XjS-Qj-qqd.nib" =     {
+        hash2 = {length = 32, bytes = 0x9fe70551 adc04b8d 8f53f67f 8151afb3 ... fd89093b 5f24f344 };
+    };
+    "KurskBaseLayer.storyboardc/bcJ-a0-eD3-view-P45-23-QWM.nib" =     {
+        hash2 = {length = 32, bytes = 0xc8c7c3df bca26480 4a6bcf7a 608fe32b ... bf2c22f0 182fcdda };
+    };
+    "NewPlayerGuide.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x456be65b 5a2f7fe5 9c6dd84a 260bf8d1 ... 9200d947 f5f28e6a };
+    };
+    "NewPlayerGuide.storyboardc/MnH-gx-0cY-view-W2j-z9-JL7.nib" =     {
+        hash2 = {length = 32, bytes = 0x7d213bd6 5625e89a 63f43a00 6ad335d7 ... def9813c 2ead1b95 };
+    };
+    "NewPlayerGuide.storyboardc/NewPlayerGuideViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x4238c0a5 ebf48f2d 9fe6053c 6dc57c5c ... 96b300d9 b76a4e4c };
+    };
+    "NewPlayerGuide.storyboardc/UINavigationController-kRy-kH-qET.nib" =     {
+        hash2 = {length = 32, bytes = 0x8b3c1abf 9bfe78b6 7d982918 0b37e2a0 ... f36c5dfa 18bd9fd9 };
+    };
+    "OmahaBeachBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xc439a2c6 9cbb309f f0cf9c35 92a6f393 ... 80594a6a 1796c01a };
+    };
+    "OmahaBeachBaseLayer.storyboardc/OmahaBeachBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x0a22ce74 36fb9c41 a70d2984 9228502e ... c4d33dd1 fee9196f };
+    };
+    "OmahaBeachBaseLayer.storyboardc/UINavigationController-Ipc-1W-mwd.nib" =     {
+        hash2 = {length = 32, bytes = 0x78b7b188 ce5d31ea 239ffc3b 9d2a4313 ... 33f27021 b23ba3ed };
+    };
+    "OmahaBeachBaseLayer.storyboardc/koJ-Da-j9B-view-mcj-RR-x9o.nib" =     {
+        hash2 = {length = 32, bytes = 0x02897bd3 f9cf9b00 88e38e7e a467fc3c ... 80bcff14 82bd21cd };
+    };
+    "PurpleHeartLaneBaseLayer.storyboardc/BQ2-Y2-0rm-view-9iV-am-62Y.nib" =     {
+        hash2 = {length = 32, bytes = 0xda86cbeb 34e919b6 6b7279da 82dc3614 ... 32deeb30 435f54fe };
+    };
+    "PurpleHeartLaneBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xe0ef47ae 80395567 207b4d11 6e0613c2 ... 3bfc1e49 aa026989 };
+    };
+    "PurpleHeartLaneBaseLayer.storyboardc/PurpleHeartLaneBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x682d3a0c ec6ab5cd 0606d7b9 8ba8d8d3 ... 3ff29923 40674ca1 };
+    };
+    "PurpleHeartLaneBaseLayer.storyboardc/UINavigationController-daV-dQ-U6F.nib" =     {
+        hash2 = {length = 32, bytes = 0xb7ebd0ef 343b92b4 3abe3476 95f10571 ... 342edfbf 560339b8 };
+    };
+    "RemagenBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xaffcb825 65ba9f1f 25b09a7a ed08880f ... 5f3d1aa8 a6bc5ff7 };
+    };
+    "RemagenBaseLayer.storyboardc/RemagenBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x5c9c4059 04cd8aeb b13564e4 a4c6ab7e ... bedaf459 84ebc96c };
+    };
+    "RemagenBaseLayer.storyboardc/UINavigationController-Gyc-hN-KJM.nib" =     {
+        hash2 = {length = 32, bytes = 0x4de5ca3d 4a0c1b03 d374e5d9 4d0b65a9 ... f5063e99 c5542502 };
+    };
+    "RemagenBaseLayer.storyboardc/jAl-ET-Fnr-view-cX6-cu-AoP.nib" =     {
+        hash2 = {length = 32, bytes = 0xcd784916 958c7277 cc81fe59 87375388 ... 1089118d ff700760 };
+    };
+    "SainteMarieduMontBaseLayer.storyboardc/Aty-wk-lWf-view-wNs-K9-OFn.nib" =     {
+        hash2 = {length = 32, bytes = 0x7a2b0b54 93df75ec 65e18810 89a2363c ... f86bf808 32ee03f5 };
+    };
+    "SainteMarieduMontBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x4f841883 0603d37f be98d87a 67f2fb16 ... cc1cb6a5 2cf1c511 };
+    };
+    "SainteMarieduMontBaseLayer.storyboardc/SainteMarieduMontBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x0a7cc485 b40e86dd 4000cb78 e05df8d3 ... cf5f6ad6 49716e3b };
+    };
+    "SainteMarieduMontBaseLayer.storyboardc/UINavigationController-hSv-hx-afa.nib" =     {
+        hash2 = {length = 32, bytes = 0x2569eb97 c94b4bbd c540ffef 0bfcfe60 ... 7376529c c9496d3a };
+    };
+    "SainteMereEgliseBaseLayer.storyboardc/A8E-AF-QB4-view-q5j-Jp-0Kd.nib" =     {
+        hash2 = {length = 32, bytes = 0x60d09c0f e0d812b8 9d8aaaf2 fde7a693 ... 62e43523 bdf725b2 };
+    };
+    "SainteMereEgliseBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x52672b02 c7975ac0 a4a39247 a69def5b ... c88cac43 480eaa69 };
+    };
+    "SainteMereEgliseBaseLayer.storyboardc/SainteMereEgliseBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x75379d1a fdc2cb4c 46db5890 1ef9a645 ... fc3ebd2f 67738449 };
+    };
+    "SainteMereEgliseBaseLayer.storyboardc/UINavigationController-lGf-h3-Hdw.nib" =     {
+        hash2 = {length = 32, bytes = 0x4f5210bb 5fff35e7 b7bf0685 7f46d13d ... e2cdb076 b77cf111 };
+    };
+    "SelectCarentanLayers.storyboardc/Iaq-vs-o7V-view-1fE-84-8ig.nib" =     {
+        hash2 = {length = 32, bytes = 0x604add54 b8cee334 bc643e7d 4f934bce ... 37ae3fe8 160756d9 };
+    };
+    "SelectCarentanLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xaf318145 fade1be5 25d2fea3 43e399ed ... 87629e20 76fc79d4 };
+    };
+    "SelectCarentanLayers.storyboardc/SelectCarentanLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x55b7ef6f 27d9ab89 e38e3919 2cf12c86 ... 4af50c9c 28dc35b2 };
+    };
+    "SelectCarentanLayers.storyboardc/UINavigationController-Smh-uh-EcC.nib" =     {
+        hash2 = {length = 32, bytes = 0xb5af3a6d 128dcee7 924e6b55 14db8d7c ... 61b220c1 77d3ac25 };
+    };
+    "SelectCarentanLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x188033ea a9b9a194 3157360b 35938792 ... 6562419d f1277e73 };
+    };
+    "SelectFoyLayers.storyboardc/BAO-HR-63Y-view-l2x-VR-5jB.nib" =     {
+        hash2 = {length = 32, bytes = 0xabfc6268 8dc8e22f 85c74caf 777c362c ... 30b834d4 1530b0d9 };
+    };
+    "SelectFoyLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xcaf0a106 fd1ade49 0ab469fd 19130667 ... f698bb07 4151a961 };
+    };
+    "SelectFoyLayers.storyboardc/SelectFoyLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0xe6e71894 c75bc9fa 67bcead2 2415215e ... 7e1aba0f fa766827 };
+    };
+    "SelectFoyLayers.storyboardc/UINavigationController-1Zh-cQ-Sca.nib" =     {
+        hash2 = {length = 32, bytes = 0x4ba10368 33952aef 02dbf5ed 8ccda1bb ... 6258bf1e bc2a8828 };
+    };
+    "SelectFoyLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0xb11a2a12 3ec6afca 30f11e4e 6b0d40bf ... f1ecf73e f4df64de };
+    };
+    "SelectHill400Layers.storyboardc/9fG-et-oli-view-pkF-En-nA7.nib" =     {
+        hash2 = {length = 32, bytes = 0xbe2cbf58 e4af2772 a8a72185 b9a58d5e ... b7f6a9c1 9031c6b6 };
+    };
+    "SelectHill400Layers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xe7a255c8 c96f14f0 dd0f3d0e f1d908d2 ... 463ecbbb 6d43692c };
+    };
+    "SelectHill400Layers.storyboardc/SelectHill400LayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x68367eba 4e496e33 f73b567a 7789841a ... a411d3e2 2dc29f75 };
+    };
+    "SelectHill400Layers.storyboardc/UINavigationController-DnT-Si-O4b.nib" =     {
+        hash2 = {length = 32, bytes = 0x005a1424 ffd47f82 229177f5 23fbff28 ... 4f0a83ae b7b04a9f };
+    };
+    "SelectHill400LayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x4dda6ca8 3a4d435a 41b6ddbf 26939e02 ... 6d01d833 b10e2b1a };
+    };
+    "SelectHurtgenForestLayers.storyboardc/Asw-ka-7fh-view-M0P-dr-89a.nib" =     {
+        hash2 = {length = 32, bytes = 0xcab91dff 8f12ff08 a0de5f83 467d2681 ... e552aeae 7695b99f };
+    };
+    "SelectHurtgenForestLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xecd25928 f15f589a b3975a18 19355a2b ... 42757256 080c6719 };
+    };
+    "SelectHurtgenForestLayers.storyboardc/SelectHurtgenForestLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x23bbd432 d3a9d919 f9b3a865 6fb2a899 ... eebf8e6f 89e60ae6 };
+    };
+    "SelectHurtgenForestLayers.storyboardc/UINavigationController-gHT-IY-jTm.nib" =     {
+        hash2 = {length = 32, bytes = 0x2416144b e8ae6849 c56f1169 17ee887b ... ae122627 87817659 };
+    };
+    "SelectHurtgenForestLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x90adefde 6a2fffa4 e09b2a40 fe92ac8e ... eab38c45 ab46180d };
+    };
+    "SelectKurskLayers.storyboardc/4nS-zo-nlb-view-MfB-cB-niU.nib" =     {
+        hash2 = {length = 32, bytes = 0xedd3c4e2 f77160a6 631a0f75 7fb548e7 ... dd8b372a 5cec1e20 };
+    };
+    "SelectKurskLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xe8beff51 be7a0763 a94136cd 3503a8b0 ... 2ba45ed0 73f9b16f };
+    };
+    "SelectKurskLayers.storyboardc/SelectKurskLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x6f0f90ec 9d0e3be6 f6bd561a 218ee799 ... 20e9fc9e af295d6f };
+    };
+    "SelectKurskLayers.storyboardc/UINavigationController-XYo-Ab-s6Z.nib" =     {
+        hash2 = {length = 32, bytes = 0x7ed892be 4b82166c 71ef203f 660a925b ... e9586c78 1d992644 };
+    };
+    "SelectKurskLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x4cc8cefc 297582f2 93b7a214 bfb27a06 ... 31508494 35d59c2d };
+    };
+    "SelectOmahaBeachLayers.storyboardc/DID-S5-aqM-view-zLg-3b-msa.nib" =     {
+        hash2 = {length = 32, bytes = 0xabfc6268 8dc8e22f 85c74caf 777c362c ... 30b834d4 1530b0d9 };
+    };
+    "SelectOmahaBeachLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xcae91177 c5b1f328 fded50c4 17a5ba62 ... 1bc33bac c74a5875 };
+    };
+    "SelectOmahaBeachLayers.storyboardc/SelectOmahaBeachLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x35885eb4 efcf061b eec4fb42 5c0cbf9c ... 4261da67 aafa8bd1 };
+    };
+    "SelectOmahaBeachLayers.storyboardc/UINavigationController-i7j-xh-bau.nib" =     {
+        hash2 = {length = 32, bytes = 0x15156341 60470590 a7f5d3dc f25079a2 ... 543d2593 71fed299 };
+    };
+    "SelectOmahaBeachLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x45b4fc45 2ab0a47d 01607f2e a9529877 ... 94063a13 93f56561 };
+    };
+    "SelectPurpleHeartLaneLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x7caea77e 9016b07c 0997efdc 94c91df2 ... 2fbe191e a5fc464a };
+    };
+    "SelectPurpleHeartLaneLayers.storyboardc/SelectPurpleHeartLaneLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0xf400af86 64ff0971 3827e70f 9af1e608 ... ff0090a5 aaf9e52a };
+    };
+    "SelectPurpleHeartLaneLayers.storyboardc/UINavigationController-Zy1-iR-TFr.nib" =     {
+        hash2 = {length = 32, bytes = 0x3ef0b279 55de62ae 10ae9c97 4f27ef0a ... 9e4382aa 9a324cf0 };
+    };
+    "SelectPurpleHeartLaneLayers.storyboardc/dJL-z8-cvK-view-cgS-n7-M45.nib" =     {
+        hash2 = {length = 32, bytes = 0x881c64cd c85ceed1 a881c81e 0da335d5 ... d17b7c1f 11dafc36 };
+    };
+    "SelectPurpleHeartLaneLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0xc7fbdf31 a9254b96 ab92ffb8 793ac2be ... 9fc06043 b335ce83 };
+    };
+    "SelectRemagenLayers.storyboardc/FLT-6S-rxM-view-VgN-iz-lTA.nib" =     {
+        hash2 = {length = 32, bytes = 0xd7157c42 21bbc07f b134e0ca ca2aaa66 ... aae715bb db3b1722 };
+    };
+    "SelectRemagenLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0xaa15a7b9 5f368b06 0d6b66fc 0019836d ... 7b34794c 796728fb };
+    };
+    "SelectRemagenLayers.storyboardc/SelectRemagenLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0xe5f3c2e8 2b199bc3 3176b1d8 7d3f2846 ... 61af53ac f1266035 };
+    };
+    "SelectRemagenLayers.storyboardc/UINavigationController-aJ1-k4-bfn.nib" =     {
+        hash2 = {length = 32, bytes = 0x40366eef ce3b145e 89f5697a 05a257cb ... fee7fd21 a84dcdb8 };
+    };
+    "SelectRemagenLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x89b6a3a4 ae6d38df 0464f698 29cb6aaa ... 7fa971b1 c46af778 };
+    };
+    "SelectSainteMarieduMontLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x84cde0d2 a286bc44 efc357f4 d38bc735 ... 82314c91 2c28c281 };
+    };
+    "SelectSainteMarieduMontLayers.storyboardc/SelectSainteMarieduMontLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0xe08e3bc4 f5a15bda a3ba4fe7 c9015db8 ... fbb9438a 6c939493 };
+    };
+    "SelectSainteMarieduMontLayers.storyboardc/UINavigationController-jub-3F-Csi.nib" =     {
+        hash2 = {length = 32, bytes = 0x7fe3e4f5 ace80132 97797f75 e4ddb285 ... d199b244 4b75799e };
+    };
+    "SelectSainteMarieduMontLayers.storyboardc/msJ-me-AKm-view-fpc-rQ-RYF.nib" =     {
+        hash2 = {length = 32, bytes = 0x6d2c1f45 9a0d3d2b 9c89db4f 55bf73cd ... b9321149 59a04960 };
+    };
+    "SelectSainteMarieduMontLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x8a306138 f8e3669a a2f4c1a5 7f608271 ... bded5638 da2b92bb };
+    };
+    "SelectSainteMereEgliseLayers.storyboardc/7fF-5b-SOb-view-xyR-WV-g6f.nib" =     {
+        hash2 = {length = 32, bytes = 0x6d2c1f45 9a0d3d2b 9c89db4f 55bf73cd ... b9321149 59a04960 };
+    };
+    "SelectSainteMereEgliseLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x82731345 7024bb58 70829434 74a422e4 ... 6d41851d 930f4e8a };
+    };
+    "SelectSainteMereEgliseLayers.storyboardc/SelectSainteMereEgliseLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x2c4dca10 576321a4 134de572 dbe8862c ... 8dceef7e 3576b76b };
+    };
+    "SelectSainteMereEgliseLayers.storyboardc/UINavigationController-vPG-Bi-cCO.nib" =     {
+        hash2 = {length = 32, bytes = 0x5bd1803e 01c584d1 1372324f 0f5f6c37 ... edb515ff 934265db };
+    };
+    "SelectSainteMereEgliseLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x0ed77658 f1e388bb 925cbb35 1d56f9cf ... 25160bfb a0d855fd };
+    };
+    "SelectStalingradLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x245e9bec b9c746be 33ac7f4e 2f3c5e0f ... bdae7cfd dc5dbc65 };
+    };
+    "SelectStalingradLayers.storyboardc/SelectStalingradLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0xaa382960 6aa3b178 fc169aa3 7b282fc9 ... 9c1c7097 b4deb9f8 };
+    };
+    "SelectStalingradLayers.storyboardc/UINavigationController-gLO-GX-98p.nib" =     {
+        hash2 = {length = 32, bytes = 0x120d97de 4ede0ee4 99f3de9f d2cecd89 ... 3d76590a 8222ca9f };
+    };
+    "SelectStalingradLayers.storyboardc/kow-VO-xhh-view-n7a-TD-F8h.nib" =     {
+        hash2 = {length = 32, bytes = 0xf74c61b8 8e62fb4a 0ed0da3a 682e6460 ... 5e2446a5 0e67e531 };
+    };
+    "SelectStalingradLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0xa2b3428b fdc7e96c 0350aa3e 6aefffb7 ... 9a6798c6 30325cec };
+    };
+    "SelectUtahBeachLayers.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x74b2265f c2d35501 e15df95b 8619cdbc ... eb5c914c cab7a770 };
+    };
+    "SelectUtahBeachLayers.storyboardc/SelectUtahBeachLayersViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x1f700d36 b7aa099a da611622 dc0669d9 ... 10c01c9b 09227145 };
+    };
+    "SelectUtahBeachLayers.storyboardc/UINavigationController-RGl-lm-W9O.nib" =     {
+        hash2 = {length = 32, bytes = 0x12863f8a 146fd388 382304bf 6c3c9fe8 ... 9a39a465 fb1f06f5 };
+    };
+    "SelectUtahBeachLayers.storyboardc/oAj-Nw-yRe-view-s3t-cV-CwN.nib" =     {
+        hash2 = {length = 32, bytes = 0x03874410 c6c7fe7c da0d5c96 4ca19a7b ... dd556b53 a55ba3e8 };
+    };
+    "SelectUtahBeachLayersTableViewCell.nib" =     {
+        hash2 = {length = 32, bytes = 0x9338e754 84e150f9 a7725119 6b29d7b5 ... 774b930d e88fb905 };
+    };
+    "StalingradBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x705fda1f 9b2c9713 26cffecc d8b40caa ... f538a3b5 303765db };
+    };
+    "StalingradBaseLayer.storyboardc/Qm4-eN-r4j-view-mxS-wl-ptU.nib" =     {
+        hash2 = {length = 32, bytes = 0xbf8db8f9 17afae7f cc32dc35 9dae209d ... 7df92a64 aeec3ed6 };
+    };
+    "StalingradBaseLayer.storyboardc/StalingradBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x9f90ff33 f3a4f2ac 32ea235f 1ea7bc59 ... 47ec9693 6403e6e3 };
+    };
+    "StalingradBaseLayer.storyboardc/UINavigationController-1ST-1C-bbw.nib" =     {
+        hash2 = {length = 32, bytes = 0x305d5b6a 173e40ff bdc6a1b5 b7a86c11 ... 8fe73aba 4c23ba7f };
+    };
+    "ToggleSwitchChoice.momd/ToggleSwitchChoice.mom" =     {
+        hash2 = {length = 32, bytes = 0x5a572df2 3b9ef09f 6a93307e 62445d35 ... 668ee86b be8a5dcd };
+    };
+    "ToggleSwitchChoice.momd/VersionInfo.plist" =     {
+        hash2 = {length = 32, bytes = 0xc1691b2c 24d4f613 73bc567b a6477010 ... 2cf22791 55f8e747 };
+    };
+    "UtahBeachBaseLayer.storyboardc/Info.plist" =     {
+        hash2 = {length = 32, bytes = 0x08bc7727 9e49e68c ada60407 289c3073 ... 4def02c6 cfacd671 };
+    };
+    "UtahBeachBaseLayer.storyboardc/UINavigationController-PqQ-bF-rau.nib" =     {
+        hash2 = {length = 32, bytes = 0xb3aac1db a26640a0 08718dd6 f20b05c6 ... 89ac59c6 b5d20fdb };
+    };
+    "UtahBeachBaseLayer.storyboardc/UtahBeachBaseLayerViewController.nib" =     {
+        hash2 = {length = 32, bytes = 0x17d798e9 5deb064b 6ff86331 f560ea1f ... 3f56c320 be7471fd };
+    };
+    "UtahBeachBaseLayer.storyboardc/pE4-ik-yv9-view-V57-8U-m71.nib" =     {
+        hash2 = {length = 32, bytes = 0x5dac9f1a ab052c00 ae7bb951 94438b10 ... 3d5d8728 af96a975 };
+    };
+    "embedded.mobileprovision" =     {
+        hash2 = {length = 32, bytes = 0xae857c55 e27f2534 ee887967 75a15206 ... d73cd0b6 14616bca };
+    };
+}, AnyHashable("rules"): {
+    "^.*" = 1;
+    "^.*\\.lproj/" =     {
+        optional = 1;
+        weight = 1000;
+    };
+    "^.*\\.lproj/locversion.plist$" =     {
+        omit = 1;
+        weight = 1100;
+    };
+    "^Base\\.lproj/" =     {
+        weight = 1010;
+    };
+    "^version.plist$" = 1;
+}], enableSignatureValidation: true)'
+2022-09-26 21:47:33 +0000  Sending request 300E7BB9-66C9-45F0-AC96-F218DCB427A1 to <https://developerservices2.apple.com/services/v1/certificates> for session <DVTServicesAccountBasedSession: 0x60000ac59740; account='<DVTAppleIDBasedDeveloperAccount: 0x600002878af0; username='micahburnside@protonmail.com'>'>.
+Method: POST
+
+Headers:
+{
+    Accept = "application/vnd.api+json";
+    "Accept-Encoding" = "gzip, deflate";
+    "Content-Length" = 104;
+    "Content-Type" = "application/vnd.api+json";
+    DSESSIONID = 19pinjhvv02vkoi97dalic2mtbrhvlbuhsqes2rj3sghffakcebl;
+    "User-Agent" = Xcode;
+    "X-Apple-App-Info" = "com.apple.gs.xcode.auth";
+    "X-Apple-GS-Token" = "AAAABLwIAAAAAGIuh8URDWdzLnhjb2RlLmF1dGi9AA8tqaDfIBOdeX3RtwMinCiE7yd8swtpM0clUSdCgGvuDpfW7ugLLYTDas3r6qS/bmf+fpRSqAninMm65QApUxvQj7eljz+aWmc+giP5Sq7qvfK37sg8KowkiJuVipD7x2RxBVBEIZEsaxqLEC+KFeKs22sm";
+    "X-Apple-I-Client-Time" = "2022-09-26T21:47:33Z";
+    "X-Apple-I-Identity-Id" = "000097-05-d91a2c9b-0a7e-4442-a610-2e387b7bbd89";
+    "X-Apple-I-Locale" = "en_US";
+    "X-Apple-I-MD" = "AAAABQAAABBjIgynmSzo+MQAhT5fzqsmAAAAAQ==";
+    "X-Apple-I-MD-LU" = B1439CC155964BAF7272E198E8FD6DEC111B49D0526C3F57CD37C02D6D8AA4C0;
+    "X-Apple-I-MD-M" = "oNeYAGiR88Exr/is3yJPO5q8EfBQ5X+HvmN06QUgbF7wy9PfRSZAd9spG32jL8e5KWSj/Jmk8igYqQk0";
+    "X-Apple-I-MD-RINFO" = 50660608;
+    "X-Apple-I-TimeZone" = EDT;
+    "X-HTTP-Method-Override" = GET;
+    "X-MMe-Client-Info" = "<MacBookPro18,2> <macOS;12.5.1;21G83> <com.apple.AuthKit/1 (com.apple.dt.Xcode/21335)>";
+    "X-Mme-Device-Id" = "DE56B9A6-7FBB-5D39-B929-1F005A49874E";
+    "X-Xcode-Version" = "14.0 (14A309)";
+}
+
+Payload:
+{"urlEncodedQueryParams":"teamId=DZHXZ94XN9&filter%5BcertificateType%5D=DISTRIBUTION_MANAGED&limit=200"}
+2022-09-26 21:47:33 +0000  Received response for 300E7BB9-66C9-45F0-AC96-F218DCB427A1 @ <https://developerservices2.apple.com/services/v1/certificates>. Code = 0
+2022-09-26 21:47:33 +0000  Response payload: {
+  "data" : [ {
+    "type" : "certificates",
+    "id" : "9883RZ25F7",
+    "attributes" : {
+      "requesterEmail" : "micahburnside@protonmail.com",
+      "serialNumber" : "29A7DA34238EAD0BD5483181E72A0CF0",
+      "certificateContent" : "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",
+      "displayName" : "Micah Burnside",
+      "requesterLastName" : "Burnside",
+      "csrContent" : null,
+      "machineName" : null,
+      "platform" : null,
+      "requesterFirstName" : "Micah",
+      "machineId" : null,
+      "name" : "Apple Distribution: Micah Burnside",
+      "responseId" : "0abb9428-0c3d-45d0-b0dd-3c941ad89bf3",
+      "expirationDate" : "2023-05-01T00:48:07.000+00:00",
+      "certificateType" : "DISTRIBUTION_MANAGED"
+    },
+    "links" : {
+      "self" : "https://developerservices2.apple.com:443/services/v1/certificates/9883RZ25F7"
+    }
+  } ],
+  "links" : {
+    "self" : "https://developerservices2.apple.com:443/services/v1/certificates?filter%5BcertificateType%5D=DISTRIBUTION_MANAGED&limit=200"
+  },
+  "meta" : {
+    "paging" : {
+      "total" : 1,
+      "limit" : 200
+    }
+  }
+}
+
+2022-09-26 21:47:33 +0000  Sending request FAA7784B-BDC6-463F-86FF-000D7C360FC0 to <https://developerservices3.apple.com/services/v1/batch> for session <DVTServicesAccountBasedSession: 0x60000ac59740; account='<DVTAppleIDBasedDeveloperAccount: 0x600002878af0; username='micahburnside@protonmail.com'>'>.
+Method: POST
+
+Headers:
+{
+    Accept = "application/vnd.api+json";
+    "Accept-Encoding" = "gzip, deflate";
+    "Content-Length" = 488;
+    "Content-Type" = "application/vnd.api+json";
+    DSESSIONID = 19pinjhvv02vkoi97dalic2mtbrhvlbuhsqes2rj3sghffakcebl;
+    "User-Agent" = Xcode;
+    "X-Apple-App-Info" = "com.apple.gs.xcode.auth";
+    "X-Apple-GS-Token" = "AAAABLwIAAAAAGIuh8URDWdzLnhjb2RlLmF1dGi9AA8tqaDfIBOdeX3RtwMinCiE7yd8swtpM0clUSdCgGvuDpfW7ugLLYTDas3r6qS/bmf+fpRSqAninMm65QApUxvQj7eljz+aWmc+giP5Sq7qvfK37sg8KowkiJuVipD7x2RxBVBEIZEsaxqLEC+KFeKs22sm";
+    "X-Apple-I-Client-Time" = "2022-09-26T21:47:33Z";
+    "X-Apple-I-Identity-Id" = "000097-05-d91a2c9b-0a7e-4442-a610-2e387b7bbd89";
+    "X-Apple-I-Locale" = "en_US";
+    "X-Apple-I-MD" = "AAAABQAAABBjIgynmSzo+MQAhT5fzqsmAAAAAQ==";
+    "X-Apple-I-MD-LU" = B1439CC155964BAF7272E198E8FD6DEC111B49D0526C3F57CD37C02D6D8AA4C0;
+    "X-Apple-I-MD-M" = "oNeYAGiR88Exr/is3yJPO5q8EfBQ5X+HvmN06QUgbF7wy9PfRSZAd9spG32jL8e5KWSj/Jmk8igYqQk0";
+    "X-Apple-I-MD-RINFO" = 50660608;
+    "X-Apple-I-TimeZone" = EDT;
+    "X-MMe-Client-Info" = "<MacBookPro18,2> <macOS;12.5.1;21G83> <com.apple.AuthKit/1 (com.apple.dt.Xcode/21335)>";
+    "X-Mme-Device-Id" = "DE56B9A6-7FBB-5D39-B929-1F005A49874E";
+    "X-Xcode-Version" = "14.0 (14A309)";
+}
+
+Payload:
+{"data":{"type":"batch","attributes":{"teamId":"DZHXZ94XN9","resourceVersion":"1","resourceList":[{"data":{"type":"codeSignatures","attributes":{"teamId":"DZHXZ94XN9","cdHashSha256":"45F745BF54A9617AA18D79877D03A8DDAB32BC774F92A924D8724534896D4026","name":"0","digestHash":"45F745BF54A9617AA18D79877D03A8DDAB32BC774F92A924D8724534896D4026"},"relationships":{"certificate":{"data":{"id":"9883RZ25F7","type":"certificates"}},"bundleId":{"data":{"id":"TL4GWWT7ZK","type":"bundleIds"}}}}}]}}}
+2022-09-26 21:47:33 +0000  Received response for FAA7784B-BDC6-463F-86FF-000D7C360FC0 @ <https://developerservices3.apple.com/services/v1/batch>. Code = 0
+2022-09-26 21:47:33 +0000  Response payload: {
+  "data" : {
+    "type" : "batch",
+    "id" : "739961c1-d4f2-4ce9-85f9-80d08b5e079c",
+    "attributes" : {
+      "responseId" : "739961c1-d4f2-4ce9-85f9-80d08b5e079c",
+      "resourceList" : [ {
+        "type" : "codeSignatures",
+        "id" : "b71101f1-d7fb-43f5-b2a8-b44491777359",
+        "attributes" : {
+          "digestHash" : "45F745BF54A9617AA18D79877D03A8DDAB32BC774F92A924D8724534896D4026",
+          "cdHashSha256" : "45F745BF54A9617AA18D79877D03A8DDAB32BC774F92A924D8724534896D4026",
+          "signature" : "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",
+          "name" : "0",
+          "responseId" : "739961c1-d4f2-4ce9-85f9-80d08b5e079c",
+          "cmsSignature" : "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",
+          "timestamp" : false
+        },
+        "relationships" : {
+          "bundleId" : {
+            "data" : {
+              "type" : "bundleIds",
+              "id" : "TL4GWWT7ZK"
+            },
+            "links" : {
+              "self" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/b71101f1-d7fb-43f5-b2a8-b44491777359/relationships/bundleId"
+              },
+              "related" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/b71101f1-d7fb-43f5-b2a8-b44491777359/bundleId"
+              }
+            }
+          },
+          "certificate" : {
+            "data" : {
+              "type" : "certificates",
+              "id" : "9883RZ25F7"
+            },
+            "links" : {
+              "self" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/b71101f1-d7fb-43f5-b2a8-b44491777359/relationships/certificate"
+              },
+              "related" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/b71101f1-d7fb-43f5-b2a8-b44491777359/certificate"
+              }
+            }
+          }
+        },
+        "links" : {
+          "self" : {
+            "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/b71101f1-d7fb-43f5-b2a8-b44491777359"
+          }
+        }
+      } ],
+      "resourceVersion" : "1"
+    },
+    "links" : {
+      "self" : "https://developerservices3.apple.com:443/services/v1/batch/739961c1-d4f2-4ce9-85f9-80d08b5e079c"
+    }
+  },
+  "links" : {
+    "self" : "https://developerservices3.apple.com:443/services/v1/batch"
+  }
+}
+
+2022-09-26 21:47:33 +0000  Remote signature for /var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app (arch: arm64) is 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
+2022-09-26 21:47:33 +0000  invoking codesign: <NSConcreteTask: 0x60001a8a2e90; launchPath='/usr/bin/codesign', arguments='(
+    "-e",
+    "--edit-cms",
+    "/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/cms~~~xoRlxS",
+    "/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app"
+)'>
+2022-09-26 21:47:33 +0000  codesign output: 
+2022-09-26 21:47:33 +0000  Processing step: IDEDistributionZipODRItemStep
+2022-09-26 21:47:33 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2022-09-26 21:47:33 +0000  Processing step: IDEDistributionCreateIPAStep
+2022-09-26 21:47:33 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Symbols' '--link-dest' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root'
+2022-09-26 21:47:33 +0000  building file list ... 
+2022-09-26 21:47:33 +0000   0 files...2022-09-26 21:47:33 +0000  2 files to consider
+2022-09-26 21:47:33 +0000  Symbols/
+2022-09-26 21:47:33 +0000  
+2022-09-26 21:47:33 +0000  sent 150 bytes  received 26 bytes  352.00 bytes/sec
+total size is 1.73M  speedup is 10325.57
+2022-09-26 21:47:33 +0000  /usr/bin/rsync exited with 0
+2022-09-26 21:47:33 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root' '/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Packages/HLL Maps.ipa'
+2022-09-26 21:47:33 +0000  >>> Copying /var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root 
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/_CodeSignature/CodeResources ... 
+2022-09-26 21:47:33 +0000  39829 bytes for ./Payload/HLL Maps.app/_CodeSignature/CodeResources
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/RemagenBaseLayerViewController.nib ... 
+2022-09-26 21:47:33 +0000  1976 bytes for ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/RemagenBaseLayerViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/jAl-ET-Fnr-view-cX6-cu-AoP.nib ... 
+2022-09-26 21:47:33 +0000  3454 bytes for ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/jAl-ET-Fnr-view-cX6-cu-AoP.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/UINavigationController-Gyc-hN-KJM.nib ... 
+2022-09-26 21:47:33 +0000  2851 bytes for ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/UINavigationController-Gyc-hN-KJM.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  357 bytes for ./Payload/HLL Maps.app/RemagenBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/UINavigationController-vPG-Bi-cCO.nib ... 
+2022-09-26 21:47:33 +0000  2578 bytes for ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/UINavigationController-vPG-Bi-cCO.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/7fF-5b-SOb-view-xyR-WV-g6f.nib ... 
+2022-09-26 21:47:33 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/7fF-5b-SOb-view-xyR-WV-g6f.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  381 bytes for ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/SelectSainteMereEgliseLayersViewController.nib ... 
+2022-09-26 21:47:33 +0000  1524 bytes for ./Payload/HLL Maps.app/SelectSainteMereEgliseLayers.storyboardc/SelectSainteMereEgliseLayersViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMarieduMontLayersTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1697 bytes for ./Payload/HLL Maps.app/SelectSainteMarieduMontLayersTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/BaseLayerMapsViewController.nib ... 
+2022-09-26 21:47:33 +0000  1434 bytes for ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/BaseLayerMapsViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/UINavigationController-fxL-el-1nk.nib ... 
+2022-09-26 21:47:33 +0000  2462 bytes for ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/UINavigationController-fxL-el-1nk.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  351 bytes for ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/EU8-Zv-9qJ-view-cnJ-ru-3TU.nib ... 
+2022-09-26 21:47:33 +0000  3075 bytes for ./Payload/HLL Maps.app/BaseLayerMaps.storyboardc/EU8-Zv-9qJ-view-cnJ-ru-3TU.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/UINavigationController-Smh-uh-EcC.nib ... 
+2022-09-26 21:47:33 +0000  2538 bytes for ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/UINavigationController-Smh-uh-EcC.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/Iaq-vs-o7V-view-1fE-84-8ig.nib ... 
+2022-09-26 21:47:33 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/Iaq-vs-o7V-view-1fE-84-8ig.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/SelectCarentanLayersViewController.nib ... 
+2022-09-26 21:47:33 +0000  1484 bytes for ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/SelectCarentanLayersViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  365 bytes for ./Payload/HLL Maps.app/SelectCarentanLayers.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/Aty-wk-lWf-view-wNs-K9-OFn.nib ... 
+2022-09-26 21:47:33 +0000  3464 bytes for ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/Aty-wk-lWf-view-wNs-K9-OFn.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/UINavigationController-hSv-hx-afa.nib ... 
+2022-09-26 21:47:33 +0000  2895 bytes for ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/UINavigationController-hSv-hx-afa.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/SainteMarieduMontBaseLayerViewController.nib ... 
+2022-09-26 21:47:33 +0000  2020 bytes for ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/SainteMarieduMontBaseLayerViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  377 bytes for ./Payload/HLL Maps.app/SainteMarieduMontBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectHurtgenForestLayersTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1693 bytes for ./Payload/HLL Maps.app/SelectHurtgenForestLayersTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/AppIcon60x60@2x.png ... 
+2022-09-26 21:47:33 +0000  4780 bytes for ./Payload/HLL Maps.app/AppIcon60x60@2x.png
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectFoyLayersTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1683 bytes for ./Payload/HLL Maps.app/SelectFoyLayersTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/UINavigationController-c8b-CO-P1A.nib ... 
+2022-09-26 21:47:33 +0000  2852 bytes for ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/UINavigationController-c8b-CO-P1A.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/Hill400BaseLayerViewController.nib ... 
+2022-09-26 21:47:33 +0000  1977 bytes for ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/Hill400BaseLayerViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/S4t-yV-gEj-view-5jB-t8-Kuh.nib ... 
+2022-09-26 21:47:33 +0000  3454 bytes for ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/S4t-yV-gEj-view-5jB-t8-Kuh.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  357 bytes for ./Payload/HLL Maps.app/Hill400BaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMereEgliseLayersTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1696 bytes for ./Payload/HLL Maps.app/SelectSainteMereEgliseLayersTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/UINavigationController-gLO-GX-98p.nib ... 
+2022-09-26 21:47:33 +0000  2548 bytes for ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/UINavigationController-gLO-GX-98p.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/SelectStalingradLayersViewController.nib ... 
+2022-09-26 21:47:33 +0000  1494 bytes for ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/SelectStalingradLayersViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/kow-VO-xhh-view-n7a-TD-F8h.nib ... 
+2022-09-26 21:47:33 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/kow-VO-xhh-view-n7a-TD-F8h.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  369 bytes for ./Payload/HLL Maps.app/SelectStalingradLayers.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/ToggleSwitchChoice.momd/ToggleSwitchChoice.mom ... 
+2022-09-26 21:47:33 +0000  2042 bytes for ./Payload/HLL Maps.app/ToggleSwitchChoice.momd/ToggleSwitchChoice.mom
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/ToggleSwitchChoice.momd/VersionInfo.plist ... 
+2022-09-26 21:47:33 +0000  204 bytes for ./Payload/HLL Maps.app/ToggleSwitchChoice.momd/VersionInfo.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/HLL Maps ... 
+2022-09-26 21:47:33 +0000  915872 bytes for ./Payload/HLL Maps.app/HLL Maps
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectRemagenLayersTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1687 bytes for ./Payload/HLL Maps.app/SelectRemagenLayersTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/Base.lproj/LaunchScreen.storyboardc/itm-2t-IqW-view-uU8-o3-N0p.nib ... 
+2022-09-26 21:47:33 +0000  2776 bytes for ./Payload/HLL Maps.app/Base.lproj/LaunchScreen.storyboardc/itm-2t-IqW-view-uU8-o3-N0p.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-itm-2t-IqW.nib ... 
+2022-09-26 21:47:33 +0000  896 bytes for ./Payload/HLL Maps.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-itm-2t-IqW.nib
+copying file ./Payload/HLL Maps.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  258 bytes for ./Payload/HLL Maps.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectKurskLayersTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1513 bytes for ./Payload/HLL Maps.app/SelectKurskLayersTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/BaseLayerMapsTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1790 bytes for ./Payload/HLL Maps.app/BaseLayerMapsTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/UINavigationController-XYo-Ab-s6Z.nib ... 
+2022-09-26 21:47:33 +0000  2523 bytes for ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/UINavigationController-XYo-Ab-s6Z.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/4nS-zo-nlb-view-MfB-cB-niU.nib ... 
+2022-09-26 21:47:33 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/4nS-zo-nlb-view-MfB-cB-niU.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/SelectKurskLayersViewController.nib ... 
+2022-09-26 21:47:33 +0000  1469 bytes for ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/SelectKurskLayersViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  359 bytes for ./Payload/HLL Maps.app/SelectKurskLayers.storyboardc/Info.plist
+copying file ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/MnH-gx-0cY-view-W2j-z9-JL7.nib ... 
+2022-09-26 21:47:33 +0000  3455 bytes for ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/MnH-gx-0cY-view-W2j-z9-JL7.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/NewPlayerGuideViewController.nib ... 
+2022-09-26 21:47:33 +0000  1242 bytes for ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/NewPlayerGuideViewController.nib
+copying file ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/UINavigationController-kRy-kH-qET.nib ... 
+2022-09-26 21:47:33 +0000  2267 bytes for ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/UINavigationController-kRy-kH-qET.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  353 bytes for ./Payload/HLL Maps.app/NewPlayerGuide.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/UtahBeachBaseLayerViewController.nib ... 
+2022-09-26 21:47:33 +0000  1987 bytes for ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/UtahBeachBaseLayerViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/pE4-ik-yv9-view-V57-8U-m71.nib ... 
+2022-09-26 21:47:33 +0000  3456 bytes for ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/pE4-ik-yv9-view-V57-8U-m71.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/UINavigationController-PqQ-bF-rau.nib ... 
+2022-09-26 21:47:33 +0000  2862 bytes for ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/UINavigationController-PqQ-bF-rau.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  361 bytes for ./Payload/HLL Maps.app/UtahBeachBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/SelectCarentanLayersTableViewCell.nib ... 
+2022-09-26 21:47:33 +0000  1516 bytes for ./Payload/HLL Maps.app/SelectCarentanLayersTableViewCell.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/UINavigationController-1ST-1C-bbw.nib ... 
+2022-09-26 21:47:33 +0000  2866 bytes for ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/UINavigationController-1ST-1C-bbw.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:33 +0000  363 bytes for ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/Info.plist
+copying file ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/Qm4-eN-r4j-view-mxS-wl-ptU.nib ... 
+2022-09-26 21:47:33 +0000  3457 bytes for ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/Qm4-eN-r4j-view-mxS-wl-ptU.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/StalingradBaseLayerViewController.nib ... 
+2022-09-26 21:47:33 +0000  1991 bytes for ./Payload/HLL Maps.app/StalingradBaseLayer.storyboardc/StalingradBaseLayerViewController.nib
+2022-09-26 21:47:33 +0000  copying file ./Payload/HLL Maps.app/Assets.car ... 
+2022-09-26 21:47:38 +0000  274997208 bytes for ./Payload/HLL Maps.app/Assets.car
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/SelectHurtgenForestLayersViewController.nib ... 
+1509 bytes for ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/SelectHurtgenForestLayersViewController.nib
+copying file ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/UINavigationController-gHT-IY-jTm.nib ... 
+2563 bytes for ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/UINavigationController-gHT-IY-jTm.nib
+copying file ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/Asw-ka-7fh-view-M0P-dr-89a.nib ... 
+2622 bytes for ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/Asw-ka-7fh-view-M0P-dr-89a.nib
+copying file ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:38 +0000  375 bytes for ./Payload/HLL Maps.app/SelectHurtgenForestLayers.storyboardc/Info.plist
+copying file ./Payload/HLL Maps.app/AppIcon76x76@2x~ipad.png ... 
+2022-09-26 21:47:38 +0000  5758 bytes for ./Payload/HLL Maps.app/AppIcon76x76@2x~ipad.png
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/uRQ-aR-cuq-view-hfK-2D-CCd.nib ... 
+2022-09-26 21:47:38 +0000  3462 bytes for ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/uRQ-aR-cuq-view-hfK-2D-CCd.nib
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/CarentanBaseLayerViewController.nib ... 
+2022-09-26 21:47:38 +0000  1981 bytes for ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/CarentanBaseLayerViewController.nib
+copying file ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/UINavigationController-Wsj-7g-op3.nib ... 
+2022-09-26 21:47:38 +0000  2856 bytes for ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/UINavigationController-Wsj-7g-op3.nib
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/Info.plist ... 
+359 bytes for ./Payload/HLL Maps.app/CarentanBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/DID-S5-aqM-view-zLg-3b-msa.nib ... 
+2022-09-26 21:47:38 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/DID-S5-aqM-view-zLg-3b-msa.nib
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/SelectOmahaBeachLayersViewController.nib ... 
+2022-09-26 21:47:38 +0000  1494 bytes for ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/SelectOmahaBeachLayersViewController.nib
+copying file ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/UINavigationController-i7j-xh-bau.nib ... 
+2022-09-26 21:47:38 +0000  2548 bytes for ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/UINavigationController-i7j-xh-bau.nib
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:38 +0000  369 bytes for ./Payload/HLL Maps.app/SelectOmahaBeachLayers.storyboardc/Info.plist
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/SelectPurpleHeartLaneLayersViewController.nib ... 
+2022-09-26 21:47:38 +0000  1519 bytes for ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/SelectPurpleHeartLaneLayersViewController.nib
+2022-09-26 21:47:38 +0000  copying file ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/dJL-z8-cvK-view-cgS-n7-M45.nib ... 
+2022-09-26 21:47:38 +0000  2667 bytes for ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/dJL-z8-cvK-view-cgS-n7-M45.nib
+copying file ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/UINavigationController-Zy1-iR-TFr.nib ... 
+2022-09-26 21:47:38 +0000  2573 bytes for ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/UINavigationController-Zy1-iR-TFr.nib
+copying file ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  379 bytes for ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayers.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/SelectSainteMarieduMontLayersViewController.nib ... 
+2022-09-26 21:47:39 +0000  1529 bytes for ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/SelectSainteMarieduMontLayersViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/UINavigationController-jub-3F-Csi.nib ... 
+2022-09-26 21:47:39 +0000  2583 bytes for ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/UINavigationController-jub-3F-Csi.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/msJ-me-AKm-view-fpc-rQ-RYF.nib ... 
+2022-09-26 21:47:39 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/msJ-me-AKm-view-fpc-rQ-RYF.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/Info.plist ... 
+383 bytes for ./Payload/HLL Maps.app/SelectSainteMarieduMontLayers.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/PurpleHeartLaneBaseLayerViewController.nib ... 
+2022-09-26 21:47:39 +0000  2018 bytes for ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/PurpleHeartLaneBaseLayerViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/BQ2-Y2-0rm-view-9iV-am-62Y.nib ... 
+2022-09-26 21:47:39 +0000  3462 bytes for ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/BQ2-Y2-0rm-view-9iV-am-62Y.nib
+copying file ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/UINavigationController-daV-dQ-U6F.nib ... 
+2022-09-26 21:47:39 +0000  2893 bytes for ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/UINavigationController-daV-dQ-U6F.nib
+copying file ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  373 bytes for ./Payload/HLL Maps.app/PurpleHeartLaneBaseLayer.storyboardc/Info.plist
+copying file ./Payload/HLL Maps.app/SelectOmahaBeachLayersTableViewCell.nib ... 
+2022-09-26 21:47:39 +0000  1690 bytes for ./Payload/HLL Maps.app/SelectOmahaBeachLayersTableViewCell.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/OmahaBeachBaseLayerViewController.nib ... 
+2022-09-26 21:47:39 +0000  1992 bytes for ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/OmahaBeachBaseLayerViewController.nib
+copying file ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/koJ-Da-j9B-view-mcj-RR-x9o.nib ... 
+2022-09-26 21:47:39 +0000  3457 bytes for ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/koJ-Da-j9B-view-mcj-RR-x9o.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/UINavigationController-Ipc-1W-mwd.nib ... 
+2022-09-26 21:47:39 +0000  2867 bytes for ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/UINavigationController-Ipc-1W-mwd.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/Info.plist ... 
+363 bytes for ./Payload/HLL Maps.app/OmahaBeachBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/609-Mh-kZw-view-wd2-Br-Dvd.nib ... 
+2022-09-26 21:47:39 +0000  3456 bytes for ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/609-Mh-kZw-view-wd2-Br-Dvd.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/FoyBaseLayerViewController.nib ... 
+2022-09-26 21:47:39 +0000  1956 bytes for ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/FoyBaseLayerViewController.nib
+copying file ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/UINavigationController-F0P-ym-u80.nib ... 
+2022-09-26 21:47:39 +0000  2831 bytes for ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/UINavigationController-F0P-ym-u80.nib
+copying file ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  349 bytes for ./Payload/HLL Maps.app/FoyBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/KurskBaseLayerViewController.nib ... 
+2022-09-26 21:47:39 +0000  1966 bytes for ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/KurskBaseLayerViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/UINavigationController-XjS-Qj-qqd.nib ... 
+2022-09-26 21:47:39 +0000  2841 bytes for ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/UINavigationController-XjS-Qj-qqd.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/bcJ-a0-eD3-view-P45-23-QWM.nib ... 
+2022-09-26 21:47:39 +0000  3452 bytes for ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/bcJ-a0-eD3-view-P45-23-QWM.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  353 bytes for ./Payload/HLL Maps.app/KurskBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectUtahBeachLayersTableViewCell.nib ... 
+2022-09-26 21:47:39 +0000  1689 bytes for ./Payload/HLL Maps.app/SelectUtahBeachLayersTableViewCell.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/oAj-Nw-yRe-view-s3t-cV-CwN.nib ... 
+2022-09-26 21:47:39 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/oAj-Nw-yRe-view-s3t-cV-CwN.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/UINavigationController-RGl-lm-W9O.nib ... 
+2022-09-26 21:47:39 +0000  2543 bytes for ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/UINavigationController-RGl-lm-W9O.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/SelectUtahBeachLayersViewController.nib ... 
+2022-09-26 21:47:39 +0000  1489 bytes for ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/SelectUtahBeachLayersViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  367 bytes for ./Payload/HLL Maps.app/SelectUtahBeachLayers.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/embedded.mobileprovision ... 
+2022-09-26 21:47:39 +0000  12197 bytes for ./Payload/HLL Maps.app/embedded.mobileprovision
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayersTableViewCell.nib ... 
+2022-09-26 21:47:39 +0000  1695 bytes for ./Payload/HLL Maps.app/SelectPurpleHeartLaneLayersTableViewCell.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/UINavigationController-aJ1-k4-bfn.nib ... 
+2022-09-26 21:47:39 +0000  2533 bytes for ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/UINavigationController-aJ1-k4-bfn.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/FLT-6S-rxM-view-VgN-iz-lTA.nib ... 
+2022-09-26 21:47:39 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/FLT-6S-rxM-view-VgN-iz-lTA.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/SelectRemagenLayersViewController.nib ... 
+2022-09-26 21:47:39 +0000  1479 bytes for ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/SelectRemagenLayersViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  363 bytes for ./Payload/HLL Maps.app/SelectRemagenLayers.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/UINavigationController-DnT-Si-O4b.nib ... 
+2022-09-26 21:47:39 +0000  2533 bytes for ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/UINavigationController-DnT-Si-O4b.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/9fG-et-oli-view-pkF-En-nA7.nib ... 
+2022-09-26 21:47:39 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/9fG-et-oli-view-pkF-En-nA7.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/SelectHill400LayersViewController.nib ... 
+2022-09-26 21:47:39 +0000  1479 bytes for ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/SelectHill400LayersViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  363 bytes for ./Payload/HLL Maps.app/SelectHill400Layers.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/rhK-Y0-w1M-view-7Yu-qW-J7h.nib ... 
+2022-09-26 21:47:39 +0000  3462 bytes for ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/rhK-Y0-w1M-view-7Yu-qW-J7h.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/HurtgenForestBaseLayerViewController.nib ... 
+2022-09-26 21:47:39 +0000  2008 bytes for ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/HurtgenForestBaseLayerViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/UINavigationController-aLz-cu-apT.nib ... 
+2022-09-26 21:47:39 +0000  2883 bytes for ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/UINavigationController-aLz-cu-apT.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  369 bytes for ./Payload/HLL Maps.app/HurtgenForestBaseLayer.storyboardc/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/Info.plist ... 
+2022-09-26 21:47:39 +0000  1825 bytes for ./Payload/HLL Maps.app/Info.plist
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/SainteMereEgliseBaseLayerViewController.nib ... 
+2022-09-26 21:47:39 +0000  2025 bytes for ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/SainteMereEgliseBaseLayerViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/A8E-AF-QB4-view-q5j-Jp-0Kd.nib ... 
+2022-09-26 21:47:39 +0000  3463 bytes for ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/A8E-AF-QB4-view-q5j-Jp-0Kd.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  375 bytes for ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/Info.plist
+copying file ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/UINavigationController-lGf-h3-Hdw.nib ... 
+2022-09-26 21:47:39 +0000  2900 bytes for ./Payload/HLL Maps.app/SainteMereEgliseBaseLayer.storyboardc/UINavigationController-lGf-h3-Hdw.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/PkgInfo ... 
+2022-09-26 21:47:39 +0000  8 bytes for ./Payload/HLL Maps.app/PkgInfo
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectStalingradLayersTableViewCell.nib ... 
+2022-09-26 21:47:39 +0000  1690 bytes for ./Payload/HLL Maps.app/SelectStalingradLayersTableViewCell.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectHill400LayersTableViewCell.nib ... 
+2022-09-26 21:47:39 +0000  1687 bytes for ./Payload/HLL Maps.app/SelectHill400LayersTableViewCell.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/BAO-HR-63Y-view-l2x-VR-5jB.nib ... 
+2022-09-26 21:47:39 +0000  2622 bytes for ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/BAO-HR-63Y-view-l2x-VR-5jB.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/UINavigationController-1Zh-cQ-Sca.nib ... 
+2022-09-26 21:47:39 +0000  2512 bytes for ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/UINavigationController-1Zh-cQ-Sca.nib
+2022-09-26 21:47:39 +0000  copying file ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/Info.plist ... 
+2022-09-26 21:47:39 +0000  355 bytes for ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/Info.plist
+copying file ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/SelectFoyLayersViewController.nib ... 
+2022-09-26 21:47:39 +0000  1458 bytes for ./Payload/HLL Maps.app/SelectFoyLayers.storyboardc/SelectFoyLayersViewController.nib
+2022-09-26 21:47:39 +0000  copying file ./Symbols/728F5D1F-2AB5-3301-A876-FE4817BE71D2.symbols ... 
+2022-09-26 21:47:39 +0000  1817300 bytes for ./Symbols/728F5D1F-2AB5-3301-A876-FE4817BE71D2.symbols
+2022-09-26 21:47:39 +0000  /usr/bin/ditto exited with 0
+2022-09-26 21:47:39 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2022-09-26 21:47:39 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2022-09-26 21:47:39 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2022-09-26 21:47:39 +0000  IDEDistributionItem init <DVTFilePath:0x60000a1a2140:'/var/folders/s2/sqc1nkv90rq0zhmbxp3l5mfw0000gn/T/XcodeDistPipeline.~~~fZ4sUs/Root/Payload/HLL Maps.app'>
+2022-09-26 21:47:39 +0000  Processing step: IDEDistributionCreateManifestStep
+2022-09-26 21:47:39 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so
