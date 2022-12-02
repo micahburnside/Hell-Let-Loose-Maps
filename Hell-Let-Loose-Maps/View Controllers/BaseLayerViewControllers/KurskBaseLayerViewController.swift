@@ -543,7 +543,7 @@ extension KurskBaseLayerViewController: UpdateKurskMapDelegate {
     
     func loadKurskArtilleryPosition() {
         self.imageViewArtilleryPosition.isHidden = false
-        self.imageViewArtilleryPosition.image = getStrongpoint(strongpoint: .StrongpointArtilleryPosition)
+        self.imageViewArtilleryPosition.image = getStrongpoint(strongpoint: .StrongpointKurskArtilleryPosition)
     }
     
     func loadKurskGrushki() {
