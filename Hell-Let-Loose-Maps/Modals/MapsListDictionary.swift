@@ -21,6 +21,7 @@ struct MapsListDictionary {
         "Foy" : "America vs Germany",
         "Hill 400" : "America vs Germany",
         "Hürtgen Forest" : "America vs Germany",
+        "Kharkov" : "Germany vs Soviet Union",
         "Kursk" : "Germany vs Soviet Union",
         "Omaha Beach" : "America vs Germany",
         "Purple Heart Lane" : "America vs Germany",
@@ -109,6 +110,26 @@ struct MapsListDictionary {
         "13 - Grosshau Approach" : "",
         "14 - Hürtgen Approach" : "",
         "15 - Logging Camp" : ""
+    ]
+    
+    let KharkovStrongpointsDictionary: [String : String] = [
+//        "TAC" : "displays grid lines on top of base layer",
+//        "Strongpoints" : "displays strongpoints",
+        "1 - Marsh Town" : "",
+        "2 - Soviet Vantage Point" : "",
+        "3 - German Fuel Dump" : "",
+        "4 - Bitter Spring" : "",
+        "5 - Lumber Works" : "",
+        "6 - Windmill Hillside" : "",
+        "7 - Water Mill" : "",
+        "8 - St Mary" : "",
+        "9 - Distillery" : "",
+        "10 - River Crossing" : "",
+        "11 - Belgorod Outskirts" : "",
+        "12 - Lumberyard" : "",
+        "13 - Wehrmacht Overlook" : "",
+        "14 - Hay Storage" : "",
+        "15 - Overpass" : ""
     ]
     
     let KurskStrongpointsDictionary: [String : String] = [

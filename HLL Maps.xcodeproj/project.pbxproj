@@ -25,7 +25,6 @@
 		54141899281CC2C500E0483B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141898281CC2C500E0483B /* BaseViewController.swift */; };
 		542BC28728D815240064922E /* PresentationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542BC28628D815240064922E /* PresentationHelper.swift */; };
 		5470CF8D28458EE800AAEB0B /* NewPlayerGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */; };
-		547F338428E0D837009D7968 /* LocationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F338328E0D837009D7968 /* LocationListener.swift */; };
 		547F338628E0DAF9009D7968 /* CustomLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F338528E0DAF9009D7968 /* CustomLocations.swift */; };
 		548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */; };
 		5488870828483B810025993D /* GetTerritoryColorSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */; };
@@ -131,6 +130,15 @@
 		54D0826228330B0400542CB7 /* SelectCarentanLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D0826128330B0400542CB7 /* SelectCarentanLayers.storyboard */; };
 		54D0826428330B2500542CB7 /* SelectCarentanLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826328330B2500542CB7 /* SelectCarentanLayersViewController.swift */; };
 		54D0826A28330B7300542CB7 /* SelectCarentanLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826928330B7300542CB7 /* SelectCarentanLayersDataSource.swift */; };
+		54FEA553293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA552293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift */; };
+		54FEA556293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */; };
+		54FEA557293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */; };
+		54FEA559293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA558293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift */; };
+		54FEA55B293A778000CEDA28 /* KharkovBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA55A293A778000CEDA28 /* KharkovBaseLayer.storyboard */; };
+		54FEA55D293A77D200CEDA28 /* KharkovBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */; };
+		54FEA55F293A77E100CEDA28 /* SelectKharkovLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */; };
+		54FEA561293A788D00CEDA28 /* SelectKharkovLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */; };
+		54FEA563293AC82200CEDA28 /* LocationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA562293AC82200CEDA28 /* LocationListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,7 +182,6 @@
 		542BC28628D815240064922E /* PresentationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationHelper.swift; sourceTree = "<group>"; };
 		544132D728DE514D00FC141A /* HLL Maps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HLL Maps.entitlements"; sourceTree = "<group>"; };
 		5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPlayerGuide.storyboard; sourceTree = "<group>"; };
-		547F338328E0D837009D7968 /* LocationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListener.swift; sourceTree = "<group>"; };
 		547F338528E0DAF9009D7968 /* CustomLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocations.swift; sourceTree = "<group>"; };
 		548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointLayerSelectionDelegate.swift; sourceTree = "<group>"; };
 		5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTerritoryColorSelectionDelegate.swift; sourceTree = "<group>"; };
@@ -280,6 +287,15 @@
 		54D0826128330B0400542CB7 /* SelectCarentanLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCarentanLayers.storyboard; sourceTree = "<group>"; };
 		54D0826328330B2500542CB7 /* SelectCarentanLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarentanLayersViewController.swift; sourceTree = "<group>"; };
 		54D0826928330B7300542CB7 /* SelectCarentanLayersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarentanLayersDataSource.swift; sourceTree = "<group>"; };
+		54FEA552293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateKharkovMapDelegate.swift; sourceTree = "<group>"; };
+		54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectKharkovLayersTableViewCell.swift; sourceTree = "<group>"; };
+		54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectKharkovLayersTableViewCell.xib; sourceTree = "<group>"; };
+		54FEA558293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectKharkovLayersDataSource.swift; sourceTree = "<group>"; };
+		54FEA55A293A778000CEDA28 /* KharkovBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KharkovBaseLayer.storyboard; sourceTree = "<group>"; };
+		54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KharkovBaseLayerViewController.swift; sourceTree = "<group>"; };
+		54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectKharkovLayersViewController.swift; sourceTree = "<group>"; };
+		54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectKharkovLayers.storyboard; sourceTree = "<group>"; };
+		54FEA562293AC82200CEDA28 /* LocationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +338,7 @@
 				54CCCA7F2899707600539EFF /* SelectSainteMereEgliseLayersViewController.swift */,
 				54CCCA812899708500539EFF /* SelectStalingradLayersViewController.swift */,
 				54CCCA832899709A00539EFF /* SelectUtahBeachLayersViewController.swift */,
+				54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */,
 			);
 			path = LayerSelection;
 			sourceTree = "<group>";
@@ -399,6 +416,7 @@
 				54CCCA27288F32F700539EFF /* SelectFoyLayersDataSource.swift */,
 				54CCCA31288FFBFC00539EFF /* SelectHill400LayersDataSource.swift */,
 				54CCCA3B28989E5B00539EFF /* SelectHurtgenForestLayersDataSource.swift */,
+				54FEA558293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift */,
 				54CCCA85289973C400539EFF /* SelectKurskLayersDataSource.swift */,
 				54CCCA87289973D400539EFF /* SelectOmahaBeachLayersDataSource.swift */,
 				54CCCA89289973E600539EFF /* SelectRemagenLayersDataSource.swift */,
@@ -437,6 +455,8 @@
 				54CCCA5E2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.xib */,
 				54CCCA612898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.swift */,
 				54CCCA622898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.xib */,
+				54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */,
+				54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */,
 				54CCCA972899892D00539EFF /* SelectKurskLayersTableViewCell.swift */,
 				54CCCA982899892D00539EFF /* SelectKurskLayersTableViewCell.xib */,
 				54CCCAAF28A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift */,
@@ -475,6 +495,7 @@
 				54022BCB286AE96D0080AF63 /* UpdateFoyMapDelegate.swift */,
 				54CCCA33288FFED200539EFF /* UpdateHill400MapDelegate.swift */,
 				54CCCA3928989D2500539EFF /* UpdateHurtgenForestMapDelegate.swift */,
+				54FEA552293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift */,
 				54CCCA73289901F200539EFF /* UpdateKurskMapDelegate.swift */,
 				54CCCA65289900F700539EFF /* UpdateOmahaBeachMapDelegate.swift */,
 				54CCCA672899010C00539EFF /* UpdateRemagenMapDelegate.swift */,
@@ -512,6 +533,7 @@
 				54D081E22829F6C700542CB7 /* FoyBaseLayer.storyboard */,
 				54D081E42829F6F800542CB7 /* Hill400BaseLayer.storyboard */,
 				54D081E62829F75B00542CB7 /* HurtgenForestBaseLayer.storyboard */,
+				54FEA55A293A778000CEDA28 /* KharkovBaseLayer.storyboard */,
 				54D081E82829F76600542CB7 /* KurskBaseLayer.storyboard */,
 				54D081EA2829F77D00542CB7 /* OmahaBeachBaseLayer.storyboard */,
 				54D081EC2829F78E00542CB7 /* PurpleHeartLaneBaseLayer.storyboard */,
@@ -550,6 +572,7 @@
 				54D081D22829F16000542CB7 /* SainteMereEgliseBaseLayerViewController.swift */,
 				54D081D42829F16D00542CB7 /* StalingradBaseLayerViewController.swift */,
 				54D081D62829F17700542CB7 /* UtahBeachBaseLayerViewController.swift */,
+				54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */,
 			);
 			path = BaseLayerViewControllers;
 			sourceTree = "<group>";
@@ -560,7 +583,7 @@
 				54141891281CC22E00E0483B /* NSObject+.swift */,
 				54141895281CC24100E0483B /* MapsListDictionary.swift */,
 				542BC28628D815240064922E /* PresentationHelper.swift */,
-				547F338328E0D837009D7968 /* LocationListener.swift */,
+				54FEA562293AC82200CEDA28 /* LocationListener.swift */,
 				547F338528E0DAF9009D7968 /* CustomLocations.swift */,
 			);
 			path = Modals;
@@ -582,6 +605,7 @@
 				54CCCAA72899A51100539EFF /* SelectStalingradLayers.storyboard */,
 				54CCCAA92899A52500539EFF /* SelectUtahBeachLayers.storyboard */,
 				54CCCAAB28A3405200539EFF /* SelectRemagenLayers.storyboard */,
+				54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -713,9 +737,12 @@
 				54CCCAAA2899A52500539EFF /* SelectUtahBeachLayers.storyboard in Resources */,
 				54CCCA24288E869A00539EFF /* SelectFoyLayers.storyboard in Resources */,
 				54D081F52829F7C300542CB7 /* UtahBeachBaseLayer.storyboard in Resources */,
+				54FEA55B293A778000CEDA28 /* KharkovBaseLayer.storyboard in Resources */,
 				54CCCAA42899A4DA00539EFF /* SelectSainteMarieduMontLayers.storyboard in Resources */,
 				54CCCAB228A9C26F00539EFF /* SelectCarentanLayersTableViewCell.xib in Resources */,
 				54D081ED2829F78E00542CB7 /* PurpleHeartLaneBaseLayer.storyboard in Resources */,
+				54FEA561293A788D00CEDA28 /* SelectKharkovLayers.storyboard in Resources */,
+				54FEA557293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib in Resources */,
 				54CCCA542898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.xib in Resources */,
 				54CCCA482898C66C00539EFF /* SelectHurtgenForestLayersTableViewCell.xib in Resources */,
 				54D081F12829F7A600542CB7 /* SainteMarieduMontBaseLayer.storyboard in Resources */,
@@ -760,7 +787,6 @@
 				54CCCA8A289973E600539EFF /* SelectRemagenLayersDataSource.swift in Sources */,
 				54CCCA3C28989E5B00539EFF /* SelectHurtgenForestLayersDataSource.swift in Sources */,
 				54141823281CC13100E0483B /* ViewController.swift in Sources */,
-				547F338428E0D837009D7968 /* LocationListener.swift in Sources */,
 				54141899281CC2C500E0483B /* BaseViewController.swift in Sources */,
 				54D081C12829F03B00542CB7 /* CarentanBaseLayerViewController.swift in Sources */,
 				54D081CF2829F14300542CB7 /* RemagenBaseLayerViewController.swift in Sources */,
@@ -777,6 +803,7 @@
 				548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */,
 				542BC28728D815240064922E /* PresentationHelper.swift in Sources */,
 				54CCCA7A2899703400539EFF /* SelectRemagenLayersViewController.swift in Sources */,
+				54FEA556293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift in Sources */,
 				54D081C92829F11100542CB7 /* KurskBaseLayerViewController.swift in Sources */,
 				54022BCC286AE96D0080AF63 /* UpdateFoyMapDelegate.swift in Sources */,
 				54CCCA28288F32F700539EFF /* SelectFoyLayersDataSource.swift in Sources */,
@@ -807,6 +834,7 @@
 				54CCCA842899709A00539EFF /* SelectUtahBeachLayersViewController.swift in Sources */,
 				54D081C32829F0EC00542CB7 /* FoyBaseLayerViewController.swift in Sources */,
 				54141892281CC22E00E0483B /* CustomUITableViewCell.swift in Sources */,
+				54FEA55F293A77E100CEDA28 /* SelectKharkovLayersViewController.swift in Sources */,
 				54CCCA72289901A300539EFF /* UpdateSainteMarieduMontMapDelegate.swift in Sources */,
 				54CCCA3A28989D2500539EFF /* UpdateHurtgenForestMapDelegate.swift in Sources */,
 				54D0826428330B2500542CB7 /* SelectCarentanLayersViewController.swift in Sources */,
@@ -818,9 +846,12 @@
 				54D081DD2829F25900542CB7 /* BaseLayerMapsDataSource.swift in Sources */,
 				54D081CB2829F12200542CB7 /* OmahaBeachBaseLayerViewController.swift in Sources */,
 				54D081C72829F10800542CB7 /* HurtgenForestBaseLayerViewController.swift in Sources */,
+				54FEA55D293A77D200CEDA28 /* KharkovBaseLayerViewController.swift in Sources */,
 				54CCCA2B288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift in Sources */,
 				54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */,
 				54CCCA782899702500539EFF /* SelectOmahaBeachLayersViewController.swift in Sources */,
+				54FEA563293AC82200CEDA28 /* LocationListener.swift in Sources */,
+				54FEA559293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift in Sources */,
 				54022BCA28606C680080AF63 /* ToggleSwitchChoice.xcdatamodeld in Sources */,
 				54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */,
 				54CCCA4F2898E19200539EFF /* SelectRemagenLayersTableViewCell.swift in Sources */,
@@ -835,6 +866,7 @@
 				54CCCAB128A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift in Sources */,
 				54CCCA8C289973F600539EFF /* SelectPurpleHeartLaneLayersDataSource.swift in Sources */,
 				54CCCA372890012D00539EFF /* SelectHill400LayersTableViewCell.swift in Sources */,
+				54FEA553293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

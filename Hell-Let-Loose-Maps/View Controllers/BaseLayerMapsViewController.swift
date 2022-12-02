@@ -53,21 +53,24 @@ extension BaseLayerMapsViewController: DataSourceDelegate {
         case 3:
             self.pushToViewController(storyboardName: "HurtgenForestBaseLayer", identifier: "HurtgenForestBaseLayerViewController")
         case 4:
-            self.pushToViewController(storyboardName: "KurskBaseLayer", identifier: "KurskBaseLayerViewController")
+            self.pushToViewController(storyboardName: "KharkovBaseLayer", identifier: "KharkovBaseLayerViewController")
         case 5:
-            self.pushToViewController(storyboardName: "OmahaBeachBaseLayer", identifier: "OmahaBeachBaseLayerViewController")
+            self.pushToViewController(storyboardName: "KurskBaseLayer", identifier: "KurskBaseLayerViewController")
         case 6:
-            self.pushToViewController(storyboardName: "PurpleHeartLaneBaseLayer", identifier: "PurpleHeartLaneBaseLayerViewController")
+            self.pushToViewController(storyboardName: "OmahaBeachBaseLayer", identifier: "OmahaBeachBaseLayerViewController")
         case 7:
-            self.pushToViewController(storyboardName: "RemagenBaseLayer", identifier: "RemagenBaseLayerViewController")
+            self.pushToViewController(storyboardName: "PurpleHeartLaneBaseLayer", identifier: "PurpleHeartLaneBaseLayerViewController")
         case 8:
-            self.pushToViewController(storyboardName: "SainteMarieduMontBaseLayer", identifier: "SainteMarieduMontBaseLayerViewController")
+            self.pushToViewController(storyboardName: "RemagenBaseLayer", identifier: "RemagenBaseLayerViewController")
         case 9:
-            self.pushToViewController(storyboardName: "SainteMereEgliseBaseLayer", identifier: "SainteMereEgliseBaseLayerViewController")
+            self.pushToViewController(storyboardName: "SainteMarieduMontBaseLayer", identifier: "SainteMarieduMontBaseLayerViewController")
         case 10:
-            self.pushToViewController(storyboardName: "StalingradBaseLayer", identifier: "StalingradBaseLayerViewController")
+            self.pushToViewController(storyboardName: "SainteMereEgliseBaseLayer", identifier: "SainteMereEgliseBaseLayerViewController")
         case 11:
+            self.pushToViewController(storyboardName: "StalingradBaseLayer", identifier: "StalingradBaseLayerViewController")
+        case 12:
             self.pushToViewController(storyboardName: "UtahBeachBaseLayer", identifier: "UtahBeachBaseLayerViewController")
+
         default:
         break
         }
