@@ -652,6 +652,7 @@ extension CarentanBaseLayerViewController: UpdateCarentanMapDelegate {
 }
 
 extension CarentanBaseLayerViewController: UIAdaptivePresentationControllerDelegate {
+    ///this method is required  when presenting the UIActivityContoller on iPad OS. Without this method, the app will build and will work normally until a user taps on the share button which presents a UIActivityController which will result in an app crash.
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
     return .none
     }

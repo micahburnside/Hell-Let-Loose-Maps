@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--KharkovBaseLayer-->
+        <scene sceneID="ahH-f9-Pio">
+            <objects>
+                <viewController storyboardIdentifier="KharkovBaseLayerViewController" title="KharkovBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qm3-kb-YAA" customClass="KharkovBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GDH-Qk-T6C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2x-2F-l9p">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarentanBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="4eb-dC-nFN" userLabel="imageView0">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4eb-dC-nFN" firstAttribute="top" secondItem="C2x-2F-l9p" secondAttribute="top" constant="-22" id="89l-DT-FyX"/>
+                                    <constraint firstAttribute="trailing" secondItem="4eb-dC-nFN" secondAttribute="trailing" id="QF0-8D-2LX"/>
+                                    <constraint firstAttribute="bottom" secondItem="4eb-dC-nFN" secondAttribute="bottom" constant="-22" id="ccR-QP-Det"/>
+                                    <constraint firstItem="4eb-dC-nFN" firstAttribute="leading" secondItem="C2x-2F-l9p" secondAttribute="leading" id="h4T-eW-mZY"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Vvm-bm-MLi"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7d6-6W-eud"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Vx-SV-XtT"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C2x-2F-l9p" firstAttribute="centerX" secondItem="GDH-Qk-T6C" secondAttribute="centerX" id="D7e-rz-U7U"/>
+                            <constraint firstItem="C2x-2F-l9p" firstAttribute="top" secondItem="0Vx-SV-XtT" secondAttribute="top" id="LLg-6i-aev"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="C2x-2F-l9p" secondAttribute="bottom" constant="-34" id="PL4-sZ-4Do"/>
+                            <constraint firstItem="C2x-2F-l9p" firstAttribute="leading" secondItem="0Vx-SV-XtT" secondAttribute="leading" id="VAo-80-Wvs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kharkov" id="oVM-re-Jiz">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="Gt8-wn-9Ju">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="Qm3-kb-YAA" id="xPy-ZY-uzZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="OsX-fE-qTa">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareKharkovMapLayer:" destination="Qm3-kb-YAA" id="nbg-zi-Tvb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView0" destination="4eb-dC-nFN" id="zZy-eg-fmk"/>
+                        <outlet property="imageViewBottomConstraint" destination="ccR-QP-Det" id="zbR-ZK-p36"/>
+                        <outlet property="imageViewLeadingConstraint" destination="h4T-eW-mZY" id="USl-Pj-Ll1"/>
+                        <outlet property="imageViewTopConstraint" destination="89l-DT-FyX" id="gfi-qd-1W0"/>
+                        <outlet property="imageViewTrailingConstraint" destination="QF0-8D-2LX" id="PNE-wR-wmg"/>
+                        <outlet property="scrollView" destination="C2x-2F-l9p" id="yzM-uT-aGA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VFG-fh-ixU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TIa-qQ-C9J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJG-qI-aLq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KSE-f1-12o">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qm3-kb-YAA" kind="relationship" relationship="rootViewController" id="5oN-ct-zrB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLh-FE-Qbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CarentanBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

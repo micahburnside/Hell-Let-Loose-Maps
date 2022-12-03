@@ -14,12 +14,12 @@ public protocol MapLayerSelectionDelegate {
 }
 
 public enum MapName: String {
-    case Carentan, Foy, Hill400, HurtgenForest, Kursk, OmahaBeach, PurpleHeartLane, Remagen, SainteMarieduMont, SainteMereEglise, Stalingrad, UtahBeach
+    case Carentan, Foy, Hill400, HurtgenForest, Kharkov, Kursk, OmahaBeach, PurpleHeartLane, Remagen, SainteMarieduMont, SainteMereEglise, Stalingrad, UtahBeach
 }
 
 //MARK: - All Map Layers
 public enum LayerType: String {
-    case CarentanBaseLayer, CarentanTAC, CarentanStrongpoints, FoyBaseLayer, FoyTAC, FoyStrongpoints, Hill400BaseLayer, Hill400TAC, Hill400Strongpoints, HurtgenForestBaseLayer, HurtgenForestTAC, HurtgenForestStrongpoints, KurskBaseLayer, KurskTAC, KurskStrongpoints, OmahaBeachBaseLayer, OmahaBeachTAC, OmahaBeachStrongpoints, PurpleHeartLaneBaseLayer, PurpleHeartLaneTAC, PurpleHeartLaneStrongpoints, RemagenBaseLayer, RemagenTAC, RemagenStrongpoints, SainteMarieduMontBaseLayer, SainteMarieduMontTAC, SainteMarieduMontStrongpoints, SainteMereEgliseBaseLayer, SainteMereEgliseTAC, SainteMereEgliseStrongpoints, StalingradBaseLayer, StalingradTAC, StalingradStrongpoints, UtahBeachBaseLayer, UtahBeachTAC, UtahBeachStrongpoints
+    case CarentanBaseLayer, CarentanTAC, CarentanStrongpoints, FoyBaseLayer, FoyTAC, FoyStrongpoints, Hill400BaseLayer, Hill400TAC, Hill400Strongpoints, HurtgenForestBaseLayer, HurtgenForestTAC, HurtgenForestStrongpoints, KharkovBaseLayer, KharkovTAC, KharkovStrongpoints, KurskBaseLayer, KurskTAC, KurskStrongpoints, OmahaBeachBaseLayer, OmahaBeachTAC, OmahaBeachStrongpoints, PurpleHeartLaneBaseLayer, PurpleHeartLaneTAC, PurpleHeartLaneStrongpoints, RemagenBaseLayer, RemagenTAC, RemagenStrongpoints, SainteMarieduMontBaseLayer, SainteMarieduMontTAC, SainteMarieduMontStrongpoints, SainteMereEgliseBaseLayer, SainteMereEgliseTAC, SainteMereEgliseStrongpoints, StalingradBaseLayer, StalingradTAC, StalingradStrongpoints, UtahBeachBaseLayer, UtahBeachTAC, UtahBeachStrongpoints
 }
 
 
@@ -33,6 +33,8 @@ func getMap(mapName: MapName, layerType: LayerType) -> UIImage  {
     case .Hill400:
         return getLayer(layerType: layerType)
     case .HurtgenForest:
+        return getLayer(layerType: layerType)
+    case .Kharkov:
         return getLayer(layerType: layerType)
     case .Kursk:
         return getLayer(layerType: layerType)
@@ -80,6 +82,12 @@ func getLayer(layerType: LayerType) -> UIImage  {
         return UIImage(named: "HürtgenForestTAC.png")!
     case .HurtgenForestStrongpoints:
         return UIImage(named: "HürtgenForestStrongpoints.png")!
+    case .KharkovBaseLayer:
+        return UIImage(named: "KharkovBaseLayer.png")!
+    case .KharkovTAC:
+        return UIImage(named: "KharkovTAC.png")!
+    case .KharkovStrongpoints:
+        return UIImage(named: "KharkovStrongpoints.png")!
     case .KurskBaseLayer:
         return UIImage(named: "KurskBaseLayer.png")!
     case .KurskTAC:
