@@ -138,7 +138,6 @@
 		54FEA55D293A77D200CEDA28 /* KharkovBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */; };
 		54FEA55F293A77E100CEDA28 /* SelectKharkovLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */; };
 		54FEA561293A788D00CEDA28 /* SelectKharkovLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */; };
-		54FEA563293AC82200CEDA28 /* LocationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA562293AC82200CEDA28 /* LocationListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,7 +294,6 @@
 		54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KharkovBaseLayerViewController.swift; sourceTree = "<group>"; };
 		54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectKharkovLayersViewController.swift; sourceTree = "<group>"; };
 		54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectKharkovLayers.storyboard; sourceTree = "<group>"; };
-		54FEA562293AC82200CEDA28 /* LocationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -583,7 +581,6 @@
 				54141891281CC22E00E0483B /* NSObject+.swift */,
 				54141895281CC24100E0483B /* MapsListDictionary.swift */,
 				542BC28628D815240064922E /* PresentationHelper.swift */,
-				54FEA562293AC82200CEDA28 /* LocationListener.swift */,
 				547F338528E0DAF9009D7968 /* CustomLocations.swift */,
 			);
 			path = Modals;
@@ -850,7 +847,6 @@
 				54CCCA2B288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift in Sources */,
 				54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */,
 				54CCCA782899702500539EFF /* SelectOmahaBeachLayersViewController.swift in Sources */,
-				54FEA563293AC82200CEDA28 /* LocationListener.swift in Sources */,
 				54FEA559293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift in Sources */,
 				54022BCA28606C680080AF63 /* ToggleSwitchChoice.xcdatamodeld in Sources */,
 				54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */,

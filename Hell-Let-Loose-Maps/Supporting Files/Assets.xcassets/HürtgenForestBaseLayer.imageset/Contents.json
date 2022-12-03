@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "HürtgenForest.png",
+      "filename" : "HürtgenForestBaseLayer.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,9 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "compression-type" : "lossless",
-    "preserves-vector-representation" : true
   }
 }
