@@ -17,19 +17,19 @@ struct MapsListDictionary {
     ]
     
     let mapsListDictionary: [String : String] = [
-        "Carentan" : "America vs Germany",
-        "Foy" : "America vs Germany",
-        "Hill 400" : "America vs Germany",
-        "Hürtgen Forest" : "America vs Germany",
+        "Carentan" : "United States vs Germany",
+        "Foy" : "United States vs Germany",
+        "Hill 400" : "United States vs Germany",
+        "Hürtgen Forest" : "United States vs Germany",
         "Kharkov" : "Germany vs Soviet Union",
         "Kursk" : "Germany vs Soviet Union",
-        "Omaha Beach" : "America vs Germany",
-        "Purple Heart Lane" : "America vs Germany",
-        "Remagen" : "America vs Germany",
-        "Sainte Marie du Mont" : "America vs Germany",
-        "Sainte Mère Église" : "America vs Germany",
+        "Omaha Beach" : "United States vs Germany",
+        "Purple Heart Lane" : "United States vs Germany",
+        "Remagen" : "United States vs Germany",
+        "Sainte Marie du Mont" : "United States vs Germany",
+        "Sainte Mère Église" : "United States vs Germany",
         "Stalingrad" : "Germany vs Soviet Union",
-        "Utah Beach" : "America vs Germay",
+        "Utah Beach" : "United States vs Germay",
     ]
 
     let carentanStrongpointsDictionary: [String : String] = [
