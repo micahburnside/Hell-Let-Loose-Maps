@@ -1,0 +1,58 @@
+[
+    {
+        "name": "STRONGPOINT_502NDSTART",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_FARMRUINS",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_PUMPINGSTATION",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_RUINS",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_DERAILEDTRAIN",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_CANALCROSSING",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_TOWNCENTER",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_TRAINSTATION",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_CUSTOMS",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_RAILCROSSING",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_MOUNTHALAIS",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_CANALLOCKS",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_RAILCAUSEWAY",
+        "active": true
+    },
+        {
+        "name": "STRONGPOINT_LAMAISONDESORMES",
+        "active": true
+    },
+]
