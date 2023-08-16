@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectDrielLayersTableViewCell: UITableViewCell {
+class SelectDrielLayersTableViewCell: CustomUITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

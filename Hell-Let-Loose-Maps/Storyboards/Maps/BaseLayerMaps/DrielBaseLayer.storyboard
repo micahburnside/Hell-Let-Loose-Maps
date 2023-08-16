@@ -1,30 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3AD-jW-YXi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--DrielBaseLayer-->
+        <scene sceneID="dzs-Fg-fsU">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController storyboardIdentifier="DrielBaseLayerViewController" title="DrielBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rN1-6t-U2y" customClass="DrielBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B3L-05-Wle">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLl-0W-zc3">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DrielBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="9BB-We-IBv">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9BB-We-IBv" secondAttribute="trailing" id="9Pv-u9-OEu"/>
+                                    <constraint firstAttribute="bottom" secondItem="9BB-We-IBv" secondAttribute="bottom" constant="-22" id="RYV-3n-W1o"/>
+                                    <constraint firstItem="9BB-We-IBv" firstAttribute="top" secondItem="WLl-0W-zc3" secondAttribute="top" constant="-22" id="rKL-1r-vJT"/>
+                                    <constraint firstItem="9BB-We-IBv" firstAttribute="leading" secondItem="WLl-0W-zc3" secondAttribute="leading" id="z8t-wr-Y6U"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="dTu-ze-Xn7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="CYE-IV-xqh"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QDa-Uc-OUe"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WLl-0W-zc3" firstAttribute="leading" secondItem="QDa-Uc-OUe" secondAttribute="leading" id="HRU-FM-Dh2"/>
+                            <constraint firstItem="WLl-0W-zc3" firstAttribute="top" secondItem="QDa-Uc-OUe" secondAttribute="top" id="LpL-NU-uHR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="WLl-0W-zc3" secondAttribute="bottom" constant="-34" id="TMT-hn-OIg"/>
+                            <constraint firstItem="WLl-0W-zc3" firstAttribute="centerX" secondItem="B3L-05-Wle" secondAttribute="centerX" id="gtQ-Uh-TJa"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Driel" id="fvf-nU-8wK">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="j7D-Ee-iaA">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="rN1-6t-U2y" id="Sv7-TW-Lpa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="kDU-b5-TYT">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareDrielMapLayer:" destination="rN1-6t-U2y" id="fFt-ou-JMo"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView0" destination="9BB-We-IBv" id="3Cf-gO-kGE"/>
+                        <outlet property="imageViewBottomConstraint" destination="RYV-3n-W1o" id="nSC-gU-Noz"/>
+                        <outlet property="imageViewLeadingConstraint" destination="z8t-wr-Y6U" id="7XR-r7-Uku"/>
+                        <outlet property="imageViewTopConstraint" destination="rKL-1r-vJT" id="T5m-gg-ggx"/>
+                        <outlet property="imageViewTrailingConstraint" destination="9Pv-u9-OEu" id="HcN-uT-wXN"/>
+                        <outlet property="scrollView" destination="WLl-0W-zc3" id="r2D-Ug-iZL"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksK-B1-4mm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BCy-yo-Q03">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3AD-jW-YXi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zkl-w3-SIy">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rN1-6t-U2y" kind="relationship" relationship="rootViewController" id="hoU-Ux-WK6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AmX-Qs-gaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="DrielBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

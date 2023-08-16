@@ -59,10 +59,11 @@ extension SelectCarentanLayersDataSource: UITableViewDataSource {
         return view
     }
     
+    ///sets header height in pixels
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-    
+    ///animates the cells when they are loaded
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         DispatchQueue.main.async {
@@ -73,6 +74,7 @@ extension SelectCarentanLayersDataSource: UITableViewDataSource {
         }
     }
 
+    ///sets number of rows in the section based on the amount of Key-Value pairs in "keys"
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.keys.count
     }
@@ -91,35 +93,35 @@ extension SelectCarentanLayersDataSource: UITableViewDataSource {
         
         // CARENTAN
         if switchControl.tag == 0 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_BLACTOT)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_BLACTOT)
         } else if switchControl.tag == 1 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_502NDSTART)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_502NDSTART)
         } else if switchControl.tag == 2 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FARMRUINS)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_FARMRUINS)
         } else if switchControl.tag == 3 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PUMPINGSTATION)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_PUMPINGSTATION)
         } else if switchControl.tag == 4 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RUINS)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RUINS)
         } else if switchControl.tag == 5 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_DERAILEDTRAIN)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_DERAILEDTRAIN)
         } else if switchControl.tag == 6 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CANALCROSSING)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALCROSSING)
         } else if switchControl.tag == 7 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_TOWNCENTER)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_TOWNCENTER)
         } else if switchControl.tag == 8 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_TRAINSTATION)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_TRAINSTATION)
         } else if switchControl.tag == 9 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CUSTOMS)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CUSTOMS)
         } else if switchControl.tag == 10 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RAILCROSSING)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCROSSING)
         } else if switchControl.tag == 11 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_MOUNTHALAIS)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_MOUNTHALAIS)
         } else if switchControl.tag == 12 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CANALLOCKS)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALLOCKS)
         } else if switchControl.tag == 13 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RAILCAUSEWAY)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCAUSEWAY)
         } else if switchControl.tag == 14 {
-                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_LAMAISONDESORMES)
+                switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_LAMAISONDESORMES)
         }
         return cell
 
@@ -132,151 +134,151 @@ extension SelectCarentanLayersDataSource: UITableViewDataSource {
         case 0:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_BLACTOT, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_BLACTOT, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanBlactot()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanBlactot()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_BLACTOT, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_BLACTOT, isOn: false)
             }
             break
         case 1:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_502NDSTART, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_502NDSTART, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentan502ndStart()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentan502ndStart()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_502NDSTART, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_502NDSTART, isOn: false)
             }
             break
         case 2:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_FARMRUINS, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_FARMRUINS, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanFarmRuins()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanFarmRuins()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_FARMRUINS, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_FARMRUINS, isOn: false)
             }
             break
         case 3:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_PUMPINGSTATION, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_PUMPINGSTATION, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanPumpingStation()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanPumpingStation()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_PUMPINGSTATION, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_PUMPINGSTATION, isOn: false)
             }
             break
         case 4:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_RUINS, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RUINS, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanRuins()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanRuins()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_RUINS, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RUINS, isOn: false)
             }
             break
         case 5:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_DERAILEDTRAIN, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_DERAILEDTRAIN, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanDerailedTrain()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanDerailedTrain()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_DERAILEDTRAIN, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_DERAILEDTRAIN, isOn: false)
             }
             break
         case 6:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CANALCROSSING, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALCROSSING, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanCanalCrossing()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanCanalCrossing()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CANALCROSSING, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALCROSSING, isOn: false)
             }
             break
         case 7:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_TOWNCENTER, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TOWNCENTER, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanTownCenter()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanTownCenter()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_TOWNCENTER, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TOWNCENTER, isOn: false)
             }
             break
         case 8:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_TRAINSTATION, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TRAINSTATION, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanTrainStation()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanTrainStation()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_TRAINSTATION, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TRAINSTATION, isOn: false)
             }
             break
         case 9:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CUSTOMS, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CUSTOMS, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanCustoms()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanCustoms()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CUSTOMS, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CUSTOMS, isOn: false)
             }
             break
         case 10:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_RAILCROSSING, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCROSSING, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanRailCrossing()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanRailCrossing()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_RAILCROSSING, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCROSSING, isOn: false)
             }
             break
         case 11:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_MOUNTHALAIS, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_MOUNTHALAIS, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanMountHalais()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanMountHalais()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_MOUNTHALAIS, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_MOUNTHALAIS, isOn: false)
             }
             break
         case 12:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CANALLOCKS, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALLOCKS, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanCanalLocks()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanCanalLocks()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CANALLOCKS, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALLOCKS, isOn: false)
             }
             break
         case 13:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_RAILCAUSEWAY, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCAUSEWAY, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanRailCauseway()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanRailCauseway()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_RAILCAUSEWAY, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCAUSEWAY, isOn: false)
             }
             break
         case 14:
             print("\(sender.tag)")
             if sender.isOn {
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_LAMAISONDESORMES, isOn: sender.isOn)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_LAMAISONDESORMES, isOn: sender.isOn)
                 self.updateCarentanMapDelegate?.loadCarentanLaMasionDesOrmes()
             } else {
                 self.updateCarentanMapDelegate?.removeCarentanLaMasionDesOrmes()
-                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_LAMAISONDESORMES, isOn: false)
+                StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_LAMAISONDESORMES, isOn: false)
             }
             break
         default:
@@ -286,3 +288,186 @@ extension SelectCarentanLayersDataSource: UITableViewDataSource {
 }
 
 
+//func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//    let cell = tableView.dequeueReusableCell(withIdentifier: "SelectCarentanLayersTableViewCell", for: indexPath) as! SelectCarentanLayersTableViewCell
+//    let key = self.keyValueMap[indexPath.row]
+//    let switchControl = UISwitch()
+//    switchControl.tag = indexPath.row
+//    switchControl.addTarget(self, action: #selector(didChangeSwitch(_:)), for: .valueChanged)
+//    cell.accessoryView = switchControl
+//    cell.primaryText = "\(key)"
+//    cell.secondaryText = "\(self.layerTypes[key.name] ?? "")"
+//    cell.backgroundColor = .black
+//
+//    switchControl.isOn = key.active
+//
+//
+//    // save list
+//    ToggleKeyCodable.saveMap(list: self.keyValueMap)
+//
+//    return cell
+//
+//}
+//
+//@objc func didChangeSwitch(_ sender: UISwitch) {
+//
+//    switch sender.tag {
+//    // CARENTAN TOGGLE SWITCHES
+//    case 0:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_BLACTOT, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanBlactot()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanBlactot()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_BLACTOT, isOn: false)
+//        }
+//        break
+//    case 1:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_502NDSTART, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentan502ndStart()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentan502ndStart()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_502NDSTART, isOn: false)
+//        }
+//        break
+//    case 2:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_FARMRUINS, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanFarmRuins()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanFarmRuins()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_FARMRUINS, isOn: false)
+//        }
+//        break
+//    case 3:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_PUMPINGSTATION, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanPumpingStation()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanPumpingStation()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_PUMPINGSTATION, isOn: false)
+//        }
+//        break
+//    case 4:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RUINS, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanRuins()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanRuins()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RUINS, isOn: false)
+//        }
+//        break
+//    case 5:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_DERAILEDTRAIN, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanDerailedTrain()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanDerailedTrain()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_DERAILEDTRAIN, isOn: false)
+//        }
+//        break
+//    case 6:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALCROSSING, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanCanalCrossing()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanCanalCrossing()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALCROSSING, isOn: false)
+//        }
+//        break
+//    case 7:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TOWNCENTER, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanTownCenter()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanTownCenter()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TOWNCENTER, isOn: false)
+//        }
+//        break
+//    case 8:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TRAINSTATION, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanTrainStation()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanTrainStation()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_TRAINSTATION, isOn: false)
+//        }
+//        break
+//    case 9:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CUSTOMS, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanCustoms()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanCustoms()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CUSTOMS, isOn: false)
+//        }
+//        break
+//    case 10:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCROSSING, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanRailCrossing()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanRailCrossing()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCROSSING, isOn: false)
+//        }
+//        break
+//    case 11:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_MOUNTHALAIS, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanMountHalais()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanMountHalais()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_MOUNTHALAIS, isOn: false)
+//        }
+//        break
+//    case 12:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALLOCKS, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanCanalLocks()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanCanalLocks()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALLOCKS, isOn: false)
+//        }
+//        break
+//    case 13:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCAUSEWAY, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanRailCauseway()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanRailCauseway()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCAUSEWAY, isOn: false)
+//        }
+//        break
+//    case 14:
+//        print("\(sender.tag)")
+//        if sender.isOn {
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_LAMAISONDESORMES, isOn: sender.isOn)
+//            self.updateCarentanMapDelegate?.loadCarentanLaMasionDesOrmes()
+//        } else {
+//            self.updateCarentanMapDelegate?.removeCarentanLaMasionDesOrmes()
+//            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_CARENTAN_LAMAISONDESORMES, isOn: false)
+//        }
+//        break
+//    default:
+//        break
+//    }
+//}
+//}
+//
+//

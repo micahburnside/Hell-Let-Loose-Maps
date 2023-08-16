@@ -1,30 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BHX-U1-Hfx">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--ElAlameinBaseLayer-->
+        <scene sceneID="wN0-6P-7xX">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController storyboardIdentifier="ElAlameinBaseLayerViewController" title="ElAlameinBaseLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wNc-Q4-c1t" customClass="ElAlameinBaseLayerViewController" customModule="HLL_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16G-aT-5TS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XO4-HI-OYk">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElAlameinBaseLayer" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-wO-kDI">
+                                        <rect key="frame" x="0.0" y="-22" width="1920" height="1920"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="I7E-wO-kDI" secondAttribute="trailing" id="03c-xz-1qd"/>
+                                    <constraint firstItem="I7E-wO-kDI" firstAttribute="top" secondItem="XO4-HI-OYk" secondAttribute="top" constant="-22" id="J1U-ox-atv"/>
+                                    <constraint firstAttribute="bottom" secondItem="I7E-wO-kDI" secondAttribute="bottom" constant="-22" id="JcM-LF-D3m"/>
+                                    <constraint firstItem="I7E-wO-kDI" firstAttribute="leading" secondItem="XO4-HI-OYk" secondAttribute="leading" id="PPc-Zf-vYk"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="3Dn-II-1Kk"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fkW-qs-tJQ"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KLn-wJ-1JZ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="XO4-HI-OYk" secondAttribute="bottom" constant="-34" id="FCn-rc-42z"/>
+                            <constraint firstItem="XO4-HI-OYk" firstAttribute="centerX" secondItem="16G-aT-5TS" secondAttribute="centerX" id="Flq-mZ-USB"/>
+                            <constraint firstItem="XO4-HI-OYk" firstAttribute="leading" secondItem="KLn-wJ-1JZ" secondAttribute="leading" id="PsV-dA-LQ5"/>
+                            <constraint firstItem="XO4-HI-OYk" firstAttribute="top" secondItem="KLn-wJ-1JZ" secondAttribute="top" id="kzg-Op-ecY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="El Alamein" id="hIa-Py-8t2">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map.fill" catalog="system" id="VdP-nO-Qyh">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="layerButtonPressed:" destination="wNc-Q4-c1t" id="356-Dg-SB2"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="29L-eY-hnK">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="shareElAlameinMapLayer:" destination="wNc-Q4-c1t" id="VkI-yq-Nmz"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView0" destination="I7E-wO-kDI" id="gRJ-uB-lLX"/>
+                        <outlet property="imageViewBottomConstraint" destination="JcM-LF-D3m" id="mYu-9h-h98"/>
+                        <outlet property="imageViewLeadingConstraint" destination="PPc-Zf-vYk" id="dzF-Am-llg"/>
+                        <outlet property="imageViewTopConstraint" destination="J1U-ox-atv" id="7WD-HI-q55"/>
+                        <outlet property="imageViewTrailingConstraint" destination="03c-xz-1qd" id="PmM-gU-LEZ"/>
+                        <outlet property="scrollView" destination="XO4-HI-OYk" id="LAX-9L-Etc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dB8-n5-O9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D9j-3y-NaC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BHX-U1-Hfx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KLS-qW-dti">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wNc-Q4-c1t" kind="relationship" relationship="rootViewController" id="oel-Jz-EnS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FhK-yy-2TQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ElAlameinBaseLayer" width="1920" height="1920"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>
