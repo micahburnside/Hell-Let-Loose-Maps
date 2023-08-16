@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectElAlameinLayersTableViewCell: UITableViewCell {
+class SelectElAlameinLayersTableViewCell: CustomUITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

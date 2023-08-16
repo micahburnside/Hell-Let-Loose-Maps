@@ -15,7 +15,7 @@ class CoreDataService: NSObject {
     }()
 
     private let persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "People")
+        let container = NSPersistentContainer(name: "ToggleSwitchChoice")
         
         container.loadPersistentStores { description, error in
             if let error = error {
@@ -29,23 +29,23 @@ class CoreDataService: NSObject {
         return self.persistentContainer.viewContext
     }
     
-    func addPerson(with name: String) {
-        let person = NSEntityDescription.insertNewObject(forEntityName: "Person", into: persistentContainer.viewContext)
-        person.setValue(name, forKey: "name")
+    func addMap(with name: String) {
+        let map = NSEntityDescription.insertNewObject(forEntityName: "Map", into: persistentContainer.viewContext)
+        map.setValue(name, forKey: "name")
     }
     
     func removePerson(with name: String, jobTitle: String, country: String) {
-        let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
+        let fetchRequest: NSFetchRequest<Map> = Map.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "%K == %@",
-                                             argumentArray: ["name", "jobTitle", "country"])
+                                             argumentArray: ["name"])
         do {
-            guard let person = try persistentContainer.viewContext.fetch(fetchRequest).first else {
-                // no fruit :(
+            guard let map = try persistentContainer.viewContext.fetch(fetchRequest).first else {
+                // no map :(
                 return
             }
-            persistentContainer.viewContext.delete(person)
+            persistentContainer.viewContext.delete(map)
         } catch let error {
-        print("Failed to delete animal \(error)")
+        print("Failed to delete map \(error)")
         }
         
     }
@@ -60,8 +60,8 @@ class CoreDataService: NSObject {
             print("Error: \(error), \(error.userInfo)")
         }
     }
-    func insertPerson(name: Any) {
-        let person = Person(context: self.persistentContainer.viewContext)
+    func insertMap(name: Any) {
+        let map = Map(context: self.persistentContainer.viewContext)
         }
         
         

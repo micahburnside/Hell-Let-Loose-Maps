@@ -1,58 +1,58 @@
 [
     {
-        "name": "STRONGPOINT_502NDSTART",
+        "name": "STRONGPOINT_CARENTAN_502NDSTART",
         "active": true
     },
         {
-        "name": "STRONGPOINT_FARMRUINS",
+        "name": "STRONGPOINT_CARENTAN_FARMRUINS",
         "active": true
     },
         {
-        "name": "STRONGPOINT_PUMPINGSTATION",
+        "name": "STRONGPOINT_CARENTAN_PUMPINGSTATION",
         "active": true
     },
         {
-        "name": "STRONGPOINT_RUINS",
+        "name": "STRONGPOINT_CARENTAN_RUINS",
         "active": true
     },
         {
-        "name": "STRONGPOINT_DERAILEDTRAIN",
+        "name": "STRONGPOINT_CARENTAN_DERAILEDTRAIN",
         "active": true
     },
         {
-        "name": "STRONGPOINT_CANALCROSSING",
+        "name": "STRONGPOINT_CARENTAN_CANALCROSSING",
         "active": true
     },
         {
-        "name": "STRONGPOINT_TOWNCENTER",
+        "name": "STRONGPOINT_CARENTAN_TOWNCENTER",
         "active": true
     },
         {
-        "name": "STRONGPOINT_TRAINSTATION",
+        "name": "STRONGPOINT_CARENTAN_TRAINSTATION",
         "active": true
     },
         {
-        "name": "STRONGPOINT_CUSTOMS",
+        "name": "STRONGPOINT_CARENTAN_CUSTOMS",
         "active": true
     },
         {
-        "name": "STRONGPOINT_RAILCROSSING",
+        "name": "STRONGPOINT_CARENTAN_RAILCROSSING",
         "active": true
     },
         {
-        "name": "STRONGPOINT_MOUNTHALAIS",
+        "name": "STRONGPOINT_CARENTAN_MOUNTHALAIS",
         "active": true
     },
         {
-        "name": "STRONGPOINT_CANALLOCKS",
+        "name": "STRONGPOINT_CARENTAN_CANALLOCKS",
         "active": true
     },
         {
-        "name": "STRONGPOINT_RAILCAUSEWAY",
+        "name": "STRONGPOINT_CARENTAN_RAILCAUSEWAY",
         "active": true
     },
         {
-        "name": "STRONGPOINT_LAMAISONDESORMES",
+        "name": "STRONGPOINT_CARENTAN_LAMAISONDESORMES",
         "active": true
     },
 ]

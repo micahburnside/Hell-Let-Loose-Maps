@@ -14,12 +14,12 @@ public protocol MapLayerSelectionDelegate {
 }
 
 public enum MapName: String {
-    case Carentan, Foy, Hill400, HurtgenForest, Kharkov, Kursk, OmahaBeach, PurpleHeartLane, Remagen, SainteMarieduMont, SainteMereEglise, Stalingrad, UtahBeach
+    case Carentan, Driel, ElAlamein, Foy, Hill400, HurtgenForest, Kharkov, Kursk, OmahaBeach, PurpleHeartLane, Remagen, SainteMarieduMont, SainteMereEglise, Stalingrad, UtahBeach
 }
 
 //MARK: - All Map Layers
 public enum LayerType: String {
-    case CarentanBaseLayer, CarentanTAC, CarentanStrongpoints, FoyBaseLayer, FoyTAC, FoyStrongpoints, Hill400BaseLayer, Hill400TAC, Hill400Strongpoints, HurtgenForestBaseLayer, HurtgenForestTAC, HurtgenForestStrongpoints, KharkovBaseLayer, KharkovTAC, KharkovStrongpoints, KurskBaseLayer, KurskTAC, KurskStrongpoints, OmahaBeachBaseLayer, OmahaBeachTAC, OmahaBeachStrongpoints, PurpleHeartLaneBaseLayer, PurpleHeartLaneTAC, PurpleHeartLaneStrongpoints, RemagenBaseLayer, RemagenTAC, RemagenStrongpoints, SainteMarieduMontBaseLayer, SainteMarieduMontTAC, SainteMarieduMontStrongpoints, SainteMereEgliseBaseLayer, SainteMereEgliseTAC, SainteMereEgliseStrongpoints, StalingradBaseLayer, StalingradTAC, StalingradStrongpoints, UtahBeachBaseLayer, UtahBeachTAC, UtahBeachStrongpoints
+    case CarentanBaseLayer, CarentanTAC, CarentanStrongpoints, DrielBaseLayer, DrielTAC, DrielStrongpoints, ElAlameinBaseLayer, ElAlameinTAC, ElAlameinStrongpoints, FoyBaseLayer, FoyTAC, FoyStrongpoints, Hill400BaseLayer, Hill400TAC, Hill400Strongpoints, HurtgenForestBaseLayer, HurtgenForestTAC, HurtgenForestStrongpoints, KharkovBaseLayer, KharkovTAC, KharkovStrongpoints, KurskBaseLayer, KurskTAC, KurskStrongpoints, OmahaBeachBaseLayer, OmahaBeachTAC, OmahaBeachStrongpoints, PurpleHeartLaneBaseLayer, PurpleHeartLaneTAC, PurpleHeartLaneStrongpoints, RemagenBaseLayer, RemagenTAC, RemagenStrongpoints, SainteMarieduMontBaseLayer, SainteMarieduMontTAC, SainteMarieduMontStrongpoints, SainteMereEgliseBaseLayer, SainteMereEgliseTAC, SainteMereEgliseStrongpoints, StalingradBaseLayer, StalingradTAC, StalingradStrongpoints, UtahBeachBaseLayer, UtahBeachTAC, UtahBeachStrongpoints
 }
 
 
@@ -27,6 +27,10 @@ public enum LayerType: String {
 func getMap(mapName: MapName, layerType: LayerType) -> UIImage  {
     switch mapName {
     case .Carentan:
+        return getLayer(layerType: layerType)
+    case .Driel:
+        return getLayer(layerType: layerType)
+    case .ElAlamein:
         return getLayer(layerType: layerType)
     case .Foy:
         return getLayer(layerType: layerType)
@@ -64,6 +68,18 @@ func getLayer(layerType: LayerType) -> UIImage  {
         return UIImage(named: "CarentanTAC.png")!
     case .CarentanStrongpoints:
         return UIImage(named: "CarentanStrongpoints.png")!
+    case .DrielBaseLayer:
+        return UIImage(named: "DrielBaseLayer.png")!
+    case .DrielTAC:
+        return UIImage(named: "DrielTAC.png")!
+    case .DrielStrongpoints:
+        return UIImage(named: "DrielStrongpoints.png")!
+    case .ElAlameinBaseLayer:
+        return UIImage(named: "ElAlameinBaseLayer.png")!
+    case .ElAlameinTAC:
+        return UIImage(named: "ElAlameinTAC.png")!
+    case .ElAlameinStrongpoints:
+        return UIImage(named: "ElAlameinStrongpoints.png")!
     case .FoyBaseLayer:
         return UIImage(named: "FoyBaseLayer.png")!
     case .FoyTAC:

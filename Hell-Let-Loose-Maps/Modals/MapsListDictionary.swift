@@ -18,6 +18,8 @@ struct MapsListDictionary {
     
     let mapsListDictionary: [String : String] = [
         "Carentan" : "United States vs Germany",
+        "Driel" : "Great Britain vs Germany",
+        "El Alamein" : "Great Britain vs Germany",
         "Foy" : "United States vs Germany",
         "Hill 400" : "United States vs Germany",
         "Hürtgen Forest" : "United States vs Germany",
@@ -50,6 +52,46 @@ struct MapsListDictionary {
         "13 - Canal Locks" : "",
         "14 - Rail Causeway" : "",
         "15 - La Maison Des Ormes" : ""
+    ]
+    
+    let drielStrongpointsDictionary: [String : String] = [
+//        "TAC" : "displays grid lines on top of base layer",
+//        "Strongpoints" : "displays strongpoints",
+        "1 - Osterbeek Approach" : "",
+        "2 - Roseander Polder" : "",
+        "3 - Kasteel Rosande" : "",
+        "4 - Boatyard" : "",
+        "5 - Bridgeway" : "",
+        "6 - Rijn Banks" : "",
+        "7 - Brick Factory" : "",
+        "8 - Railway Bridge" : "",
+        "9 - Gun Emplacements" : "",
+        "10 - Rietveld" : "",
+        "11 - South Railway" : "",
+        "12 - MiddelRoad" : "",
+        "13 - Orchards" : "",
+        "14 - Schaduwwolken Farm" : "",
+        "15 - Fields" : ""
+    ]
+    
+    let elAlameinStrongpointsDictionary: [String : String] = [
+//        "TAC" : "displays grid lines on top of base layer",
+//        "Strongpoints" : "displays strongpoints",
+        "1 - Vehicle Depot" : "",
+        "2 - Artillery Guns" : "",
+        "3 - MiteiriyaRidge" : "",
+        "4 - Hamlet Ruins" : "",
+        "5 - El Mreir" : "",
+        "6 - Watchtower" : "",
+        "7 - Desert Rat Trenches" : "",
+        "8 - Oasis" : "",
+        "9 - Valley" : "",
+        "10 - Fuel Depot" : "",
+        "11 - Airfield Command" : "",
+        "12 - Airfield Hangars" : "",
+        "13 - Cliffside Village" : "",
+        "14 - Ambushed Convoy" : "",
+        "15 - Quarry" : ""
     ]
     
     let FoyStrongpointsDictionary: [String : String] = [
@@ -208,7 +250,7 @@ struct MapsListDictionary {
         "11 - The Cemetery" : "",
         "12 - Maison Du Crique" : "",
         "13 - Les Vieux Vergers" : "",
-        "14 - The Draw" : "",
+        "14 - Cross Roads" : "",
         "15 - Russeau De Ferme" : ""
     ]
     

@@ -93,7 +93,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "1.0.2"
+      customArchiveName = "1.0.3"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

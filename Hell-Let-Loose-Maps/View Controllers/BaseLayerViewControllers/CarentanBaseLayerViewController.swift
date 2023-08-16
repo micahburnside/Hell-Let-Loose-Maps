@@ -7,9 +7,13 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class CarentanBaseLayerViewController: BaseViewController {
     var updateCarentanMapDelegate: UpdateCarentanMapDelegate!
+    
+//    private var imageViewContentOffset = CGPoint.zero
+//    private var imageViewZoomScale: CGFloat = 1.0
 
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -253,20 +257,26 @@ class CarentanBaseLayerViewController: BaseViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("Core Data Model Test: \(StoredData.shared.createCarentanMap())")
         self.imageView0.image = getMap(mapName: .Carentan, layerType: .CarentanTAC)
         self.scrollView.delegate = self
         scrollView.maximumZoomScale = 5.0
         createImageViewLayerSubViews()
         doubleTapGesture()
         
-        
     }
-   
+
     override func viewWillLayoutSubviews() {
       super.viewWillLayoutSubviews()
         updateMinZoomScaleForSize(view.bounds.size)
     }
-    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+//        // Update the content size and offset of the scroll view
+//        scrollView.updateContentSize()
+//    }
+
     override func viewWillAppear(_ animated: Bool) {
         showStrongpoints()
         hideStrongpoints()
@@ -364,97 +374,97 @@ class CarentanBaseLayerViewController: BaseViewController {
     }
     
     func showStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_BLACTOT) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_BLACTOT) {
             self.loadCarentanBlactot()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_502NDSTART) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_502NDSTART) {
             self.loadCarentan502ndStart()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FARMRUINS) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_FARMRUINS) {
             self.loadCarentanFarmRuins()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PUMPINGSTATION) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_PUMPINGSTATION) {
             self.loadCarentanPumpingStation()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RUINS) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RUINS) {
             self.loadCarentanRuins()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_DERAILEDTRAIN) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_DERAILEDTRAIN) {
             self.loadCarentanDerailedTrain()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CANALCROSSING) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALCROSSING) {
             self.loadCarentanCanalCrossing()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_TOWNCENTER) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_TOWNCENTER) {
             self.loadCarentanTownCenter()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_TRAINSTATION) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_TRAINSTATION) {
             self.loadCarentanTrainStation()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CUSTOMS) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CUSTOMS) {
             self.loadCarentanCustoms()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RAILCROSSING) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCROSSING) {
             self.loadCarentanRailCrossing()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_MOUNTHALAIS) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_MOUNTHALAIS) {
             self.loadCarentanMountHalais()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CANALLOCKS) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALLOCKS) {
             self.loadCarentanCanalLocks()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RAILCAUSEWAY) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCAUSEWAY) {
             self.loadCarentanRailCauseway()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_LAMAISONDESORMES) {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_LAMAISONDESORMES) {
             self.loadCarentanLaMasionDesOrmes()
         }
     }
     
     func hideStrongpoints() {
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_BLACTOT) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_BLACTOT) == false {
             self.removeCarentanBlactot()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_502NDSTART) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_502NDSTART) == false {
             self.removeCarentan502ndStart()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_FARMRUINS) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_FARMRUINS) == false {
             self.removeCarentanFarmRuins()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_PUMPINGSTATION) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_PUMPINGSTATION) == false {
             self.removeCarentanPumpingStation()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RUINS) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RUINS) == false {
             self.removeCarentanRuins()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_DERAILEDTRAIN) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_DERAILEDTRAIN) == false {
             self.removeCarentanDerailedTrain()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CANALCROSSING) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALCROSSING) == false {
             self.removeCarentanCanalCrossing()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_TOWNCENTER) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_TOWNCENTER) == false {
             self.removeCarentanTownCenter()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_TRAINSTATION) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_TRAINSTATION) == false {
             self.removeCarentanTrainStation()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CUSTOMS) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CUSTOMS) == false {
             self.removeCarentanCustoms()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RAILCROSSING) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCROSSING) == false {
             self.removeCarentanRailCrossing()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_MOUNTHALAIS) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_MOUNTHALAIS) == false {
             self.removeCarentanMountHalais()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CANALLOCKS) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_CANALLOCKS) == false {
             self.removeCarentanCanalLocks()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_RAILCAUSEWAY) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_RAILCAUSEWAY) == false {
             self.removeCarentanRailCauseway()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_LAMAISONDESORMES) == false {
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_CARENTAN_LAMAISONDESORMES) == false {
             self.removeCarentanLaMasionDesOrmes()
         }
     }
@@ -490,14 +500,27 @@ extension CarentanBaseLayerViewController {
 //MARK: - UIScrollViewDelegate
 extension CarentanBaseLayerViewController: UIScrollViewDelegate {
     ///Sets imageView0 as the view that will be zoomed in the scrollview
-  func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-      return imageView0
-  }
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView0
+    }
+    
+    ///Updates constraints as view zooms in and out
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        updateConstraintsForSize(view.bounds.size)
+    }
 
-  ///Updates constraints as view zooms in and out
-  func scrollViewDidZoom(_ scrollView: UIScrollView) {
-    updateConstraintsForSize(view.bounds.size)
-  }
+    
+    func calculateZoomScale(for size: CGSize) -> CGFloat {
+        let currentZoomScale = scrollView.zoomScale
+        let currentSize = scrollView.bounds.size
+        
+        let widthScale = size.width / currentSize.width
+        let heightScale = size.height / currentSize.height
+        
+        let newZoomScale = currentZoomScale * min(widthScale, heightScale)
+        
+        return newZoomScale
+    }
 
 }
 
