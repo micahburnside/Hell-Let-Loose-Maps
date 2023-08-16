@@ -390,8 +390,8 @@ class SainteMereEgliseBaseLayerViewController: BaseViewController {
         if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LESVIEUXVERGERS) {
             self.loadSainteMereEgliseLesVieuxVergers()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW) {
-            self.loadSainteMereEgliseTheDraw()
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CROSSROADS) {
+            self.loadSainteMereEgliseCrossRoads()
         }
         if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUSSEAUDEFERME) {
             self.loadSainteMereEgliseRusseauDeFerme()
@@ -438,8 +438,8 @@ class SainteMereEgliseBaseLayerViewController: BaseViewController {
         if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LESVIEUXVERGERS) == false {
             self.removeSainteMereEgliseLesVieuxVergers()
         }
-        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW) == false {
-            self.removeSainteMereEgliseTheDraw()
+        if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CROSSROADS) == false {
+            self.removeSainteMereEgliseCrossRoads()
         }
         if StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUSSEAUDEFERME) == false {
             self.removeSainteMereEgliseRusseauDeFerme()
@@ -485,6 +485,7 @@ extension SainteMereEgliseBaseLayerViewController: UIScrollViewDelegate {
 }
 
 extension SainteMereEgliseBaseLayerViewController: UpdateSainteMereEgliseMapDelegate {
+    
 
     func removeSainteMereEgliseFlakPosition() {
         self.imageViewFlakPosition.isHidden = true
@@ -538,7 +539,7 @@ extension SainteMereEgliseBaseLayerViewController: UpdateSainteMereEgliseMapDele
         self.imageViewLesVieuxVergers.isHidden = true
     }
     
-    func removeSainteMereEgliseTheDraw() {
+    func removeSainteMereEgliseCrossRoads() {
         self.imageViewTheDraw.isHidden = true
     }
     
@@ -611,9 +612,9 @@ extension SainteMereEgliseBaseLayerViewController: UpdateSainteMereEgliseMapDele
         self.imageViewLesVieuxVergers.image = getStrongpoint(strongpoint: .StrongpointSainteMereEgliseLesVieuxVergers)
     }
     
-    func loadSainteMereEgliseTheDraw() {
+    func loadSainteMereEgliseCrossRoads() {
         self.imageViewTheDraw.isHidden = false
-        self.imageViewTheDraw.image = getStrongpoint(strongpoint: .StrongpointSainteMereEgliseTheDraw)
+        self.imageViewTheDraw.image = getStrongpoint(strongpoint: .StrongpointSainteMereEgliseCrossRoads)
     }
     func loadSainteMereEgliseRusseauDeFerme() {
         self.imageViewRusseauDeFerme.isHidden = false

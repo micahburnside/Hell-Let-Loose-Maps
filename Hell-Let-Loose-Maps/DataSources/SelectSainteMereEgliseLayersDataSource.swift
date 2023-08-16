@@ -113,7 +113,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     }  else if switchControl.tag == 12 {
         switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_LESVIEUXVERGERS)
     }  else if switchControl.tag == 13 {
-        switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW)
+        switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CROSSROADS)
     }  else if switchControl.tag == 14 {
         switchControl.isOn = StoredData.shared.getToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_RUSSEAUDEFERME)
     }
@@ -259,11 +259,11 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     case 13:
         print("\(sender.tag)")
         if sender.isOn {
-            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW, isOn: sender.isOn)
-            self.updateSainteMereEgliseMapDelegate?.loadSainteMereEgliseTheDraw()
+            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CROSSROADS, isOn: sender.isOn)
+            self.updateSainteMereEgliseMapDelegate?.loadSainteMereEgliseCrossRoads()
         } else {
-            self.updateSainteMereEgliseMapDelegate?.removeSainteMereEgliseTheDraw()
-            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_THEDRAW, isOn: false)
+            self.updateSainteMereEgliseMapDelegate?.removeSainteMereEgliseCrossRoads()
+            StoredData.shared.setToggleState(switchKey: .STRONGPOINT_SAINTEMEREEGLISE_CROSSROADS, isOn: false)
         }
         break
     case 14:

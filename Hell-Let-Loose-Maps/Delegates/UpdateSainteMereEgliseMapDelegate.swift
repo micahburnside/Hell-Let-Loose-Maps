@@ -19,7 +19,7 @@ protocol UpdateSainteMereEgliseMapDelegate {
     func removeSainteMereEgliseTheCemetery()
     func removeSainteMereEgliseMaisonDuCrique()
     func removeSainteMereEgliseLesVieuxVergers()
-    func removeSainteMereEgliseTheDraw()
+    func removeSainteMereEgliseCrossRoads()
     func removeSainteMereEgliseRusseauDeFerme()
     func loadSainteMereEgliseFlakPosition()
     func loadSainteMereEgliseVaulaville()
@@ -34,6 +34,6 @@ protocol UpdateSainteMereEgliseMapDelegate {
     func loadSainteMereEgliseTheCemetery()
     func loadSainteMereEgliseMaisonDuCrique()
     func loadSainteMereEgliseLesVieuxVergers()
-    func loadSainteMereEgliseTheDraw()
+    func loadSainteMereEgliseCrossRoads()
     func loadSainteMereEgliseRusseauDeFerme()
 }

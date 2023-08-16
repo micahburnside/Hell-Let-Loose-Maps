@@ -24,12 +24,13 @@
 		54141896281CC24100E0483B /* MapsListDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141895281CC24100E0483B /* MapsListDictionary.swift */; };
 		54141899281CC2C500E0483B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141898281CC2C500E0483B /* BaseViewController.swift */; };
 		542BC28728D815240064922E /* PresentationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542BC28628D815240064922E /* PresentationHelper.swift */; };
-		5470CF8D28458EE800AAEB0B /* NewPlayerGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */; };
 		547F338628E0DAF9009D7968 /* CustomLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F338528E0DAF9009D7968 /* CustomLocations.swift */; };
 		548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */; };
 		5488870828483B810025993D /* GetTerritoryColorSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */; };
 		5488870A28489DD90025993D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870928489DD90025993D /* UIColor+.swift */; };
+		549B5E4C29E65E2500224799 /* ScrollViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B5E4B29E65E2500224799 /* ScrollViewHelper.swift */; };
 		54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */; };
+		54C2FB6829CCB617000B213A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C2FB6729CCB617000B213A /* CoreDataService.swift */; };
 		54CCCA24288E869A00539EFF /* SelectFoyLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA23288E869A00539EFF /* SelectFoyLayers.storyboard */; };
 		54CCCA28288F32F700539EFF /* SelectFoyLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA27288F32F700539EFF /* SelectFoyLayersDataSource.swift */; };
 		54CCCA2B288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA29288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift */; };
@@ -130,6 +131,22 @@
 		54D0826228330B0400542CB7 /* SelectCarentanLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D0826128330B0400542CB7 /* SelectCarentanLayers.storyboard */; };
 		54D0826428330B2500542CB7 /* SelectCarentanLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826328330B2500542CB7 /* SelectCarentanLayersViewController.swift */; };
 		54D0826A28330B7300542CB7 /* SelectCarentanLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826928330B7300542CB7 /* SelectCarentanLayersDataSource.swift */; };
+		54EAF8392A59EFAA009B8EA8 /* DrielBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF8382A59EFAA009B8EA8 /* DrielBaseLayer.storyboard */; };
+		54EAF83B2A59F0D8009B8EA8 /* SelectDrielLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF83A2A59F0D8009B8EA8 /* SelectDrielLayers.storyboard */; };
+		54EAF83D2A59F135009B8EA8 /* UpdateDrielMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF83C2A59F135009B8EA8 /* UpdateDrielMapDelegate.swift */; };
+		54EAF83F2A5A0C78009B8EA8 /* ElAlameinBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF83E2A5A0C78009B8EA8 /* ElAlameinBaseLayer.storyboard */; };
+		54EAF8412A5A0C8C009B8EA8 /* SelectElAlameinLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF8402A5A0C8C009B8EA8 /* SelectElAlameinLayers.storyboard */; };
+		54EAF8432A5A0CF5009B8EA8 /* UpdateElAlameinMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8422A5A0CF5009B8EA8 /* UpdateElAlameinMapDelegate.swift */; };
+		54EAF8462A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8442A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.swift */; };
+		54EAF8472A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF8452A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.xib */; };
+		54EAF84C2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF84A2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.swift */; };
+		54EAF84D2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF84B2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.xib */; };
+		54EAF84F2A5A0E09009B8EA8 /* SelectDrielLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF84E2A5A0E09009B8EA8 /* SelectDrielLayersDataSource.swift */; };
+		54EAF8512A5A0E1D009B8EA8 /* SelectElAlameinLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8502A5A0E1D009B8EA8 /* SelectElAlameinLayersDataSource.swift */; };
+		54EAF8532A5A0F04009B8EA8 /* SelectDrielLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8522A5A0F04009B8EA8 /* SelectDrielLayersViewController.swift */; };
+		54EAF8552A5A0F16009B8EA8 /* SelectElAlameinLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8542A5A0F16009B8EA8 /* SelectElAlameinLayersViewController.swift */; };
+		54EAF8572A5A278D009B8EA8 /* DrielBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8562A5A278D009B8EA8 /* DrielBaseLayerViewController.swift */; };
+		54EAF8592A5A3615009B8EA8 /* ElAlameinBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8582A5A3615009B8EA8 /* ElAlameinBaseLayerViewController.swift */; };
 		54FEA553293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA552293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift */; };
 		54FEA556293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */; };
 		54FEA557293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */; };
@@ -138,6 +155,8 @@
 		54FEA55D293A77D200CEDA28 /* KharkovBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */; };
 		54FEA55F293A77E100CEDA28 /* SelectKharkovLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */; };
 		54FEA561293A788D00CEDA28 /* SelectKharkovLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */; };
+		54FEA56E2944FAE200CEDA28 /* ToggleKeyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA56D2944FAE200CEDA28 /* ToggleKeyCodable.swift */; };
+		54FEA570294516B700CEDA28 /* keyMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA56F294516B700CEDA28 /* keyMap.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,12 +199,13 @@
 		54141898281CC2C500E0483B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		542BC28628D815240064922E /* PresentationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationHelper.swift; sourceTree = "<group>"; };
 		544132D728DE514D00FC141A /* HLL Maps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HLL Maps.entitlements"; sourceTree = "<group>"; };
-		5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPlayerGuide.storyboard; sourceTree = "<group>"; };
 		547F338528E0DAF9009D7968 /* CustomLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocations.swift; sourceTree = "<group>"; };
 		548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongpointLayerSelectionDelegate.swift; sourceTree = "<group>"; };
 		5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTerritoryColorSelectionDelegate.swift; sourceTree = "<group>"; };
 		5488870928489DD90025993D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		549B5E4B29E65E2500224799 /* ScrollViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewHelper.swift; sourceTree = "<group>"; };
 		54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		54C2FB6729CCB617000B213A /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		54CCCA23288E869A00539EFF /* SelectFoyLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectFoyLayers.storyboard; sourceTree = "<group>"; };
 		54CCCA27288F32F700539EFF /* SelectFoyLayersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFoyLayersDataSource.swift; sourceTree = "<group>"; };
 		54CCCA29288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFoyLayersTableViewCell.swift; sourceTree = "<group>"; };
@@ -286,6 +306,22 @@
 		54D0826128330B0400542CB7 /* SelectCarentanLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCarentanLayers.storyboard; sourceTree = "<group>"; };
 		54D0826328330B2500542CB7 /* SelectCarentanLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarentanLayersViewController.swift; sourceTree = "<group>"; };
 		54D0826928330B7300542CB7 /* SelectCarentanLayersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarentanLayersDataSource.swift; sourceTree = "<group>"; };
+		54EAF8382A59EFAA009B8EA8 /* DrielBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrielBaseLayer.storyboard; sourceTree = "<group>"; };
+		54EAF83A2A59F0D8009B8EA8 /* SelectDrielLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectDrielLayers.storyboard; sourceTree = "<group>"; };
+		54EAF83C2A59F135009B8EA8 /* UpdateDrielMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDrielMapDelegate.swift; sourceTree = "<group>"; };
+		54EAF83E2A5A0C78009B8EA8 /* ElAlameinBaseLayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ElAlameinBaseLayer.storyboard; sourceTree = "<group>"; };
+		54EAF8402A5A0C8C009B8EA8 /* SelectElAlameinLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectElAlameinLayers.storyboard; sourceTree = "<group>"; };
+		54EAF8422A5A0CF5009B8EA8 /* UpdateElAlameinMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateElAlameinMapDelegate.swift; sourceTree = "<group>"; };
+		54EAF8442A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDrielLayersTableViewCell.swift; sourceTree = "<group>"; };
+		54EAF8452A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDrielLayersTableViewCell.xib; sourceTree = "<group>"; };
+		54EAF84A2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectElAlameinLayersTableViewCell.swift; sourceTree = "<group>"; };
+		54EAF84B2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectElAlameinLayersTableViewCell.xib; sourceTree = "<group>"; };
+		54EAF84E2A5A0E09009B8EA8 /* SelectDrielLayersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDrielLayersDataSource.swift; sourceTree = "<group>"; };
+		54EAF8502A5A0E1D009B8EA8 /* SelectElAlameinLayersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectElAlameinLayersDataSource.swift; sourceTree = "<group>"; };
+		54EAF8522A5A0F04009B8EA8 /* SelectDrielLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDrielLayersViewController.swift; sourceTree = "<group>"; };
+		54EAF8542A5A0F16009B8EA8 /* SelectElAlameinLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectElAlameinLayersViewController.swift; sourceTree = "<group>"; };
+		54EAF8562A5A278D009B8EA8 /* DrielBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrielBaseLayerViewController.swift; sourceTree = "<group>"; };
+		54EAF8582A5A3615009B8EA8 /* ElAlameinBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElAlameinBaseLayerViewController.swift; sourceTree = "<group>"; };
 		54FEA552293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateKharkovMapDelegate.swift; sourceTree = "<group>"; };
 		54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectKharkovLayersTableViewCell.swift; sourceTree = "<group>"; };
 		54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectKharkovLayersTableViewCell.xib; sourceTree = "<group>"; };
@@ -294,6 +330,8 @@
 		54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KharkovBaseLayerViewController.swift; sourceTree = "<group>"; };
 		54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectKharkovLayersViewController.swift; sourceTree = "<group>"; };
 		54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectKharkovLayers.storyboard; sourceTree = "<group>"; };
+		54FEA56D2944FAE200CEDA28 /* ToggleKeyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleKeyCodable.swift; sourceTree = "<group>"; };
+		54FEA56F294516B700CEDA28 /* keyMap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keyMap.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +375,8 @@
 				54CCCA812899708500539EFF /* SelectStalingradLayersViewController.swift */,
 				54CCCA832899709A00539EFF /* SelectUtahBeachLayersViewController.swift */,
 				54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */,
+				54EAF8522A5A0F04009B8EA8 /* SelectDrielLayersViewController.swift */,
+				54EAF8542A5A0F16009B8EA8 /* SelectElAlameinLayersViewController.swift */,
 			);
 			path = LayerSelection;
 			sourceTree = "<group>";
@@ -365,6 +405,7 @@
 		5414181D281CC13100E0483B /* Hell-Let-Loose-Maps */ = {
 			isa = PBXGroup;
 			children = (
+				54FEA56F294516B700CEDA28 /* keyMap.json */,
 				54D081FD282C6E1D00542CB7 /* Modals */,
 				54AE2C8F2845CFF6000C4297 /* Data Persistence */,
 				5488870B2848A22F0025993D /* Extensions */,
@@ -423,6 +464,8 @@
 				54CCCA8F2899741B00539EFF /* SelectSainteMereEgliseLayersDataSource.swift */,
 				54CCCA912899742E00539EFF /* SelectStalingradLayersDataSource.swift */,
 				54CCCA952899745800539EFF /* SelectUtahBeachLayersDataSource.swift */,
+				54EAF84E2A5A0E09009B8EA8 /* SelectDrielLayersDataSource.swift */,
+				54EAF8502A5A0E1D009B8EA8 /* SelectElAlameinLayersDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -433,32 +476,36 @@
 				54141890281CC22E00E0483B /* CustomUITableViewCell.swift */,
 				54D081DE2829F28F00542CB7 /* BaseLayerMapsTableViewCell.swift */,
 				54D081DF2829F28F00542CB7 /* BaseLayerMapsTableViewCell.xib */,
+				54CCCAAF28A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift */,
+				54CCCAB028A9C26F00539EFF /* SelectCarentanLayersTableViewCell.xib */,
+				54EAF8442A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.swift */,
+				54EAF8452A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.xib */,
+				54EAF84A2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.swift */,
+				54EAF84B2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.xib */,
 				54CCCA29288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift */,
 				54CCCA2A288F3A3500539EFF /* SelectFoyLayersTableViewCell.xib */,
 				54CCCA352890012D00539EFF /* SelectHill400LayersTableViewCell.swift */,
 				54CCCA362890012D00539EFF /* SelectHill400LayersTableViewCell.xib */,
 				54CCCA452898C66C00539EFF /* SelectHurtgenForestLayersTableViewCell.swift */,
 				54CCCA462898C66C00539EFF /* SelectHurtgenForestLayersTableViewCell.xib */,
+				54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */,
+				54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */,
+				54CCCA972899892D00539EFF /* SelectKurskLayersTableViewCell.swift */,
+				54CCCA982899892D00539EFF /* SelectKurskLayersTableViewCell.xib */,
 				54CCCA492898E11200539EFF /* SelectOmahaBeachLayersTableViewCell.swift */,
 				54CCCA4A2898E11200539EFF /* SelectOmahaBeachLayersTableViewCell.xib */,
+				54CCCA5D2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.swift */,
+				54CCCA5E2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.xib */,
 				54CCCA4D2898E19200539EFF /* SelectRemagenLayersTableViewCell.swift */,
 				54CCCA4E2898E19200539EFF /* SelectRemagenLayersTableViewCell.xib */,
+				54CCCA612898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.swift */,
+				54CCCA622898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.xib */,
 				54CCCA512898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.swift */,
 				54CCCA522898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.xib */,
 				54CCCA552898E1DD00539EFF /* SelectStalingradLayersTableViewCell.swift */,
 				54CCCA562898E1DD00539EFF /* SelectStalingradLayersTableViewCell.xib */,
 				54CCCA592898E20A00539EFF /* SelectUtahBeachLayersTableViewCell.swift */,
 				54CCCA5A2898E20A00539EFF /* SelectUtahBeachLayersTableViewCell.xib */,
-				54CCCA5D2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.swift */,
-				54CCCA5E2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.xib */,
-				54CCCA612898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.swift */,
-				54CCCA622898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.xib */,
-				54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */,
-				54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */,
-				54CCCA972899892D00539EFF /* SelectKurskLayersTableViewCell.swift */,
-				54CCCA982899892D00539EFF /* SelectKurskLayersTableViewCell.xib */,
-				54CCCAAF28A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift */,
-				54CCCAB028A9C26F00539EFF /* SelectCarentanLayersTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -490,6 +537,9 @@
 				5414186B281CC1F200E0483B /* DataSourceDelegate.swift */,
 				54D0825D283057CE00542CB7 /* MapLayerSelectionDelegate.swift */,
 				548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */,
+				54CCCAAD28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift */,
+				54EAF83C2A59F135009B8EA8 /* UpdateDrielMapDelegate.swift */,
+				54EAF8422A5A0CF5009B8EA8 /* UpdateElAlameinMapDelegate.swift */,
 				54022BCB286AE96D0080AF63 /* UpdateFoyMapDelegate.swift */,
 				54CCCA33288FFED200539EFF /* UpdateHill400MapDelegate.swift */,
 				54CCCA3928989D2500539EFF /* UpdateHurtgenForestMapDelegate.swift */,
@@ -502,7 +552,6 @@
 				54CCCA6D2899016700539EFF /* UpdateUtahBeachMapDelegate.swift */,
 				54CCCA6F2899018500539EFF /* UpdatePurpleHeartLaneMapDelegate.swift */,
 				54CCCA71289901A300539EFF /* UpdateSainteMarieduMontMapDelegate.swift */,
-				54CCCAAD28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift */,
 				5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */,
 			);
 			path = Delegates;
@@ -512,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				5488870928489DD90025993D /* UIColor+.swift */,
+				549B5E4B29E65E2500224799 /* ScrollViewHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -519,7 +569,9 @@
 		54AE2C8F2845CFF6000C4297 /* Data Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				54C2FB6729CCB617000B213A /* CoreDataService.swift */,
 				54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */,
+				54FEA56D2944FAE200CEDA28 /* ToggleKeyCodable.swift */,
 			);
 			path = "Data Persistence";
 			sourceTree = "<group>";
@@ -528,6 +580,8 @@
 			isa = PBXGroup;
 			children = (
 				54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */,
+				54EAF8382A59EFAA009B8EA8 /* DrielBaseLayer.storyboard */,
+				54EAF83E2A5A0C78009B8EA8 /* ElAlameinBaseLayer.storyboard */,
 				54D081E22829F6C700542CB7 /* FoyBaseLayer.storyboard */,
 				54D081E42829F6F800542CB7 /* Hill400BaseLayer.storyboard */,
 				54D081E62829F75B00542CB7 /* HurtgenForestBaseLayer.storyboard */,
@@ -538,9 +592,8 @@
 				54D081EE2829F79800542CB7 /* RemagenBaseLayer.storyboard */,
 				54D081F02829F7A600542CB7 /* SainteMarieduMontBaseLayer.storyboard */,
 				54D081F22829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard */,
-				54D081F42829F7C300542CB7 /* UtahBeachBaseLayer.storyboard */,
 				54D081F6282A131400542CB7 /* StalingradBaseLayer.storyboard */,
-				5470CF8C28458EE800AAEB0B /* NewPlayerGuide.storyboard */,
+				54D081F42829F7C300542CB7 /* UtahBeachBaseLayer.storyboard */,
 			);
 			path = BaseLayerMaps;
 			sourceTree = "<group>";
@@ -571,6 +624,8 @@
 				54D081D42829F16D00542CB7 /* StalingradBaseLayerViewController.swift */,
 				54D081D62829F17700542CB7 /* UtahBeachBaseLayerViewController.swift */,
 				54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */,
+				54EAF8562A5A278D009B8EA8 /* DrielBaseLayerViewController.swift */,
+				54EAF8582A5A3615009B8EA8 /* ElAlameinBaseLayerViewController.swift */,
 			);
 			path = BaseLayerViewControllers;
 			sourceTree = "<group>";
@@ -591,18 +646,20 @@
 			children = (
 				54D081DA2829F24800542CB7 /* BaseLayerMaps.storyboard */,
 				54D0826128330B0400542CB7 /* SelectCarentanLayers.storyboard */,
+				54EAF83A2A59F0D8009B8EA8 /* SelectDrielLayers.storyboard */,
+				54EAF8402A5A0C8C009B8EA8 /* SelectElAlameinLayers.storyboard */,
 				54CCCA23288E869A00539EFF /* SelectFoyLayers.storyboard */,
 				54CCCA2D288FFAE900539EFF /* SelectHill400Layers.storyboard */,
 				54CCCA432898B47F00539EFF /* SelectHurtgenForestLayers.storyboard */,
+				54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */,
 				54CCCA9B2899969800539EFF /* SelectKurskLayers.storyboard */,
 				54CCCA9D2899A1E100539EFF /* SelectOmahaBeachLayers.storyboard */,
 				54CCCA9F2899A49F00539EFF /* SelectPurpleHeartLaneLayers.storyboard */,
+				54CCCAAB28A3405200539EFF /* SelectRemagenLayers.storyboard */,
 				54CCCAA32899A4DA00539EFF /* SelectSainteMarieduMontLayers.storyboard */,
 				54CCCAA52899A4F100539EFF /* SelectSainteMereEgliseLayers.storyboard */,
 				54CCCAA72899A51100539EFF /* SelectStalingradLayers.storyboard */,
 				54CCCAA92899A52500539EFF /* SelectUtahBeachLayers.storyboard */,
-				54CCCAAB28A3405200539EFF /* SelectRemagenLayers.storyboard */,
-				54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -715,6 +772,8 @@
 				54CCCA4C2898E11200539EFF /* SelectOmahaBeachLayersTableViewCell.xib in Resources */,
 				54D081E72829F75B00542CB7 /* HurtgenForestBaseLayer.storyboard in Resources */,
 				54D081E32829F6C700542CB7 /* FoyBaseLayer.storyboard in Resources */,
+				54EAF83F2A5A0C78009B8EA8 /* ElAlameinBaseLayer.storyboard in Resources */,
+				54EAF84D2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.xib in Resources */,
 				54CCCA5C2898E20A00539EFF /* SelectUtahBeachLayersTableViewCell.xib in Resources */,
 				5414182B281CC13200E0483B /* LaunchScreen.storyboard in Resources */,
 				54D0826228330B0400542CB7 /* SelectCarentanLayers.storyboard in Resources */,
@@ -724,14 +783,18 @@
 				54D081EB2829F77D00542CB7 /* OmahaBeachBaseLayer.storyboard in Resources */,
 				54D081E52829F6F800542CB7 /* Hill400BaseLayer.storyboard in Resources */,
 				54141828281CC13200E0483B /* Assets.xcassets in Resources */,
+				54EAF8472A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.xib in Resources */,
 				54D081F32829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard in Resources */,
+				54FEA570294516B700CEDA28 /* keyMap.json in Resources */,
 				54D081E92829F76600542CB7 /* KurskBaseLayer.storyboard in Resources */,
 				54CCCA9E2899A1E100539EFF /* SelectOmahaBeachLayers.storyboard in Resources */,
 				54CCCA382890012D00539EFF /* SelectHill400LayersTableViewCell.xib in Resources */,
+				54EAF83B2A59F0D8009B8EA8 /* SelectDrielLayers.storyboard in Resources */,
 				54D081F7282A131400542CB7 /* StalingradBaseLayer.storyboard in Resources */,
 				54CCCAA62899A4F100539EFF /* SelectSainteMereEgliseLayers.storyboard in Resources */,
 				54CCCA602898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.xib in Resources */,
 				54CCCAAA2899A52500539EFF /* SelectUtahBeachLayers.storyboard in Resources */,
+				54EAF8392A59EFAA009B8EA8 /* DrielBaseLayer.storyboard in Resources */,
 				54CCCA24288E869A00539EFF /* SelectFoyLayers.storyboard in Resources */,
 				54D081F52829F7C300542CB7 /* UtahBeachBaseLayer.storyboard in Resources */,
 				54FEA55B293A778000CEDA28 /* KharkovBaseLayer.storyboard in Resources */,
@@ -742,11 +805,11 @@
 				54FEA557293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib in Resources */,
 				54CCCA542898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.xib in Resources */,
 				54CCCA482898C66C00539EFF /* SelectHurtgenForestLayersTableViewCell.xib in Resources */,
+				54EAF8412A5A0C8C009B8EA8 /* SelectElAlameinLayers.storyboard in Resources */,
 				54D081F12829F7A600542CB7 /* SainteMarieduMontBaseLayer.storyboard in Resources */,
 				54CCCAA02899A49F00539EFF /* SelectPurpleHeartLaneLayers.storyboard in Resources */,
 				54CCCA2E288FFAE900539EFF /* SelectHill400Layers.storyboard in Resources */,
 				54CCCA582898E1DD00539EFF /* SelectStalingradLayersTableViewCell.xib in Resources */,
-				5470CF8D28458EE800AAEB0B /* NewPlayerGuide.storyboard in Resources */,
 				54CCCA9C2899969800539EFF /* SelectKurskLayers.storyboard in Resources */,
 				54CCCA642898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.xib in Resources */,
 				54D081E12829F28F00542CB7 /* BaseLayerMapsTableViewCell.xib in Resources */,
@@ -796,13 +859,16 @@
 				54CCCA682899010D00539EFF /* UpdateRemagenMapDelegate.swift in Sources */,
 				54CCCA66289900F700539EFF /* UpdateOmahaBeachMapDelegate.swift in Sources */,
 				5488870A28489DD90025993D /* UIColor+.swift in Sources */,
+				54EAF8532A5A0F04009B8EA8 /* SelectDrielLayersViewController.swift in Sources */,
 				54141893281CC22E00E0483B /* NSObject+.swift in Sources */,
 				548886FA284834A40025993D /* StrongpointLayerSelectionDelegate.swift in Sources */,
 				542BC28728D815240064922E /* PresentationHelper.swift in Sources */,
 				54CCCA7A2899703400539EFF /* SelectRemagenLayersViewController.swift in Sources */,
 				54FEA556293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift in Sources */,
 				54D081C92829F11100542CB7 /* KurskBaseLayerViewController.swift in Sources */,
+				54FEA56E2944FAE200CEDA28 /* ToggleKeyCodable.swift in Sources */,
 				54022BCC286AE96D0080AF63 /* UpdateFoyMapDelegate.swift in Sources */,
+				54EAF8552A5A0F16009B8EA8 /* SelectElAlameinLayersViewController.swift in Sources */,
 				54CCCA28288F32F700539EFF /* SelectFoyLayersDataSource.swift in Sources */,
 				54CCCA5B2898E20A00539EFF /* SelectUtahBeachLayersTableViewCell.swift in Sources */,
 				5414181F281CC13100E0483B /* AppDelegate.swift in Sources */,
@@ -812,6 +878,7 @@
 				54CCCA5F2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.swift in Sources */,
 				54CCCA962899745800539EFF /* SelectUtahBeachLayersDataSource.swift in Sources */,
 				54CCCA7C2899705600539EFF /* SelectPurpleHeartLaneLayersViewController.swift in Sources */,
+				54EAF8462A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.swift in Sources */,
 				54CCCA902899741B00539EFF /* SelectSainteMereEgliseLayersDataSource.swift in Sources */,
 				54CCCA632898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.swift in Sources */,
 				54CCCA422898A44900539EFF /* SelectHurtgenForestLayersViewController.swift in Sources */,
@@ -821,11 +888,15 @@
 				54CCCA472898C66C00539EFF /* SelectHurtgenForestLayersTableViewCell.swift in Sources */,
 				54141896281CC24100E0483B /* MapsListDictionary.swift in Sources */,
 				54CCCA7E2899706500539EFF /* SelectSainteMarieduMontLayersViewController.swift in Sources */,
+				54EAF8512A5A0E1D009B8EA8 /* SelectElAlameinLayersDataSource.swift in Sources */,
 				54CCCA86289973C400539EFF /* SelectKurskLayersDataSource.swift in Sources */,
+				54EAF84F2A5A0E09009B8EA8 /* SelectDrielLayersDataSource.swift in Sources */,
 				54CCCA30288FFB1A00539EFF /* SelectHill400LayersViewController.swift in Sources */,
 				54CCCA4B2898E11200539EFF /* SelectOmahaBeachLayersTableViewCell.swift in Sources */,
+				54C2FB6829CCB617000B213A /* CoreDataService.swift in Sources */,
 				54CCCA32288FFBFC00539EFF /* SelectHill400LayersDataSource.swift in Sources */,
 				54022BCE286AFAED0080AF63 /* SelectFoyLayersViewController.swift in Sources */,
+				549B5E4C29E65E2500224799 /* ScrollViewHelper.swift in Sources */,
 				54CCCA6C2899015300539EFF /* UpdateStalingradMapDelegate.swift in Sources */,
 				54CCCA802899707600539EFF /* SelectSainteMereEgliseLayersViewController.swift in Sources */,
 				54CCCA842899709A00539EFF /* SelectUtahBeachLayersViewController.swift in Sources */,
@@ -833,10 +904,12 @@
 				54141892281CC22E00E0483B /* CustomUITableViewCell.swift in Sources */,
 				54FEA55F293A77E100CEDA28 /* SelectKharkovLayersViewController.swift in Sources */,
 				54CCCA72289901A300539EFF /* UpdateSainteMarieduMontMapDelegate.swift in Sources */,
+				54EAF8432A5A0CF5009B8EA8 /* UpdateElAlameinMapDelegate.swift in Sources */,
 				54CCCA3A28989D2500539EFF /* UpdateHurtgenForestMapDelegate.swift in Sources */,
 				54D0826428330B2500542CB7 /* SelectCarentanLayersViewController.swift in Sources */,
 				54D081D32829F16000542CB7 /* SainteMereEgliseBaseLayerViewController.swift in Sources */,
 				54D081CD2829F13400542CB7 /* PurpleHeartLaneBaseLayerViewController.swift in Sources */,
+				54EAF8592A5A3615009B8EA8 /* ElAlameinBaseLayerViewController.swift in Sources */,
 				54D081E02829F28F00542CB7 /* BaseLayerMapsTableViewCell.swift in Sources */,
 				54D081D72829F17700542CB7 /* UtahBeachBaseLayerViewController.swift in Sources */,
 				54CCCAAE28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift in Sources */,
@@ -847,18 +920,21 @@
 				54CCCA2B288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift in Sources */,
 				54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */,
 				54CCCA782899702500539EFF /* SelectOmahaBeachLayersViewController.swift in Sources */,
+				54EAF84C2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.swift in Sources */,
 				54FEA559293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift in Sources */,
 				54022BCA28606C680080AF63 /* ToggleSwitchChoice.xcdatamodeld in Sources */,
 				54AE2C912845D04B000C4297 /* UserDefaultsManager.swift in Sources */,
 				54CCCA4F2898E19200539EFF /* SelectRemagenLayersTableViewCell.swift in Sources */,
 				54D081D12829F15300542CB7 /* SainteMarieduMontBaseLayerViewController.swift in Sources */,
 				54CCCA6A2899012A00539EFF /* UpdateSainteMereEgliseMapDelegate.swift in Sources */,
+				54EAF8572A5A278D009B8EA8 /* DrielBaseLayerViewController.swift in Sources */,
 				547F338628E0DAF9009D7968 /* CustomLocations.swift in Sources */,
 				54CCCA532898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.swift in Sources */,
 				54CCCA992899892D00539EFF /* SelectKurskLayersTableViewCell.swift in Sources */,
 				54D0826A28330B7300542CB7 /* SelectCarentanLayersDataSource.swift in Sources */,
 				5414186D281CC1F200E0483B /* DataSourceDelegate.swift in Sources */,
 				54CCCA702899018500539EFF /* UpdatePurpleHeartLaneMapDelegate.swift in Sources */,
+				54EAF83D2A59F135009B8EA8 /* UpdateDrielMapDelegate.swift in Sources */,
 				54CCCAB128A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift in Sources */,
 				54CCCA8C289973F600539EFF /* SelectPurpleHeartLaneLayersDataSource.swift in Sources */,
 				54CCCA372890012D00539EFF /* SelectHill400LayersTableViewCell.swift in Sources */,
@@ -1032,7 +1108,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "HLL Maps.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = DZHXZ94XN9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hell-Let-Loose-Maps/Info.plist";
@@ -1044,13 +1120,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "micahburnside.Hell-Let-Loose-Maps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1070,7 +1146,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "HLL Maps.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = DZHXZ94XN9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hell-Let-Loose-Maps/Info.plist";
@@ -1082,13 +1158,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "micahburnside.Hell-Let-Loose-Maps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
