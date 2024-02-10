@@ -157,6 +157,155 @@
 		54FEA561293A788D00CEDA28 /* SelectKharkovLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */; };
 		54FEA56E2944FAE200CEDA28 /* ToggleKeyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA56D2944FAE200CEDA28 /* ToggleKeyCodable.swift */; };
 		54FEA570294516B700CEDA28 /* keyMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA56F294516B700CEDA28 /* keyMap.json */; };
+		C25191682B76B986000A679D /* GetTerritoryColorSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870728483B810025993D /* GetTerritoryColorSelectionDelegate.swift */; };
+		C25191692B76B986000A679D /* StalingradBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081D42829F16D00542CB7 /* StalingradBaseLayerViewController.swift */; };
+		C251916A2B76B986000A679D /* SelectRemagenLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA89289973E600539EFF /* SelectRemagenLayersDataSource.swift */; };
+		C251916B2B76B986000A679D /* SelectHurtgenForestLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA3B28989E5B00539EFF /* SelectHurtgenForestLayersDataSource.swift */; };
+		C251916C2B76B986000A679D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141822281CC13100E0483B /* ViewController.swift */; };
+		C251916D2B76B986000A679D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141898281CC2C500E0483B /* BaseViewController.swift */; };
+		C251916E2B76B986000A679D /* CarentanBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C02829F03B00542CB7 /* CarentanBaseLayerViewController.swift */; };
+		C251916F2B76B986000A679D /* RemagenBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081CE2829F14300542CB7 /* RemagenBaseLayerViewController.swift */; };
+		C25191702B76B986000A679D /* UpdateUtahBeachMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA6D2899016700539EFF /* UpdateUtahBeachMapDelegate.swift */; };
+		C25191712B76B986000A679D /* SelectStalingradLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA552898E1DD00539EFF /* SelectStalingradLayersTableViewCell.swift */; };
+		C25191722B76B986000A679D /* SelectKurskLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA752899701200539EFF /* SelectKurskLayersViewController.swift */; };
+		C25191732B76B986000A679D /* UpdateKurskMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA73289901F200539EFF /* UpdateKurskMapDelegate.swift */; };
+		C25191742B76B986000A679D /* SelectStalingradLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA912899742E00539EFF /* SelectStalingradLayersDataSource.swift */; };
+		C25191752B76B986000A679D /* SelectOmahaBeachLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA87289973D400539EFF /* SelectOmahaBeachLayersDataSource.swift */; };
+		C25191762B76B986000A679D /* UpdateRemagenMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA672899010C00539EFF /* UpdateRemagenMapDelegate.swift */; };
+		C25191772B76B986000A679D /* UpdateOmahaBeachMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA65289900F700539EFF /* UpdateOmahaBeachMapDelegate.swift */; };
+		C25191782B76B986000A679D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5488870928489DD90025993D /* UIColor+.swift */; };
+		C25191792B76B986000A679D /* SelectDrielLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8522A5A0F04009B8EA8 /* SelectDrielLayersViewController.swift */; };
+		C251917A2B76B986000A679D /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141891281CC22E00E0483B /* NSObject+.swift */; };
+		C251917B2B76B986000A679D /* StrongpointLayerSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548886F9284834A40025993D /* StrongpointLayerSelectionDelegate.swift */; };
+		C251917C2B76B986000A679D /* PresentationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542BC28628D815240064922E /* PresentationHelper.swift */; };
+		C251917D2B76B986000A679D /* SelectRemagenLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA792899703400539EFF /* SelectRemagenLayersViewController.swift */; };
+		C251917E2B76B986000A679D /* SelectKharkovLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA554293A717300CEDA28 /* SelectKharkovLayersTableViewCell.swift */; };
+		C251917F2B76B986000A679D /* KurskBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C82829F11100542CB7 /* KurskBaseLayerViewController.swift */; };
+		C25191802B76B986000A679D /* ToggleKeyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA56D2944FAE200CEDA28 /* ToggleKeyCodable.swift */; };
+		C25191812B76B986000A679D /* UpdateFoyMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54022BCB286AE96D0080AF63 /* UpdateFoyMapDelegate.swift */; };
+		C25191822B76B986000A679D /* SelectElAlameinLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8542A5A0F16009B8EA8 /* SelectElAlameinLayersViewController.swift */; };
+		C25191832B76B986000A679D /* SelectFoyLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA27288F32F700539EFF /* SelectFoyLayersDataSource.swift */; };
+		C25191842B76B986000A679D /* SelectUtahBeachLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA592898E20A00539EFF /* SelectUtahBeachLayersTableViewCell.swift */; };
+		C25191852B76B986000A679D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414181E281CC13100E0483B /* AppDelegate.swift */; };
+		C25191862B76B986000A679D /* Hill400BaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C42829F0F800542CB7 /* Hill400BaseLayerViewController.swift */; };
+		C25191872B76B986000A679D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141820281CC13100E0483B /* SceneDelegate.swift */; };
+		C25191882B76B986000A679D /* UpdateHill400MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA33288FFED200539EFF /* UpdateHill400MapDelegate.swift */; };
+		C25191892B76B986000A679D /* SelectPurpleHeartLaneLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA5D2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.swift */; };
+		C251918A2B76B986000A679D /* SelectUtahBeachLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA952899745800539EFF /* SelectUtahBeachLayersDataSource.swift */; };
+		C251918B2B76B986000A679D /* SelectPurpleHeartLaneLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA7B2899705600539EFF /* SelectPurpleHeartLaneLayersViewController.swift */; };
+		C251918C2B76B986000A679D /* SelectDrielLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8442A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.swift */; };
+		C251918D2B76B986000A679D /* SelectSainteMereEgliseLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA8F2899741B00539EFF /* SelectSainteMereEgliseLayersDataSource.swift */; };
+		C251918E2B76B986000A679D /* SelectSainteMarieduMontLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA612898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.swift */; };
+		C251918F2B76B986000A679D /* SelectHurtgenForestLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA412898A44900539EFF /* SelectHurtgenForestLayersViewController.swift */; };
+		C25191902B76B986000A679D /* BaseLayerMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081D82829F19000542CB7 /* BaseLayerMapsViewController.swift */; };
+		C25191912B76B986000A679D /* SelectSainteMarieduMontLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA8D2899740800539EFF /* SelectSainteMarieduMontLayersDataSource.swift */; };
+		C25191922B76B986000A679D /* SelectStalingradLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA812899708500539EFF /* SelectStalingradLayersViewController.swift */; };
+		C25191932B76B986000A679D /* SelectHurtgenForestLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA452898C66C00539EFF /* SelectHurtgenForestLayersTableViewCell.swift */; };
+		C25191942B76B986000A679D /* MapsListDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141895281CC24100E0483B /* MapsListDictionary.swift */; };
+		C25191952B76B986000A679D /* SelectSainteMarieduMontLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA7D2899706500539EFF /* SelectSainteMarieduMontLayersViewController.swift */; };
+		C25191962B76B986000A679D /* SelectElAlameinLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8502A5A0E1D009B8EA8 /* SelectElAlameinLayersDataSource.swift */; };
+		C25191972B76B986000A679D /* SelectKurskLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA85289973C400539EFF /* SelectKurskLayersDataSource.swift */; };
+		C25191982B76B986000A679D /* SelectDrielLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF84E2A5A0E09009B8EA8 /* SelectDrielLayersDataSource.swift */; };
+		C25191992B76B986000A679D /* SelectHill400LayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA2F288FFB1A00539EFF /* SelectHill400LayersViewController.swift */; };
+		C251919A2B76B986000A679D /* SelectOmahaBeachLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA492898E11200539EFF /* SelectOmahaBeachLayersTableViewCell.swift */; };
+		C251919B2B76B986000A679D /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C2FB6729CCB617000B213A /* CoreDataService.swift */; };
+		C251919C2B76B986000A679D /* SelectHill400LayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA31288FFBFC00539EFF /* SelectHill400LayersDataSource.swift */; };
+		C251919D2B76B986000A679D /* SelectFoyLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54022BCD286AFAED0080AF63 /* SelectFoyLayersViewController.swift */; };
+		C251919E2B76B986000A679D /* ScrollViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B5E4B29E65E2500224799 /* ScrollViewHelper.swift */; };
+		C251919F2B76B986000A679D /* UpdateStalingradMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA6B2899015300539EFF /* UpdateStalingradMapDelegate.swift */; };
+		C25191A02B76B986000A679D /* SelectSainteMereEgliseLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA7F2899707600539EFF /* SelectSainteMereEgliseLayersViewController.swift */; };
+		C25191A12B76B986000A679D /* SelectUtahBeachLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA832899709A00539EFF /* SelectUtahBeachLayersViewController.swift */; };
+		C25191A22B76B986000A679D /* FoyBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C22829F0EC00542CB7 /* FoyBaseLayerViewController.swift */; };
+		C25191A32B76B986000A679D /* CustomUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54141890281CC22E00E0483B /* CustomUITableViewCell.swift */; };
+		C25191A42B76B986000A679D /* SelectKharkovLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55E293A77E100CEDA28 /* SelectKharkovLayersViewController.swift */; };
+		C25191A52B76B986000A679D /* UpdateSainteMarieduMontMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA71289901A300539EFF /* UpdateSainteMarieduMontMapDelegate.swift */; };
+		C25191A62B76B986000A679D /* UpdateElAlameinMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8422A5A0CF5009B8EA8 /* UpdateElAlameinMapDelegate.swift */; };
+		C25191A72B76B986000A679D /* UpdateHurtgenForestMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA3928989D2500539EFF /* UpdateHurtgenForestMapDelegate.swift */; };
+		C25191A82B76B986000A679D /* SelectCarentanLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826328330B2500542CB7 /* SelectCarentanLayersViewController.swift */; };
+		C25191A92B76B986000A679D /* SainteMereEgliseBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081D22829F16000542CB7 /* SainteMereEgliseBaseLayerViewController.swift */; };
+		C25191AA2B76B986000A679D /* PurpleHeartLaneBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081CC2829F13400542CB7 /* PurpleHeartLaneBaseLayerViewController.swift */; };
+		C25191AB2B76B986000A679D /* ElAlameinBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8582A5A3615009B8EA8 /* ElAlameinBaseLayerViewController.swift */; };
+		C25191AC2B76B986000A679D /* BaseLayerMapsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081DE2829F28F00542CB7 /* BaseLayerMapsTableViewCell.swift */; };
+		C25191AD2B76B986000A679D /* UtahBeachBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081D62829F17700542CB7 /* UtahBeachBaseLayerViewController.swift */; };
+		C25191AE2B76B986000A679D /* UpdateCarentanMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCAAD28A9BDAA00539EFF /* UpdateCarentanMapDelegate.swift */; };
+		C25191AF2B76B986000A679D /* BaseLayerMapsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081DC2829F25900542CB7 /* BaseLayerMapsDataSource.swift */; };
+		C25191B02B76B986000A679D /* OmahaBeachBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081CA2829F12200542CB7 /* OmahaBeachBaseLayerViewController.swift */; };
+		C25191B12B76B986000A679D /* HurtgenForestBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081C62829F10800542CB7 /* HurtgenForestBaseLayerViewController.swift */; };
+		C25191B22B76B986000A679D /* KharkovBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA55C293A77D200CEDA28 /* KharkovBaseLayerViewController.swift */; };
+		C25191B32B76B986000A679D /* SelectFoyLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA29288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift */; };
+		C25191B42B76B986000A679D /* MapLayerSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0825D283057CE00542CB7 /* MapLayerSelectionDelegate.swift */; };
+		C25191B52B76B986000A679D /* SelectOmahaBeachLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA772899702500539EFF /* SelectOmahaBeachLayersViewController.swift */; };
+		C25191B62B76B986000A679D /* SelectElAlameinLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF84A2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.swift */; };
+		C25191B72B76B986000A679D /* SelectKharkovLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA558293A71A900CEDA28 /* SelectKharkovLayersDataSource.swift */; };
+		C25191B82B76B986000A679D /* ToggleSwitchChoice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54022BC828606C680080AF63 /* ToggleSwitchChoice.xcdatamodeld */; };
+		C25191B92B76B986000A679D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE2C902845D04B000C4297 /* UserDefaultsManager.swift */; };
+		C25191BA2B76B986000A679D /* SelectRemagenLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA4D2898E19200539EFF /* SelectRemagenLayersTableViewCell.swift */; };
+		C25191BB2B76B986000A679D /* SainteMarieduMontBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D081D02829F15300542CB7 /* SainteMarieduMontBaseLayerViewController.swift */; };
+		C25191BC2B76B986000A679D /* UpdateSainteMereEgliseMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA692899012A00539EFF /* UpdateSainteMereEgliseMapDelegate.swift */; };
+		C25191BD2B76B986000A679D /* DrielBaseLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8562A5A278D009B8EA8 /* DrielBaseLayerViewController.swift */; };
+		C25191BE2B76B986000A679D /* CustomLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F338528E0DAF9009D7968 /* CustomLocations.swift */; };
+		C25191BF2B76B986000A679D /* SelectSainteMereEgliseLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA512898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.swift */; };
+		C25191C02B76B986000A679D /* SelectKurskLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA972899892D00539EFF /* SelectKurskLayersTableViewCell.swift */; };
+		C25191C12B76B986000A679D /* SelectCarentanLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0826928330B7300542CB7 /* SelectCarentanLayersDataSource.swift */; };
+		C25191C22B76B986000A679D /* DataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5414186B281CC1F200E0483B /* DataSourceDelegate.swift */; };
+		C25191C32B76B986000A679D /* UpdatePurpleHeartLaneMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA6F2899018500539EFF /* UpdatePurpleHeartLaneMapDelegate.swift */; };
+		C25191C42B76B986000A679D /* UpdateDrielMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF83C2A59F135009B8EA8 /* UpdateDrielMapDelegate.swift */; };
+		C25191C52B76B986000A679D /* SelectCarentanLayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCAAF28A9C26F00539EFF /* SelectCarentanLayersTableViewCell.swift */; };
+		C25191C62B76B986000A679D /* SelectPurpleHeartLaneLayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA8B289973F600539EFF /* SelectPurpleHeartLaneLayersDataSource.swift */; };
+		C25191C72B76B986000A679D /* SelectHill400LayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCA352890012D00539EFF /* SelectHill400LayersTableViewCell.swift */; };
+		C25191C82B76B986000A679D /* UpdateKharkovMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FEA552293A705D00CEDA28 /* UpdateKharkovMapDelegate.swift */; };
+		C25191CB2B76B986000A679D /* SelectRemagenLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCAAB28A3405200539EFF /* SelectRemagenLayers.storyboard */; };
+		C25191CC2B76B986000A679D /* SelectOmahaBeachLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA4A2898E11200539EFF /* SelectOmahaBeachLayersTableViewCell.xib */; };
+		C25191CD2B76B986000A679D /* HurtgenForestBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081E62829F75B00542CB7 /* HurtgenForestBaseLayer.storyboard */; };
+		C25191CE2B76B986000A679D /* FoyBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081E22829F6C700542CB7 /* FoyBaseLayer.storyboard */; };
+		C25191CF2B76B986000A679D /* ElAlameinBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF83E2A5A0C78009B8EA8 /* ElAlameinBaseLayer.storyboard */; };
+		C25191D02B76B986000A679D /* SelectElAlameinLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF84B2A5A0DB9009B8EA8 /* SelectElAlameinLayersTableViewCell.xib */; };
+		C25191D12B76B986000A679D /* SelectUtahBeachLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA5A2898E20A00539EFF /* SelectUtahBeachLayersTableViewCell.xib */; };
+		C25191D22B76B986000A679D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54141829281CC13200E0483B /* LaunchScreen.storyboard */; };
+		C25191D32B76B986000A679D /* SelectCarentanLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D0826128330B0400542CB7 /* SelectCarentanLayers.storyboard */; };
+		C25191D42B76B986000A679D /* SelectRemagenLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA4E2898E19200539EFF /* SelectRemagenLayersTableViewCell.xib */; };
+		C25191D52B76B986000A679D /* BaseLayerMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081DA2829F24800542CB7 /* BaseLayerMaps.storyboard */; };
+		C25191D62B76B986000A679D /* SelectHurtgenForestLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA432898B47F00539EFF /* SelectHurtgenForestLayers.storyboard */; };
+		C25191D72B76B986000A679D /* OmahaBeachBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081EA2829F77D00542CB7 /* OmahaBeachBaseLayer.storyboard */; };
+		C25191D82B76B986000A679D /* Hill400BaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081E42829F6F800542CB7 /* Hill400BaseLayer.storyboard */; };
+		C25191D92B76B986000A679D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54141827281CC13200E0483B /* Assets.xcassets */; };
+		C25191DA2B76B986000A679D /* SelectDrielLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF8452A5A0D91009B8EA8 /* SelectDrielLayersTableViewCell.xib */; };
+		C25191DB2B76B986000A679D /* SainteMereEgliseBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081F22829F7B500542CB7 /* SainteMereEgliseBaseLayer.storyboard */; };
+		C25191DC2B76B986000A679D /* keyMap.json in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA56F294516B700CEDA28 /* keyMap.json */; };
+		C25191DD2B76B986000A679D /* KurskBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081E82829F76600542CB7 /* KurskBaseLayer.storyboard */; };
+		C25191DE2B76B986000A679D /* SelectOmahaBeachLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA9D2899A1E100539EFF /* SelectOmahaBeachLayers.storyboard */; };
+		C25191DF2B76B986000A679D /* SelectHill400LayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA362890012D00539EFF /* SelectHill400LayersTableViewCell.xib */; };
+		C25191E02B76B986000A679D /* SelectDrielLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF83A2A59F0D8009B8EA8 /* SelectDrielLayers.storyboard */; };
+		C25191E12B76B986000A679D /* StalingradBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081F6282A131400542CB7 /* StalingradBaseLayer.storyboard */; };
+		C25191E22B76B986000A679D /* SelectSainteMereEgliseLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCAA52899A4F100539EFF /* SelectSainteMereEgliseLayers.storyboard */; };
+		C25191E32B76B986000A679D /* SelectPurpleHeartLaneLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA5E2898E24300539EFF /* SelectPurpleHeartLaneLayersTableViewCell.xib */; };
+		C25191E42B76B986000A679D /* SelectUtahBeachLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCAA92899A52500539EFF /* SelectUtahBeachLayers.storyboard */; };
+		C25191E52B76B986000A679D /* DrielBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF8382A59EFAA009B8EA8 /* DrielBaseLayer.storyboard */; };
+		C25191E62B76B986000A679D /* SelectFoyLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA23288E869A00539EFF /* SelectFoyLayers.storyboard */; };
+		C25191E72B76B986000A679D /* UtahBeachBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081F42829F7C300542CB7 /* UtahBeachBaseLayer.storyboard */; };
+		C25191E82B76B986000A679D /* KharkovBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA55A293A778000CEDA28 /* KharkovBaseLayer.storyboard */; };
+		C25191E92B76B986000A679D /* SelectSainteMarieduMontLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCAA32899A4DA00539EFF /* SelectSainteMarieduMontLayers.storyboard */; };
+		C25191EA2B76B986000A679D /* SelectCarentanLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCAB028A9C26F00539EFF /* SelectCarentanLayersTableViewCell.xib */; };
+		C25191EB2B76B986000A679D /* PurpleHeartLaneBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081EC2829F78E00542CB7 /* PurpleHeartLaneBaseLayer.storyboard */; };
+		C25191EC2B76B986000A679D /* SelectKharkovLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */; };
+		C25191ED2B76B986000A679D /* SelectKharkovLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FEA555293A717300CEDA28 /* SelectKharkovLayersTableViewCell.xib */; };
+		C25191EE2B76B986000A679D /* SelectSainteMereEgliseLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA522898E1B000539EFF /* SelectSainteMereEgliseLayersTableViewCell.xib */; };
+		C25191EF2B76B986000A679D /* SelectHurtgenForestLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA462898C66C00539EFF /* SelectHurtgenForestLayersTableViewCell.xib */; };
+		C25191F02B76B986000A679D /* SelectElAlameinLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EAF8402A5A0C8C009B8EA8 /* SelectElAlameinLayers.storyboard */; };
+		C25191F12B76B986000A679D /* SainteMarieduMontBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081F02829F7A600542CB7 /* SainteMarieduMontBaseLayer.storyboard */; };
+		C25191F22B76B986000A679D /* SelectPurpleHeartLaneLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA9F2899A49F00539EFF /* SelectPurpleHeartLaneLayers.storyboard */; };
+		C25191F32B76B986000A679D /* SelectHill400Layers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA2D288FFAE900539EFF /* SelectHill400Layers.storyboard */; };
+		C25191F42B76B986000A679D /* SelectStalingradLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA562898E1DD00539EFF /* SelectStalingradLayersTableViewCell.xib */; };
+		C25191F52B76B986000A679D /* SelectKurskLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA9B2899969800539EFF /* SelectKurskLayers.storyboard */; };
+		C25191F62B76B986000A679D /* SelectSainteMarieduMontLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA622898E26800539EFF /* SelectSainteMarieduMontLayersTableViewCell.xib */; };
+		C25191F72B76B986000A679D /* BaseLayerMapsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D081DF2829F28F00542CB7 /* BaseLayerMapsTableViewCell.xib */; };
+		C25191F82B76B986000A679D /* SelectStalingradLayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCAA72899A51100539EFF /* SelectStalingradLayers.storyboard */; };
+		C25191F92B76B986000A679D /* SelectFoyLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA2A288F3A3500539EFF /* SelectFoyLayersTableViewCell.xib */; };
+		C25191FA2B76B986000A679D /* CarentanBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081BD2829EFEC00542CB7 /* CarentanBaseLayer.storyboard */; };
+		C25191FB2B76B986000A679D /* SelectKurskLayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCA982899892D00539EFF /* SelectKurskLayersTableViewCell.xib */; };
+		C25191FC2B76B986000A679D /* RemagenBaseLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D081EE2829F79800542CB7 /* RemagenBaseLayer.storyboard */; };
+		C25192032B76BA4A000A679D /* NewTargetFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25192022B76BA4A000A679D /* NewTargetFile.swift */; };
+		C25192042B76BA4A000A679D /* NewTargetFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25192022B76BA4A000A679D /* NewTargetFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,6 +481,9 @@
 		54FEA560293A788D00CEDA28 /* SelectKharkovLayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectKharkovLayers.storyboard; sourceTree = "<group>"; };
 		54FEA56D2944FAE200CEDA28 /* ToggleKeyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleKeyCodable.swift; sourceTree = "<group>"; };
 		54FEA56F294516B700CEDA28 /* keyMap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keyMap.json; sourceTree = "<group>"; };
+		C25192002B76B986000A679D /* HLL Maps Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HLL Maps Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25192012B76B987000A679D /* HLL Maps copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HLL Maps copy-Info.plist"; path = "/Users/junkfoodsanta/Documents/Development/Swift/Hell-Let-Loose-Maps/HLL Maps copy-Info.plist"; sourceTree = "<absolute>"; };
+		C25192022B76BA4A000A679D /* NewTargetFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTargetFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +502,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		54141838281CC13200E0483B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25191C92B76B986000A679D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,6 +548,7 @@
 				54141834281CC13200E0483B /* Hell-Let-Loose-MapsTests */,
 				5414183E281CC13200E0483B /* Hell-Let-Loose-MapsUITests */,
 				5414181C281CC13100E0483B /* Products */,
+				C25192012B76B987000A679D /* HLL Maps copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -398,6 +558,7 @@
 				5414181B281CC13100E0483B /* HLL Maps.app */,
 				54141831281CC13200E0483B /* HLL MapsTests.xctest */,
 				5414183B281CC13200E0483B /* HLL MapsUITests.xctest */,
+				C25192002B76B986000A679D /* HLL Maps Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -521,6 +682,7 @@
 		54141897281CC24500E0483B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C25192022B76BA4A000A679D /* NewTargetFile.swift */,
 				5414181E281CC13100E0483B /* AppDelegate.swift */,
 				54141820281CC13100E0483B /* SceneDelegate.swift */,
 				54141822281CC13100E0483B /* ViewController.swift */,
@@ -720,6 +882,23 @@
 			productReference = 5414183B281CC13200E0483B /* HLL MapsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C25191662B76B986000A679D /* HLL Maps Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25191FD2B76B986000A679D /* Build configuration list for PBXNativeTarget "HLL Maps Dev" */;
+			buildPhases = (
+				C25191672B76B986000A679D /* Sources */,
+				C25191C92B76B986000A679D /* Frameworks */,
+				C25191CA2B76B986000A679D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HLL Maps Dev";
+			productName = "Hell-Let-Loose-Maps";
+			productReference = C25192002B76B986000A679D /* HLL Maps Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -757,6 +936,7 @@
 			projectRoot = "";
 			targets = (
 				5414181A281CC13100E0483B /* HLL Maps */,
+				C25191662B76B986000A679D /* HLL Maps Dev */,
 				54141830281CC13200E0483B /* HLL MapsTests */,
 				5414183A281CC13200E0483B /* HLL MapsUITests */,
 			);
@@ -832,6 +1012,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25191CA2B76B986000A679D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25191CB2B76B986000A679D /* SelectRemagenLayers.storyboard in Resources */,
+				C25191CC2B76B986000A679D /* SelectOmahaBeachLayersTableViewCell.xib in Resources */,
+				C25191CD2B76B986000A679D /* HurtgenForestBaseLayer.storyboard in Resources */,
+				C25191CE2B76B986000A679D /* FoyBaseLayer.storyboard in Resources */,
+				C25191CF2B76B986000A679D /* ElAlameinBaseLayer.storyboard in Resources */,
+				C25191D02B76B986000A679D /* SelectElAlameinLayersTableViewCell.xib in Resources */,
+				C25191D12B76B986000A679D /* SelectUtahBeachLayersTableViewCell.xib in Resources */,
+				C25191D22B76B986000A679D /* LaunchScreen.storyboard in Resources */,
+				C25191D32B76B986000A679D /* SelectCarentanLayers.storyboard in Resources */,
+				C25191D42B76B986000A679D /* SelectRemagenLayersTableViewCell.xib in Resources */,
+				C25191D52B76B986000A679D /* BaseLayerMaps.storyboard in Resources */,
+				C25191D62B76B986000A679D /* SelectHurtgenForestLayers.storyboard in Resources */,
+				C25191D72B76B986000A679D /* OmahaBeachBaseLayer.storyboard in Resources */,
+				C25191D82B76B986000A679D /* Hill400BaseLayer.storyboard in Resources */,
+				C25191D92B76B986000A679D /* Assets.xcassets in Resources */,
+				C25191DA2B76B986000A679D /* SelectDrielLayersTableViewCell.xib in Resources */,
+				C25191DB2B76B986000A679D /* SainteMereEgliseBaseLayer.storyboard in Resources */,
+				C25191DC2B76B986000A679D /* keyMap.json in Resources */,
+				C25191DD2B76B986000A679D /* KurskBaseLayer.storyboard in Resources */,
+				C25191DE2B76B986000A679D /* SelectOmahaBeachLayers.storyboard in Resources */,
+				C25191DF2B76B986000A679D /* SelectHill400LayersTableViewCell.xib in Resources */,
+				C25191E02B76B986000A679D /* SelectDrielLayers.storyboard in Resources */,
+				C25191E12B76B986000A679D /* StalingradBaseLayer.storyboard in Resources */,
+				C25191E22B76B986000A679D /* SelectSainteMereEgliseLayers.storyboard in Resources */,
+				C25191E32B76B986000A679D /* SelectPurpleHeartLaneLayersTableViewCell.xib in Resources */,
+				C25191E42B76B986000A679D /* SelectUtahBeachLayers.storyboard in Resources */,
+				C25191E52B76B986000A679D /* DrielBaseLayer.storyboard in Resources */,
+				C25191E62B76B986000A679D /* SelectFoyLayers.storyboard in Resources */,
+				C25191E72B76B986000A679D /* UtahBeachBaseLayer.storyboard in Resources */,
+				C25191E82B76B986000A679D /* KharkovBaseLayer.storyboard in Resources */,
+				C25191E92B76B986000A679D /* SelectSainteMarieduMontLayers.storyboard in Resources */,
+				C25191EA2B76B986000A679D /* SelectCarentanLayersTableViewCell.xib in Resources */,
+				C25191EB2B76B986000A679D /* PurpleHeartLaneBaseLayer.storyboard in Resources */,
+				C25191EC2B76B986000A679D /* SelectKharkovLayers.storyboard in Resources */,
+				C25191ED2B76B986000A679D /* SelectKharkovLayersTableViewCell.xib in Resources */,
+				C25191EE2B76B986000A679D /* SelectSainteMereEgliseLayersTableViewCell.xib in Resources */,
+				C25191EF2B76B986000A679D /* SelectHurtgenForestLayersTableViewCell.xib in Resources */,
+				C25191F02B76B986000A679D /* SelectElAlameinLayers.storyboard in Resources */,
+				C25191F12B76B986000A679D /* SainteMarieduMontBaseLayer.storyboard in Resources */,
+				C25191F22B76B986000A679D /* SelectPurpleHeartLaneLayers.storyboard in Resources */,
+				C25191F32B76B986000A679D /* SelectHill400Layers.storyboard in Resources */,
+				C25191F42B76B986000A679D /* SelectStalingradLayersTableViewCell.xib in Resources */,
+				C25191F52B76B986000A679D /* SelectKurskLayers.storyboard in Resources */,
+				C25191F62B76B986000A679D /* SelectSainteMarieduMontLayersTableViewCell.xib in Resources */,
+				C25191F72B76B986000A679D /* BaseLayerMapsTableViewCell.xib in Resources */,
+				C25191F82B76B986000A679D /* SelectStalingradLayers.storyboard in Resources */,
+				C25191F92B76B986000A679D /* SelectFoyLayersTableViewCell.xib in Resources */,
+				C25191FA2B76B986000A679D /* CarentanBaseLayer.storyboard in Resources */,
+				C25191FB2B76B986000A679D /* SelectKurskLayersTableViewCell.xib in Resources */,
+				C25191FC2B76B986000A679D /* RemagenBaseLayer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,6 +1154,7 @@
 				54D081CB2829F12200542CB7 /* OmahaBeachBaseLayerViewController.swift in Sources */,
 				54D081C72829F10800542CB7 /* HurtgenForestBaseLayerViewController.swift in Sources */,
 				54FEA55D293A77D200CEDA28 /* KharkovBaseLayerViewController.swift in Sources */,
+				C25192032B76BA4A000A679D /* NewTargetFile.swift in Sources */,
 				54CCCA2B288F3A3500539EFF /* SelectFoyLayersTableViewCell.swift in Sources */,
 				54D0825E283057CE00542CB7 /* MapLayerSelectionDelegate.swift in Sources */,
 				54CCCA782899702500539EFF /* SelectOmahaBeachLayersViewController.swift in Sources */,
@@ -956,6 +1194,111 @@
 			files = (
 				54141840281CC13200E0483B /* Hell_Let_Loose_MapsUITests.swift in Sources */,
 				54141842281CC13200E0483B /* Hell_Let_Loose_MapsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25191672B76B986000A679D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25191682B76B986000A679D /* GetTerritoryColorSelectionDelegate.swift in Sources */,
+				C25191692B76B986000A679D /* StalingradBaseLayerViewController.swift in Sources */,
+				C251916A2B76B986000A679D /* SelectRemagenLayersDataSource.swift in Sources */,
+				C251916B2B76B986000A679D /* SelectHurtgenForestLayersDataSource.swift in Sources */,
+				C251916C2B76B986000A679D /* ViewController.swift in Sources */,
+				C251916D2B76B986000A679D /* BaseViewController.swift in Sources */,
+				C251916E2B76B986000A679D /* CarentanBaseLayerViewController.swift in Sources */,
+				C251916F2B76B986000A679D /* RemagenBaseLayerViewController.swift in Sources */,
+				C25191702B76B986000A679D /* UpdateUtahBeachMapDelegate.swift in Sources */,
+				C25191712B76B986000A679D /* SelectStalingradLayersTableViewCell.swift in Sources */,
+				C25191722B76B986000A679D /* SelectKurskLayersViewController.swift in Sources */,
+				C25191732B76B986000A679D /* UpdateKurskMapDelegate.swift in Sources */,
+				C25191742B76B986000A679D /* SelectStalingradLayersDataSource.swift in Sources */,
+				C25191752B76B986000A679D /* SelectOmahaBeachLayersDataSource.swift in Sources */,
+				C25191762B76B986000A679D /* UpdateRemagenMapDelegate.swift in Sources */,
+				C25191772B76B986000A679D /* UpdateOmahaBeachMapDelegate.swift in Sources */,
+				C25191782B76B986000A679D /* UIColor+.swift in Sources */,
+				C25191792B76B986000A679D /* SelectDrielLayersViewController.swift in Sources */,
+				C251917A2B76B986000A679D /* NSObject+.swift in Sources */,
+				C251917B2B76B986000A679D /* StrongpointLayerSelectionDelegate.swift in Sources */,
+				C251917C2B76B986000A679D /* PresentationHelper.swift in Sources */,
+				C251917D2B76B986000A679D /* SelectRemagenLayersViewController.swift in Sources */,
+				C251917E2B76B986000A679D /* SelectKharkovLayersTableViewCell.swift in Sources */,
+				C251917F2B76B986000A679D /* KurskBaseLayerViewController.swift in Sources */,
+				C25191802B76B986000A679D /* ToggleKeyCodable.swift in Sources */,
+				C25191812B76B986000A679D /* UpdateFoyMapDelegate.swift in Sources */,
+				C25191822B76B986000A679D /* SelectElAlameinLayersViewController.swift in Sources */,
+				C25191832B76B986000A679D /* SelectFoyLayersDataSource.swift in Sources */,
+				C25191842B76B986000A679D /* SelectUtahBeachLayersTableViewCell.swift in Sources */,
+				C25191852B76B986000A679D /* AppDelegate.swift in Sources */,
+				C25191862B76B986000A679D /* Hill400BaseLayerViewController.swift in Sources */,
+				C25191872B76B986000A679D /* SceneDelegate.swift in Sources */,
+				C25191882B76B986000A679D /* UpdateHill400MapDelegate.swift in Sources */,
+				C25191892B76B986000A679D /* SelectPurpleHeartLaneLayersTableViewCell.swift in Sources */,
+				C251918A2B76B986000A679D /* SelectUtahBeachLayersDataSource.swift in Sources */,
+				C251918B2B76B986000A679D /* SelectPurpleHeartLaneLayersViewController.swift in Sources */,
+				C251918C2B76B986000A679D /* SelectDrielLayersTableViewCell.swift in Sources */,
+				C251918D2B76B986000A679D /* SelectSainteMereEgliseLayersDataSource.swift in Sources */,
+				C251918E2B76B986000A679D /* SelectSainteMarieduMontLayersTableViewCell.swift in Sources */,
+				C251918F2B76B986000A679D /* SelectHurtgenForestLayersViewController.swift in Sources */,
+				C25191902B76B986000A679D /* BaseLayerMapsViewController.swift in Sources */,
+				C25191912B76B986000A679D /* SelectSainteMarieduMontLayersDataSource.swift in Sources */,
+				C25191922B76B986000A679D /* SelectStalingradLayersViewController.swift in Sources */,
+				C25191932B76B986000A679D /* SelectHurtgenForestLayersTableViewCell.swift in Sources */,
+				C25191942B76B986000A679D /* MapsListDictionary.swift in Sources */,
+				C25191952B76B986000A679D /* SelectSainteMarieduMontLayersViewController.swift in Sources */,
+				C25191962B76B986000A679D /* SelectElAlameinLayersDataSource.swift in Sources */,
+				C25191972B76B986000A679D /* SelectKurskLayersDataSource.swift in Sources */,
+				C25191982B76B986000A679D /* SelectDrielLayersDataSource.swift in Sources */,
+				C25191992B76B986000A679D /* SelectHill400LayersViewController.swift in Sources */,
+				C251919A2B76B986000A679D /* SelectOmahaBeachLayersTableViewCell.swift in Sources */,
+				C251919B2B76B986000A679D /* CoreDataService.swift in Sources */,
+				C251919C2B76B986000A679D /* SelectHill400LayersDataSource.swift in Sources */,
+				C251919D2B76B986000A679D /* SelectFoyLayersViewController.swift in Sources */,
+				C251919E2B76B986000A679D /* ScrollViewHelper.swift in Sources */,
+				C251919F2B76B986000A679D /* UpdateStalingradMapDelegate.swift in Sources */,
+				C25191A02B76B986000A679D /* SelectSainteMereEgliseLayersViewController.swift in Sources */,
+				C25191A12B76B986000A679D /* SelectUtahBeachLayersViewController.swift in Sources */,
+				C25191A22B76B986000A679D /* FoyBaseLayerViewController.swift in Sources */,
+				C25191A32B76B986000A679D /* CustomUITableViewCell.swift in Sources */,
+				C25191A42B76B986000A679D /* SelectKharkovLayersViewController.swift in Sources */,
+				C25191A52B76B986000A679D /* UpdateSainteMarieduMontMapDelegate.swift in Sources */,
+				C25191A62B76B986000A679D /* UpdateElAlameinMapDelegate.swift in Sources */,
+				C25191A72B76B986000A679D /* UpdateHurtgenForestMapDelegate.swift in Sources */,
+				C25191A82B76B986000A679D /* SelectCarentanLayersViewController.swift in Sources */,
+				C25191A92B76B986000A679D /* SainteMereEgliseBaseLayerViewController.swift in Sources */,
+				C25191AA2B76B986000A679D /* PurpleHeartLaneBaseLayerViewController.swift in Sources */,
+				C25191AB2B76B986000A679D /* ElAlameinBaseLayerViewController.swift in Sources */,
+				C25191AC2B76B986000A679D /* BaseLayerMapsTableViewCell.swift in Sources */,
+				C25191AD2B76B986000A679D /* UtahBeachBaseLayerViewController.swift in Sources */,
+				C25191AE2B76B986000A679D /* UpdateCarentanMapDelegate.swift in Sources */,
+				C25191AF2B76B986000A679D /* BaseLayerMapsDataSource.swift in Sources */,
+				C25191B02B76B986000A679D /* OmahaBeachBaseLayerViewController.swift in Sources */,
+				C25191B12B76B986000A679D /* HurtgenForestBaseLayerViewController.swift in Sources */,
+				C25191B22B76B986000A679D /* KharkovBaseLayerViewController.swift in Sources */,
+				C25192042B76BA4A000A679D /* NewTargetFile.swift in Sources */,
+				C25191B32B76B986000A679D /* SelectFoyLayersTableViewCell.swift in Sources */,
+				C25191B42B76B986000A679D /* MapLayerSelectionDelegate.swift in Sources */,
+				C25191B52B76B986000A679D /* SelectOmahaBeachLayersViewController.swift in Sources */,
+				C25191B62B76B986000A679D /* SelectElAlameinLayersTableViewCell.swift in Sources */,
+				C25191B72B76B986000A679D /* SelectKharkovLayersDataSource.swift in Sources */,
+				C25191B82B76B986000A679D /* ToggleSwitchChoice.xcdatamodeld in Sources */,
+				C25191B92B76B986000A679D /* UserDefaultsManager.swift in Sources */,
+				C25191BA2B76B986000A679D /* SelectRemagenLayersTableViewCell.swift in Sources */,
+				C25191BB2B76B986000A679D /* SainteMarieduMontBaseLayerViewController.swift in Sources */,
+				C25191BC2B76B986000A679D /* UpdateSainteMereEgliseMapDelegate.swift in Sources */,
+				C25191BD2B76B986000A679D /* DrielBaseLayerViewController.swift in Sources */,
+				C25191BE2B76B986000A679D /* CustomLocations.swift in Sources */,
+				C25191BF2B76B986000A679D /* SelectSainteMereEgliseLayersTableViewCell.swift in Sources */,
+				C25191C02B76B986000A679D /* SelectKurskLayersTableViewCell.swift in Sources */,
+				C25191C12B76B986000A679D /* SelectCarentanLayersDataSource.swift in Sources */,
+				C25191C22B76B986000A679D /* DataSourceDelegate.swift in Sources */,
+				C25191C32B76B986000A679D /* UpdatePurpleHeartLaneMapDelegate.swift in Sources */,
+				C25191C42B76B986000A679D /* UpdateDrielMapDelegate.swift in Sources */,
+				C25191C52B76B986000A679D /* SelectCarentanLayersTableViewCell.swift in Sources */,
+				C25191C62B76B986000A679D /* SelectPurpleHeartLaneLayersDataSource.swift in Sources */,
+				C25191C72B76B986000A679D /* SelectHill400LayersTableViewCell.swift in Sources */,
+				C25191C82B76B986000A679D /* UpdateKharkovMapDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1595,84 @@
 			};
 			name = Release;
 		};
+		C25191FE2B76B986000A679D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "HLL Maps.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = DZHXZ94XN9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HLL Maps copy-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HLL Maps";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Hell Let Loose Maps needs permission to access your photo library";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.5;
+				OTHER_SWIFT_FLAGS = "-DDEVELOPMENT";
+				PRODUCT_BUNDLE_IDENTIFIER = "micahburnside.Hell-Let-Loose-Maps";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C25191FF2B76B986000A679D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "HLL Maps.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = DZHXZ94XN9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HLL Maps copy-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HLL Maps";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Hell Let Loose Maps needs permission to access your photo library";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = BaseLayerMaps;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.5;
+				OTHER_SWIFT_FLAGS = "-DDEVELOPMENT";
+				PRODUCT_BUNDLE_IDENTIFIER = "micahburnside.Hell-Let-Loose-Maps";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1287,6 +1708,15 @@
 			buildConfigurations = (
 				5414184C281CC13200E0483B /* Debug */,
 				5414184D281CC13200E0483B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25191FD2B76B986000A679D /* Build configuration list for PBXNativeTarget "HLL Maps Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25191FE2B76B986000A679D /* Debug */,
+				C25191FF2B76B986000A679D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

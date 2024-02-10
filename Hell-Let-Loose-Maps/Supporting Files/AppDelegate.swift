@@ -11,11 +11,32 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    enum Environment: String {
+        case development = "Development Environment"
+        case production = "Production Environment"
+        case none = "None"
+    }
+    var environment: Environment = .none
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        #if DEVELOPMENT
+        environment = .development
+        
+        #else
+        environment = .production
+        
+        #endif
+        
+        switch environment {
+        case .none:
+            print("environment is none")
+        case .development:
+            print("environment is development")
+        case .production:
+            print("environment is production")
+        }
+        
         return true
     }
 
